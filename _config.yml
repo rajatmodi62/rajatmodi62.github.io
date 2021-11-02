@@ -1,11 +1,11 @@
 # Site settings
-title: Andrej Karpathy blog
+title: Rajat Modi's Blog
 email: 
-description: "Musings of a Computer Scientist."
+description: "Machines emulate representations of Human Brain"
 baseurl: ""
-url: "http://karpathy.github.io"
-twitter_username: karpathy
-github_username:  karpathy
+url: "http://rajatmodi62.github.io"
+# twitter_username: karpathy
+github_username:  rajatmodi62
 
 # Build settings
 markdown: kramdown
