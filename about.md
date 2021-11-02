@@ -9,5 +9,4 @@ I am pursuing my PhD in Computer Science at University of Central Florida. I am 
 
 My focus is on action recognition. Specifically, how can a machine learn to distinguish between an actor, object of action and actions being performed. Another direction i am interested in is understanding the 'supporting actors' in videos which can inform inference of an action. 
 
-The purpose of this blog is for me to 'think' as i write and communicate several ideas in a similar manner. 
-
+The purpose of this blog is for me to 'think' about analogies from a brain point of view and use those notions towards developing an intelligent machine. 
