@@ -37,7 +37,7 @@ Now, i dont have a grandiose story to tell. There are no girls (yet). There is n
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino1.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    A huge congratulations to Dr. Geoffrey Hinton sir for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
+    A huge congratulations to Dr. Geoffrey Hinton for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
 </div>
 
 On this rare occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
