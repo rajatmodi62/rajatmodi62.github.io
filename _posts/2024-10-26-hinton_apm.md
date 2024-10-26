@@ -87,5 +87,5 @@ Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes
 
 "Hinton. <b>Geoff Hinton</b>. The <b>Godfather</b>. How to represent part whole hierarchies in neural nets".
 
-What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Maybe Mars should be next. Really, I'm serious this time. 
+What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Or maybe Mars should be next. Really, I'm serious this time. It's tough to decide. 
 
