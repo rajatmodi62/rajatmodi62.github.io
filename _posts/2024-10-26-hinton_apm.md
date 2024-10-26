@@ -16,7 +16,7 @@ date:   2024-10-26 11:00:00
 </div>
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
-
+ 
 We don't want him to be angry. Took me two years to learn this simple lesson. Gosh, I wished I had learnt it sooner.
 
 "Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, dressed in a charming black-suit, as he suits up for his class. I can't help it, but he reminds me of barney in "How i met your mother" .
