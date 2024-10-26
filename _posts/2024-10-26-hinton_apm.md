@@ -12,7 +12,7 @@ date:   2024-10-26 11:00:00
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\baby_hinton.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    <b>Geoff Hinton as a baby</b> poses with an anaconda. conda activate <>, he cries. CONDA ACTIVATE <>, he yells. Godammn. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Nothing we can do about it now. Bad anaconda.
+    <b>Geoff Hinton as a baby</b> poses with an anaconda. conda activate <>, he cries. CONDA ACTIVATE <>, he yells. Godammn. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Bad anaconda.
 </div>
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
