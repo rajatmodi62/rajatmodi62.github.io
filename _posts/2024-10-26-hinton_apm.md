@@ -27,7 +27,10 @@ As I gather my wits by what just happened, he swivels on his chair. Wheeeee. His
 
 Omg. That really hurts. He is correct, so it hurts even more. And no-one can help me. Who cares about a poor, underfed, and miserable graduate student? Everyone has their battles to fight, hills to climb, grants to write, phds to defend and tenures to track. It seems I have no choice, but to finally listen to him. 
 
-So here we are. On this blogpost. A safe space. You and me. A safezone. Promise. And I will tell  you about this story  of a new model we developed called "Asynchronous Perception Machine". 
+So here we are. On this blogpost. A safe space. You and me. A safezone. Promise. 
+
+
+And so I will tell  you about this story  of a new model called "Asynchronous Perception Machine". 
 
 Now, i dont have a grandiose story to tell. There is no eureka moment: Like the cooler goodfellow et al, i didnt go to a bar, and or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission, we will travel this bandwagon together. 
 
