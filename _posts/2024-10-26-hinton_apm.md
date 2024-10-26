@@ -29,7 +29,7 @@ Omg. That really hurts. He is correct, so it hurts even more. And no-one can hel
 
 So here we are. On this blogpost. A safe space. You and me. A safezone. Promise. And I will tell  you about this story  of a new model we developed called "Asynchronous Perception Machine". 
 
-
+Now, i dont have a grandiose story to tell. There are no girls (yet). There is no eureka moment: Like the cooler goodfellow et al, i didnt go to a bar, and or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission, we will travel this bandwagon together. 
 
 p.s. shneaked in a little godzilla in our paper. sooo shorrry. Please don't tell my advisor. He'll be angry. We don't want him to be angry. Angry bad. Happy good. Mooooooo............. Ok, you can tell him, but after i graduate. 
 
@@ -78,7 +78,7 @@ We also plan to use some of those little godzillas to rewrite the books in compu
 
 ## Limitation  
 
-Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes, godzilla is rejected from CVPR/ECCV because he cannot surpass SOTA. Little godzilla is also not that robust: he should be tested extensively in the real world. And for now, poor godzilla only does image-classification. That's not a "real" computer vision task. Godzilla needs to do dense tasks, reasoning and alignment also.
+Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes, godzilla is rejected from CVPR/ECCV because he cannot surpass SOTA. Little godzilla is also not that robust: he should be tested extensively in the real world. And for now, poor godzilla only does image-classification. That's not a "real" computer vision task. Godzilla needs to do dense tasks, reasoning and alignment also. And dont even get us started on the hard problem of consciousness. Is it really hard? Alas, only time will tell lol. 
 
 ## References
  <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
