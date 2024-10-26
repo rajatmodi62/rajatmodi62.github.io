@@ -21,7 +21,7 @@ We don't want him to be angry. Took me two years to learn this simple lesson. Go
 
 "Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, dressed in a charming black-suit, as he suits up for his class. I can't help it, but he reminds me of barney in "How i met your mother" .
 
-You know, he really takes all this stuff seriously. A lot of people are excited for computer vision after all. As always he is such a cutie-pie and an amazing teacher. I have never been the smartest kid on the block. Far from that. I got put on academic probation, with a couple of C's in those computer vision courses lol. And one C in genetic algorithms i think. Will have to check.
+You know, he really takes all this stuff seriously. A lot of people are excited for computer vision after all. As always he is such a cutie-pie and an amazing teacher. 
 
 As I gather my wits by what just happened, he swivels on his chair. Wheeeee. His desk is 45 degrees away from where I am s(h)itting, but within a constant slapping radius. Openreview is open on his screen for his review. He clicks a button and sends someone's paper back to where it came from.  Shooooo. 
 
@@ -29,7 +29,7 @@ Omg. That really hurts. He is correct, so it hurts even more. And no-one can hel
 
 So here we are. On this blogpost. A safe space. You and me. A safezone. Promise. And I will tell  you about this story  of a new model we developed called "Asynchronous Perception Machine". 
 
-Now, i dont have a grandiose story to tell. There are no girls (yet). There is no eureka moment: Like the cooler goodfellow et al, i didnt go to a bar, and or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission, we will travel this bandwagon together. 
+Now, i dont have a grandiose story to tell. There is no eureka moment: Like the cooler goodfellow et al, i didnt go to a bar, and or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission, we will travel this bandwagon together. 
 
 
 
