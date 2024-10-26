@@ -32,7 +32,7 @@ So here we are. On this blogpost. A safe space. You and me. A safezone. Promise.
 
 And so I will tell  you about this story  of a new model called "Asynchronous Perception Machine". 
 
-Now, i dont have a grandiose story to tell. There is no eureka moment: Like the cooler goodfellow et al, i didnt go to a bar or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission (star trek), we will travel this bandwagon together. 
+Now, i dont have a grandiose story to tell. There is no eureka moment: Unlike the much cooler Ian goodfellow, i didnt go to a bar or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission (star trek), we will travel this bandwagon together. 
 
 
 
