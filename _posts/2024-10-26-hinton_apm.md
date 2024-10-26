@@ -5,7 +5,7 @@ title:  "Asynchronous Perception Machine: A little godzilla's journey"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
-> APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. And this goose has now started to have some feathers. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go chom chom. Hiya.
+> APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. And this goose has now started to have some feathers. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-haters. Hiyaaaaaaa!!!!!!
 
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
