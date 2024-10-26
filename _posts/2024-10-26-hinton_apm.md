@@ -31,13 +31,7 @@ So here we are. On this blogpost. A safe space. You and me. A safezone. Promise.
 
 Now, i dont have a grandiose story to tell. There are no girls (yet). There is no eureka moment: Like the cooler goodfellow et al, i didnt go to a bar, and or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission, we will travel this bandwagon together. 
 
-p.s. shneaked in a little godzilla in our paper. sooo shorrry. Please don't tell my advisor. He'll be angry. We don't want him to be angry. Angry bad. Happy good. Mooooooo............. Ok, you can tell him, but after i graduate. 
 
-There are still a lot more papers to be shipped to NeurIPS for babies. 
-
-till next time,<br>
-love,<br>
-rajat
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino1.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
@@ -70,11 +64,17 @@ On an occasional weekend, things get too intense. Godzilla has to get out of the
 
 Sometimes, Godzilla has to read papers on the arxiv. But, he has poor eyesight. So, he resorts to wearing spectacles. Contact lenses dry up too fast. He gets long hair before paper deadlines, and godzilla even forgets to comb them. He gets all sweaty and smelly in those tough times. You really don't wanna annoy this version of him. This godzilla also looks like my friend Sarinda, although it's a matter of debate: Sarinda has long maroon hair and he says that this godzilla's hair are red. I don't agree. Maybe i am colour blind too lol.
 
+p.s. shneaked in a little godzilla in our paper. sooo shorrry. Please don't tell my advisor. He'll be angry. We don't want him to be angry. Angry bad. Happy good. Mooooooo............. Ok, you can tell him, but after i graduate. 
+
+There are still a lot more papers to be shipped to NeurIPS for babies. 
+
+till next time,<br>
+love,<br>
+rajat
+
 ## Future work
 
 In future, we plan to make more humble godzillas. Each godzilla comes with its own outfit and ablation experiments. You can tell us which ablations you like, and we will combine those to form a nicely-dressed godzilla that remains competitive. One that is customized just for you. And we will do it for free. Without a GPU that is.
-
-We also plan to use some of those little godzillas to rewrite the books in computer vision that they teach in class.
 
 ## Limitation  
 
@@ -97,3 +97,4 @@ What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Or m
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
