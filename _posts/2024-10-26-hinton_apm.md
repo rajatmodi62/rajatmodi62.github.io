@@ -19,9 +19,9 @@ My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man
  
 We don't want him to be angry. Took me two years to learn this simple lesson. Gosh, I wished I had learnt it sooner.
 
-"Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, dressed in a charming black-suit, as he suits up for his class. I can't help it, but he reminds me of barney in "How i met your mother" .
+"Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, as he `suits up' for his class. I can't help it, but he reminds me of barney in "How i met your mother" . 
 
-You know, he really takes all this stuff seriously. A lot of people are excited for computer vision after all. As always he is such a cutie-pie and an amazing teacher. 
+You know what? he really takes all this stuff seriously. A lot of people are excited for computer vision after all. As always he is such a cutie-pie and an amazing teacher. 
 
 As I gather my wits by what just happened, he swivels on his chair. Wheeeee. His desk is 45 degrees away from where I am s(h)itting, but within a constant slapping radius. Openreview is open on his screen for his review. He clicks a button and sends someone's paper back to where it came from.  Shooooo. 
 
