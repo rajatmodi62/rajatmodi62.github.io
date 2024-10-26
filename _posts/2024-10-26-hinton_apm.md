@@ -19,7 +19,7 @@ My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man
 
 We don't want him to be angry. Took me two years to learn this simple lesson. Gosh, I wished I had learnt it sooner.
 
-"Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, dressed in a charming black-suit, as he gets ready for lecturing his class. 
+"Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, dressed in a charming black-suit, as he suits up for his class. I can't help it, but he reminds me of barney in "How i met your mother" .
 
 You know, he really takes all this stuff seriously. A lot of people are excited for computer vision after all. As always he is such a cutie-pie and an amazing teacher. I have never been the smartest kid on the block. Far from that. I got put on academic probation, with a couple of C's in those computer vision courses lol. And one C in genetic algorithms i think. Will have to check.
 
