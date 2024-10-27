@@ -86,7 +86,7 @@ And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\mona_sparrow_glom.png" style="width: 80%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-
+<b> Insert more content here as i get time.  </b>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
