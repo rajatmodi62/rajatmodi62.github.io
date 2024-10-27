@@ -89,11 +89,44 @@ And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So
 Now we will start introducing some technical terms shall we. You will notice that the figure above has 6 columns. There are 4 tokens, and last two are trash cans. So basically, we only need to look at the leftmost 4 columns. Now, consider the token marked 1. Look at the column sitting on it. That column has 4 arrows and a question mark on it. What are all these arrows? The idea is that this column consists of 5 levels, at lowest level it might be representing the nose of the mona, and at the second highest level, it may be representing the entire mona lisa object. Therefore, the lowest level is representing a part and the second highest level is representing the object. 
 
 Now, you will see there are a bunch of arrows. For eg, consider the three red arrows. Perhaps all those red arrows are representing the mona sparrows face. Now look at the lowst level, those stupid black arrows. Those might be just rgb pixels, and scattered together. The red arrows are in three of the boxes, and they are pointing in all the same directions. Same directions mean that they are all "agreeing" that it is mona sparrows face at that location. Therefore, this leads us to the following conclusion:
->> As we go up in the GLOM's levels, the amount of agreement increases. There are more number of red arrows at the second highest level, that the stupid black arrows at the lowest level. 
+>> As we go up in the GLOM's levels, the amount of agreement increases. There are more number of red arrows at the second highest level, than the stupid black arrows at the lowest level. 
 
 Next, you will notice that i marked the last level as <b>useless shit</b>. Why did we do that?
 
-Here is the argument: the original idea in GLOM was that at the highest level of the GLOM there is a single representation, which represents the scene level information. So if you took images, say mona sparrow at your home, and mona sparrow in your school, the network will be able to understand the difference between the home and school. But, in practice, it seems very difficult to converge on a scene representation. This is also the reason why the research between  the computer graphics community (aka those neural fields) and perception community is split. The rendering community just focuses on rendering: how to model radiance fiels. Their representation just keeps <b>changing </b> with the viewpoint. On the other hand, the perception community does not give a shit about radiance fields: they only model first four levels of glom. Not the last one. 
+Here is the argument: the original idea in GLOM was that at the highest level of the GLOM there is a single representation, which represents the scene level information. So if you took images, say mona sparrow at your home, and mona sparrow in your school, the network will be able to understand the difference between the home and school. But, in practice, it seems very difficult to converge on a scene representation. This is also the reason why the research between  the computer graphics community (aka those neural fields) and perception community is split. The rendering community just focuses on rendering: how to model radiance fields. Their representation just keeps <b>changing </b> with the viewpoint. On the other hand, the perception community does not give a shit about radiance fields: they only model first four levels of glom, i.e. the object level. Not the last one. 
+
+Now, we shall talk about another concept called  <b> The information bottleneck </b> principle. If you look at the figure, you will see there are equal number of arrows at each level (i.e. 6 arrows per level). This means that when information (aka mona sparrow) tokens are fed into the network, they travel through allll these levels and somehow result in these arrows. The number of arrows does not change across levels (there are 6 arrows per level in hintons figure lol),  so there is no loss of information. There is no stupid downsampling like the one which occurs in CNNs. 
+
+The next insight in APM is as follows: <b> Each of the levels of the GLOM system corresponds to a different layer of the VIT, aka transformer </b>. This assumption works in practice, because in the transformer there is no bottleneck problem: there is no upsampling or downsampling of the input tokens. That remains faithful to the figure that hinton drew. Lolzy. We have marked that <b> L layers of a transformer (VIT) on the Y axis </b> in glom's figure. 
+
+Ok, so now we need to learn all these arrows. Sometimes they are all red, sometimes they are black, and sometimes blue lol. So, how to learn them. Well, the answer is very simple. <b> Don't learn them lol </b>. They are already present in a transformer like Dinov2. Here is a figure that i stole from Shir Amir's paper yo:
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\shir_dino.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+So if you look along the arrow i show, it shows that as you progress along the different layers of a DINOv2, the representations are pretty cool. At the last layer, all the representations of the DOG like ears, eyes, mouth have automatically given themselves some color. Note that this network was NOT trained with any class labels, just a simple self-supervised loss lol. So this told us that there was something interesting going on in the transformer, and it was able to automatically learn the object parts and their wholes. Somehow, we needed to exploit it. 
+
+Like a cutie pie we are, we were parsing through hintons forward forward paper. And then, we come across this line:
+
+>> A static image is a rather boring video - Dr. Geoff Hinton, Forward forward some preliminary investigations.
+
+And when geoff hinton says something, we do that lol. 
+
+So what did we do? We took a static image. We repeated it many times along through a temporal axis. Then it became a boring video that does not move. And then we gave this boring video to a video-transformer like Mvitv2. Note that this Mvitv2 was trained only for action-recognition, and no semantic information was being used here. So, we took a video and pumped through this transformer. We looked at the second or third layer of it, and selected the higher dimensional tokens corresponding to a particular frame. And then, a cutie pie told us to do three dimensional t-sne clustering on them. And so we did that lol. And what did we get:
+
+<div class="gif-container">
+  <figure>
+    <img src="{{ '/assets/img/apm/island_hinton.gif' | relative_url }}" alt="Description of GIF">
+    <figcaption> <b> Hinton's Islands of Agreement </b> were shown by us Neurips2023. Don't they look all cute and beautiful?. They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik.</b></figcaption>
+  </figure>
+</div>
+
+So basically this showed that even lower layer in the transformer could give us such sexy islands. And they were soooo beautiful. And these islands were one of the levels in the GLOM. And if we got these islands from different layers in the transformer, they would serve as <b> free sources of supervision </b> for GLOM. So basically, it would tell each layer of GLOM what arrows are what lol. We dont need to learn them. They are already there. So we will <b> just distill representation from a transformer like Mvitv2 or Dino </b> in GLOM lol. 
+
+Now we wish to redirect your attention to one thing. Notice that the islands in the above figure were obtained after repeating a static image along temporal axis to become a boring video. This is very subtle trick: To converge on a stable representation for a scene (in this case a static image), there are two ways you could go about it. The <b> first way  </b> is to look at the same image recurrently over many iterations. That will make the network know what is the best representation of this image. <b> This is what GLOM said in his original paper. He said take a image and do many routing-iterations on it. But, we don't wanna do that</b>. Instead, we do opposite thing. That is the <b> second way</b>. When we repeat the image along the temporal axis, the network looks at the multiple copies of the <b> same image </b> in <b> parallel  lolzy</b>. This operation occupies more memory but takes less time than having to do stupid routing in GLOM. And it gives beautiful islands. 
+
+
+
 <b> Insert more content here as i get time.  </b>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
