@@ -70,7 +70,7 @@ So, what is GLOM about, and how does it settle the debate between the warrior fa
     Figure stolen with love. This illustrates the idea of <b>Islands of Agreement</b>
 </div>
 
-It talks about a new representation called islands of agreement, and a way to use these islands to somehow do machine perception. But, before we go deeper, we will label his figure a little bit. Trust me, it's a revolutionary idea. 
+It talks about a new representation called islands of agreement, and a way to use these islands to somehow do machine perception. But, before we define what are islands, what are these little arrows, we will label his figure a little bit. Trust me, it's a revolutionary idea. 
 
 Let's say you are given an image of mona-sparrow. Something like this: 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
