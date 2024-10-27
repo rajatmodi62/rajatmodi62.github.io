@@ -50,7 +50,9 @@ But now we are in times of peace and love. So, we need an interesting compromise
 can show that extremely plausible ideas are just wrong and extremely implausible ones, like learning a entire complicated system by end-to-end gradient
 decent, are just right.- Geoff Hinton, GLOM
 
-Stupid ideas work, and everyone seems happy with them. GLOM is intuitive, but godammn thing was not working in practice. With APM, we try to rectify this problem and argue that what is in fact intuitive, is what actually works in practice. 
+Stupid ideas work, and everyone seems happy with them. After all publishing is an optimization problem right?: maximize the number of tier 1 papers in shortest time. Who cares about quality and fundamentals? 
+
+GLOM is intuitive, but godammn thing was not working in practice. With APM, we try to rectify this problem and argue that what is in fact intuitive, is what actually works in practice. 
 
 So, what is GLOM about, and how does it settle the debate between the connectionists and symbolists?
 
