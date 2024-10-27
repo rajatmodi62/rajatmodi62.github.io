@@ -115,6 +115,11 @@ Sometimes, Godzilla has to read papers on the arxiv. But, he has poor eyesight. 
 
 p.s. shneaked in a little godzilla in our paper. sooo shorrry. Please don't tell my advisor. He'll be angry. We don't want him to be angry. Angry bad. Happy good. Mooooooo............. Ok, you can tell him, but after i graduate. 
 
+
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
 There are still a lot more papers to be shipped to NeurIPS for babies. 
 
 As turing concludes in his seminal paper, "We can see but a short distance ahead, but we can see plenty there that needs to be done". I have done it alone till now. This is a call to action. Please join the ship before it is too late. 
