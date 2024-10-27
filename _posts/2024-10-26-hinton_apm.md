@@ -77,7 +77,7 @@ Let's say you are given an image of mona-sparrow. Something like this:
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\mona_sparrow.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    <b> A mona-sparrow.</b> She is cut into four pieces, and each piece is numbered. This number can be a stupid positional encoding for all we care. 
+    <b> A mona-sparrow.</b> She is cut into four pieces, and each piece is numbered. This number can be a positional encoding for all we care. 
 </div>
 
 And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So basically, each of this piece is a token you feed to the hinton's glom. This is how you feed it from the bottom:
