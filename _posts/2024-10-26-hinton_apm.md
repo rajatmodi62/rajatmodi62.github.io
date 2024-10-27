@@ -36,7 +36,7 @@ Now, i dont have a grandiose story to tell. There is no eureka moment: Unlike th
 
 So the whole story began when Geoff Hinton put out two papers on arxiv. The first one was GLOM, and second one was forward-forward. GLOM was an idea which was not working at all. I talked to quite a few people over the years, and they told me:<b>"Hinton's a crazy old nut".</b> That was a big blow to us part-whole nerds. (Shame Shame, Poppy shame to them!!)
 
-In the perception community, there has been a long term cold-war going on. The warriors can be split among two factions: 
+In the perception community, there has been a long term cold-war going on. The clan-warriors can be split among two factions: 
 
 1) <b>The connectionists, aka the cool hinton crowd</b>: guys who believe that brain contains these little neurons. So in a machine, just build some mathematical equivalent of these neurons, and learn the connection strengths between them. Suppose a neural net has to represent an object. Then the presence of an object is governed by some distributed representation that it triggers inside the network. They invented the backpropagation as their weapon: that neural nets with multiple layers could learn interesting internal representations, and overcome the limitations of frank-rosenblatt's perceptron. Frank's perceptron was just a single input layer, and single output layer, and didnt possess any hidden layers. Sad perceptron. But anyways, backpropogation seemed to do the job well.
 
@@ -44,21 +44,21 @@ In the perception community, there has been a long term cold-war going on. The w
 
 There has been a great deal of bloodshed on both sides. Countless soldiers have sacrificed their lives to their respective causes. <b>There is no clear winner</b>. People have lost hope. There is no settling this debate hmmmm. 
 
-But now we are in times of peace and love. So, we need an interesting compromise. A peace treaty of sorts. Something everyone could be happy with. GLOM seems to offer just that. The only problem was that it was a mere philosophy.
+But now we are in the times of peace and love. So, we need an interesting compromise. A peace treaty of sorts. Something everyone could be happy with. GLOM seems to offer just that. The only problem was that it was a mere philosophy.
 
 > The difference between science and philosophy is that experiments
 can show that extremely plausible ideas are just wrong and extremely implausible ones, like learning a entire complicated system by end-to-end gradient
 decent, are just right.- Geoff Hinton, GLOM
 
-Stupid ideas work, and everyone seems happy with them. After all publishing is an optimization problem right?: Maximize the number of tier 1 papers in shortest time. Who cares about quality and fundamentals, as long as the citation count is high? GLOM is intuitive, but was not working in practice. With APM, we try to rectify this problem and argue that what is in fact intuitive, is what actually works in practice. 
+Stupid ideas work, and everyone seems happy with them. After all publishing is an optimization problem right?: Maximize the number of tier 1 papers in shortest time. Who cares about quality and fundamentals, as long as the citation count is high? GLOM is intuitive, but was not working in practice. With APM, we try to rectify this problem and argue that what is in fact intuitive, can actually work better in practice. 
 
-So, what is GLOM about, and how does it settle the debate between the connectionists and symbolists?
+So, what is GLOM about, and how does it settle the debate between the warriors of connectionism and symbolism?
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\glom_islands.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: left;">
-    Figure stolen from Hinton's GlOM paper. This illustrates the idea of <b>Islands of Agreement</b>
+    Figure stolen with love from Hinton's GLOM paper. This illustrates the idea of <b>Islands of Agreement</b>
 </div>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
