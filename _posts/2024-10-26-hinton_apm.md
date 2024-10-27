@@ -32,7 +32,7 @@ So here we are. On this blogpost. You and me. Safe. Pinky swear.
 
 And so I will tell  you about this story  of a new model called "Asynchronous Perception Machine". 
 
-Now, i dont have a grandiose story to tell. There is no eureka moment: Unlike the much cooler Ian goodfellow, i didnt go to a bar or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission (star trek), we will travel this bandwagon together. 
+Now, ill be upfront and honest: i dont have a grandiose story to tell. There is no eureka moment: Unlike the much cooler Ian goodfellow, i didnt go to a bar or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission (star trek), we will travel this bandwagon together. 
 
 So the whole story began when Geoff Hinton put out two papers on arxiv. The first one was GLOM, and second one was forward-forward. GLOM was an idea which was not working at all, forward-forward was only working well on mnist. I talked to quite a few people over the years, and they told me:<b>"Hinton's a crazy old nut".</b> That was a big blow to us part-whole nerds. (Shame Shame, Poppy shame to them!!)
 
