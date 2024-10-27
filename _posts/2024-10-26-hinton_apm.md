@@ -88,6 +88,19 @@ And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So
 
 
 
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+There are still a lot more papers to be shipped to NeurIPS for babies. 
+
+As turing concludes in his seminal paper, "We can see but a short distance ahead, but we can see plenty there that needs to be done". I have done it alone till now. This is a call to action. Please join the ship before it is too late. 
+
+till next time,<br>
+love,<br>
+rajat
+
+
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
 
@@ -116,17 +129,6 @@ Sometimes, Godzilla has to read papers on the arxiv. But, he has poor eyesight. 
 p.s. shneaked in a little godzilla in our paper. sooo shorrry. Please don't tell my advisor. He'll be angry. We don't want him to be angry. Angry bad. Happy good. Mooooooo............. Ok, you can tell him, but after i graduate. 
 
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-
-There are still a lot more papers to be shipped to NeurIPS for babies. 
-
-As turing concludes in his seminal paper, "We can see but a short distance ahead, but we can see plenty there that needs to be done". I have done it alone till now. This is a call to action. Please join the ship before it is too late. 
-
-till next time,<br>
-love,<br>
-rajat
 
 ## Future work
 
@@ -153,4 +155,6 @@ What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perh
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+There are some rare instances when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. Little Godzilla just forgot what he had to say when he grabbed the microphone, he is not comfortable on big stages you know. For eg, you can play this video. Do notice the super-cute smirk at :-). Splendid!!! Just in good-humour hehe. 
 
