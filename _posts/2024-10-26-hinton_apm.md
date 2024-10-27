@@ -27,7 +27,7 @@ As I gather my wits by what just happened, he swivels on his chair. Wheeeee. His
 
 Omg. That really hurts. He is correct, so it hurts even more. And no-one can help me. Who cares about a poor, underfed, and miserable graduate student? Everyone has their battles to fight, hills to climb, grants to write, phds to defend and tenures to track. It seems I have no choice, but to finally listen to him. 
 
-So here we are. On this blogpost. A safe space. You and me. A safezone. Promise. 
+So here we are. On this blogpost. You and me. Safe. Pinky swear. 
 
 
 And so I will tell  you about this story  of a new model called "Asynchronous Perception Machine". 
