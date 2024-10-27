@@ -147,8 +147,10 @@ Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes
 
 What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perhaps, I dont need math, because maybe i can learn it with backprop. Or maybe Mars should be next. Really, I'm super serious this time. It's tough to decide. 
 
-There are some <b> rare instances </b> when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. <b> Do notice the super-cute smirk and pierced-nose-wrinkle at timestamp :-). </b>
-
+There are some <b> rare instances </b> when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. <b> Do notice the super-cute smirk and pierced-nose-wrinkle between the  timestamps 1.03- 1.06 :-). </b>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/b-cgktoep4M?si=yBHRTyl4nd9GGkIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <b> Splendid!!! Just in good-humour hehe.</b> In his defence, Little Godzilla gets nervous easily. He is not that comfortable on big stages, you know. So he lost his shit and blabbed all over the panel. Shorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
 
