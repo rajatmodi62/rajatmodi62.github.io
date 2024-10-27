@@ -149,9 +149,9 @@ What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perh
 
 There are some rare instances when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. 
 
-Little Godzilla gets nervous easily, and just forgot what he had to say when he grabbed the microphone, he is not comfortable on big stages you know. So he lost his shit and blabbed all over the stage. Do notice the super-cute smirk and nose-wrinkle at timestamp :-). Splendid!!! Just in good-humour hehe. 
+Little Godzilla gets nervous easily, and just forgot what he had to say when he grabbed the microphone, he is not comfortable on big stages you know. So he lost his shit and blabbed all over the stage. Luckily there wasnt enough audience so notice little godzilla's nervous breakdown. Do notice the super-cute smirk and nose-wrinkle at timestamp :-). Splendid!!! Just in good-humour hehe. 
 
-And now before i sadly leave you, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. So here we go,  
+And now before i leave, and you become sad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. So here we go,  
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E?si=y3Cw43OabskFb_Jn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
