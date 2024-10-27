@@ -149,7 +149,7 @@ What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perh
 
 There are some <b> rare instances </b> when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. <b> Do notice the super-cute smirk and pierced-nose-wrinkle at timestamp :-). Splendid!!! Just in good-humour hehe. </b>
 
-Little Godzilla gets nervous easily, and just forgot what he had to say when he grabbed the microphone, he is not comfortable on big stages you know. So he lost his shit and blabbed all over the stage. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
+Little Godzilla gets nervous easily, and he is not that comfortable on big stages you know. He forgot whatever he had to say when he grabbed the microphone. So he lost his shit and blabbed all over the panel. Sorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
 
 And now before i leave, and you go all saaaad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. So here we go. 
 
