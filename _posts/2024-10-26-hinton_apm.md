@@ -94,7 +94,7 @@ And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So
 
 There are still a lot more papers to be shipped to NeurIPS for babies. 
 
-As turing concludes in his seminal paper, "We can see but a short distance ahead, but we can see plenty there that needs to be done". I keep struggling alone. No one cares. This is a call to action. Please join the ship before it is too late. 
+As turing concludes in his seminal paper, "We can see but a short distance ahead, but we can see plenty there that needs to be done". I keep struggling alone. No one cares. This is a call to action. Please join the ship before it is too late. In any case, this ship has one small mortal machine, as long as he is on this planet called earth. 
 
 till next time,<br>
 love,<br>
