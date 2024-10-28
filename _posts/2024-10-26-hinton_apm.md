@@ -33,7 +33,7 @@ Yeah, thanos wont accept challenge even by schr(h)-<b>uber</b>. Okkkk fine, he c
 
 GLOM is now claimed. GLOM = Geoff's last original model. Or at least his latest lol. 
 
-Thanos has thus spoken. 
+Thanoses have thus spoken. 
 
 ----------------
 
