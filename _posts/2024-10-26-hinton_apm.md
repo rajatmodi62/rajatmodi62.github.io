@@ -271,7 +271,7 @@ He still needs to do the third paper of his phd. Otherwise his advisor Dr. Yoges
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\hinton_steal.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-And now, by the note of sacred academic-tradition, little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania" for himself. It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problem sharing credit). <br>
+And now, by the note of sacred academic-tradition, little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania" for himself. It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problem sharing academic-credit where it is due). <br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
