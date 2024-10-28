@@ -29,7 +29,7 @@ date:   2024-10-26 11:00:00
 
 And now, as even the stars spanning the cosmos <b> shall be made to bear witness </b> to this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee itself, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b> from all the locations of this planet called earth. Locations include land, water, sky, and inside volcanoes too. May this claim forever remain <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
 
-Not even by schr-<b>uber</b>. Okkkk he can challenge it, we accept appeals :-). But, we might veto it. Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
+Yeah, thanos wont accept challenge even by schr-<b>uber</b>. Okkkk he can challenge it, we accept appeals :-). But, we might veto it. Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
 
 ----------------
 
