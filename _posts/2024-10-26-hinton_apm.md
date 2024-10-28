@@ -23,7 +23,7 @@ date:   2024-10-26 11:00:00
 </div>
 
 
-And now, as the planets across the galaxies <b> witness this moment </b>, under the sacred laws of academic-tradition, and the blessings of esteemed NeurIPS program committee itself (on earth), little godzilla on this twenty eighth day of the month of october in the year 2024 of our lord christ <b> hereby claims Yannic Kilcher's "Me-(GLOM)-ania"</b> in the village of Orlando. It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problems  sharing :- ). <br>
+And now, as the planets across the galaxies <b> witness this moment </b>, under the sacred laws of academic-tradition, and the blessings of esteemed NeurIPS program committee itself (on earth), little godzilla on this <b> twenty eighth day of the month of october in the year 2024</b> of our lord christ <b> hereby claims Yannic Kilcher's "Me-(GLOM)-ania"</b> in the village of Orlando. It's a cool machine learning system after all. (Ok you can claim it too, dear big-godzilla, little godzilla has no problems  sharing :- ). <br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
