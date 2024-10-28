@@ -214,6 +214,7 @@ But there is no smile on his face, because he is sad that experiments didnt work
 
 On an occasional weekend, things get too intense. Godzilla has to get out of the lab. His roommate has been very kind to take him to places, because godzilla does not know how to drive. Afterall, Godzilla is not invincible: there are things he cannot do alone. In return, Godzilla buys his roomate food. Food for the car's gas is the deal. Roommate happy, godzilla happy. Their wallet is happy. Win Win. 
 
+Godzillas roommate is called a soumik-ghosh. He comes from west of bengal, a bengal tiger you know. But roomate always angry. He wants to be called S-(how)-mik instead of S-oumik. Godzilla has no idea why people dont keep their names like they want it to be pronounced. 
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino4.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
@@ -276,7 +277,7 @@ It is late night now. We have been on this blog for sooo long. Little godzilla w
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\lullaby.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
-Big godzilla's lullaby in action. It helps little godzillas wake and then sleep again. Wake-sleep algorithm he he. Wait, the slide says Kevin Swersky. Alex Kryzhvysky. Swesky. Kryzhvysky. Zzzzzzzz.
+Big godzilla's lullaby in action. It helps little godzillas wake and then sleep again. Wake-sleep algorithm he he. Wait, the slide says Kevin Swersky. Alex Kryzhvysky. Swersky. Kryzhvysky. Kryzh-(vys)-ky. Kryzh-(swers)-ky. Zzzzzzzz. There is a part-whole relationship there after all. 
 
 
 love, <br>
