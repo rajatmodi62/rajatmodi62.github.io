@@ -245,7 +245,7 @@ And now before i leave, and you go all saaaad, i will dump a few videos we creat
 
 All little  godzilla requests in return is protection from being schmidubered. Please protect him. Little godzilla is still small. Very small. Less than a GB of memory. Maybe little godzilla should go to big godzilla for protection and join his gang. Big godzilla has a nobel now, so he might be willing to give mafia privileges. 
 
-And before you start thinking that little godzilla is very creative, he isn't. He just stole the idea of folding and unfolding from papa godzilla. The last line of papa godzilla talks about mental folding. Hiyaaaa!!
+And before you start thinking that little godzilla is very creative, he isn't. He just stole the idea of folding and unfolding from big godzilla. The last line of big godzilla talks about mental folding. Hiyaaaa!!
 
  <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\hinton_steal.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
