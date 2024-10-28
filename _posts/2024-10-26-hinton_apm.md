@@ -263,7 +263,7 @@ Ok, here are the videos I promised:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-And now, by the note of sacred academic-tradition, and the blessings of NeurIPS program committee, little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania" for himself. It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problem sharing academic-credit where it is due). <br>
+And now, by the note of sacred academic-tradition, and the blessings of NeurIPS program committee, little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania" for himself. It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problems  sharing :- ). <br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
