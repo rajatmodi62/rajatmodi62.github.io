@@ -22,15 +22,15 @@ date:   2024-10-26 11:00:00
     A huge congratulations to <b> Dr. </b> Geoffrey Hinton for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
 </div>
 
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
 
 
 And now, as even the stars spanning the cosmos <b> shall be made to bear witness </b> to this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee itself, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b> from all the locations of this planet called earth. Locations include land, water, sky, and inside volcanoes too. May this claim forever remain <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
 
 Not even by schr-<b>uber</b>. Okkkk he can challenge it, we accept appeals :-). But, we might veto it. Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
-
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
+----------------
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
  
