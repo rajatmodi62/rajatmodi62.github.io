@@ -106,7 +106,7 @@ Ok, so now we need to learn all these arrows. Sometimes they are all red, someti
 
 So if you look along the arrow i show, it shows that as you progress along the different layers of a DINOv2, the representations are pretty cool. At the last layer, all the representations of the DOG like ears, eyes, mouth have automatically given themselves some color. Note that this network was NOT trained with any class labels, just a simple self-supervised loss lol. So this told us that there was something interesting going on in the transformer, and it was able to automatically learn the object parts and their wholes. Somehow, we needed to exploit it. 
 
-Like a cutie pie we are, we were parsing through hintons forward forward paper. And then, we come across this line:
+Like a cutie pie we are, we were parsing through hintons forward forward paper. And then, we case across this line:
 
 >> A static image is a rather boring video - Dr. Geoff Hinton, Forward forward some preliminary investigations.
 
@@ -115,15 +115,39 @@ And when geoff hinton says something, we do that lol.
 So what did we do? We took a static image. We repeated it many times along through a temporal axis. Then it became a boring video that does not move. And then we gave this boring video to a video-transformer like Mvitv2. Note that this Mvitv2 was trained only for action-recognition, and no semantic information was being used here. So, we took a video and pumped through this transformer. We looked at the second or third layer of it, and selected the higher dimensional tokens corresponding to a particular frame. And then, a cutie pie told us to do three dimensional t-sne clustering on them. And so we did that lol. And what did we get:
 
 <div class="gif-container">
-  <figure>
-    <img src="{{ '/assets/img/apm/island_hinton.gif' | relative_url }}" alt="Description of GIF">
-    <figcaption> <b> Hinton's Islands of Agreement </b> were shown by us Neurips2023. Don't they look all cute and beautiful?. They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik.</b></figcaption>
+  <figure style="width: 500px; margin: 0 auto; text-align: center;">
+    <img src="{{ '/assets/img/apm/island_hinton.gif' | relative_url }}" alt="Description of GIF" height="300px">
+    <figcaption><b> Hinton's Islands of Agreement </b> were shown by us Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik.</b></figcaption>
   </figure>
 </div>
 
 So basically this showed that even lower layer in the transformer could give us such sexy islands. And they were soooo beautiful. And these islands were one of the levels in the GLOM. And if we got these islands from different layers in the transformer, they would serve as <b> free sources of supervision </b> for GLOM. So basically, it would tell each layer of GLOM what arrows are what lol. We dont need to learn them. They are already there. So we will <b> just distill representation from a transformer like Mvitv2 or Dino </b> in GLOM lol. 
 
 Now we wish to redirect your attention to one thing. Notice that the islands in the above figure were obtained after repeating a static image along temporal axis to become a boring video. This is very subtle trick: To converge on a stable representation for a scene (in this case a static image), there are two ways you could go about it. The <b> first way  </b> is to look at the same image recurrently over many iterations. That will make the network know what is the best representation of this image. <b> This is what GLOM said in his original paper. He said take a image and do many routing-iterations on it. But, we don't wanna do that</b>. Instead, we do opposite thing. That is the <b> second way</b>. When we repeat the image along the temporal axis, the network looks at the multiple copies of the <b> same image </b> in <b> parallel  lolzy</b>. This operation occupies more memory but takes less time than having to do stupid routing in GLOM. And it gives beautiful islands. 
+
+So all the above discussion can be now wrapped up in the following simplified figure:
+
+<div class="text-center" style="margin: 0 auto; max-width: 900;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\zap.png" style="width: 100%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+Now is the time to visualize this whole thing. Trust me you cannot understand it otherwise. 
+
+So, in the above figure, the trash can means that the input sequence is padded. So, we will be not concerned with any of the red marked region. We already know that the good source of supervision for all the remaining locations in the GLOM can come from a teacher. So let us imagine a teacher. And it can hop around the different locations in the hintons diagram and tell the GLOM model which arrow belongs to what location. This transfer of arrow (aka island) from the teacher to the GLOM is called ZAPPPPP!! 
+
+But, there is one last thing in the GLOM diagram that we need to get rid of. Notice the GLOM's figure along the columns. There are four columns (each containing 4 arrows and a question mark in itself. ) In the original GLOM formulation, these columns were communicating among themselves, and telling each other what arrow goes where. But, in our case since the teacher is telling that information to each cell GLOM, there is <b> no need for having these columns to communicate among themselves. No more routing lol. No routing, no memory issue. It's that simple. </b>
+
+
+But it really is not simple. If the columns dont communicate, how does the GLOM know that it is looking at left half of mona-sparrow, or right-half of her. <b>Afterall, machine perception needs all patches to communicate amongst themselves? </b> And that is the idea of attention right? And  using attention means using too much memory. We dont want to do this. So, we will do this another way. The above diagram can be changed as follows:
+
+
+<div class="text-center" style="margin: 0 auto; max-width: 900;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\glom_col.png" style="width: 100%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+So each column of the GLOM is carrying the whole image in it. Since it contains all the image in itself, there is no more need of attention. The input already carries the context with it. <b> No more routing between columns. That will save memory.</b> Different columns can be numbered according to 1,2,3,4 etc. That way, by concatenating the global image (I, p), where p is the positional encoding, we can create a <b> strong enough </b> column representation for any location. So, the GLOM's architecture will now take this column representation as input and solve the following problem:
+
+>> <b> Given the entire image as input, and a location in the hintons diagram, what is the arrow at that location. That answer can be given by a transformer as a free source of supervision and in this way GLOM can be trained. </b> 
 
 
 
