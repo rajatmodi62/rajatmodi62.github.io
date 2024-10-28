@@ -112,12 +112,12 @@ Like a cutie pie we are, we were parsing through hintons forward forward paper. 
 
 And when geoff hinton says something, we do that lol. 
 
-So what did we do? We took a static image. We repeated it many times along through a temporal axis. Then it became a boring video that does not move. And then we gave this boring video to a video-transformer like Mvitv2. Note that this Mvitv2 was trained only for action-recognition, and no semantic information was being used here. So, we took a video and pumped through this transformer. We looked at the second or third layer of it, and selected the higher dimensional tokens corresponding to a particular frame. And then, a cutie pie told us to do three dimensional t-sne clustering on them. And so we did that lol. And what did we get:
+So what did we do? We took a static image. We repeated it many times along through a temporal axis. Then it became a boring video that does not move. And then we gave this boring video to a video-transformer like Mvitv2. Note that this Mvitv2 was trained only for action-recognition, and no semantic information was being used here. So, we took a video and pumped through this transformer. We looked at the second or third layer of it, and selected the higher dimensional tokens corresponding to a particular frame. And then, a cutie pie told us to do three dimensional t-sne clustering on them. And so we did that lol. And this is what we get:
 
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/island_hinton.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption><b> Hinton's Islands of Agreement </b> were shown by us Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik.</b></figcaption>
+    <figcaption><b> Hinton's Islands of Agreement </b> were shown by us in Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik.</b></figcaption>
   </figure>
 </div>
 
@@ -135,7 +135,7 @@ Now is the time to visualize this whole thing. Trust me you cannot understand it
 
 So, in the above figure, the trash can means that the input sequence is padded. So, we will be not concerned with any of the red marked region. We already know that the good source of supervision for all the remaining locations in the GLOM can come from a teacher. So let us imagine a teacher. And it can hop around the different locations in the hintons diagram and tell the GLOM model which arrow belongs to what location. This transfer of arrow (aka island) from the teacher to the GLOM is called ZAPPPPP!! 
 
-But, there is one last thing in the GLOM diagram that we need to get rid of. Notice the GLOM's figure along the columns. There are four columns (each containing 4 arrows and a question mark in itself. ) In the original GLOM formulation, these columns were communicating among themselves, and telling each other what arrow goes where. But, in our case since the teacher is telling that information to each cell GLOM, there is <b> no need for having these columns to communicate among themselves. No more routing lol. No routing, no memory issue. It's that simple. </b>
+But, there is one last thing in the GLOM diagram that we need to get rid of. Notice the GLOM's figure along the columns. There are four columns (each containing 4 arrows and a question mark in itself. ) In the original GLOM formulation, these columns were communicating among themselves, and telling each other what arrow goes where. But, in our case since the teacher is telling that information to each cell of GLOM, there is <b> no need for having these columns to communicate among themselves. No more routing lol. No routing, no attention. No attention, memory issue. It's that simple. Hiyaaaaaaaaaa!!!</b>
 
 
 But it really is not simple. If the columns dont communicate, how does the GLOM know that it is looking at left half of mona-sparrow, or right-half of her. <b>Afterall, machine perception needs all patches to communicate amongst themselves? </b> And that is the idea of attention right? And  using attention means using too much memory. We dont want to do this. So, we will do this another way. The above diagram can be changed as follows:
@@ -148,6 +148,23 @@ But it really is not simple. If the columns dont communicate, how does the GLOM 
 So each column of the GLOM is carrying the whole image in it. Since it contains all the image in itself, there is no more need of attention. The input already carries the context with it. <b> No more routing between columns. That will save memory.</b> Different columns can be numbered according to 1,2,3,4 etc. That way, by concatenating the global image (I, p), where p is the positional encoding, we can create a <b> strong enough </b> column representation for any location. So, the GLOM's architecture will now take this column representation as input and solve the following problem:
 
 >> <b> Given the entire image as input, and a location in the hintons diagram, what is the arrow at that location. That answer can be given by a transformer as a free source of supervision and in this way GLOM can be trained. </b> 
+
+So we now know that teacher is a transformer. The only problem left is what does the architecture of GLOM look like lol. And to put it together with the teacher and train the little boy. So the GLOM architecture now somewhat like this:
+
+<div class="text-center" style="margin: 0 auto; max-width: 800;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\arch.png" style="width: 100%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+
+We have a mona sparrow image. THen suppose we consider a single Column 1. The column contains entire mona sparrow, and positional encoding corresponding to 1. And then we give this column to MLP. And it screams an answer. That answer is wrong. The teacher zaps it. And MLP does several iterations on this column and then gives the correct answer. The process is repeated for all such dotted columns. 
+
+We will look at the design of this column. 
+<div class="text-center" style="margin: 0 auto; max-width: 800;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\arch_col.png" style="width: 100%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+So this column contains a single cnn filter. We take mona sparrow and run cnn filter on it. That writes these patches to the column. And we can then generate a hardcoded encoding like 1, 2, 3, 4, attach it to column and in this way create a <b> location-specific</b> query for our little MLP. The learnable parameters of this whole little network are just in one CNN filter and one MLP. That's all. <b> No more attention lol. So much for a transformer. </b>. Bbye transformer. We got rid of your attention and kept your positional encoding. Positional encoding is all we need. Hiyaaa!!!!!
+
 
 
 
@@ -212,7 +229,7 @@ Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes
 
 What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perhaps, I dont need math, because maybe i can learn it with backprop. Or maybe Mars should be next. Really, I'm super serious this time. It's tough to decide. 
 
-There are some <b> rare instances </b> when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. This was Unireps workshop panel in NeurIPS 2023. <b> Do notice the super-cute smirk and pierced-nose-wrinkle between the  timestamps 1.00- 1.06 :-). </b> Remember to select the highest quality lol.
+There are some <b> rare instances </b> when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. This was Unireps workshop panel in NeurIPS 2023. <b> Do notice the super-cute smirk and pierced-nose-wrinkle between the  timestamps 1.00- 1.06 :-). </b> Remember to <b> go full screen and select the highest quality lol.</b>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/b-cgktoep4M?si=yBHRTyl4nd9GGkIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -220,6 +237,8 @@ There are some <b> rare instances </b> when even NeurIPS panels don't understand
 <b> Splendid!!! Just in good-humour hehe.</b> In his defence, Little Godzilla gets nervous easily. He is not that comfortable on big stages, you know. So he lost his shit and blabbed all over the panel. Shorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
 
 And now before i leave, and you go all saaaad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. Yes, you: the <b> bigger </b> godzilla. Little godzilla loves you. So here you go. 
+
+All little  godzilla requests is protection from being schmidubered. Please protect him. Little godzilla is still small. Very small. Less than a GB of memory. 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E?si=y3Cw43OabskFb_Jn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
