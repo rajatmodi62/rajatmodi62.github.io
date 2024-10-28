@@ -124,7 +124,7 @@ So what did we do? We took a static image. We repeated it many times along throu
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/island_hinton.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption><b> Hinton's Islands of Agreement </b> were shown by us in Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik.</b></figcaption>
+    <figcaption><b> Hinton's Islands of Agreement </b> were shown by us in Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik. Hiyaaaaaa!!!!!</b></figcaption>
   </figure>
 </div>
 
