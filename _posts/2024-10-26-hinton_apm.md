@@ -24,7 +24,7 @@ date:   2024-10-26 11:00:00
 
 
 
-And now, as even the stars spanning the cosmos <b> shall be made to bear witness </b> to this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee itself, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b> from all the locations of this planet called earth. May this claim forever remain <b>UNCHALLENGED and UNDILUTED.</b>
+And now, as even the stars spanning the cosmos <b> shall be made to bear witness </b> to this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee itself, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b> from all the locations of this planet called earth. Locations include land, water, sky, and inside volcanoes too. May this claim forever remain <b>UNCHALLENGED and UNDILUTED.</b>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
