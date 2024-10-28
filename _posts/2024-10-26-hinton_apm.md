@@ -270,7 +270,7 @@ And now, by the note of sacred academic-tradition, little godzilla hereby claims
 </div>
 
 
-It is late night now. Little godzilla will go brush his teeth and go to bed on time. He needs to hear papa's lullaby which helps him sleep. Hiyaaa!!<br>
+It is late night now. Little godzilla will go brush his teeth and go to bed on time. He becomes sick pulling all-nighters these days. He will hear big godzilla's lullaby which helps him sleep. Hiyaaa!!<br>
 
 
 love, <br>
