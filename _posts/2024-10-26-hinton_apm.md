@@ -113,11 +113,11 @@ Ok, so now we need to learn all these arrows. Sometimes they are all red, someti
 
 So if you look along the arrow i show, it shows that as you progress along the different layers of a DINOv2, the representations are pretty cool. At the last layer, all the representations of the DOG like ears, eyes, mouth have automatically given themselves some color. Note that this network was NOT trained with any class labels, just a simple self-supervised loss lol. So this told us that there was something interesting going on in the transformer, and it was able to automatically learn the object parts and their wholes. Somehow, we needed to exploit it. 
 
-Like a cutie pie we are, we were parsing through hintons forward forward paper. And then, we case across this line:
+Like a cutie pie we are, we were parsing through hintons forward forward paper. And then, we came across this line:
 
 >> A static image is a rather boring video - Dr. Geoff Hinton, Forward forward some preliminary investigations.
 
-And when geoff hinton says something, we do that lol. 
+And when geoff hinton says something, we do that. seriously, just do that. its that simple. 
 
 So what did we do? We took a static image. We repeated it many times along through a temporal axis. Then it became a boring video that does not move. And then we gave this boring video to a video-transformer like Mvitv2. Note that this Mvitv2 was trained only for action-recognition, and no semantic information was being used here. So, we took a video and pumped through this transformer. We looked at the second or third layer of it, and selected the higher dimensional tokens corresponding to a particular frame. And then, a cutie pie told us to do three dimensional t-sne clustering on them. And so we did that lol. And this is what we get:
 
