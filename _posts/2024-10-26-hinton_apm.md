@@ -52,7 +52,7 @@ Omg. That really hurts. He is correct, so it hurts even more. And no-one can hel
 So here we are. On this blogpost. You and me. Safe. Pinky swear. 
 
 
-And so I will tell  you about this story  of a new model called "Asynchronous Perception Machine". 
+And so I will tell  you about this story  of a new model called <b>"Asynchronous Perception Machine".</b> 
 
 Now, ill be upfront and honest: i dont have a grandiose story to tell. There is no eureka moment: Unlike the much cooler Ian goodfellow, i didnt go to a bar or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission (star trek), we will travel this bandwagon together. 
 
