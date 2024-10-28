@@ -238,7 +238,7 @@ There are some <b> rare instances </b> when even NeurIPS panels don't understand
 
 And now before i leave, and you go all saaaad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. Yes, you: the <b> bigger </b> godzilla. Little godzilla loves you. So here you go. 
 
-All little  godzilla requests in return is protection from being schmidubered. Please protect him. Little godzilla is still small. Very small. Less than a GB of memory. Maybe little godzilla should go to big godfather for protection. Big godfather has a nobel now, so he will be able to give mafia privileges. 
+All little  godzilla requests in return is protection from being schmidubered. Please protect him. Little godzilla is still small. Very small. Less than a GB of memory. Maybe little godzilla should go to big godfather for protection and join his gang. Big godfather has a nobel now, so he will be able to give mafia privileges. 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E?si=y3Cw43OabskFb_Jn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
