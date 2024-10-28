@@ -32,6 +32,7 @@ And now, as even the stars spanning the cosmos <b> shall be made to bear witness
 Yeah, thanos wont accept challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
 
 GLOM is thus now claimed. GLOM = Geoff's last original model. Or at least his latest lol.
+
 ----------------
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
