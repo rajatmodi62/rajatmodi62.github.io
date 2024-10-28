@@ -33,7 +33,7 @@ Yeah, thanos wont accept challenge even by schr(h)-<b>uber</b>. Okkkk fine, he c
 
 By the power of infinity stones, GLOM is thus claimed. GLOM = Geoff's last original model. Or at least his latest lol. 
 
-Thanoses have thus spoken. 
+Thanoses have spoken. 
 
 ----------------
 
