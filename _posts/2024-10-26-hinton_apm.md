@@ -23,7 +23,8 @@ date:   2024-10-26 11:00:00
 </div>
 
 
-And now, as the stars across the galaxies <b> witness this grand-moment </b>, under the sacred laws of academic-tradition spanning millenia, and the blessings of esteemed NeurIPS program committee itself (on earth),  <b>MLcollective</b>  on this <b> twenty eighth day of the month of october in the year 2024</b> of our lord christ <b> hereby claims Yannic Kilcher's "Me-(GLOM)-ania"</b> in the village of Orlando. It's a cool machine learning system after all. (Ok you can claim it too, dear big-godzillas, little godzilla has no problems  sharing :- ). <br>
+
+And now, as even the stars across the cosmos <b> shall be made to witness </b> this grand-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee itself, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord Jesus Christ  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b> from all the locations of this planet called earth. May this claim forever be <b>UNCHALLENGED and UNDILUTED.</b>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
