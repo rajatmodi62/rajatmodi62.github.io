@@ -272,7 +272,7 @@ And now, by the note of sacred academic-tradition, little godzilla hereby claims
 
 It is late night now. Little godzilla will go brush his teeth and go to bed on time. Otherwise, papa gets angry. <br>
 
-He still needs to do the third paper of his phd. Otherwise his advisor Dr. Yogesh will get angry. Angry Bad. Happy Good. Moooooooo. He will now go on search for whatever other godzillas have said. Hiyaaa!!
+He still needs to do the third paper of his phd. Otherwise his advisor Dr. Yogesh will get angry. Angry Bad. Happy Good. Moooooooo. He will now go and search for whatever other godzillas have said. Hiyaaa!!
 
 love, <br>
 rajat
