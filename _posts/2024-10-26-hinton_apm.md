@@ -89,7 +89,7 @@ And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So
 Now we will start introducing some technical terms shall we. You will notice that the figure above has 6 columns. There are 4 tokens, and last two are trash cans. So basically, we only need to look at the leftmost 4 columns. Now, consider the token marked 1. Look at the column sitting on it. That column has 4 arrows and a question mark on it. What are all these arrows? The idea is that this column consists of 5 levels, at lowest level it might be representing the nose of the mona, and at the second highest level, it may be representing the entire mona lisa object. Therefore, the lowest level is representing a part and the second highest level is representing the object. 
 
 Now, you will see there are a bunch of arrows. For eg, consider the three red arrows. Perhaps all those red arrows are representing the mona sparrows face. Now look at the lowst level, those  black arrows. Those might be just rgb pixels, and scattered together. The red arrows are in three of the boxes, and they are pointing in all the same directions. Same directions mean that they are all "agreeing" that it is mona sparrows face at that location. Therefore, this leads us to the following conclusion:
->> As we go up in the GLOM's levels, the amount of agreement increases. There are more number of red arrows at the second highest level, than the  black arrows at the lowest level. 
+>> As we go up in the GLOM's levels, the amount of agreement increases. There are more number of red arrows at the second highest level which agree with each other, than the  black arrows at the lowest level. 
 
 Next, you will notice that i marked the last level as <b>useless shit</b>. Why did we do that?
 
