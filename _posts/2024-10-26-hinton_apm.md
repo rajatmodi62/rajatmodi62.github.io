@@ -12,8 +12,7 @@ date:   2024-10-26 11:00:00
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\baby_hinton.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    <b>Geoff Hinton as a baby</b> poses with an anaconda. conda activate <>, he cries. CONDA ACTIVATE <>, he yells. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Bad anaconda.... <br> 
-    Geoff hinton has no choice but to take out a whip and beat the anaconda. Whipppp!!! It still refuses to move. Something needs to be done about this. Something urgent. <b> Maybe a nobel prize? </b> Surely, he knew 60 years ago this day would come. 
+    <b>Geoff Hinton as a baby</b> poses with an anaconda. conda activate <>, he cries. CONDA ACTIVATE <>, he yells. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Bad anaconda.... Geoff hinton has no choice but to take out a whip and beat the anaconda. Whipppp!!! It still refuses to move. Something needs to be done about this. Something urgent. <b> Maybe a nobel prize? </b> Surely, he knew 60 years ago this day would come. 
 </div>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
