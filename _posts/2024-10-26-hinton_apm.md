@@ -275,7 +275,7 @@ It is late night now. Little godzilla will go brush his teeth and go to bed on t
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\lullaby.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
-Big godzilla's lullaby in action. It helps little godzillas wake and then sleep again. Wake-sleep algorithm he he. Kevin Swersky. Alexy Kryzhvysky. Swesky. Kryzhvysky. Zzzzzzzz.
+Big godzilla's lullaby in action. It helps little godzillas wake and then sleep again. Wake-sleep algorithm he he. Wait, the slide says Kevin Swersky. Alex Kryzhvysky. Swesky. Kryzhvysky. Zzzzzzzz.
 
 
 love, <br>
