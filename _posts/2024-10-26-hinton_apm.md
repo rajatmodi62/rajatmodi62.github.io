@@ -22,6 +22,13 @@ date:   2024-10-26 11:00:00
     A huge congratulations to <b> Dr. </b> Geoffrey Hinton for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
 </div>
 
+
+And now, as the planets across the galaxies witness this moment, under the sacred laws of academic-tradition, and the blessings of NeurIPS program committee itself (on earth), little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania". It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problems  sharing :- ). <br>
+
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
  
 We don't want him to be angry. Took me two years to learn this simple lesson. Gosh, I wished I had learnt it sooner.
@@ -263,11 +270,7 @@ Ok, here are the videos I promised:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-And now, as the planets across the galaxies witness this moment, under the sacred laws of academic-tradition, and the blessings of NeurIPS program committee itself (on earth), little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania". It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problems  sharing :- ). <br>
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
 
 
 It is late night now. We have been on this blog for sooo long. Little godzilla will go brush and floss his teeth, gargle on crest's mouthwash, put on his (k)night-suit and go to bed on time. Afterall, he becomes sick pulling all-nighters. He will hear big godzilla's lullaby to tuck himself in. Especially the old coursera lectures. Hiyaaaaaaaaaaaa!!<br>
