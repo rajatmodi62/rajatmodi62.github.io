@@ -263,19 +263,16 @@ Ok, here are the videos I promised:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-It is late night now. Little godzilla will go brush his teeth and go to bed on time. Otherwise, papa gets angry. <br>
-
-He still needs to do the third paper of his phd. Otherwise his advisor Dr. Yogesh will get angry. Angry Bad. Happy Good. Moooooooo. He will now go on search for whatever other godzillas have said. Hiyaaa!!
-
- <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\hinton_steal.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-
 And now, by the note of sacred academic-tradition, little godzilla hereby claims Yannic Kilcher's "Me-(GLOM)-ania" for himself. It's a cool machine learning system after all. (Ok you can claim it too, my lovely big godzilla, little godzilla has no problem sharing academic-credit where it is due). <br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
+
+
+It is late night now. Little godzilla will go brush his teeth and go to bed on time. Otherwise, papa gets angry. <br>
+
+He still needs to do the third paper of his phd. Otherwise his advisor Dr. Yogesh will get angry. Angry Bad. Happy Good. Moooooooo. He will now go on search for whatever other godzillas have said. Hiyaaa!!
 
 love, <br>
 rajat
