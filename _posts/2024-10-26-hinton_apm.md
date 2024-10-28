@@ -240,7 +240,7 @@ There are some <b> rare instances </b> when even NeurIPS panels don't understand
    <iframe width="560" height="315" src="https://www.youtube.com/embed/b-cgktoep4M?si=yBHRTyl4nd9GGkIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<b> Splendid!!! Just in good-humour hehe.</b> In his defence, Little Godzilla gets nervous easily. He is not that comfortable on big stages, you know. So he lost his shit and blabbed all over the panel. Shorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
+<b> Splendid!!! Pure gold ehh :-) Just in good-humour hehe.</b> In his defence, Little Godzilla gets nervous easily. He is not that comfortable on big stages, you know. So he lost his shit and blabbed all over the panel. Shorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
 
 And now before i leave, and you go all saaaad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. Yes, you: the <b> bigger </b> godzilla. Little godzilla loves you. So here you go. 
 
