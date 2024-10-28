@@ -272,7 +272,7 @@ Ok, here are the videos I promised:
 </div>
 
 
-It is late night now. We have been on this blog for sooo long. Little godzilla will now go brush and floss his teeth, gargle on crest's mouthwash, put on his (k)night-suit and go to bed on time. Afterall, he becomes sick pulling those all-nighters. He will hear big godzilla's lullaby to tuck himself in. Especially the old coursera lectures. Hiyaaaaaaaaaaaa!!<br>
+It is late night now. We have been on this blog for sooo long. Little godzilla will now go brush and floss his teeth, gargle on crest's mouthwash, put on his (k)night-suit and go to bed on time. Afterall, he becomes sick pulling those all-nighters. He will hear big godzilla's lullaby on a laptop sitting on his tummy and tuck himself in. Especially the old coursera lectures. Hiyaaaaaaaaaaaa!!<br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\lullaby.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
