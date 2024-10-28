@@ -165,6 +165,15 @@ We will look at the design of this column.
 
 So this column contains a single cnn filter. We take mona sparrow and run cnn filter on it. That writes these patches to the column. And we can then generate a hardcoded encoding like 1, 2, 3, 4, attach it to column and in this way create a <b> location-specific</b> query for our little MLP. The learnable parameters of this whole little network are just in one CNN filter and one MLP. That's all. <b> No more attention lol. So much for a transformer. </b>. Bbye transformer. We got rid of your attention and kept your positional encoding. Positional encoding is all we need. Hiyaaa!!!!!
 
+And the way it takes care of those chom-chom mouths is like this: CNN filter can be thought of as a device which writes <b> symbols </b> on the column. The MLP is akin to a turing machine which reads those symbols and processes information. The output of MLP is vectors. Reasoning is done by operating on vectors in the higher dimensional space, much aking to Word2Vec paper by Mikolov. The only difference is that mikolovs paper did that for words, and talked about analogies in the higher dimensional space. In APM/GLOM the vectors are for images now. 
+
+
+And here is the final architecture for this cute-little model called Asynchronous Perception Machine. Little godzilla still keeps gazing at the simplicity of it.
+
+
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\apm_arch.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
 
 
 
