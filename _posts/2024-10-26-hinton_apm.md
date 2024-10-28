@@ -159,7 +159,7 @@ So we now know that teacher is a transformer. The only problem left is what does
 We have a mona sparrow image. THen suppose we consider a single Column 1. The column contains entire mona sparrow, and positional encoding corresponding to 1. And then we give this column to MLP. And it screams an answer. That answer is wrong. The teacher zaps it. And MLP does several iterations on this column and then gives the correct answer. The process is repeated for all such dotted columns. 
 
 We will look at the design of this column. 
-<div class="text-center" style="margin: 0 auto; max-width: 800;"> <!-- Set max-width as needed -->
+<div class="text-center" style="margin: 0 auto; max-width: 1200;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\arch_col.png" style="width: 100%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
@@ -176,9 +176,6 @@ And here is the final architecture for this cute-little model called Asynchronou
 </div>
 
 
-
-<b> Insert more content here as i get time.  </b>
-
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
@@ -190,7 +187,6 @@ As turing concludes in his seminal paper, "We can see but a short distance ahead
 till next time,<br>
 love,<br>
 rajat
-
 
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
