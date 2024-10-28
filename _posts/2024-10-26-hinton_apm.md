@@ -270,7 +270,7 @@ And now, by the note of sacred academic-tradition, and the blessings of NeurIPS 
 </div>
 
 
-It is late night now. Little godzilla will go brush his teeth, put on his night-suit and go to bed on time. He becomes sick pulling all-nighters these days.    He will hear big godzilla's lullaby which puts him to sweet dreams. Especially the old coursera lectures. Hiyaaaaaaaaaaaa!!<br>
+It is late night now. Little godzilla will go brush and floss his teeth, gargle on a mouthwash, put on his (k)night-suit and go to bed on time. He becomes sick pulling all-nighters these days.    He will hear big godzilla's lullaby which puts him to sweet dreams. Especially the old coursera lectures. Hiyaaaaaaaaaaaa!!<br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\lullaby.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
