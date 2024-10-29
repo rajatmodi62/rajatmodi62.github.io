@@ -29,11 +29,11 @@ date:   2024-10-26 11:00:00
 
 And now, as even the stars spanning the cosmos <b> shall be made to bear witness </b>  this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee itself, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b>. Member's locations can include any land, water, spaceships, and inside volcanoes too. May this claim forever remain <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
 
-Yeah, thanos wont accept challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
+Yeah, members wont accept challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
 
 By the power vested into MLCollective by infinity stones, GLOM hereby rests claimed. GLOM = Geoff's last original model. Or at least his latest.
 
-Thanoses have thus spoken. 
+Members have thus spoken. 
 
 Next time they will speak at DLCT talk. If Rosanne/Jason allow that is :-). 
 
