@@ -49,8 +49,10 @@ and inside volcanoes too. May this clhaim <b>for(h)ever rest ,</b><br>
 May this claim <b>forever rest ,</b><br>
 <b>UNCHALLENGED,</b><br>
 B(h)y <b>Jürgen Schmid-(h)-uber/s.</b><br>
-(so sorry, Hic!, Hic!,we are getting hiccups..)<br>
+(so sorry, Hic!, Hic!,we are getting hiccups..)<br> 
+<br>
 Ok fineeeee, we are not so rigid. We will allow challenges, <br>
+<br>
 By the <b>po(ho)wer vested into MLCollective by,</b> <br>
 Hinton's <b>Infinity Stones,</b><br>
 May this claim <b>IF CHALLENGED,</b><br>
