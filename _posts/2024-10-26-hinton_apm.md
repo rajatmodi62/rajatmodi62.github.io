@@ -35,7 +35,7 @@ shall be <b>FORCED to bear WITN-(H)-ESS</b> this grandiose-moment,<br>
 under the <b>sacred laws</b> of academic-tradition spanning <b>MILLENNIA,</b><br>
 and the blessings of esteemed <b>NeurIPS program committee, </b><br>
 <b>(Me)mbers of the (ML)-Collective </b>on this twenty eighth day of the month of october,<br>
-in the year 2024 of our humble lord <b>Jesus Christ,</b> <br>
+in the year 2024 of our humble lord <b>JESUS CHRIST,</b> <br>
 hereby,<br>
 <b>LAY CL(H)AIM to,</b><br>
  Yannic Kilcher’s ,<br>
