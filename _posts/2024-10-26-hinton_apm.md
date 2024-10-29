@@ -27,13 +27,46 @@ date:   2024-10-26 11:00:00
 </div>
 
 
-And now, as even the stars spanning the cosmos <b> shall be forced to bear witness </b>  this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b>. Member's locations can include any land, water, spaceships, and inside volcanoes too. May this claim forever rest <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
+
+(footnote: German needs H) <br>
+And <b>N(H)OW ,</b> <br>
+as <b>even the ST(H)ARS</b> spanning the coshmosh,<br>
+shall be <b>FORCED to bear WITN-(H)-ESS</b> this grandiose-moment,<br>
+under the <b>sacred laws</b> of academic-tradition spanning <b>MILLENNIA,</b><br>
+and the blessings of esteemed <b>NeurIPS program committee, </b><br>
+<b>(Me)mbers of the (ML)-Collective </b>on this twenty eighth day of the month of october,<br>
+in the year 2024 of our humble lord <b>Jesus Christ,</b> <br>
+hereby,<br>
+<b>LAY CL(H)AIM to,</b><br>
+ Yannic Kilcher’s ,<br>
+<b>“(Me)-GLO-(MiL)-lennia”.</b><br>
+Member’s locations can include any land, water, spaceships,<br>
+and inside volcanoes too. May this clhaim <b>for(h)ever rest ,</b><br>
+<b>ETERNAL,</b><br>
+<b>UNWAVERED,</b><br>
+<b>UNDILUTE</b><br>
+(a little cough.... <b>D</b>. sorry, ran out of breath, what was we saying? oh, we remember now)<br>
+May this claim <b>forever rest ,</b><br>
+<b>UNCHALLENGED,</b><br>
+B(h)y <b>Jürgen Schmid-(h)-uber/s.</b><br>
+(so sorry, Hic!, Hic!,we are getting hiccups..)<br>
+Ok fineeeee, we are not so rigid. We will allow challenges, <br>
+By the <b>po(ho)wer vested into MLCollective by,</b> <br>
+Hinton's <b>Infinity Stones,</b><br>
+May this claim <b>IF CHALLENGED,</b><br>
+Be resolved,<br>
+By the members themselves. <br>
+p.s. We have members from <b>(H)-Uber/s too</b>(cc Rosanne Liu, Jason Yosinski).)..<br>
+p.s. the six infinity stones are nobhel, turhing, roshen-blatt, rumel-hart, Hyun-dai, and astur-h-ias. <br>
+
+
+<!-- And now, as even the stars spanning the cosmos <b> shall be forced to bear witness </b>  this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b>. Member's locations can include any land, water, spaceships, and inside volcanoes too. May this claim forever rest <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
 
 Yeah, members won't entertain challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
 
 By the power vested into MLCollective by infinity stones, GLOM hereby rests claimed. GLOM = Geoff's last original model. Or at least his latest.
 
-Members have thus spoken. 
+Members have thus spoken.  -->
 
 <!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
@@ -73,7 +106,7 @@ In the perception community, there has been a long term cold-war going on. The c
 
 1) <b>The connectionists, aka the cool hinton crowd</b>: guys who believe that brain contains these little neurons. So in a machine, just build some mathematical equivalent of these neurons, and learn the connection strengths between them. Suppose a neural net has to represent an object. Then the presence of an object is governed by some distributed representation that it triggers inside the network. They invented the backpropagation as their weapon: that neural nets with multiple layers could learn interesting internal representations, and overcome the limitations of frank-rosenblatt's perceptron. Frank's perceptron was just a single input layer, and single output layer, and didnt possess any hidden layers. Sad perceptron. But anyways, backpropogation seemed to do the job well. It also effectively shut those people who boooed connectionism. 
 
-2) <b>The symbolists, i.e. the chom chom/minsky crowd</b>. They believe that there are symbols in the brain, like some representation of what an apple means like, what godzilla means like etc. So brain has all this interesting grammar for all these objects. This vocabulary is called symbols. Then these symbols interact with each other at lower levels, and some reasoning happens at the higher level. 
+2) <b>The symbolists, i.e. the minsky crowd</b>. They believe that there are symbols in the brain, like some representation of what an apple means like, what godzilla means like etc. So brain has all this interesting grammar for all these objects. This vocabulary is called symbols. Then these symbols interact with each other at lower levels, and some reasoning happens at the higher level. 
 
 There has been a great deal of bloodshed on both sides. Countless soldiers have sacrificed their lives to their respective causes. <b>There is no clear winner</b>. People have lost hope. There is no settling this debate hmmmm. 
 
@@ -189,7 +222,7 @@ We will look at the design of this column.
 
 So this column contains a single cnn filter. We take mona sparrow and run cnn filter on it. That writes these patches to the column. And we can then generate a hardcoded encoding like 1, 2, 3, 4, attach it to column and in this way create a <b> location-specific</b> query for our little MLP. The learnable parameters of this whole little network are just in one CNN filter and one MLP. That's all. <b> No more attention lol. So much for a transformer. </b>. Thku transformer. We got rid of attention and kept your positional encoding. Positional encoding is all we need. Hiyaaa!!!!!
 
-And the way it takes care of those chom-chom mouths is like this: CNN filter can be thought of as a device which writes <b> symbols </b> on the column. The MLP is akin to a turing machine which reads those symbols and processes information. The output of MLP is vectors. Reasoning is done by operating on vectors in the higher dimensional space, much aking to Word2Vec paper by Mikolov. The only difference is that mikolovs paper did that for words, and talked about analogies in the higher dimensional space. In APM/GLOM the vectors are for images now. 
+And the way it takes pacifies of those symbolists is like this: CNN filter can be thought of as a device which writes <b> symbols </b> on the column. The MLP is akin to a turing machine which reads those symbols and processes information. The output of MLP is vectors. Reasoning is done by operating on vectors in the higher dimensional space, much aking to Word2Vec paper by Mikolov. The only difference is that mikolovs paper did that for words, and talked about analogies in the higher dimensional space. In APM/GLOM the vectors are for images now. 
 
 
 And here is the final architecture for this cute-little model called Asynchronous Perception Machine. Little godzilla still keeps gazing at the simplicity of it.
