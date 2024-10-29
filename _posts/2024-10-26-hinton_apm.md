@@ -31,7 +31,7 @@ And now, as even the stars spanning the cosmos <b> shall be made to bear witness
 
 Yeah, thanos wont accept challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
 
-By the power vested to MLCollective by infinity stones, GLOM is hereby claimed. GLOM = Geoff's last original model. Or at least his latest lol. 
+By the power vested in MLCollective by infinity stones, GLOM is hereby claimed. GLOM = Geoff's last original model. Or at least his latest lol. 
 
 Thanoses have spoken. 
 
