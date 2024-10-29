@@ -62,7 +62,7 @@ Hinton's <b>Infinity Stones,</b><br>
 May this claim <b>IF CHALLENGED,</b><br>
 Be resolved,<br>
 By the members themselves. <br>
-p.s. We have members from <b>(H)-Uber/s too</b>(cc Rosanne Liu, Jason Yosinski).)..<br>
+p.s. We have the supreme controllers from <b>(H)-Uber/s too</b>(cc Rosanne Liu, Jason Yosinski).)..<br>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\infinity_stone.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
