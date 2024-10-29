@@ -5,7 +5,7 @@ title:  "Asynchronous Perception Machine: A little godzilla's journey"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
-> APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-haters. Chom chom. Hiyaaaaaaa!!!!!! 
+> APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-haters. Hiyaaaaaaa!!!!!! 
 
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
@@ -224,7 +224,7 @@ We will look at the design of this column.
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\arch_col.png" style="width: 100%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-So this column contains a single cnn filter. We take mona sparrow and run cnn filter on it. That writes these patches to the column. And we can then generate a hardcoded encoding like 1, 2, 3, 4, attach it to column and in this way create a <b> location-specific</b> query for our little MLP. The learnable parameters of this whole little network are just in one CNN filter and one MLP. That's all. <b> No more attention lol. So much for a transformer. </b>. Thku transformer. We got rid of attention and kept your positional encoding. Positional encoding is all we need. Hiyaaa!!!!!
+So this column contains a single cnn filter. We take mona sparrow and run cnn filter on it. That writes these patches to the column. And we can then generate a hardcoded encoding like 1, 2, 3, 4, attach it to column and in this way create a <b> location-specific</b> query for our little MLP. The learnable parameters of this whole little network are just in one CNN filter and one MLP. That's all. Thku so much transformer. We kept your positional encoding. Positional encoding is what we need. Hiyaaa!!!!!
 
 And the way it takes pacifies of those symbolists is like this: CNN filter can be thought of as a device which writes <b> symbols </b> on the column. The MLP is akin to a turing machine which reads those symbols and processes information. The output of MLP is vectors. Reasoning is done by operating on vectors in the higher dimensional space, much aking to Word2Vec paper by Mikolov. The only difference is that mikolovs paper did that for words, and talked about analogies in the higher dimensional space. In APM/GLOM the vectors are for images now. 
 
