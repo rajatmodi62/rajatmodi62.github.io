@@ -62,7 +62,7 @@ p.s. We have members from <b>(H)-Uber/s too</b>(cc Rosanne Liu, Jason Yosinski).
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\infinity_stone.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    <b> BEHOLD, O Human, </b>, gazeth at the six infinity stones of <b>THANOS</b> in their full gl(h)ory: nob(h)el, tur(h)ing, ros(h)en-blatt, rumel-(h)art, (H)yun-dai, and astur-(h)-ias.
+    <b> BEHOLD, O Human </b>, gazeth at the six infinity stones of <b>THANOS</b> in their full gl(h)ory: nob(h)el, tur(h)ing, ros(h)en-blatt, rumel-(h)art, (H)yun-dai, and astur-(h)-ias.
 </div>
 <!-- And now, as even the stars spanning the cosmos <b> shall be forced to bear witness </b>  this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b>. Member's locations can include any land, water, spaceships, and inside volcanoes too. May this claim forever rest <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
 
