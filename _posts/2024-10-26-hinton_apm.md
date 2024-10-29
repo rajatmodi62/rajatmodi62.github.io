@@ -45,7 +45,10 @@ and inside volcanoes too. May this clhaim <b>for(h)ever rest ,</b><br>
 <b>ETERNAL,</b><br>
 <b>UNWAVERED,</b><br>
 <b>UNDILUTE</b><br>
+<br>
 (a little cough.... <b>D</b>. sorry, ran out of breath, what was we saying? oh, we remember now)<br>
+<br>
+
 May this claim <b>forever rest ,</b><br>
 <b>UNCHALLENGED,</b><br>
 B(h)y <b>Jürgen Schmid-(h)-uber/s.</b><br>
