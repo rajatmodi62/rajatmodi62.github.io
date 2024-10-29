@@ -35,7 +35,7 @@ By the power vested into MLCollective by infinity stones, GLOM hereby rests clai
 
 Members have thus spoken. 
 
-Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-). 
+<!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
 ----------------
 
