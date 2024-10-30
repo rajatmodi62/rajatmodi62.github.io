@@ -26,7 +26,7 @@ date:   2024-10-26 11:00:00
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-Hinton wrote the GLOM paper. GLOM means "coming together". And since it somewhat works now, You may ask, what gives me the privilege. Well, i spent my life trying to make it work. So, on the behalf of everyone. <br>
+Hinton wrote the GLOM paper. GLOM means "coming together". And since it somewhat works now, You may ask, what gives us the privilege. Well, we spent 3 years trying to make it work. So, on the behalf of everyone. <br>
 
 (footnote: German needs H) <br>
 <br>
