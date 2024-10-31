@@ -93,12 +93,6 @@ You know what? he really takes all this stuff seriously. A lot of people are exc
 
 As I gather my wits by what just happened, he swivels on his chair. Wheeeee. His desk is 45 degrees away from where I am s(h)itting, but within a constant slapping radius. Openreview is open on his screen for his review. He clicks a button and sends someone's paper back to where it came from.  Shooooo. 
 
-<!-- <div class="text-center" style="margin: 0 auto; max-width: 400px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\yogesh.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-<div class="caption" style="text-align: center;">
-    <b>Dr. Yogesh. He is an area chair.</b> The last line of defence on what gets in. We dont want him angry. 
-</div> -->
 
 Omg. That really hurts. He is correct, so it hurts even more. And no-one can help me. Who cares about a poor, underfed, and miserable graduate student? Everyone has their battles to fight, hills to climb, grants to write, phds to defend and tenures to track. It seems I have no choice, but to finally listen to him. 
 
