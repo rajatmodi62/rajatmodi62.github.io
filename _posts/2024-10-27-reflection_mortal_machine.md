@@ -54,3 +54,4 @@ And then we feel the hands of god upon us. For he holds the very planet we live 
 These five levels of the part-while hierarchies are the five levels of Geoffrey Everest Hinton's GLOM. For some reason, i am reminded of my own mortality on this earth. So, let the topic of phd be on mortal machines. And i can finally feel closure in my bones: i am finally ok with no longer seeking public-recognition, and this blog never being read by any other mortal machine on this earth. Let this be crawled by a bot of a search engine, and merge itself forever into the transcendental cosmos. I'm finally at peace.
 
 rajat
+a forever-humbled mortal machine
