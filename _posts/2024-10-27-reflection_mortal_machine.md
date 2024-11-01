@@ -30,7 +30,7 @@ Consider the lowest level of GLOM. for eg. we get down on the floor, and from al
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\purpose\pray_floor.webp" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-Next, we are still on the floor, but see the sun through a window of our homes. That makes us remember that their are still untamed elements better than us in this world. 
+Next, we are still on the floor, but see the sun through a window of our homes. That makes us remember that there are still untamed elements better than us in this world. 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\purpose\cathedral.webp" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
