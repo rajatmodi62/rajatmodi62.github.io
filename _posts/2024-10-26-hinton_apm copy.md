@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Asynchronous Perception Machine: A little godzilla's journey"
+title:  "On Asynchronous Perception Machine: A little godzilla's journey"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
