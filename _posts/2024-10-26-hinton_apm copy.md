@@ -351,7 +351,7 @@ May, the silent man remind us of slow science. May he make us remember, that as 
 </div>
 
 Reflections of the silent man can be found here. 
-Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. <br> 
+Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A really smart silent man. :-) <br> 
 
 Geoffrey Hinton on mortal computation. 
 
