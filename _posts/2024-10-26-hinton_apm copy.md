@@ -71,6 +71,14 @@ p.s. We have the supreme controllers, lords of the rings,  from <b>(H)-Uber/s to
 <div class="caption" style="text-align: center;">
     <b> BEHOLD,</b> O (H)-Uber/s who are <b>also the important members of borg/MLcollective </b>, for the COSMOS shall now speak. And they shall speak only <b>ONCE</b>. Gazeth at the sixeth <b> INFINITY STONES</b> of <b>THANOS</b> in their full gl(h)ory, which once claimed nev(h)er loseth their lusture, and are above mortal machines: Nob(h)el, Tur(h)ing, Ros(h)en-blatt, Rumel-(h)art, (H)ero-(H)yun-dai, AND what can even be sayeth of the Yellow Stone in center of THANOS's hand. That's his <b> PRINCESS </b>. Let HER name be knoweth across the cosmos as <b>Astur-(h)-ias</b>. There are more stones too lol. But that will need other hand. That glove is still under construction. We will update once it gets completed. S(h)orry. Ive limited time for all this comedy after all. This wont give me my p(h)d. Have to meet with my advisor tm(h)ww. A lot more work needs to be done. 
 </div>
+
+<div class="gif-container" style="text-align: left;">
+  <figure style="width: 500px; margin: 0;">
+    <img src="{{ '/assets/img/apm/tongue.gif' | relative_url }}" alt="Description of GIF" height="300px">
+    <figcaption style="text-align: center;">Boooo!!!!!!</figcaption>
+  </figure>
+</div>
+
 <!-- And now, as even the stars spanning the cosmos <b> shall be forced to bear witness </b>  this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b>. Member's locations can include any land, water, spaceships, and inside volcanoes too. May this claim forever rest <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
 
 Yeah, members won't entertain challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
@@ -351,7 +359,9 @@ May, the silent man remind us of slow science. May he make us remember, that as 
 </div>
 
 Reflections of the silent man can be found [here](https://rajatmodi62.github.io/2024/10/26/reflection_mortal_machine/). 
-Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A silent man. A true godzilla. A cute noble prize godzilla :-) . There you go jurgen-schmidoobers. Booooooo!!!!<br> 
+Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A silent man. A true godzilla. A cute noble prize godzilla :-) . 
+
+
 
 Geoffrey Hinton on mortal computation. 
 
