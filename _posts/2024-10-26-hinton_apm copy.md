@@ -351,12 +351,12 @@ May, the silent man remind us of slow science. May he make us remember, that as 
 </div>
 
 Reflections of the silent man can be found here. 
-Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A really smart silent man afterall. A true godzilla. Noble Godzilla. :-) <br> 
+Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A silent man. A true godzilla. Noble Godzilla. :-) <br> 
 
 Geoffrey Hinton on mortal computation. 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=sghvwkXV3VU&ab_channel=VectorInstitute" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sghvwkXV3VU?si=qCU0DqSD_IYHFJRF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 rajat
