@@ -363,7 +363,7 @@ Silent man is a mortal machine, which is imprecise, which then reduces to Geoffr
 
 
 
-Geoffrey Hinton on mortal computation. 
+Geoff Hinton on mortal computation. 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sghvwkXV3VU?si=qCU0DqSD_IYHFJRF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
