@@ -305,7 +305,7 @@ There are some <b> rare instances </b> when even NeurIPS panels don't understand
 
 <b> Splendid!!! Pure gold ehh :-) Just in good-humour hehe.</b> In his defence, Little Godzilla gets nervous easily. He is not that comfortable on big stages, you know. So he lost his shit and blabbed all over the panel. Shorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
 
-And now before i leave, and you go all shaaaad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. Yes, you: the <b> bigger </b> godzilla. Little godzilla loves you. So here you go. 
+And now before i leave, and you go all awwww and shaaaad, i will dump a few videos we created for this project over the years. This jekyll blog is stupid and embedding these videos messes up the spacing. But that shouldnt prevent me from sharing cool stuff with you. Yes, you: the <b> bigger </b> godzilla. Little godzilla loves you. So here you go. 
 
 All little  godzilla requests in return is protection from being schmidubered. Please protect him. Little godzilla is still small. Very small. Less than a GB of memory. Maybe little godzilla should go to big godzilla for protection and join his gang. Big godzilla has a nobel now, so he might be able to provide some mafia protection. 
 
@@ -337,3 +337,26 @@ Big godzilla's lullaby in action. It helps little godzillas wake and then sleep 
 
 love, <br>
 little_dogzilla/s
+
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\silent_man.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+Finally managed to squeeze "The Silent Man" in Openereview and the NeurIPS community. May this silent man be cherished. 
+
+May, the silent man remind us of slow science. May he make us remember, that as the world goes in a state of turmoil, there are a lot of silent men standing guard. May the silent man remind us that science is greater than ourselves, and it is the collective progress that matters. May the silent man remind us that humanity is our collective relationships, love, and mutual respect for each other. May the silent man help us be humble and true to our families. May the silent man help us remember that we are still dependent on each other. Merry Christmas!!. May the silent man be the santa claus who brings hope and gifts in our lives. 
+
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\purpose\cathedral.webp" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
+Reflections of the silent man can be found here. 
+Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. <br> 
+
+Geoffrey Hinton on mortal computation. 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=sghvwkXV3VU&ab_channel=VectorInstitute" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+rajat
