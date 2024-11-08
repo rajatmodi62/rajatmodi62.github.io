@@ -350,7 +350,7 @@ May, the silent man remind us of slow science. May he make us remember, that as 
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\purpose\cathedral.webp" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-Reflections of the silent man can be found here. 
+Reflections of the silent man can be found [here](https://rajatmodi62.github.io/2024/10/26/reflection_mortal_machine/). 
 Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A silent man. A true godzilla. Noble Godzilla. :-) <br> 
 
 Geoffrey Hinton on mortal computation. 
