@@ -434,7 +434,7 @@ Gotta do something about this 😡. <br>
 Let's make their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
 
 <br>
-we'll behave, <br> for now.<br>
+we'll behave, <br> for now at least.<br>
 
 <!-- Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
