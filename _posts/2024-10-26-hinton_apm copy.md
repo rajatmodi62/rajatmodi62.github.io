@@ -437,3 +437,9 @@ forever, <br>
 a silent man, <br>
 a small member of the <b>MLCollective.</b>
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+<div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\sauron.webp" style="width: 50%; height: auto;"> 
+</div>
+<div class="caption" style="text-align: center;">
+    And in case you are enjoying the ride too much, remember <b>Sauron's EYE is Watching. </b> Don't mess with it. Or you can. We dont mind. 😘   
+</div>
