@@ -433,5 +433,5 @@ a below-average, subpar-student, <br>
 who is not productive, <br>
 does not publish often, <br>
 never went to a big-school, <br>
-forever a small member of the MLCollective.
+forever, a small member of the MLCollective.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
