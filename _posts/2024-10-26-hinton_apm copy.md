@@ -412,7 +412,7 @@ You can checkout the figure on page 27 of the APM paper :-) <br>
 
 There is another easter egg🥚 named barney. See if you can find him. 
 
-p.s. plz plz don't tell NeurIPS and my advisor. They are strict. Shoooo!!! 
+p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫🪄. Shoooo!!! 
 
-p.s. just wait till their gradient descent/backpropogation/knowledge-distillation goes away too :-). nah just kidding. pinky swear.
+p.s. just wait till their gradient-descent/backpropogation/knowledge-distillation goes away too 😛. nah, just kidding😉. promise🤝. pinky swear.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
