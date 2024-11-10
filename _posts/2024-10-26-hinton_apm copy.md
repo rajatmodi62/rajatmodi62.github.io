@@ -434,5 +434,6 @@ who is not productive, <br>
 has 20 citations only, <br>
 does not publish often, <br>
 never went to a big-school, <br>
-forever, a small member of the <b>MLCollective.</b>
+forever, <br>
+a small member of the <b>MLCollective.</b>
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
