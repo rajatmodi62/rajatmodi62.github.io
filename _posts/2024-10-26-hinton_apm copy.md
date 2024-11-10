@@ -287,7 +287,7 @@ love,<br>
 little_godzilla/s
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 3 (sleeping quarters): Roommate woke me from sleep early morning. The shock of nobel prize is still sunking in the community. Congratulations are flowing around. Everyone feels its their nobel.</b>  
+<b> Update 3 (sleeping quarters): Roommate woke me from sleep early morning. The shock of nobel prize is still sunking in the MLCollective. Congratulations are flowing around. Everyone feels its their nobel.</b>  
 
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
