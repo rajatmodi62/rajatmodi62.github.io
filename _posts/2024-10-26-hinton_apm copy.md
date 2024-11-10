@@ -425,7 +425,7 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 
 <b> Update 6: Advisor scolded me again. </b> 
 
-Gotta do something about this 😡. <br>
+Gotta do something about him 😡. <br>
 
 Let's make their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br>
 
