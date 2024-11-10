@@ -419,4 +419,4 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 
 Gotta do something about this 😡. <br>
 
-just wait till their gradient-descent/backpropogation/knowledge-distillation/ goes away too 😛. nah, just kidding😉. promise🤝. pinky swear.
+just wait till their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear.
