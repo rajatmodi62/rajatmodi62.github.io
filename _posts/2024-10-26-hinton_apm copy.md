@@ -421,9 +421,15 @@ Gotta do something about this 😡. <br>
 
 just wait till their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br>
 
-Machine-learning midterm tmw. need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
+Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
-Just a below-average, subpar, student, <b> trying to be a researcher</b> after all. Books are always correct. Not our intuitions.  I'd rather go with my gut anyday. Time to rewrite their books. Thanks but no thanks. 
+Just  after all. Books are always correct. Not our intuitions.  <br>
 
-rajat.
+I'd rather go with my gut anyday. Time to rewrite their books. <br>
+
+Thanks but no thanks, <br>
+rajat, <br>
+a below-average, subpar, student, <br>
+who never went to a big-school, <br>
+a small member of the MLCollective.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
