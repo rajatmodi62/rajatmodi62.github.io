@@ -429,7 +429,9 @@ I'd rather go with my gut anyday. Time to rewrite their books. <br>
 
 Thanks but no thanks, <br>
 rajat, <br>
-a below-average, subpar, student, <br>
-who never went to a big-school, <br>
-a small member of the MLCollective.
+a below-average, subpar-student, <br>
+who is not productive, <br>
+does not publish often <br>
+never went to a big-school, <br>
+forever a small member of the MLCollective.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
