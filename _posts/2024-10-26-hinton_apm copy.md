@@ -421,7 +421,7 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\sauron.webp" style="width: 50%; height: auto;"> 
 </div>
 <div class="caption" style="text-align: center;">
-    In case you are enjoying the ride too much, <b> ALWAYS remember:</b> Huntron. Geoff Huntron. Lord of the Rings. <b> THE EYE WATCHES ALL. </b> Don't mess with it. Or you can. We don't mind. The more, the merrier. Gotta catch them all.😘   
+    In case you are enjoying the ride too much, <b> ALWAYS remember:</b> <b> HUNTRON's EYE WATCHES ALL. </b> Don't mess with it. Or you can. We don't mind. The more, the merrier. Gotta catch them all.😘   
 </div>
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
