@@ -414,7 +414,7 @@ There is another easter egg🥚 named barney. See if you can find him.
 p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫🪄. Shoooo!!! 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 6: (My advisor): Rajat, again? I am worried about you. </b> 
+<b> Update 6: (My advisor): He scolded me again. </b> 
 
 Gotta do something about this 😡. <br>
 
