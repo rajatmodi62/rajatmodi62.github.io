@@ -431,11 +431,6 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 
 Gotta do something about this 😡. <br>
 
-Let's make their gradient-descent/backpropogation/knowledge-distillation go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
-
-<br>
-we'll behave, <br> for now at least.<br>
-
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godzilla.jpg" style="width: 50%; height: auto;"> 
@@ -443,6 +438,14 @@ we'll behave, <br> for now at least.<br>
 <div class="caption" style="text-align: center;">
     The little godzilla in the battleground. Huntron got it for us. <br>Just a little-school-kid here.  
 </div>
+
+Let's make their gradient-descent/backpropogation/knowledge-distillation go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
+
+<br>
+we'll behave, <br> for now at least.<br>
+
+
+
 --------
 <!-- Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
