@@ -437,6 +437,13 @@ Let's make their gradient-descent/backpropogation/knowledge-distillation go away
 we'll behave, <br> for now at least.<br>
 
 
+<div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godzilla.jpg" style="width: 50%; height: auto;"> 
+</div>
+<div class="caption" style="text-align: center;">
+    The little godzilla in my lab. He did all the damage. Don't blame me. Just a school-kid here.  
+</div>
+--------
 <!-- Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
 Apparently, the instructors think that books are always correct. Not our intuitions.  <br>
