@@ -321,7 +321,7 @@ p.s. shneaked in a little godzilla in our paper. sooo shorrry. Please don't tell
 
 ## Future work
 
-In future, we plan to make more humble godzillas. Each godzilla comes with its own outfit and ablation experiments. You can tell us which ablations you like, and we will combine those to form a nicely-dressed godzilla that remains competitive. One that is customized just for you. And we will do it for free. Without a GPU that is. Oooh and you cannot reproduce this godzilla again. 
+In future, we plan to make more humble godzillas. Each godzilla comes with its own outfit and ablation experiments. You can tell us which ablations you like, and we will combine those to form a nicely-dressed godzilla that remains competitive. One that is customized just for you. And we will do it for free. Without a GPU that is. 
 
 ## Limitation  
 
