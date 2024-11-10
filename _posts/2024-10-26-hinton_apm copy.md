@@ -422,7 +422,7 @@ Let's make their gradient-descent/backpropogation/knowledge-distillation/ go awa
 
 Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
-Apparently, books are always correct. Not our intuitions.  <br>
+Apparently, the instructors think that books are always correct. Not our intuitions.  <br>
 
 I'd rather go with my gut anyday. Time to rewrite their books. <br>
 
