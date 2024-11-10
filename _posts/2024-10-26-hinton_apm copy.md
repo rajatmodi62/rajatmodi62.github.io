@@ -414,6 +414,9 @@ There is another easter egg🥚 named barney. See if you can find him.
 p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫🪄. Shoooo!!! 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+<div style="text-align: center; color: red; font-size: 30px; text-transform: uppercase;">
+    WARNING
+</div>
 <div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\sauron.webp" style="width: 50%; height: auto;"> 
 </div>
