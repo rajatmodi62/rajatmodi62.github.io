@@ -423,13 +423,13 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
 
-<b> Update 6: (My advisor): He scolded me again. </b> 
+<b> Update 6: Advisor scolded me again. </b> 
 
 Gotta do something about this 😡. <br>
 
 Let's make their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br>
 
-Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
+<!-- Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
 Apparently, the instructors think that books are always correct. Not our intuitions.  <br>
 
@@ -444,5 +444,5 @@ with 2 papers, and 20 citations,<br>
 never went to a big-school, <br>
 forever, <br>
 a silent man, <br>
-a small member of the <b>MLCollective.</b>
+a small member of the <b>MLCollective.</b> -->
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
