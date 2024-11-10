@@ -415,7 +415,8 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 <div style="text-align: center; color: red; font-size: 30px; text-transform: uppercase;">
-    WARNING.
+    YOU HAVE BEEN <br>
+    WARNED.
 </div>
 <div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\sauron.webp" style="width: 50%; height: auto;"> 
