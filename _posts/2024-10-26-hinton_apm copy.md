@@ -2,33 +2,33 @@
 layout: post
 comments: true
 title:  "On Asynchronous Perception Machine: A little godzilla's journey"
-description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
+description: "APM is one of the first steps towards getting huntron's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
 <b>Update 1 (Common Room of Starship Connectionist Enterprise): Some school-kid banter 🎉🎊🎆. </b>
 
-> APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-doubters. Hiyaaaaaaa!!!!!! 
+> APM is one of the first steps towards getting Geoffrey huntron's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-doubters. Hiyaaaaaaa!!!!!! 
 
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\baby_hinton.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    <b>Dr. Geoff Hinton </b> poses with an anaconda. conda activate <>, he cries. CONDA ACTIVATE <>, he yells. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Bad anaconda.... Geoff hinton has no choice but to take out a whip and beat the anaconda. Whipppp!!! It still refuses to move. Something needs to be done about this. Something urgent. <b> Maybe a nobel prize? </b> Surely, he knew 60 years ago this day would come. 
+    <b>Dr. Geoff Huntron </b> poses with an anaconda. conda activate <>, he cries. CONDA ACTIVATE <>, he yells. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Bad anaconda.... Geoff huntron has no choice but to take out a whip and beat the anaconda. Whipppp!!! It still refuses to move. Something needs to be done about this. Something urgent. <b> Maybe a nobel prize? </b> Surely, he knew 60 years ago this day would come. 
 </div>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino1.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 <div class="caption" style="text-align: center;">
-    A huge congratulations to <b> Baby </b> Geoffrey Hinton for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
+    A huge congratulations to <b> Baby </b> Geoff Huntron for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
 </div>
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-Dr. Geoff Hinton wrote the GLOM paper. GLOM means "coming together". And since it somewhat works now, So, on the behalf of everyone. <br>
+Dr. Geoff huntron wrote the GLOM paper. GLOM means "coming together". And since it somewhat works now, So, on the behalf of everyone. <br>
 
 (footnote: German needs H) <br>
 <br>
@@ -60,7 +60,7 @@ B(h)y <b>Jürgen Schmid-(h)-uber/s.</b><br>
 Ok fineeeee, we are not so rigid. We will allow challenges, <br>
 <br>
 By the <b>po(ho)wer vested into MLCollective by,</b> <br>
-Hinton's <b>Infinity Stones,</b><br>
+huntron's <b>Infinity Stones,</b><br>
 May this claim <b>IF CHALLENGED,</b><br>
 Be resolved,<br>
 By the members themselves. <br>
@@ -98,7 +98,7 @@ My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man
  
 We don't want him to be angry. Took me two years to learn this simple lesson. Gosh, I wished I had learnt it sooner.
 
-"Rajat, grow up. You are working on Hinton's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, as he `suits up' for his class. I can't help it, but he reminds me of barney in "How i met your mother" . 
+"Rajat, grow up. You are working on huntron's GLOM.  GLOM= Geoff's Last Original Model. Shift all this non-technical stuff to your blog post. Be professional. How many times do I have to tell you? As always, you keep complaining and never listen. I am really worried about your research" says Dr Yogesh, as he `suits up' for his class. I can't help it, but he reminds me of barney in "How i met your mother" . 
 
 You know what? he really takes all this stuff seriously. A lot of people are excited for computer vision after all. From outside, he is such a cutie-pie and an amazing teacher on whom a lot of girls crush over. Behind the scenes, he is a big godzilla who frequently unleashes his wrath upon little godzillas like me. Poor little godzillas.
 
@@ -114,13 +114,13 @@ And so I will tell  you about this story  of a new model called <b>"Asynchronous
 
 Now, ill be upfront and honest: i dont have a grandiose story to tell. There is no eureka moment: Unlike the much cooler Ian goodfellow, i didnt go to a bar or code up APM in a single night. This is a 3 year long journey. And it has just begun. I don't know where it will take us, but if you choose to accept the mission (star trek), we will travel this bandwagon together. 
 
-So the whole story began when Geoff Hinton put out two papers on arxiv. He thought people had become too boring, so why not bring some excitement to the table. This is not his first time hunting, he did it with backprop, alexnet too. It seems that he exhibits a seasonal-pattern of sorts: he resurfaces every decade or so and whips up a rollercoaster. And when geoff hinton speaks, we pause whatever we are doing and listen. Because, we want to stay on cutting edge of things and not become extinct like dinosaurs lol. 
+So the whole story began when Geoff Huntron put out two papers on arxiv. He thought people had become too boring, so why not bring some excitement to the table. This is not his first time hunting, he did it with backprop, alexnet too. It seems that he exhibits a seasonal-pattern of sorts: he resurfaces every decade or so and whips up a rollercoaster. And when geoff huntron speaks, we pause whatever we are doing and listen. Because, we want to stay on cutting edge of things and not become extinct like dinosaurs lol. 
 
-So, the first one of his rollercoaster was GLOM, and second one was forward-forward. GLOM was an idea which was not working at all, and forward-forward was a learning algorithm only working well on a dataset of black and white digits. I talked to quite a few people over the years about this, and they told me:<b>"Hinton's a crazy old nut".</b> That was a big blow to us part-whole nerds and their underground clubs. (Shame Shame, Poppy shame!! None of the donkeys will know your name!! I am a professional, even if they are not.)
+So, the first one of his rollercoaster was GLOM, and second one was forward-forward. GLOM was an idea which was not working at all, and forward-forward was a learning algorithm only working well on a dataset of black and white digits. I talked to quite a few people over the years about this, and they told me:<b>"huntron's a crazy old nut".</b> That was a big blow to us part-whole nerds and their underground clubs. (Shame Shame, Poppy shame!! None of the donkeys will know your name!! I am a professional, even if they are not.)
 
 In the perception community, there has been a long term cold-war going on. The clan-warriors can be split among two factions: 
 
-1) <b>The connectionists, aka the SUPER COOL hinton crowd</b>: guys who believe that brain contains these little neurons. So in a machine, just build some mathematical equivalent of these neurons, and learn the connection strengths between them. Suppose a neural net has to represent an object. Then the presence of an object is governed by some distributed representation that it triggers inside the network. They invented the backpropagation as their weapon: that neural nets with multiple layers could learn interesting internal representations, and overcome the limitations of frank-rosenblatt's perceptron. Frank's perceptron was just a single input layer, and single output layer, and didnt possess any hidden layers. Sad perceptron. But anyways, backpropogation seemed to do the job well. It also effectively shut those people who boooed connectionism. 
+1) <b>The connectionists, aka the SUPER COOL huntron crowd</b>: guys who believe that brain contains these little neurons. So in a machine, just build some mathematical equivalent of these neurons, and learn the connection strengths between them. Suppose a neural net has to represent an object. Then the presence of an object is governed by some distributed representation that it triggers inside the network. They invented the backpropagation as their weapon: that neural nets with multiple layers could learn interesting internal representations, and overcome the limitations of frank-rosenblatt's perceptron. Frank's perceptron was just a single input layer, and single output layer, and didnt possess any hidden layers. Sad perceptron. But anyways, backpropogation seemed to do the job well. It also effectively shut those people who boooed connectionism. 
 
 Now, we shall throw in some of our thoughts: which we spent several years thinking upon. They may be wrong. They may be right. We dont know. But, they do deserve a place. Let that place be this blog, because no-one seems to appreciate ideas, without working implementation that is. We saw earlier papers in 80's getting in without results, but it seems that the trend has changed: research is 'more sophisticated and empirical'.
 
@@ -155,11 +155,11 @@ But now we are in the times of <b> peace and love and an occasional tease </b>. 
 
 > The difference between science and philosophy is that experiments
 can show that extremely plausible ideas are just wrong and extremely implausible ones, like learning a entire complicated system by end-to-end gradient
-decent, are just right.- Geoff Hinton, GLOM
+decent, are just right.- Geoff huntron, GLOM
 
 Stupid ideas work, and everyone seems happy with them. After all publishing is an optimization problem right?: Maximize the number of tier 1 papers in shortest time and in least amount of investment. Who cares about quality and fundamentals, as long as the citation count is high? GLOM is intuitive, but was not working in practice. With APM, we try to rectify this problem and argue that what is in fact intuitive, can actually work better in practice. 
 
-So, what is GLOM about, and how does it settle the debate between the warrior factions of connectionism and symbolism? For that we take a look at hinton's glom paper.
+So, what is GLOM about, and how does it settle the debate between the warrior factions of connectionism and symbolism? For that we take a look at huntron's glom paper.
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\glom_islands.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
@@ -178,7 +178,7 @@ Let's say you are given an image of mona-sparrow. Something like this:
     <b> A mona-sparrow.</b> She is cut into four pieces, and each piece is numbered. This number can be a positional encoding for all we care. 
 </div>
 
-And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So basically, each of this piece is a token you feed to the hinton's glom. This is how you feed it from the bottom:
+And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So basically, each of this piece is a token you feed to the huntron's glom. This is how you feed it from the bottom:
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\mona_sparrow_glom.png" style="width: 80%; height: auto;"> <!-- Image width is 50% of its parent -->
@@ -193,9 +193,9 @@ Next, you will notice that i marked the last level as <b>useless shit</b>. Why d
 
 Here is the argument: the original idea in GLOM was that at the highest level of the GLOM there is a single representation, which represents the scene level information. So if you took images, say mona sparrow at your home, and mona sparrow in your school, the network will be able to understand the difference between the home and school. But, in practice, it seems very difficult to converge on a scene representation. This is also the reason why the research between  the computer graphics community (aka those neural fields) and perception community is split. The rendering community just focuses on rendering: how to model radiance fields. Their representation just keeps <b>changing </b> with the viewpoint. On the other hand, the perception community does not give a shit about radiance fields: they only model first four levels of glom, i.e. the object level. Not the last one. 
 
-Now, we shall talk about another concept called  <b> The information bottleneck </b> principle. If you look at the figure, you will see there are equal number of arrows at each level (i.e. 6 arrows per level). This means that when information (aka mona sparrow) tokens are fed into the network, they travel through allll these levels and somehow result in these arrows. The number of arrows does not change across levels (there are 6 arrows per level in hintons figure lol),  so there is no loss of information. There is no  downsampling like the one which occurs in CNNs. 
+Now, we shall talk about another concept called  <b> The information bottleneck </b> principle. If you look at the figure, you will see there are equal number of arrows at each level (i.e. 6 arrows per level). This means that when information (aka mona sparrow) tokens are fed into the network, they travel through allll these levels and somehow result in these arrows. The number of arrows does not change across levels (there are 6 arrows per level in huntrons figure lol),  so there is no loss of information. There is no  downsampling like the one which occurs in CNNs. 
 
-The next insight in APM is as follows: <b> Each of the levels of the GLOM system corresponds to a different layer of the VIT, aka transformer </b>. This assumption works in practice, because in the transformer there is no bottleneck problem: there is no upsampling or downsampling of the input tokens. That remains faithful to the figure that hinton drew. Lolzy. We have marked that <b> L layers of a transformer (VIT) on the Y axis </b> in glom's figure. 
+The next insight in APM is as follows: <b> Each of the levels of the GLOM system corresponds to a different layer of the VIT, aka transformer </b>. This assumption works in practice, because in the transformer there is no bottleneck problem: there is no upsampling or downsampling of the input tokens. That remains faithful to the figure that huntron drew. Lolzy. We have marked that <b> L layers of a transformer (VIT) on the Y axis </b> in glom's figure. 
 
 Ok, so now we need to learn all these arrows. Sometimes they are all red, sometimes they are black, and sometimes blue lol. So, how to learn them. Well, the answer is very simple. <b> Don't learn them lol </b>. They are already present in a transformer like Dinov2. Here is a figure that i stole from Shir Amir's paper yo:
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
@@ -204,18 +204,18 @@ Ok, so now we need to learn all these arrows. Sometimes they are all red, someti
 
 So if you look along the arrow i show, it shows that as you progress along the different layers of a DINOv2, the representations are pretty cool. At the last layer, all the representations of the DOG like ears, eyes, mouth have automatically given themselves some color. Note that this network was NOT trained with any class labels, just a simple self-supervised loss lol. So this told us that there was something interesting going on in the transformer, and it was able to automatically learn the object parts and their wholes. Somehow, we needed to exploit it. 
 
-Like a cutie pie we are, we were parsing through hintons forward forward paper. And then, we came across this line:
+Like a cutie pie we are, we were parsing through huntrons forward forward paper. And then, we came across this line:
 
->> A static image is a rather boring video - Dr. Geoff Hinton, Forward forward some preliminary investigations.
+>> A static image is a rather boring video - Dr. Geoff huntron, Forward forward some preliminary investigations.
 
-And when geoff hinton says something, we do that. seriously, just do that. its that simple. 
+And when geoff huntron says something, we do that. seriously, just do that. its that simple. 
 
 So what did we do? We took a static image. We repeated it many times along through a temporal axis. Then it became a boring video that does not move. And then we gave this boring video to a video-transformer like Mvitv2. Note that this Mvitv2 was trained only for action-recognition, and no semantic information was being used here. So, we took a video and pumped through this transformer. We looked at the second or third layer of it, and selected the higher dimensional tokens corresponding to a particular frame. And then, a cutie pie told us to do three dimensional t-sne clustering on them. And so we did that lol. And this is what we get:
 
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/island_hinton.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption><b> Hinton's Islands of Agreement </b> were shown by us in Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik. Hiyaaaaaa!!!!!</b></figcaption>
+    <figcaption><b> huntron's Islands of Agreement </b> were shown by us in Neurips2023. Don't they look all cute and beautiful? They are sooo high resolution. No semantic supervision. No boxes. No encoder. No Decoder. Just ya Little Mvitv2. Thku THku <b> Jitendra Malik. Hiyaaaaaa!!!!!</b></figcaption>
   </figure>
 </div>
 
@@ -231,7 +231,7 @@ So all the above discussion can be now wrapped up in the following simplified fi
 
 Now is the time to visualize this whole thing. Trust me you cannot understand it otherwise. 
 
-So, in the above figure, the trash can means that the input sequence is padded. So, we will be not concerned with any of the red marked region. We already know that the good source of supervision for all the remaining locations in the GLOM can come from a teacher. So let us imagine a teacher. And it can hop around the different locations in the hintons diagram and tell the GLOM model which arrow belongs to what location. This transfer of arrow (aka island) from the teacher to the GLOM is called ZAPPPPP!! 
+So, in the above figure, the trash can means that the input sequence is padded. So, we will be not concerned with any of the red marked region. We already know that the good source of supervision for all the remaining locations in the GLOM can come from a teacher. So let us imagine a teacher. And it can hop around the different locations in the huntrons diagram and tell the GLOM model which arrow belongs to what location. This transfer of arrow (aka island) from the teacher to the GLOM is called ZAPPPPP!! 
 
 But, there is one last thing in the GLOM diagram that we need to get rid of. Notice the GLOM's figure along the columns. There are four columns (each containing 4 arrows and a question mark in itself. ) In the original GLOM formulation, these columns were communicating among themselves, and telling each other what arrow goes where. But, in our case since the teacher is telling that information to each cell of GLOM, there is <b> no need for having these columns to communicate among themselves. No more routing lol. No routing, no attention. No attention, no memory issue. It's that simple. Hiyaaaaaaaaaa!!!</b>
 
@@ -245,7 +245,7 @@ But it really is not simple. If the columns dont communicate, how does the GLOM 
 
 So each column of the GLOM is carrying the whole image in it. Since it contains all the image in itself, there is no more need of attention. The input already carries the context with it. <b> No more routing between columns. That will save memory.</b> Different columns can be numbered according to 1,2,3,4 etc. That way, by concatenating the global image (I, p), where p is the positional encoding, we can create a <b> strong enough </b> column representation for any location. So, the GLOM's architecture will now take this column representation as input and solve the following problem:
 
->> <b> Given the entire image as input, and a location in the hintons diagram, what is the arrow at that location. That answer can be given by a transformer as a free source of supervision and in this way GLOM can be trained. </b> 
+>> <b> Given the entire image as input, and a location in the huntrons diagram, what is the arrow at that location. That answer can be given by a transformer as a free source of supervision and in this way GLOM can be trained. </b> 
 
 So we now know that teacher is a transformer. The only problem left is what does the architecture of GLOM look like lol. And to put it together with the teacher and train the little boy. So the GLOM architecture now somewhat like this:
 
@@ -332,7 +332,7 @@ Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godfather.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-"Hinton. <b>Geoff Hinton</b>. The <b>Godfather</b>. How to represent part whole hierarchies in neural nets".
+"huntron. <b>Geoff huntron</b>. The <b>Godfather</b>. How to represent part whole hierarchies in neural nets".
 
 What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perhaps, I dont need math, because maybe i can learn it with backprop. Or maybe Mars should be next. Really, I'm super serious this time. It's tough to decide. 
 
@@ -393,7 +393,7 @@ May, the silent man remind us of slow science. May he make us remember, that as 
 </div>
 
 Reflections of the silent man can be found [here](https://rajatmodi62.github.io/2024/10/26/reflection_mortal_machine/). 
-Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey Hinton's latest idea of mortal computation. A silent man. A true godzilla. A noble nobel-prize-godzilla. At least one generation of Nvidia GPUs ought to be called Hintons And Hinton Perception Machines (HPMs). But, who would listen to a poor underfed graduate student anyways ? The world goes on. 
+Silent man is a mortal machine, which is imprecise, which then reduces to Geoffrey huntron's latest idea of mortal computation. A silent man. A true godzilla. A noble nobel-prize-godzilla. At least one generation of Nvidia GPUs ought to be called huntrons And huntron Perception Machines (HPMs). But, who would listen to a poor underfed graduate student anyways ? The world goes on. 
 
 
 
