@@ -423,7 +423,7 @@ just wait till their gradient-descent/backpropogation/knowledge-distillation/ go
 
 Machine-learning midterm tmw. need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
-Just a below-average, subpar, student, <b> trying to be a researcher</b> after all. Books are always correct. Not our intuitions.  I'd still go with my gut anyday. Time to rewrite their books.
+Just a below-average, subpar, student, <b> trying to be a researcher</b> after all. Books are always correct. Not our intuitions.  I'd rather go with my gut anyday. Time to rewrite their books. Thanks but no thanks. 
 
 rajat.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
