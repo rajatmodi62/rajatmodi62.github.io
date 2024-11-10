@@ -92,7 +92,7 @@ Members have thus spoken.  -->
 <!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
- <b> Update 2 (sulking in control room): Huntron got angry. Need technical stuff. </b>  
+ <b> Update 2 (sulking in control room): Huntron is angry. He wants philosophy built into a machine. He just won't settle for anything less. </b>  
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
  
@@ -414,6 +414,9 @@ There is another easter egg🥚 named barney. See if you can find him.
 
 p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫🪄. Shoooo!!! 
 
-p.s. just wait till their gradient-descent/backpropogation/knowledge-distillation goes away too 😛. nah, just kidding😉. promise🤝. pinky swear.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 <b> Update 6: (My advisor): Rajat, again? I am worried about you. </b> 
+
+Gotta do something about this 😡. <br>
+
+just wait till their gradient-descent/backpropogation/knowledge-distillation goes away too 😛. nah, just kidding😉. promise🤝. pinky swear.
