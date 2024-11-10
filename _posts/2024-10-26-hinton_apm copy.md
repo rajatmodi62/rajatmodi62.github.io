@@ -414,4 +414,5 @@ There is another easter egg named barney. See if you can find him.
 
 p.s. plz plz don't tell NeurIPS and my advisor. Shoooo!!! 
 
+p.s. just wait till gradient descent goes away too :-).
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
