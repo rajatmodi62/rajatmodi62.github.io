@@ -284,6 +284,8 @@ love,<br>
 little_godzilla/s
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+Update 2: Post-Nobel credits. 
+
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
 
@@ -370,7 +372,9 @@ Big godzilla's lullaby in action. It helps little godzillas wake and then sleep 
 
 love, <br>
 little_dogzilla/s
-
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+Update 3: Some more naughtiness :-)
+ 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\silent_man.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
