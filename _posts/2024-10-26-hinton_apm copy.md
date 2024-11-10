@@ -405,7 +405,7 @@ Geoff Hinton on mortal computation.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 5: (transmitting from a wormhole) Starship Connectionist Enterprise is still exploring.🚢🗺️🔭 </b> 
+<b> Update 5: Transmission from a wormhole🚢🗺️🔭 </b> 
 
 
 You can checkout the figure on page 27 of the APM paper :-) <br>
