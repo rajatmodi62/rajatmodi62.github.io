@@ -399,3 +399,10 @@ Geoff Hinton on mortal computation.
 </div>
 
 rajat
+
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+Update 4: Starship Connectionist Enterprise is still exploring. You can checkout the figure on page 27 of the APM paper :-)
+
+p.s. plz don't tell NeurIPS. shoooo!!! 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
