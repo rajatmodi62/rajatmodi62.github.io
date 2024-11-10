@@ -5,7 +5,7 @@ title:  "On Asynchronous Perception Machine: A little godzilla's journey"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
-<b>Update 1 (Common Room of Starship Connectionist Enterprise): Some school-kid banter :-). </b>
+<b>Update 1 (Common Room of Starship Connectionist Enterprise): Some school-kid banter 🎉🎊🎆. </b>
 
 > APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-doubters. Hiyaaaaaaa!!!!!! 
 
@@ -92,7 +92,7 @@ Members have thus spoken.  -->
 <!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
- <b> Update 2 (sulking in control room): Captain Huntron got angry. Need technical stuff. </b>  
+ <b> Update 2 (sulking in control room): Huntron got angry. Need technical stuff. </b>  
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
  
@@ -278,7 +278,7 @@ And here is the final architecture for this cute-little model called Asynchronou
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-There are still a lot more papers to be shipped to <b> NeurIPS for babies. </b> 
+There are still a lot more papers to be shipped to <b> NeurIPS for babies. 👶👶👶👶👶</b> 
 
 As turing concludes in his seminal paper, "We can see but a short distance ahead, but we can see plenty there that needs to be done". This is a call to action. Please join the ship before it is too late. In any case, this ship is being driven by at least one small mortal machine, for as long as he is on this planet called earth. 
 
@@ -287,7 +287,7 @@ love,<br>
 little_godzilla/s
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 3 (sleeping quarters): Roommate woke me from sleep early morning. The shock of nobel prize is still sunking in. </b>  
+<b> Update 3 (sleeping quarters): Roommate woke me from sleep early morning. The shock of nobel prize is still sunking in the community. Congratulations are flowing around. </b>  
 
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
@@ -376,9 +376,9 @@ Big godzilla's lullaby in action. It helps little godzillas wake and then sleep 
 love, <br>
 little_dogzilla/s
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 4 (Remote meeting with earth): My PhD advisor scolded me today. </b><br>
+<b> Update 4 (Remote meeting with earth): My PhD advisor scolded me today 😢. </b><br>
 
-Gotta do something about this.
+Gotta do something about this 😡.
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\silent_man.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
@@ -405,12 +405,12 @@ Geoff Hinton on mortal computation.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 5: (transmitting from a wormhole) Starship Connectionist Enterprise is still exploring. </b> 
+<b> Update 5: (transmitting from a wormhole) Starship Connectionist Enterprise is still exploring.🚢🗺️🔭 </b> 
 
 
 You can checkout the figure on page 27 of the APM paper :-) <br>
 
-There is another easter egg named barney. See if you can find him. 
+There is another easter egg🥚 named barney. See if you can find him. 
 
 p.s. plz plz don't tell NeurIPS and my advisor. Shoooo!!! 
 
