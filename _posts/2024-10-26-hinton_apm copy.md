@@ -414,6 +414,15 @@ There is another easter egg🥚 named barney. See if you can find him.
 p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫🪄. Shoooo!!! 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+<div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\sauron.webp" style="width: 50%; height: auto;"> 
+</div>
+<div class="caption" style="text-align: center;">
+    And in case you are enjoying the ride too much, remember Huntron is Lord of the Rings. <b> His EYE is Watching. </b> Don't mess with it. Or you can. We dont mind. The more, the merrier.😘   
+</div>
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+
 <b> Update 6: (My advisor): He scolded me again. </b> 
 
 Gotta do something about this 😡. <br>
@@ -437,9 +446,3 @@ forever, <br>
 a silent man, <br>
 a small member of the <b>MLCollective.</b>
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\sauron.webp" style="width: 50%; height: auto;"> 
-</div>
-<div class="caption" style="text-align: center;">
-    And in case you are enjoying the ride too much, remember Huntron is Lord of the Rings. <b> His EYE is Watching. </b> Don't mess with it. Or you can. We dont mind. The more, the merrier.😘   
-</div>
