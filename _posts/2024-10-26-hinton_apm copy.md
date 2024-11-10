@@ -432,7 +432,7 @@ rajat, <br>
 a below-average,<br>
 subpar-student, <br>
 un-productive, <br>
-just 2 papers, and 20 citations,<br>
+with 2 papers, and 20 citations,<br>
 never went to a big-school, <br>
 forever, <br>
 a silent man, <br>
