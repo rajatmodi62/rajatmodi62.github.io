@@ -429,11 +429,10 @@ I'd rather go with my gut anyday. Time to rewrite their books. <br>
 
 Thanks but no thanks, <br>
 rajat, <br>
-a below-average, subpar-student, <br>
+a below-average,<br>
+subpar-student, <br>
 un-productive, <br>
-with only 20 citations, <br>
-just 2 papers, <br>
-does not publish often, <br>
+just 2 papers, and 20 citations<br>
 never went to a big-school, <br>
 forever, <br>
 a silent man, <br>
