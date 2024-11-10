@@ -384,7 +384,7 @@ Gotta do something about this.
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\silent_man.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
-Finally managed to squeeze "The Silent Man" in Openereview and the NeurIPS community. May this silent man be cherished. 
+Finally managed to squeeze "The Silent Man" in Openreview and the NeurIPS community. May this silent man be cherished. 
 
 May, the silent man remind us of slow science. May he make us remember, that as the world goes in a state of turmoil, there are a lot of silent men standing guard. May the silent man remind us that science is greater than ourselves, and it is the collective progress that matters. May the silent man remind us that humanity is our collective relationships, love, and mutual respect for each other. May the silent man help us be humble and true to our families. May the silent man help us remember that we are still dependent on each other. Merry Christmas!!. May the silent man be the santa claus who brings hope and gifts in our lives. 
 
