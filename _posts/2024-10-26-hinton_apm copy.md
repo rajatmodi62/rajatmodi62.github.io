@@ -431,7 +431,7 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 
 Gotta do something about this 😡. <br>
 
-Let's make their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
+Let's make their gradient-descent/backpropogation/knowledge-distillation go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
 
 <br>
 we'll behave, <br> for now at least.<br>
