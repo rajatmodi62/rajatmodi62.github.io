@@ -427,7 +427,7 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
 
-<b> Update 6: Advisor scolded me again. </b> 
+<b> Update 6: Advisor scolds me again. </b> 
 
 Gotta do something about this 😡. <br>
 
