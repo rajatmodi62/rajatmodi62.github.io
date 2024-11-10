@@ -415,7 +415,7 @@ p.s. plz plz don't tell NeurIPS and my advisor. They are strict. 😠👩‍🏫
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 <div style="text-align: center; color: red; font-size: 30px; text-transform: uppercase;">
-    YOU HAVE BEEN <br>
+    YOU ARE HEREBY  <br>
     WARNED.
 </div>
 <div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
