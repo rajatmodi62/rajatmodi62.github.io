@@ -5,6 +5,8 @@ title:  "On Asynchronous Perception Machine: A little godzilla's journey"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
+Update 1 (The common area of Starship Connectionist Enterprise): Some school-kid banter and happiness :-).
+
 > APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-doubters. Hiyaaaaaaa!!!!!! 
 
 
@@ -89,7 +91,8 @@ Members have thus spoken.  -->
 
 <!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
-----------------
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+Update 2 (sulking in control room): Captain Huntron got angry. Need technical stuff.  
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
  
@@ -284,7 +287,7 @@ love,<br>
 little_godzilla/s
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-Update 2: Post-Nobel credits. After the shock of nobel prize sinked in. 
+Update 3 (sleeping quarters): Post-Nobel credits. The shock of nobel prize is still sunking in. 
 
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
@@ -373,7 +376,9 @@ Big godzilla's lullaby in action. It helps little godzillas wake and then sleep 
 love, <br>
 little_dogzilla/s
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-Update 3: Some more naughtiness. My advisor scolded me today, so gotta do something :-).
+Update 4 (Remote meeting with earth): My PhD advisor scolded me today. <br>
+
+Gotta do something about this.
 
 <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\silent_man.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
@@ -401,7 +406,12 @@ Geoff Hinton on mortal computation.
 rajat
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-Update 4: Starship Connectionist Enterprise is still exploring. You can checkout the figure on page 27 of the APM paper :-)
+Update 5: (from a wormhole) Starship Connectionist Enterprise is still exploring. 
+
+
+You can checkout the figure on page 27 of the APM paper :-) <br>
+
+There is another easter egg named barney. If you can find him. 
 
 p.s. plz don't tell NeurIPS. shoooo!!! 
 
