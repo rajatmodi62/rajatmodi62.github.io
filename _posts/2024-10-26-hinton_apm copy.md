@@ -421,4 +421,9 @@ Gotta do something about this 😡. <br>
 
 just wait till their gradient-descent/backpropogation/knowledge-distillation/ go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br>
 
-have machine-learning midterm tmw.  gotta get my masters. need to come out of `academic-probation'.
+have machine-learning midterm tmw. need to do well to come out of `academic-probation'. <b>hopefully, they will find it worthy of a masters at least. </b><br>
+
+i'm just a below-average, subpar, student, <b> trying to be a researcher after all </b>. 
+
+rajat.
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
