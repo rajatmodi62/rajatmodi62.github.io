@@ -431,7 +431,8 @@ Thanks but no thanks, <br>
 rajat, <br>
 a below-average, subpar-student, <br>
 who is not productive, <br>
-has 20 citations only, <br>
+with only 20 citations, <br>
+just 2 papers, <br>
 does not publish often, <br>
 never went to a big-school, <br>
 forever, <br>
