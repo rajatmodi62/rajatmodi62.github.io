@@ -466,7 +466,7 @@ neumann,<br>
 boltzman,<br>
 feynman,<br>
 silent man</b><br>
-you can find the last 7 words in official NeurIPS proceedings and rebuttal. <br>
+you can find the last 10 words in official NeurIPS proceedings and rebuttal. <br>
 we will continue to focus on our work. <br>
 if  above words are not enough, let us know <br>
 we will cook some more. <br>
