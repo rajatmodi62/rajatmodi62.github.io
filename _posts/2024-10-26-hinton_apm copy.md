@@ -492,7 +492,7 @@ one final action, and i'm done. promise.
   </figure>
 </div>
 
-<b>Update: After the shock of receiving the reply to a nobel-dressed godzilla settles in:</b>
+<b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
 
 Hmm, So This writing style seems important, <br>
 For correct prose, <br>
