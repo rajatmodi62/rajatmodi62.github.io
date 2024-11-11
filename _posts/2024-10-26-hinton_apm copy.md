@@ -500,9 +500,9 @@ I thought i was crazy, but never cared. Apparently, there are people crazier tha
 
 The reason we are sharing this particular `personal' message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-). And ill get back to living my life. I finally  have the closure i needed. <br>
 
-<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students at IIT-Bombay. I never had the privilege for being one of those students, since i failed the exams i took. Didn't even make it past the shortlist. But, surely our lives cant be governed by six hours spent in an exam-hall.  But i did listen to the video, which seemed to resonate with me.  <br>
+<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students at IIT-Bombay. I never had the privilege for being one of those students, since i failed the exams i took. Didn't even make it past the shortlist. But, surely our lives cant be governed by six hours spent in an exam-hall.  But i did listen to the video, which seemed to resonate with me. <br>
 
-In this whole journey, my advisor has been constantly with me. This taught me what character means.  
+In this whole journey, my advisor has been constantly with me. This taught me what character means. Chances are, there are a few things you might learn from this whole journey. If not, well at leaast you can laugh and ignore it :-).
 
 Hmm, So this writing style seems important, <br>
 For correct prose, <br>
