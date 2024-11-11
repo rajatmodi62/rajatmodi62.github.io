@@ -498,7 +498,7 @@ one final action, and i'm done. promise.
 I thought i was crazy, but never cared. Apparently, there are people crazier than me. Snippets after i blew my shit. Was in a cheap orlando apartment with very costly internet when this happened. <br>
 
 
-The reason we are sharing this particular message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-)<br>
+The reason we are sharing this particular message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-)<br>. And ill get back to living my life. I finally  have the closure i needed. 
 
 
 
