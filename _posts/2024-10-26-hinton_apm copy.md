@@ -496,5 +496,7 @@ one last joke, and i'm done. promise.
 <b>This writing style is important, <br>
 For correct prose and charm, <br>
 Somebody taught it to him, <br>
-They prefer the shadows.<br>
-Batman only comes out at night.</b>
+They prefer the shadows,<br>
+For they are Batman,<br>
+Who only come out at night.</b>
+As the world sleeps unaware.
