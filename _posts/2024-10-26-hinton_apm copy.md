@@ -502,8 +502,6 @@ The reason we are sharing this particular `personal' message is that we have car
 
 <b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students at IIT-Bombay. I never had the privilege for being one of those students, since i failed the exams i took. Didn't even make it past the shortlist. But, surely our lives cant be governed by six hours spent in an exam-hall.  But i did listen to the video, which seemed to resonate with me. <br>
 
-In this whole journey, my advisor has been constantly with me. This taught me what character means. Chances are, there are a few things you might learn from this whole journey. If you think you are perfect, please have a laugh and ignore it :-). It's a democracy after-all. <br>
-
 Hmm, So this writing style seems important, <br>
 For correct prose, <br>
 and charm, <br>
@@ -513,9 +511,13 @@ scroll down,<br>
 <br>
 
 
+In this whole journey, my advisor has been constantly with me. This taught me what character means. Chances are, there are a few things you might learn from this whole journey. If you think you are perfect, please free to have a laugh and ignore it :-). This is a democracy after-all. <br>
 
-just a small undergrad, <br>
-non cs-major. non stem. <br>
-forever. <br>
+
+
+
+A small undergrad, <br>
+Non CS-major,<br>
+Forever, <br>
 Member of the MLCollective. <br>
 zz
