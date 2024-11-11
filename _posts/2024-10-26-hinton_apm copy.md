@@ -506,7 +506,8 @@ They prefer the shadows,<br>
 For they are Batman,<br>
 Who only comes out at night,<br>
 Protecting the AI as it sleeps,<br>
-Apparently, It's all about symmetry lol.
+Apparently, It's all about symmetry <br>
+And a little-but breaking here and there lol.
 </b>
 
 
