@@ -500,7 +500,7 @@ I thought i was crazy, but never cared. Apparently, there are people crazier tha
 
 The reason we are sharing this particular `personal' message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-). And ill get back to living my life. I finally  have the closure i needed. <br>
 
-<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students. I never had the privilege for not being one of those students, since i failed the exams i took. But i did listen to the video.  <br>
+<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students. I never had the privilege for being one of those students, since i failed the exams i took. But, surely our lives cant be governed by six hours spent in an exam-hall.  But i did listen to the video.  <br>
 
 
 
