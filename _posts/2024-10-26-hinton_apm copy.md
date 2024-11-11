@@ -508,9 +508,9 @@ For they are Batman,<br>
 Who only comes out at night,<br>
 Protecting the AI as it sleeps,<br>
 Apparently, It's all about symmetry, <br>
-And a little-bit breaking here and, <br>
-And a little-bit breaking there and, <br>
-lol. It's broken. And we pissed in our pants.
+And a little-bit symmetry breaking here and, <br>
+And a little-bit symmetry breaking there and, <br>
+lol. It's broken. And we are pissing in our pants.
 
 
 zz
