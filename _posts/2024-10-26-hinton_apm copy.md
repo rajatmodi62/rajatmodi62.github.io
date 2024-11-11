@@ -492,4 +492,5 @@ one last joke, and i'm done. promise.
   </figure>
 </div>
 
-p.s. poem/comic style is intentional. Somebody recently taught it to him. 
+
+<b>p.s. poem style is important for aesthetics. Somebody recently taught it to him. For now, they prefer to remain in the shadows.</b>
