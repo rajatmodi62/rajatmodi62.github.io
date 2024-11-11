@@ -495,9 +495,9 @@ one final action, and i'm done. promise.
 
 <b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
 
-I thought i was crazy, but never cared. Apparently, there are people crazier than me. Snippets after i blew my shit. Was in a cheap california hotel without internet when this happened. <br>
+I thought i was crazy, but never cared. Apparently, there are people crazier than me. Snippets after i blew my shit. Was in a cheap orlando apartment with very costly internet when this happened. <br>
 
-We have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-)<br>
+
 
 
 
@@ -509,6 +509,9 @@ It lets each line, <br>
 hit you, as you, <br>
 scroll down,<br>
 <br>
+
+
+We have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-)<br>
 
 
 just a small student, <br>
