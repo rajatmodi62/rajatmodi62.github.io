@@ -436,7 +436,7 @@ Gotta do something about this 😡. <br>
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godzilla.jpg" style="width: 50%; height: auto;"> 
 </div>
 <div class="caption" style="text-align: center;">
-    The little dogzilla who battled the NeurIPS reviewers alone. Huntron prepared him for us. <br> And yeah, this one is special. <br> The one you buy on amazon <b>doesn't possess</b> that kind of mojo.  <br> And if you steal it, that mojo won't work.<br> It's custom built.
+    The little dogzilla who battled the NeurIPS reviewers alone. Huntron prepared him for us. <br> And yeah, this one is special. <br> The one you buy on amazon <b>doesn't possess</b> that kind of mojo.  <br> And if you steal it, that mojo won't work.<br> It's custom built. Correct part needs to route to correct whole.
 </div>
 
 Let's make their gradient-descent/backpropogation/knowledge-distillation go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
