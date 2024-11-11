@@ -444,7 +444,8 @@ Let's make their gradient-descent/backpropogation/knowledge-distillation go away
 <br>
 we'll behave, <br>
 until i finish my machine learning midterm that is. <br>
-need masters. 
+need masters. <br>
+mebbe phd one day.
 
 
 
