@@ -493,6 +493,7 @@ one last joke, and i'm done. promise.
 </div>
 
 
-<b>p.s. poem style is important for aesthetics. <br>
- Somebody recently taught it to him. <br>
- For now, they prefer to remain in the shadows.</b>
+<b>poem style is important <br>
+for correct prose <br>
+Somebody recently taught it to him. <br>
+They prefer to remain in the shadows.</b>
