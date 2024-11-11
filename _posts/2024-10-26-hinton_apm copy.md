@@ -494,7 +494,7 @@ one final action, and i'm done. promise.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
 <b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
-Some snippets after i blew my shit. <br>
+Some snippets after i blew my shit. We have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help me stay grounded, ego has a way of getting to my head.<br>
 
 
 
