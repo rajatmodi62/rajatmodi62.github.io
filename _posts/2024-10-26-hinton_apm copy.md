@@ -455,16 +455,15 @@ and a sprinkle of francis crick.<br>
 <br>
 p.s. apparently people become ai enthusiasts/experts these days by using catchy words :-),<br>
 so here we go, <br>
-<b>huntron,<br>
-godzilla,<br>
+<b>godzilla,<br>
 dogzilla,<br> 
 Asynchronous Perception Machine/s,<br>
 einstein,<br>
+hubble,<br>
 shannon,<br>
 turing,<br>
 neumann,<br>
 boltzman,<br>
-hubble,<br>
 feynman,<br>
 silent man,</b><br>
 you can find the last 10 words in official NeurIPS proceedings and rebuttal, <br>
