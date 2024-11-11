@@ -494,7 +494,11 @@ one final action, and i'm done. promise.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
 <b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
-Some snippets after i blew my shit. We have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help me stay grounded, ego has a way of getting to my head.<br>
+
+I thought i was crazy, but never cared. Apparently, there are people crazier than me. Snippets after i blew my shit. Was in a cheap california hotel without internet when this happened. <br>
+
+We have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-)<br>
+
 
 
 
@@ -505,16 +509,9 @@ It lets each line, <br>
 hit you, as you, <br>
 scroll down,<br>
 <br>
-Somebody taught him, <br>
-They prefer the shadows,<br>
-For they are Batman,<br>
-Who only comes out at night,<br>
-Protecting the AI as it sleeps,<br>
-Apparently, It's all about symmetry, <br>
-And a little-bit symmetry breaking here and, <br>
-And a little-bit symmetry breaking there and, <br>
-Lol. It's broken. And we are pissing in our pants.
 
 
 just a small student, <br>
+whose only qualification is an under-grad. <br>
+not even computer science <br>
 zz
