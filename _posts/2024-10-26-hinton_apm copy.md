@@ -488,11 +488,11 @@ one last joke, and i'm done. promise.
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/dog.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption>Little dogzilla starin at his PhD advisor Dr. Yogesh. And yeah, dogzilla's shameless by now. Dogzilla has finally reached 4th year. Dr. Yogesh cannot get rid of him anymore. It makes him angry. That's part of the fun. Torture dogzilla for 2 years, then dogzilla tortures him for eternity. <br>That's the <b>DEAL</b>. Huntron will agree. <br>This right to torture has been earned. <br> Dogzilla's posterior is pretty confident.</figcaption>
+    <figcaption>Little dogzilla starin at his PhD advisor Dr. Yogesh. <br>And yeah, dogzilla's shameless by now. <br> Dogzilla has finally reached 4th year. <br>Dr. Yogesh cannot get rid of him anymore. <br>It makes him angry. <br> That's part of the fun. <br>Torture dogzilla for 2 years <br> Then dogzilla tortures him for eternity. <br>That's the <b>DEAL</b>. Huntron will agree. <br>The right to torture has been earnt. <br> Dogzilla's posterior is pretty confident by now.</figcaption>
   </figure>
 </div>
 
-
+p.s. poem/comic style is intentional. Somebody recently taught it to him. 
 <!-- -------- -->
 <!-- Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
 
