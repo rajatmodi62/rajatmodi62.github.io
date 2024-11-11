@@ -494,11 +494,13 @@ one last joke, and i'm done. promise.
 
 
 <b>Hmm, This writing style is important, <br>
-For correct prose and charm, <br>
+For correct prose <br>
+and charm, <br>
 It lets each line <br>
 hit you, as you <br>
 scroll down<br>
 <br>
+
 Somebody taught it to him, <br>
 They prefer the shadows,<br>
 For they are Batman,<br>
