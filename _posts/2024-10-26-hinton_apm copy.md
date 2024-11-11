@@ -493,7 +493,7 @@ one last joke, and i'm done. promise.
 </div>
 
 
-<b>Poem style is important <br>
-For correct prose <br>
-Somebody taught it to him. <br>
+<b>This writing style is important, <br>
+For correct prose and charm, <br>
+Somebody taught it to him, <br>
 They prefer the shadows.</b>
