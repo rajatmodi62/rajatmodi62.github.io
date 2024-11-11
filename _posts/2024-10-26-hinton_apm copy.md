@@ -458,8 +458,8 @@ so here we go, <br>
 huntron, ultron, silent man, godzilla, dogzilla, Asynchronous Perception Machine/s.<br>
 you can find the last 4 words in official NeurIPS proceedings. <br>
 we will continue to focus on our work. <br>
-if  above silliness is still not enough, let us know <br>
-we will cook some more. 
+if  above words are not enough, let us know <br>
+we will cook some more. and trust me, i can cook 😛.
 
 
 <!-- -------- -->
