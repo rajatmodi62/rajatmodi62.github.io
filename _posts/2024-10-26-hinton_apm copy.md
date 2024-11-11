@@ -462,7 +462,7 @@ Asynchronous Perception Machine/s,<br>
 neumann,<br>
 boltzman,<br>
 feynman,<br>
-silent man and cajal</b><br>
+silent man</b><br>
 you can find the last 8 words in official NeurIPS proceedings. <br>
 we will continue to focus on our work. <br>
 if  above words are not enough, let us know <br>
