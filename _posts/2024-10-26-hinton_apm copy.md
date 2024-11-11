@@ -376,7 +376,7 @@ Big godzilla's lullaby in action. It helps little godzillas wake and then sleep 
 love, <br>
 little_dogzilla/s
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 4 (Remote meeting with earth): Huntron has been pacified, but advisor scolded me today 😢. </b><br>
+<b> Update 4 (Remote meeting with earth): Huntron has been pacified (for now at least), but advisor scolded me today 😢. </b><br>
 
 Gotta do something about this 😡.
 
@@ -488,7 +488,7 @@ one last joke, and i'm done. promise.
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/dog.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption>Little dogzilla starin at his PhD advisor. And yeah, dogzilla's shameless.  His advisor cannot get rid of him anymore. Dogzilla has reached 4th year. It makes him angry. That's part of the fun. Torture dogzilla for 2 years, then dogzilla tortures him for eternity. That's the deal. </figcaption>
+    <figcaption>Little dogzilla starin at his PhD advisor. And yeah, dogzilla's shameless.  His advisor cannot get rid of him anymore. Dogzilla has reached 4th year. It makes him angry. That's part of the fun. Torture dogzilla for 2 years, then dogzilla tortures him for eternity. <br>That's the deal. Huntron will agree. Dogzilla is sure.</figcaption>
   </figure>
 </div>
 
