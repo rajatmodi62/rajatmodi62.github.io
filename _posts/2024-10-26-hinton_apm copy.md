@@ -376,7 +376,7 @@ Big godzilla's lullaby in action. It helps little godzillas wake and then sleep 
 love, <br>
 little_dogzilla/s
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-<b> Update 4 (Remote meeting with earth): Huntron has been pacified, but PhD advisor scolded me today 😢. </b><br>
+<b> Update 4 (Remote meeting with earth): Huntron has been pacified, but advisor scolded me today 😢. </b><br>
 
 Gotta do something about this 😡.
 
