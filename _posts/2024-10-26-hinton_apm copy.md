@@ -451,8 +451,8 @@ i love my advisor, he allowed me play :-) <br>
 what will huntron come up with next? <br>
 we are shoooo curious. <br>
 meanwhile, i will read some isaac asimov's irobot and ray kurzwell. <br>
-and a sprinkle of francis crick.
-p.s. apparently people become ai experts by catchy words :-),<br>
+and a sprinkle of francis crick.<br>
+p.s. apparently people become ai experts and get huge salaries by using catchy words :-),<br>
 so here we go <br>
 huntron, ultron, silent man, godzilla, dogzilla, Asynchronous Perception Machines.<br>
 you can find the last 4 words in official NeurIPS proceedings. <br>
