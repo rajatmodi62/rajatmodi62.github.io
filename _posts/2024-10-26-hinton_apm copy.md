@@ -494,6 +494,9 @@ one final action, and i'm done. promise.
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
 <b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
+Some snippets after i blew my shit. <br>
+
+
 
 Hmm, So this writing style seems important, <br>
 For correct prose, <br>
