@@ -488,7 +488,7 @@ one final action, and i'm done. promise.
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/dog.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption>Little dogzilla starin at his PhD advisor Dr. Yogesh. <br>And yeah, dogzilla's shameless by now. <br> Dogzilla has finally reached 4th year. <br>Dr. Yogesh cannot get rid of him anymore. <br>It makes him angry. <br> That's part of the fun. <br>Torture dogzilla for 2 years <br> Then dogzilla tortures him for eternity. <br>That's the <b>DEAL</b>. Huntron will agree. <br>The right to torture has been earnt. <br> Dogzilla's posterior is pretty confident by now.</figcaption>
+    <figcaption>Little dogzilla starin at his PhD advisor Dr. Yogesh. <br>And yeah, dogzilla's shameless by now. <br> Dogzilla has finally reached 4th year. <br>Dr. Yogesh cannot get rid of him anymore. <br>It makes him angry. <br> That's part of the fun. <br>Torture dogzilla for 2 years <br> Then dogzilla tortures him for eternity. <br>That's the <b>DEAL</b>. The Huntron will agree. <br>The right to torture has been earnt. <br> Dogzilla's posterior is pretty confident by now.</figcaption>
   </figure>
 </div>
 
