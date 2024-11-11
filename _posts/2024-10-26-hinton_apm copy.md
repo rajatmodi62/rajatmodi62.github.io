@@ -493,21 +493,3 @@ one last joke, and i'm done. promise.
 </div>
 
 p.s. poem/comic style is intentional. Somebody recently taught it to him. 
-<!-- -------- -->
-<!-- Machine-learning midterm tmw. Need to do well to come out of <b>`Academic-Probation' </b>. Hopefully, this is <b>at least worthy</b> of a masters. <br>
-
-Apparently, the instructors think that books are always correct. Not our intuitions.  <br>
-
-I'd rather go with my gut anyday. Time to rewrite their books. <br>
-
-Thanks but no thanks, <br>
-rajat, <br>
-a below-average,<br>
-subpar-student, <br>
-un-productive, <br>
-with 2 papers, and 20 citations,<br>
-never went to a big-school, <br>
-forever, <br>
-a silent man, <br>
-a small member of the <b>MLCollective.</b> -->
-------------------------------------------------------------------------------------------------------------------------------------------------------<br>
