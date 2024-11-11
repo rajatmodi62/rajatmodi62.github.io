@@ -492,8 +492,9 @@ one final action, and i'm done. promise.
   </figure>
 </div>
 
+Update:
 
-<b>Hmm, This writing style is important, <br>
+<b>Hmm, This writing style seems important, <br>
 For correct prose, <br>
 and charm, <br>
 It lets each line, <br>
