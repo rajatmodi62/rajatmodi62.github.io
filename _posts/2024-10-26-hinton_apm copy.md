@@ -492,9 +492,9 @@ one final action, and i'm done. promise.
   </figure>
 </div>
 
-Update after the shock of nobel-dressed godzilla settles in:
+<b>Update after the shock of receiving the reply to a nobel-dressed godzilla settles in:</b>
 
-<b>Hmm, So This writing style seems important, <br>
+Hmm, So This writing style seems important, <br>
 For correct prose, <br>
 and charm, <br>
 It lets each line, <br>
@@ -510,7 +510,7 @@ Apparently, It's all about symmetry, <br>
 And a little-bit breaking here and, <br>
 And a little-bit breaking there and, <br>
 lol. It's broken.
-</b>
+
 
 
 
