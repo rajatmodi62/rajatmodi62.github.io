@@ -455,8 +455,12 @@ and a sprinkle of francis crick.<br>
 <br>
 p.s. apparently people become ai enthusiasts/experts these days by using catchy words :-),<br>
 so here we go, <br>
-<b>huntron, ultron, silent man, godzilla, dogzilla, Asynchronous Perception Machine/s.</b><br>
-you can find the last 4 words in official NeurIPS proceedings. <br>
+<b>huntron, ultron, godzilla, dogzilla, Asynchronous Perception Machine/s.</b><br>
+neumann<br>
+boltzman<br>
+feynman<br>
+silent man<br>
+you can find the last 7 words in official NeurIPS proceedings. <br>
 we will continue to focus on our work. <br>
 if  above words are not enough, let us know <br>
 we will cook some more. <br>
