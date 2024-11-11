@@ -495,7 +495,7 @@ one final action, and i'm done. promise.
 
 <b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
 
-Hmm, So This writing style seems important, <br>
+Hmm, So this writing style seems important, <br>
 For correct prose, <br>
 and charm, <br>
 It lets each line, <br>
