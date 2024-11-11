@@ -472,7 +472,7 @@ you can find the last 10 words in official NeurIPS proceedings and rebuttal, <br
 if  above words are not enough, let me know at rajatmodi62@gmail.com<br>
 we will cook some more. <br>
 and trust me, i know how to cook 😛. <br>
-even better than breaking bad <br>
+even better than breaking bad's walter whhite, <br>
 just a stupid phd student<br>
 eating avocado toast. zz.
 
