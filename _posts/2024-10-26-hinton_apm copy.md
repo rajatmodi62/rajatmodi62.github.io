@@ -453,30 +453,7 @@ we are shoooo curious. <br>
 meanwhile, i will read some isaac asimov's irobot and ray kurzwell. <br>
 and a sprinkle of francis crick.<br>
 <br>
-p.s. apparently people become ai enthusiasts/experts these days by using catchy words :-),<br>
-so here we go, <br>
-lets quote some experts,<br>
-<b>godzilla,<br>
-einstein,<br>
-hubble,<br>
-shannon,<br>
-turing,<br>
-neumann,<br>
-boltzman,<br>
-feynman,<br>
-silent man,</b><br>
-all these words can now be found in official NeurIPS proceedings and rebuttal, <br>
 
-<b>we will continue to focus on our work,</b> <br>
-if  above words are not enough, let me know at rajatmodi62@gmail.com<br>
-we will cook some more. <br>
-and trust me, i know how to cook 😛. <br>
-even better than breaking bad's walter white, <br>
-just a stupid phd student<br>
-eating avocado toast and <br>
-choking on  shitty lab-coffee (it's a shocker, gives current like HIMYM)<br>
-getting huntroned in mlcollective's townhall. <br>
-zz.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 <b> Update 7: Advisor has scolded me agaaaain. </b> 
@@ -498,9 +475,10 @@ one final action, and i'm done. promise.
 I thought i was crazy, but never cared. Apparently, there are people crazier than me. Snippets after i blew my shit. Was in a cheap orlando apartment with a very costly internet when this happened. <br>
 
 
-The reason we are sharing this particular `personal' message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than me. All credit goes to MLCollective. Please help us stay grounded. If i ever behave badly, slap me willya :-). And ill get back to living my life. I finally  have the closure i needed. And don't worry, i  know when to keep my mouth shut.<br>
+The reason we are sharing this particular `personal' message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than us. All credit goes to MLCollective.  All other things are classified by the MLCollective.
 
-<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students at IIT-Bombay. I never had the privilege for being one of those students, since i failed the exams i took. Didn't even make it past the shortlist. But, surely our lives cant be governed by six hours spent in an exam-hall.  But i did listen to the video, which seemed to resonate with me. <br>
+
+<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Huntron addressed some students at IIT-Bombay.  I did listen to the video, which seemed to have struck some deep chord. <br>
 
 Hmm, So this writing style seems important, <br>
 For correct prose, <br>
@@ -514,11 +492,6 @@ scroll down,<br>
 In this whole journey, my advisor has been constantly with me. This taught me what character means. <br>
 
 
-
-
-A small undergrad, <br>
-Non CS-major,<br>
-An electrical-engineer who "doesnt" know how to code, <br>
 Forever, <br>
 Member of the MLCollective. <br>
 zz <br>
