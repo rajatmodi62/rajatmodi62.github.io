@@ -454,7 +454,6 @@ meanwhile, i will read some isaac asimov's irobot and ray kurzwell. <br>
 and a sprinkle of francis crick.<br>
 <br>
 p.s. apparently people become ai enthusiasts/experts these days by using catchy words :-),<br>
-dressing well, being polite, donning cute smiles, and smiling all nice <br>
 so here we go, <br>
 <b>godzilla,<br>
 dogzilla,<br> 
