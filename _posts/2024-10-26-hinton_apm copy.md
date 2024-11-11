@@ -518,7 +518,7 @@ In this whole journey, my advisor has been constantly with me. This taught me wh
 
 A small undergrad, <br>
 Non CS-major,<br>
-An electrical-engineer who "doesnt" know how to code <br>
+An electrical-engineer who "doesnt" know how to code, <br>
 Forever, <br>
 Member of the MLCollective. <br>
 zz
