@@ -444,7 +444,7 @@ Let's make their gradient-descent/backpropogation/knowledge-distillation go away
 <br>
 we'll behave, <br>
 until i finish my midterm. <br>
-still need masters. 
+need masters. 
 
 
 
