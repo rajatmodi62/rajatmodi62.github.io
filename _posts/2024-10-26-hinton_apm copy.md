@@ -498,5 +498,5 @@ For correct prose and charm, <br>
 Somebody taught it to him, <br>
 They prefer the shadows,<br>
 For they are Batman,<br>
-Who only come out at night,<br>
+Who only comes out at night,<br>
 Protecting the world as it sleeps.</b>
