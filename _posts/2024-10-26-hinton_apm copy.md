@@ -466,7 +466,7 @@ boltzman,<br>
 feynman,<br>
 silent man,</b><br>
 all these words can now be found in official NeurIPS proceedings and rebuttal, <br>
-<br>
+
 <b>we will continue to focus on our work,</b> <br>
 if  above words are not enough, let me know at rajatmodi62@gmail.com<br>
 we will cook some more. <br>
