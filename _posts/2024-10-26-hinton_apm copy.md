@@ -496,4 +496,5 @@ one last joke, and i'm done. promise.
 <b>This writing style is important, <br>
 For correct prose and charm, <br>
 Somebody taught it to him, <br>
-They prefer the shadows.</b>
+They prefer the shadows.<br>
+Batman only comes out at night.</b>
