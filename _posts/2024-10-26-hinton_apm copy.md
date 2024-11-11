@@ -483,7 +483,7 @@ zz.
 
 Something needs to be done about this. <br>
 
-one last joke, and i'm done. promise. 
+one final action, and i'm done. promise. 
 
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
@@ -494,18 +494,18 @@ one last joke, and i'm done. promise.
 
 
 <b>Hmm, This writing style is important, <br>
-For correct prose <br>
+For correct prose, <br>
 and charm, <br>
-It lets each line <br>
-hit you, as you <br>
-scroll down<br>
+It lets each line, <br>
+hit you, as you, <br>
+scroll down,<br>
 <br>
-Somebody showed it to him, <br>
+Somebody taught him, <br>
 They prefer the shadows,<br>
 For they are Batman,<br>
 Who only comes out at night,<br>
-Protecting the AI as it sleeps.<br>
-It's all about symmetry lol.
+Protecting the AI as it sleeps,<br>
+Apparently, It's all about symmetry lol.
 </b>
 
 
