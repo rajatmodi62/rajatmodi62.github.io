@@ -450,7 +450,8 @@ mebbe phd one day. <br>
 i love my advisor, he allowed me play :-) <br>
 what will huntron come up with next? <br>
 we are shoooo curious. <br>
-meanwhile, i will read some isaac asimov's irobot and ray kurzwell. 
+meanwhile, i will read some isaac asimov's irobot and ray kurzwell. <br>
+and a sprinkle of francis crick.
 
 
 
