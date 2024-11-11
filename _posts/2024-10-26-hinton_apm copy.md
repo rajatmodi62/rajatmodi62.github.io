@@ -465,15 +465,15 @@ turing,<br>
 neumann,<br>
 boltzman,<br>
 feynman,<br>
-silent man</b><br>
-you can find the last 10 words in official NeurIPS proceedings and rebuttal. <br>
-we will continue to focus on our work. <br>
+silent man,</b><br>
+you can find the last 10 words in official NeurIPS proceedings and rebuttal, <br>
+we will continue to focus on our work, <br>
 if  above words are not enough, let me know at rajatmodi62@gmail.com<br>
 we will cook some more. <br>
 and trust me, i know how to cook 😛. <br>
 even better than breaking bad <br>
 just a stupid phd student<br>
-zzz.
+eating avocado toast. zz.
 
 
 <!-- -------- -->
