@@ -498,9 +498,13 @@ For correct prose and charm, <br>
 It lets each line <br>
 hit you, as you <br>
 scroll down<br>
+<br>
 Somebody taught it to him, <br>
 They prefer the shadows,<br>
 For they are Batman,<br>
 Who only comes out at night,<br>
 On its own accord, <br>
-Protecting the AI as it sleeps.</b>
+Protecting the AI as it sleeps.
+<br>
+It's all about symmetry lol.
+</b>
