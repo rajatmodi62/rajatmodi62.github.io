@@ -474,7 +474,8 @@ and trust me, i know how to cook 😛. <br>
 even better than breaking bad's walter white, <br>
 just a stupid phd student<br>
 eating avocado toast and <br>
-drinking my handmade shitty coffee in mlcollective's townhall. <br>
+choking on my handmade shitty coffee <br>
+in mlcollective's townhall. <br>
 zz.
 
 
