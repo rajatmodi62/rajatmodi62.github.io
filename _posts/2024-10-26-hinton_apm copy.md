@@ -436,7 +436,7 @@ Gotta do something about this 😡. <br>
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godzilla.jpg" style="width: 50%; height: auto;"> 
 </div>
 <div class="caption" style="text-align: center;">
-    The little godzilla who battled the NeurIPS reviewers. Huntron got him for us. <br> And yeah, it's special: the one you buy on amazon doesn't hold that kind of power.  
+    The little dogzilla who battled the NeurIPS reviewers alone. Huntron got him for us. <br> And yeah, it's special: the one you buy on amazon doesn't hold that kind of power.  
 </div>
 
 Let's make their gradient-descent/backpropogation/knowledge-distillation go away too 😛. nah, just kidding😉. promise🤝. pinky swear. <br> 
