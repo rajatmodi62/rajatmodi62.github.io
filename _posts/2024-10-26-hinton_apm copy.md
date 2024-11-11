@@ -436,7 +436,7 @@ Gotta do something about this 😡. <br>
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godzilla.jpg" style="width: 50%; height: auto;"> 
 </div>
 <div class="caption" style="text-align: center;">
-    The little_dogzilla who battled the NeurIPS reviewers alone. <br> And yeah, this one is special. <br> It was bestowed by Huntron. <br> Really, we are sherioush. <br> You can ask him if you dont believe us. <br> The one you buy on amazon <b>doesn't possess</b> this kind of mojo.  <br> And if you steal it, that mojo won't work.<br> It's custom built. <br> Correct-part needs to route to correct-whole <br> To have a correct-relationship. <br> It's that simple. <br> If you want your own dogzilla <br> ask Huntron. He's known to be generous. <br> If you catch him in good mood. <br> It was super difficult for us too, <br> he operates in the canadian shadows from geoffrey.hinton@gmail.com
+    The little_dogzilla who battled the NeurIPS reviewers alone. <br> And yeah, this one is special. <br> It was bestowed by Huntron. <br> Really, we are sherioush. <br> You can ask him if you dont believe us. <br> The one you buy on amazon <b>doesn't possess</b> this kind of mojo.  <br> And if you steal it, that mojo won't work.<br> It's custom built. <br> Correct-part needs to route to correct-whole <br> To have a correct-relationship. <br> It's that simple. <br> If you want your own dogzilla <br> ask Huntron. He's known to be generous. <br> If you catch him in good mood. <br> It was super difficult for us too, <br> he operates in the canadian shadows <br> from geoffrey.hinton@gmail.com
 
 </div>
 
