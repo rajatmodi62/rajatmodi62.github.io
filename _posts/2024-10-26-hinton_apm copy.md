@@ -459,7 +459,9 @@ huntron, ultron, silent man, godzilla, dogzilla, Asynchronous Perception Machine
 you can find the last 4 words in official NeurIPS proceedings. <br>
 we will continue to focus on our work. <br>
 if  above words are not enough, let us know <br>
-we will cook some more. and trust me, i can cook 😛.
+we will cook some more. <br>
+and trust me, i know how to cook 😛. <br>
+stupid phd student zz.
 
 
 <!-- -------- -->
