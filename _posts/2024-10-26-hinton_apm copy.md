@@ -455,7 +455,7 @@ and a sprinkle of francis crick.<br>
 <br>
 p.s. apparently people become ai enthusiasts/experts these days by using catchy words :-),<br>
 so here we go, <br>
-<b>huntron<br>
+<b>huntron,<br>
 godzilla,<br>
 dogzilla,<br> 
 Asynchronous Perception Machine/s,<br>
