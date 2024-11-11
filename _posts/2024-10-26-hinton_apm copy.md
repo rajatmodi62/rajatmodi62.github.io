@@ -473,7 +473,7 @@ we will cook some more. <br>
 and trust me, i know how to cook 😛. <br>
 even better than breaking bad's walter white, <br>
 just a stupid phd student<br>
-eating avocado toast. zz.
+eating avocado toast in mlcollective's townhall. zz.
 
 
 <!-- -------- -->
