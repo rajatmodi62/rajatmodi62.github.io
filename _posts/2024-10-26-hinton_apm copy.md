@@ -436,7 +436,7 @@ Gotta do something about this 😡. <br>
     <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godzilla.jpg" style="width: 50%; height: auto;"> 
 </div>
 <div class="caption" style="text-align: center;">
-    The little_dogzilla who battled the NeurIPS reviewers alone. <br> And yeah, this one is special. <br> It was bestowed by Huntron. <br> Really, we are sherioush. <br> You can ask him if you dont believe us. <br> The one you buy on amazon <b>doesn't possess</b> this kind of mojo.  <br> And if you steal it, that mojo won't work.<br> It's custom built. <br> Correct-part needs to route to correct-whole <br> To have a correct-relationship. <br> It's that simple. <br> If you want your own dogzilla <br> ask Huntron. He's known to be generous. <br> If you can catch him in good mood. <br> He wiggles out pretty quickly. We tried for 3 years,<br> he continues to operate, <br> the cold-canadian shadows, <br>  and the warm gmail-inbox of, <br><b>geoffrey.huntron@gmail.com </b>
+    The little_godzilla who battled the NeurIPS reviewers alone. <br> And yeah, this one is special. <br> It was bestowed by Huntron. <br> Really, we are sherioush. <br> You can ask him if you dont believe us. <br> The one you buy on amazon <b>doesn't possess</b> this kind of mojo.  <br> And if you steal it, that mojo won't work.<br> It's custom built. <br> Correct-part needs to route to correct-whole <br> To have a correct-relationship. <br> It's that simple. <br> If you want your own dogzilla <br> ask Huntron. He's known to be generous. <br> If you can catch him in good mood. <br> He wiggles out pretty quickly. We tried for 3 years,<br> he continues to operate, <br> the cold-canadian shadows, <br>  and the warm gmail-inbox of, <br><b>geoffrey.huntron@gmail.com </b>
 
 </div>
 
@@ -477,6 +477,20 @@ eating avocado toast and <br>
 choking on  shitty lab-coffee (it's a shocker, gives current like HIMYM)<br>
 getting huntroned in mlcollective's townhall. <br>
 zz.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+<b> Update 7: Advisor has scolded me agaaaain. </b> 
+
+Something needs to be done about this. <br>
+
+one last joke, and i'm done. promise. 
+
+<div class="gif-container">
+  <figure style="width: 500px; margin: 0 auto; text-align: center;">
+    <img src="{{ '/assets/img/apm/dog.gif' | relative_url }}" alt="Description of GIF" height="300px">
+    <figcaption>Little dogzilla starin at his PhD advisor. And yeah, dogzilla's shameless. And his advisor cannot get rid of him anymore. Dogzilla has reached 4th year. It makes him angry. That's part of the fun. Torture dogzilla for 2 years, then dogzilla tortures him rest of the time. That's the deal. </figcaption>
+  </figure>
+</div>
 
 
 <!-- -------- -->
