@@ -475,7 +475,7 @@ even better than breaking bad's walter white, <br>
 just a stupid phd student<br>
 eating avocado toast and <br>
 choking on  shitty lab-coffee (it's a shocker, gives current like HIMYM)<br>
-getting hunted in mlcollective's townhall. <br>
+getting huntroned in mlcollective's townhall. <br>
 zz.
 
 
