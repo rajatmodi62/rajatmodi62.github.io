@@ -513,5 +513,6 @@ scroll down,<br>
 
 
 just a small undergrad, <br>
-not even computer science <br>
+non cs-major. non stem. <br>
+Member of the MLCollective. <br>
 zz
