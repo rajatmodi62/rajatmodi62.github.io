@@ -488,7 +488,7 @@ one last joke, and i'm done. promise.
 <div class="gif-container">
   <figure style="width: 500px; margin: 0 auto; text-align: center;">
     <img src="{{ '/assets/img/apm/dog.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption>Little dogzilla starin at his PhD advisor. And yeah, dogzilla's shameless by now. Dogzilla has reached 4th year. Dr. Yogesh cannot get rid of him anymore. It makes him angry. That's part of the fun. Torture dogzilla for 2 years, then dogzilla tortures him for eternity. <br>That's the deal. Huntron will agree. Dogzilla is sure.</figcaption>
+    <figcaption>Little dogzilla starin at his PhD advisor. And yeah, dogzilla's shameless by now. Dogzilla has reached 4th year. Dr. Yogesh cannot get rid of him anymore. It makes him angry. That's part of the fun. Torture dogzilla for 2 years, then dogzilla tortures him for eternity. <br>That's the deal. Huntron will agree. That has been earned. <br> Dogzilla is sure.</figcaption>
   </figure>
 </div>
 
