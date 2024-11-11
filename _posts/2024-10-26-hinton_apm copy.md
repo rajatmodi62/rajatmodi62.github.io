@@ -446,7 +446,7 @@ we'll behave, <br>
 until i finish my machine learning midterm that is. <br>
 need masters. <br>
 mebbe phd one day. <br>
-i love my advisor, he allowed me to play :-) <br>
+i love my advisor, he allowed me play :-) <br>
 what will huntron come with next? we are soooo curious. 
 
 
