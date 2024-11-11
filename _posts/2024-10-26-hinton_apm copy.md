@@ -494,7 +494,7 @@ one final action, and i'm done. promise.
 
 Update after the shock of nobel-dressed godzilla settles in:
 
-<b>Hmm, This writing style seems important, <br>
+<b>Hmm, So This writing style seems important, <br>
 For correct prose, <br>
 and charm, <br>
 It lets each line, <br>
