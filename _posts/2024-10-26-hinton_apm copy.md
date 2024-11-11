@@ -510,7 +510,7 @@ Protecting the AI as it sleeps,<br>
 Apparently, It's all about symmetry, <br>
 And a little-bit symmetry breaking here and, <br>
 And a little-bit symmetry breaking there and, <br>
-lol. It's broken. And we are pissing in our pants.
+Lol. It's broken. And we are pissing in our pants.
 
 
 zz
