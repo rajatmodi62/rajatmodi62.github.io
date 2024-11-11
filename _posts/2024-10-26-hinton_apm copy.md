@@ -507,7 +507,9 @@ For they are Batman,<br>
 Who only comes out at night,<br>
 Protecting the AI as it sleeps,<br>
 Apparently, It's all about symmetry <br>
-And a little-but breaking here and there lol.
+And a little-bit breaking here and <br>
+And a little-bit breaking there and <br>
+lol.
 </b>
 
 
