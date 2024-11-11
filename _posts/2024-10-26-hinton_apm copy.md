@@ -92,7 +92,7 @@ Members have thus spoken.  -->
 <!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
- <b> Update 2 (sulking in control room): Huntron is hungry. He wants GLOM's philosophy built into a machine. Quickly. Nooglers are worried. He just won't take no for an answer. </b>  
+ <b> Update 2 (sulking in control room): Huntron is hangry. He wants GLOM's philosophy built into a machine. Quickly. Nooglers are worried. He just won't take no for an answer. </b>  
 
 My lovely PhD advisor Dr. Yogesh is a very strict, punctual and professional man. Every week, he wakes up early in the morning and makes me sit in his office. And then he glares at me from his ivory-spectacles trying to be all serious. I stare at the carpet and bite my lips. It's tough, but I have to remind myself constantly: "Not again rajat. Please don't laugh. Otherwise, he will get angry. Keep my mouth shut and listen.".
  
