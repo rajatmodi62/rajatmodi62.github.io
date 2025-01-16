@@ -491,7 +491,31 @@ scroll down,<br>
 
 In this whole journey, my advisor has been constantly with me. This taught me what character means. <br>
 
+<!-- <iframe src="{{ '/assets/img/apm/slides.pdf' | relative_url }}" width="100%" height="600px"></iframe> -->
+
 
 Forever, <br>
-Member of the MLCollective. <br>
+Members of the MLCollective. <br>
 zz <br>
+------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+<b>Update 9: The kind folks at MLCollective</b>
+
+The folks at MLCollective were kind enough to give us the privilege to present this work at the DLCT session. So we are dumping those slides here for your kind reference. If any issues arise, please do let me know at rajatmodi62@gmail.com
+
+Slides: <br>
+<div style="overflow-y: auto; width: 100%; height: 800px;">
+  <iframe 
+    src="{{ '/assets/img/apm/apm_slides.pdf' | relative_url }}" 
+    style="width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
+
+NeurIPS poster:<br>
+<div style="overflow-y: auto; width: 100%; height: 800px;">
+  <iframe 
+    src="{{ '/assets/img/apm/poster.pdf' | relative_url }}" 
+    style="width: 100%; height: 100%; border: none;">
+  </iframe>
+</div>
+
