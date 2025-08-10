@@ -7,7 +7,14 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-
+gem "csv"
+gem "base64"
+#gem "webrick"
+gem "kramdown"
+gem "rexml"
+gem "psych"
+gem "bigdecimal"
+gem "net-http"
 gem "jekyll", "~> 4.3.3"   # or your target 4.3.x
 gem "liquid", ">= 4.0.4"   # IMPORTANT: avoids tainted? call
 gem "webrick", "~> 1.8"
@@ -35,3 +42,5 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
 # gem "webrick", "~> 1.7"
+gem "csv"
+
