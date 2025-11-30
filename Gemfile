@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "csv"
 gem "base64"
-#gem "webrick"
+gem "webrick"
 gem "kramdown"
 gem "rexml"
 gem "psych"
@@ -17,7 +17,7 @@ gem "bigdecimal"
 gem "net-http"
 gem "jekyll", "~> 4.3.3"   # or your target 4.3.x
 gem "liquid", ">= 4.0.4"   # IMPORTANT: avoids tainted? call
-gem "webrick", "~> 1.8"
+#gem "webrick", "~> 1.8"
 
 # gem "jekyll", "~> 4.2.1"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
