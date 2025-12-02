@@ -181,6 +181,8 @@ a:visited { color: #205caa; }
   font-size: 20px;
   letter-spacing: -1px;
   line-height: 1;
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: 1000; /* Use a medium weight for the 'heavy' look */
 }
 
 .posts .post-date {
@@ -193,7 +195,10 @@ a:visited { color: #205caa; }
 /* Post styles */
 /* ----------------------------------------------------------*/
 
-.post-header { margin: 10px 0 30px; }
+.post-header { margin: 10px 0 30px; 
+font-family: 'Courier New', Courier, monospace; 
+font-weight: 2000; /* Use a medium weight for the 'heavy' look */
+}
 
 .post-header h1 {
   font-size: 36px;
@@ -210,7 +215,12 @@ a:visited { color: #205caa; }
 
 .post-content { margin: 0 0 30px; }
 
-.post-content > * { margin: 20px 0; }
+.post-content > * { margin: 20px 0;
+font-family: 'Courier New', Courier, monospace; 
+font-size: 16px; /* Adjust size if needed */
+font-weight: 1000; /* Use a medium weight for that 'heavy' look */
+line-height: 1.6;
+}
 
 
 .post-content h1,
@@ -247,6 +257,8 @@ a:visited { color: #205caa; }
   font-style: italic;
   margin: 30px 0;
   background-color: #e6cf9d;
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: 1000; /* Use a medium weight for the 'heavy' look */
 }
 
 .post-content ul,
@@ -484,4 +496,6 @@ a:visited { color: #205caa; }
 .centered-quote p {
     margin: 10px 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 1000; /* Use a medium weight for the 'heavy' look */
 }
