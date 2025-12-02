@@ -7,7 +7,7 @@ date:   2024-10-26 11:00:00
 ---
 Discussions on mental rotation, and other experiments conducted back in the 1980's.
 
->> Science without religion is lame, religion without science is blind. - Albert Einstein. 
+>> You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, nor be attached to inaction. 
 
 
 
@@ -23,7 +23,16 @@ Discussions on mental rotation, and other experiments conducted back in the 1980
 <div style="text-align: center;"> 
     <img 
         class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/dec_.png" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/dec_top_down.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+
+
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/dec_square.png" 
         style="width: 50%; height: auto; display: block; margin: 0 auto;" 
         alt="Your image description">
 </div>
@@ -31,7 +40,21 @@ Discussions on mental rotation, and other experiments conducted back in the 1980
 <div style="text-align: center;"> 
     <img 
         class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/dec_alternate_frame.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/dec_hex_model.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/cube_on_table.png" 
         style="width: 50%; height: auto; display: block; margin: 0 auto;" 
         alt="Your image description">
 </div>
@@ -39,112 +62,7 @@ Discussions on mental rotation, and other experiments conducted back in the 1980
 <div style="text-align: center;"> 
     <img 
         class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Your image description">
-</div>
-<div style="text-align: center;"> 
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/cube_representation.png" 
         style="width: 50%; height: auto; display: block; margin: 0 auto;" 
         alt="Your image description">
 </div>
@@ -152,35 +70,93 @@ Discussions on mental rotation, and other experiments conducted back in the 1980
 <div style="text-align: center;"> 
     <img 
         class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/mental_rotation/decahedron.png" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/hex_rec_flaps_original.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/hex_with_rec_flaps.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/hex_with_flaps.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/hex_with_flaps_annotated.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/necker.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/necker_1.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/necker_2.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/rec_necker.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/rec_necker_1.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/rec_necker_2.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/shear.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/equilateral_three_fold.png" 
+        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
+        alt="Your image description">
+</div>
+<div style="text-align: center;"> 
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/mental_rotation/equilateral_two_fold.png" 
         style="width: 50%; height: auto; display: block; margin: 0 auto;" 
         alt="Your image description">
 </div>
 
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-14.png)
-![alt text](image-15.png)
-![alt text](image-16.png)
-![alt text](image-17.png)
-![alt text](image.png)
-![alt text](image-18.png)
-
-
-
-rajat <br>
-a forever-humbled mortal machine.
