@@ -1,12 +1,14 @@
 # Site settings
-title: Rajat's Blog
+title: Rajat Modi
 email: 
-description: "Machines emulate representations of Human Brain"
+description: ""
 baseurl: ""
 url: "http://rajatmodi62.github.io"
 # twitter_username: karpathy
 github_username:  rajatmodi62
-
+twitter_username: rajatmodi62 # Keep this one
+linkedin_username: rajat-modi-54377877 # Find this in your LinkedIn URL
+google_scholar_link: https://scholar.google.com/citations?user=Ypzln1UAAAAJ&hl=en # Paste the full URL here
 # Build settings
 markdown: kramdown
 permalink: pretty
