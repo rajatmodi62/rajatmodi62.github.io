@@ -13,7 +13,6 @@ See the Adiyas, the Vasus, the Rudras, the two Asvins and the Maruts. O scion of
 
 As scientists, we don't yet possess such a divine eye. In fact, the human perception of things often gets impacted by cognitive biases. Our belief of what is the real truth, and what the actual truth is are a lot different. Unless, we try to quantify the randomness in our brains, we cannot devise the learning systems which model the real truth. What is it that humans see differently that a computer does not? Does the human visual cortex favour lower level processing or just learns from higher level concepts? Are there any particular representations that we favour? If so, what is their nature? How can a computer achieve this level of abstraction? These are the fundamental questions that trouble us. 
 
-![rmodi](./image.png)
 
 
 In our last post, the scales had tipped in the favour of a set of neurons as a replacement for associative memory. Instead of relying on memory addressing, the fundamental unit of storage had become the strength of synaptic connections between the neurons. Each such pattern modelled a global representation which was obtained as contributions of relaxed local representations obeying a certain set of constraints.  The outputs of such a system should match how a human perceives the world. To understand the nature of outputs a human favours, we can perform various psychological experiments on ourselves. 
