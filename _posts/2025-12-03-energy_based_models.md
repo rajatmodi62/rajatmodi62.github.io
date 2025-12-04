@@ -133,6 +133,8 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 11"
     >
 </div>
+Let us now assume that such experts exist. For eg, one expert specializes in generating a woman, one specializes in generating young people, one generates smiling people etc. So, you can combine the outputs of all to generate a smiling young person (and they look very beautiful lol, i wish i had a girlfriend like that). 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -141,6 +143,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 12"
     >
 </div>
+Geoff hinton could not stay still, so he invented another kind of machine called the restricted boltzmann machine. It contains two set of units, visible units and hidden units.  Each input pixel is connected to N*N possible outputs, which means this would generate an image of size N by N. The boltzmann machine is called restricted because it does not connect input/output units among themselves. Neither does it consist of more hidden layers. The key reason behind this was that at that time, it was not clear how to train neural nets of more than one layer (since backpropagation was not invented yet). 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -149,6 +152,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 13"
     >
 </div>
+Another variant was deep boltzmann machines. It consists of multiple hidden layers. Training is done in a greedy way, first layer is trained, and frozen, the output features are used to train second layer and so on. Note that this procedure of greedy layer by layer training was ultimately replaced by alexnet in 2012, which used backpropagation to train the neural net end to end. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -157,14 +161,16 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 14"
     >
 </div>
-<div style="text-align: center; margin-bottom: 20px;">
+We can notice some shitty samples boltzmann machine generated. But at that time, it was a pretty big deal, to have a neural net generate new samples at all!!. Boltzmann machines have been succeeded with other class of generative models, but their key ideas still remain as fundamental guiding principles. 
+<!-- <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
         src="{{ site.baseurl }}/assets/img/ebm/image-15.png" 
         style="width: 50%; height: auto; display: block; margin: 0 auto;" 
         alt="Image 15"
     >
-</div>
+</div> -->
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -173,6 +179,8 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 16"
     >
 </div>
+
+As an example, consider the joint probability distribution of a botlzmann machine. It looks very ugly, i know (sigh). However, it is time to focus on the denominator $Z$. Z is given by summing over all plausible values input x, output y. Evaluating this $Z$ is computationally very hard. However, note that if this denominator Z did not exist, we would have no issues, since the numerator consists of merely W, b, c. Alas, we can only dream, if only there was some way to get rid of this stupid z. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -181,6 +189,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 17"
     >
 </div>
+So, can we come up with a training strategy. Well to increase the likelihood, we wanna push the numerator up, denominator down. So, at the input x we are observing, we want probability to be high, and at "some other" points we want this probability to be low. 'If' we had some way of knowing these other points we would be in a good shape.  So intuitively, there is a push-pull game going on. The probability curve $f_{\theta}$ vs input x, at the correct input x, should be high, and around it should be pressed down. In other words, x should function something like a hill, with many valleys lying around it. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -189,6 +198,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 18"
     >
 </div>
+We shall now focus on the problem of how to know these "other points" we should minimize. Well the idea is "generate these other points from the NEURAL NET itself!!, and treat these samples as the negative samples!!". Provided, you sample enough of these samples, you can make a good estimate of the gradient required to update this model. This idea is known as Monte-Carlo Estimate. There is no need to remember this fancy name, as long as you understand the key concept. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -197,6 +207,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 19"
     >
 </div>
+We shall now derive the expression of how to optimize a boltzmann machine. As you can see in the slides, it consists of two parts. First, is the gradient w.r.t input sample $x_{train}$. Next, we have to take a derivative of the partition function. If you track it closely, you can see that it can be written as gradient w.r.t some input $x_{sample}$, which is generated from the network itself. This leads us to the idea of sampling: how to generate these samples, which will ultimately be used to optimize the weights of the boltzmann machine?
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -205,6 +216,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 20"
     >
 </div>
+A closer look at the second term shows partition function in the denominator. As we discussed earlier, calculating it is computationally difficult!!. So how to sample lol :-). This leads to this idea of MCMC. The algorithm is to start with some sample $x_{0}$. We generate some noise, and compute a new sample $x'$. If probability of this sample is high, we choose it. If not, we choose it sometimes with a weight which is difference in the energy of $x_t$ and $x$. We can repeat this procedure for certain no of iterations. As you can imagine, it is extremely slow!!. For each iteration, you have to generate a lot of such samples, and then take a gradient. A core problem is this: 1) suppose you are standing at $x_{0}$, what will be the optimal direction to take a step during the sampling process. Is there something better we could do?
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -213,6 +225,29 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 21"
     >
 </div>
+Well the idea is simple. You are standing in a probability space. You choose the direction, moving along which shall result in the max increase in the probability. This is known as a gradient. So, you can compute $\nabla p_{\theta}(x)$. And you know the next step you wanna take. So, it becomes easy to plug this in the MCMC equation. As you can see, you take the current $x_t$, move in the direction of gradient by a amount weighed by $\epsilon$, and sprinkle in some gaussian noise along the way. This is because, you want to explore the gradient space, and not converge to the same point after equal no of iterations. 
+
+The probability density function for an Energy-Based Model is defined as:
+$$
+\begin{equation*}
+p_{\theta}(\mathbf{x}) = \frac{e^{f_{\theta}(\mathbf{x})}}{Z(\theta)}
+\end{equation*}
+$$ Where $Z(\theta)$ is the partition function, $Z(\theta) = \int_{\mathbf{x}} e^{f_{\theta}(\mathbf{x})} d\mathbf{x}$.We take the logarithm of the probability density function:
+$$
+\log p_{\theta}(\mathbf{x}) = \log \left( \frac{e^{f_{\theta}(\mathbf{x})}}{Z(\theta)} \right) \\
+= \log \left( e^{f_{\theta}(\mathbf{x})} \right) - \log \left( Z(\theta) \right) \\
+= f_{\theta}(\mathbf{x}) - \log Z(\theta)
+$$ Next, we take the gradient with respect to the input data $\mathbf{x}$:
+$$
+\nabla_{\mathbf{x}} \log p_{\theta}(\mathbf{x}) = \nabla_{\mathbf{x}} f_{\theta}(\mathbf{x}) - \nabla_{\mathbf{x}} \log Z(\theta)
+$$. Since the partition function $Z(\theta)$ is a scalar value that results from integrating over all possible $\mathbf{x}$, it depends only on the parameters $\theta$ and is independent of the specific input $\mathbf{x}$. Therefore, the gradient of $\log Z(\theta)$ with respect to $\mathbf{x}$ is zero:
+$$
+\nabla_{\mathbf{x}} \log Z(\theta) = 0
+$$ Substituting this back into the equation yields the score function identity:
+$$
+\nabla_{\mathbf{x}} \log p_{\theta}(\mathbf{x}) = \nabla_{\mathbf{x}} f_{\theta}(\mathbf{x})
+$$
+Note that this a very powerful idea, since the gradient now becomes independent of the partition function. So, we dont need to estimate any negative samples from the network at all, making training extremely fast. Inferece  follow  the same Langevian MCMC procedure described earlier. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -221,6 +256,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 22"
     >
 </div>
+The figure shows some good faces generated via the sampling mechanism. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -229,6 +265,7 @@ We shall now describe this idea of product of experts, which was originally inve
         alt="Image 23"
     >
 </div>
+And these are some cute imagenet samples generated by some modern methods (not boltzmann machines).
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
