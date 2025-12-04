@@ -7,7 +7,7 @@ date:   2024-10-26 11:00:00
 ---
 Course notes of stefano ermons  CS230 lectures 11/12/13 at stanford.
 
->> The sun illumines the world, but the light is one. Similarly, the energy of the Supreme illuminates the whole world, and yet the energy remains one.
+>> The sun illumines the world, but the light is one. Similarly, the energy of the Supreme illuminates the whole world, and yet the energy remains one. (the sum of probabilities in energy based models also remains one :-))
 
 
 <div style="text-align: center; margin-bottom: 20px;">
