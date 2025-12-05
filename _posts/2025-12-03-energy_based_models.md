@@ -456,6 +456,7 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 53"
     >
 </div>
+A way around this problem was invented in 2011, under the idea of : denoising score matching. Let's say we are given a ground truth probability distribution   $p(x)$. It says that we can perturb the clean images by some slight noise (for example a gaussian kernel, with very low variance). Let the perturbed distribution be called $q(x)$. So rather than estimating the score of $p(x)$, it is far more computationally efficient to calculate the score of $q(x)$. How? Well that proof requires some math, which we will discuss next. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -464,6 +465,7 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 54"
     >
 </div>
+As before, if we simplify the score function, it appears to have three terms. First term (the blue part), does not depend on the parameters $\theta$, so it can be assumed to be constant. So let us only focus on the green and red term. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -472,6 +474,9 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 55"
     >
 </div>
+
+The second term contains $\nabla_{\tilde{x}} q_{\sigma}(\tilde{x})^T$. Now remember that there are several possible inputs x, which are corrupted by a kernel q, to compute $\tilde{x}$. Therefore, this term can be written as a product of probability of sampling $x$, and the probability of generating $\tilde(x)$   `given' the input x. We can integrate then by summing over all the plausible $x$. The gradient outside depends on $\tilde{x}$, so it can be brought inside the expression. So we finally get a term which contains the expectation. Remember this is the simplification of the RED term. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -480,6 +485,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 56"
     >
 </div>
+
+You do a bunch more math, and end up with the final term, which i will explain next. I think while it is important to derive on your own, the key message is: noise the input, and learn a score network that mimics the vector field of the noisy distribution. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -488,6 +495,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 57"
     >
 </div>
+
+The final  equation comes out to be very elegant. The first term is just the value that the score network predicts. The second term is the gradient of log probability of noise sample conditioned on the true sample. This is nothing but just a gaussian noise which we added, whose mean and variance are already known. So the gradient is simply the negative of difference between noisy and clean sample, divided by the variance.
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -496,30 +505,9 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 58"
     >
 </div>
-<div style="text-align: center; margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/ebm/image-59.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Image 59"
-    >
-</div>
-<div style="text-align: center; margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/ebm/image-60.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Image 60"
-    >
-</div>
-<div style="text-align: center; margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/ebm/image-61.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Image 61"
-    >
-</div>
+
+The denoising objective then becomes pretty sleek: you sample a bunch of datapoints, and perturb each of them under a noisy kernel (gaussian in our case). Then you compute the score matching function, and make a gradient `ascent'. One important point here is that the variance of noise added should be pretty small for this method to work well. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -528,6 +516,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 62"
     >
 </div>
+
+There is another algorithm called the sliced score matching.  So consider a vector field of $p_{data}$ which is very high dimensional. So we can imagine that we can `project' those vectors to some lower dimensions. The distance estimation on a set of vectors then reduces to distance estimation on a line (Which is much more computationally efficient in practice. )
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -536,6 +526,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 63"
     >
 </div>
+
+The score function can be modelled as a fisher divergence between the ground truth data, and score matching network. The key component in the equation is $v^{T}$ which projects the predicted vector field onto a straight line. Take a closer look at the second equation. It consists of $v^{T}\nabla_x v.$. Mathematically, it means that the jacobian (the two dimensional matrix) , is multiplied by a same vector, and its transpose on the same end. The final value is a scalar. Now, the key idea is that this  'weird product' is somehow much more efficient to compute. How?
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -544,6 +536,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 64"
     >
 </div>
+Because it can be modelled as a single backprop step? How? Take the output of your score network, take a dot product w.r.t $v^{T}$, backpropogate, and take another dot product w.r.t $v^{T}$ again!!. So, you no longer have to take $d$ products, where d is the number of input dimensions!!. This makes the learning process much more stable in practice. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -552,14 +546,9 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 65"
     >
 </div>
-<div style="text-align: center; margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/ebm/image-66.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Image 66"
-    >
-</div>
+
+So the algorithm of sliced score matching becomes simple, take input images, generate random projection directions, compute the weird derivative, backpropogate. so remember their are two backward passes in this algorithm 1) where outputs of score network are multiplied w.r.t v, here the aim is not the optimize the parameters. 2) actually updating the parameters of the network. One argument may be: how to choose this projection direction $v$. Note that we are sampling those directions randomly, so even if "loss of information" happens while projecting the outputs of score network, the fact we sample "random" projection directions, more than compensates for it. What we lose, is what we gain in efficiency, just 2 backprops per forward passes. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -568,6 +557,7 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 67"
     >
 </div>
+So we have discussed how to 'train' sliced-score-matching network. How to sample from it?
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -576,22 +566,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 68"
     >
 </div>
-<div style="text-align: center; margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/ebm/image-69.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Image 69"
-    >
-</div>
-<div style="text-align: center; margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/ebm/image-70.png" 
-        style="width: 50%; height: auto; display: block; margin: 0 auto;" 
-        alt="Image 70"
-    >
-</div>
+We can use normal langavian dynamics idea: choose a random starting point, take a step along score function, sprinkle a little bit of gaussian noise, to get a variety of samples in the generation process. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -600,6 +576,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 71"
     >
 </div>
+Following this algorithm, however DOES not work, all it gives us is this blurry samples, which make no sense. Alas!!, what is the use of so much math, if it doesnt work. Fortunately, there are two subtle reasons for this problem:
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -608,6 +586,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 72"
     >
 </div>
+This is the manifold hypothesis. Your data lies only on a manifold of a high dimension space. If you initialize the starting point of your sampling algorithm in some empty space, the gradient field is undefined!!. Its like you are standing in land, and cant navigate to different points in the river. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -616,6 +596,7 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 73"
     >
 </div>
+ Lets say the representation of our image lies on a 3072 dimensional vector spaec. If you reduce its dimension, to 2056, turns out, the image can still be perfectly reconstructed. This means, that "most of the space" in the high dimensions is empty. 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -624,6 +605,8 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 74"
     >
 </div>
+An intuitive insight goes as follows. On the left, we show a data distribution consisting of two gaussians. The data density in top left, and bottom right region is really 'low'. If we look at the score function in the red region, it turns out that it is pretty inaccurate, whereas only the green regions are accurate. So, if you initialize your starting point in red region, there are chances you will just keep roaming around in the red regions, and never actually end up in the green region. And all you will see is noise.
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -632,6 +615,10 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 75"
     >
 </div>
+
+
+Another problem goes as follows: Suppose you are given a mixture of gaussians which mix information in "different weights", for eg, $\pi$ amount from gaussian A, $1-\pi$ amount from gaussian B. The constraint is that a particular  sample $x$, can only belong to either A or B (disjoint mode). When you model the score field of such a mixture i.e. the gradient, instead of actual likelihood (i.e. $p_{data}$), you lose the coefficients!!. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -640,7 +627,7 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Image 76"
     >
 </div>
-
+On the left we show "unequal samples distribution". i.e. there are less samples in the bottom left gaussian, and more samples in the top right gaussian. However, when you build a score function, and then sample the points, you will see that they generate "equal densities". As seen in the right figure. However, this is not correct. 
 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
@@ -650,6 +637,16 @@ Now, if you were looking closely, you will see, we could just perform a single b
         alt="Animation GIF"
     >
 </div>
+Now, you "somehow" fix these issues, and you will be able to generate cool looking samples like the above photo. The fixes will be discussed in a later post. 
 
-Woah, so much math. OMG. If you got through it, you are a superhuman (really). This took me 5 days to write lol. I know you don't like math. But hey, here is the kicker: There is more math coming!! We will talk about the supercool diffusion models in the next post. 
+
+-----------Approaching the end of this post--------
+
+Woah, so much math. OMG. If you got through it, you are a superhuman (really). I know you don't like math. I also dont like it. Hell i dont even understand it.  But hey, here is the kicker: There is more math coming :-)!! We will talk about the supercool diffusion models in the next post. 
+
+It is very easy to listen to a lecture and then make notes. But what is difficult is making the inutuition clear to others. I could definitely have not gained this depth by reading papers: because we don't know the broader field history. Neither do we know, in what orders to read papers in. That is where the classroom programs come in handy. I just wish my own school (UCF) had such deep lectures :-). Real learning happens when the professors teach, not when the students merely present research papers in class: which anyone could read.  Thanks to stanford for making their amazing content available to us 'common' men.
+
+
+rajat
+
 
