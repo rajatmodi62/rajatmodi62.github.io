@@ -389,7 +389,9 @@ We can compute the expression for the discriminator $D_{\theta, Z}$ by incorpora
     >
 </div>
 
-The algorithm then becomes : sample some data points from true distribution, some from noisy distribution, and compute the nce loss. The parameters are then updated via standard stochastic gradient ascent. Note, that this step does not require sampling from the EBM!!. If you zoom back , this algorithm points to something weird:  you can add noise, and classify it. Somehow, it allows us to get rid of the partition function, and just learn it!!. However, note that we only classified a given sample as belonging to some real/noise. Could we build a better model, where we also estimated the "amount of noise" we added to a sample? Hmmm, it seems we are gradually building towards diffusion models lol. 
+The algorithm then becomes : sample some data points from true distribution, some from noisy distribution, and compute the nce loss. The parameters are then updated via standard stochastic gradient ascent. Note, that this step does not require sampling from the EBM!!. If you zoom back , this algorithm points to something weird:  you can add noise, and classify it. Somehow, it allows us to get rid of the partition function, and just learn it!!. Furthermore, there is no stupid second order derivative here, so thats pretty cool :-).
+
+However, note that we only classified a given sample as belonging to some real data/noise. Could we build a better model, where we also estimated the "amount of noise" we added to a sample? Hmmm, it seems we are gradually building towards diffusion models lol. 
 
 
 <div style="text-align: center; margin-bottom: 20px;">
@@ -400,6 +402,11 @@ The algorithm then becomes : sample some data points from true distribution, som
         alt="Image 48"
     >
 </div>
+
+At this point, lecture 13 started. So, i had to actually go into the ppt, and see what dr. ermon was saying :-). So thankful that stanford guys provided the notes. Really beneficial for a dumb duck like me. 
+
+We can now start imagining a plausible universe in which the score matching models lie. They are generalizable over EBM's because we can in theory use score matching to even train a Flow model, etc. 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -408,6 +415,7 @@ The algorithm then becomes : sample some data points from true distribution, som
         alt="Image 49"
     >
 </div>
+Let us now focus on building some intuition of score matching. Assume we are given a data generating function (which is a mixture of two gaussians), and we draw some samples from it. Note that the density in one gaussian is more, as compared to another, i.e. we give more "weight" to one of the gaussians. We can sample iid samples in this distribution, to get two clusters , one of which is more spread than the other. We wanna somehow compute the gradient of the likelihood of these samples, and compute a vector field. This vector field should match the field of the mixture of gaussian (on the left). This notion is known as "score matching". 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -416,6 +424,7 @@ The algorithm then becomes : sample some data points from true distribution, som
         alt="Image 50"
     >
 </div>
+So let us imagine that we have a ground truth vector field, and a field predicted by the score function. We can align these two, and measure the "angular" distance between them. This will give us an approximation of how close we are to the real distribution. 
 
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
@@ -425,6 +434,8 @@ The algorithm then becomes : sample some data points from true distribution, som
         alt="Image 51"
     >
 </div>
+The $L_2$ norm between these distributions is known as the fischer distance. Unfortunately, this thing depends on $\log p_{data}(x)$, which we don't know. Luckily, we can simplify this as the score matching equation, which only involves $\theta$. The key bottleneck comes from the jacobian part. (note that hessian is second order derivative, jacobian of a jacobian gives a hessian.)
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -433,6 +444,10 @@ The algorithm then becomes : sample some data points from true distribution, som
         alt="Image 52"
     >
 </div>
+We could parameterize the score network as a neural network. However, computing the jacobian is intractable. Consider the output neurons modelling $s_{\theta, 1}$. We need to compute the trace of the jacobian, i.e. how does the value of first output neuron change if first input neuron is changed. Similarly, we have to do this for other $d-1$ dimensions of the input. Hence, we need O(d) backward passes. 
+
+Now, if you were looking closely, you will see, we could just perform a single backward pass. Will that work? NO. Consider second input neuron. Fluctuating that should not impact any other output neurons other than second one. Therefore, we need to make sure that gradients of other output neurons are not impacting the second input neuron. That is why we need O(d) backward passes. This scales with the number of input dimensions of x, which is not really a good option. Can we do better, say somehow compute the gradients in only a single backward pass?
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -635,3 +650,6 @@ The algorithm then becomes : sample some data points from true distribution, som
         alt="Animation GIF"
     >
 </div>
+
+Woah, so much math. OMG. If you got through it, you are a superhuman (really). This took me 5 days to write lol. I know you don't like math. But hey, here is the kicker: There is more math coming!! We will talk about the supercool diffusion models in the next post. 
+
