@@ -1,11 +1,11 @@
----
+<!-- ---
 layout: page
 title: Failures
 permalink: /Failures/
 includelink: true
 ---
 {: style="color: red;"}
-**I am currently on the job market and actively searching for new opportunities!**
+**I am currently on the job market and actively searching for new opportunities! If my research can contribute in any way, please reach out at rajatmodi62@gmail.com**
 
 A list of failures sitting silently on my website. 
 
@@ -16,4 +16,4 @@ A list of failures sitting silently on my website.
 [5] Openai (Sep 25): Implement nanograd in 45 mins. Bombed. <br>
 [6] Tesla (Oct 25): Made to round 3, implement trajectory transformer, didnt know how to use naive pytorch attention layer, learn how to use libraries also!!<br>
 [7] RealityDefender (Dec 25): Upcoming. <br>
- 
+  -->

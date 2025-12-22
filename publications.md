@@ -6,9 +6,9 @@ includelink: true
 ---
 
 {: style="color: red;"}
-**I am currently on the job market and actively searching for new opportunities!**
+**I am currently on the job market and actively searching for new opportunities!If my research can contribute in any way, please reach out at rajatmodi62@gmail.com**
 
-A lot more still needs to be done. 
+
 
 2017- 2025 <br>
 [1] <u>Asynchronous Perception Machine(s)</u>: First working implementation of the GLOM architecture. It was previously only a theoretical idea. Our implementation is 10x faster than ViT-B/16 and performs 2% better than state-of-the-art OpenCLIP ViT-H on ImageNet. Designed as a spiritual successor to capsule networks.<br>
@@ -57,3 +57,5 @@ Links: [[US A1 Patent](https://drive.google.com/file/d/1R4NKRI5nVjcgQI9czmf46MTH
 [2] <u>Context Resolution in Autonomous Systems</u>
 Propose a system using cross-stitch units to merge user inputs into a unified representation.<br>
 Links: [[US A2 Patent](https://patents.google.com/patent/WO2022245134A1/en?inventor=rajat+modi)] 
+
+A lot more still needs to be done. 

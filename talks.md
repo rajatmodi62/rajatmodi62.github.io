@@ -6,7 +6,7 @@ includelink: true
 ---
 
 {: style="color: red;"}
-**I am currently on the job market and actively searching for new opportunities!**
+**I am currently on the job market and actively searching for new opportunities!If my research can contribute in any way, please reach out at rajatmodi62@gmail.com**
 
 I have given several talks over the years, which are linked below.
 

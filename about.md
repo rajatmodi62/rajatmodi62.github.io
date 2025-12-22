@@ -6,7 +6,7 @@ includelink: true
 ---
 
 <div style="color: #d32f2f; text-align: center; font-weight: bold; margin: 20px 0; border: 1px solid #d32f2f; padding: 10px; border-radius: 4px;">
-    I am on the job market (Graduating Dec 2026) and searching for full-time roles starting Jan 2027.
+    I am on the job market (Graduating Dec 2026) and searching for full-time roles starting Jan 2027. If my research can contribute in any way, please reach out at rajatmodi62@gmail.com
 </div>
 
 <!-- <div style="text-align: center;"> 
@@ -40,7 +40,7 @@ From an industry standpoint: I am interested in deploying AI models "on the edge
 
 From a research standpoint: Now, i am just trying to figure out how the brain "might" work. I read neuroscience, and then build computational models encoding those constraints. My interest lies on building biological plausible learning algorithms, simulating cognitive thought processes, inventing new kinds of "associative" memories. 
 
-Some questions which excite me: 1) what is next after backpropagation 2) How to encode part-whole hierarchies in neural nets 3) How to solve the "binding problem" in neural nets 4) How to build machines which can solve optical illusions like Necker's cube, Kaninza Triangle, and Spinning Dancing Lady. 5) How to build "conscious" machines, and solve hard problems of consciousness. 
+Some questions which excite me: 1) what is [next](https://arxiv.org/abs/1502.04156) after backpropagation 2) How to [encode part-whole hierarchies](https://arxiv.org/abs/2102.12627) in neural nets 3) How to solve the ["binding problem"](https://en.wikipedia.org/wiki/Binding_problem) in neural nets 4) How to build machines which can solve optical illusions like [Necker's cube](https://en.wikipedia.org/wiki/Necker_cube), [Kaninza Triangle](https://en.wikipedia.org/wiki/Illusory_contour), and [Spinning Dancing Lady.](https://en.wikipedia.org/wiki/Spinning_dancer) 5) Build quantum [superposition](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Arnold_representation_theorem) neural nets 6) Mechanisms of sleep in brain, and [its role](https://www.nature.com/articles/304111a0) in memory storage 7) Fast-weights to [store](https://arxiv.org/abs/1610.06258) temporary neural activities 8) How to  solve [hard problems](https://en.wikipedia.org/wiki/Hard_problem_of_consciousness) of consciousness. These problems `taste' good to me :-).  
 
 
 
