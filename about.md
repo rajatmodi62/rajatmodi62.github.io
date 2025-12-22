@@ -4,8 +4,11 @@ title: About
 permalink: /about/
 includelink: true
 ---
-{: style="color: red;"}
-**I am currently on the job market and actively searching for new opportunities!**
+
+<div style="color: #d32f2f; text-align: center; font-weight: bold; margin: 20px 0; border: 1px solid #d32f2f; padding: 10px; border-radius: 4px;">
+    I am on the job market (Graduating Dec 2026) and searching for full-time roles starting Jan 2027.
+</div>
+
 <!-- <div style="text-align: center;"> 
     <img 
         class="img-fluid" 
