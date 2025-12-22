@@ -34,7 +34,7 @@ I am currently pursuing PhD in computer science at University of Central Florida
 
 ##  Research Interests 
 
-For a long time, i described myself as being interested on LLMs, transformers, efficient AI, learning efficient models which can adapt under "distribution shifts".  
+For a long time, i have been interested in building compute-efficient AI models that adapt under "distribution shifts".  
 
 From an industry standpoint: I am interested in deploying AI models "on the edge", specifically techniques like weight pruning, quantization etc. I am also searching for a way to transfer knowledge in a zero-shot way between architectures of different structures. 
 
