@@ -4,7 +4,8 @@ title: About
 permalink: /about/
 includelink: true
 ---
-
+{: style="color: red;"}
+**I am currently on the job market and actively searching for new opportunities!**
 <!-- <div style="text-align: center;"> 
     <img 
         class="img-fluid" 
@@ -17,12 +18,26 @@ includelink: true
 </div> -->
 
 > I was jack of all, master of none. Yet, I dared do a PhD. For what is PhD, but philosophy. And philosophy i did. Turned out i was still jack all along.  
+<div style="text-align: center; margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/prof_pic.jpg" 
+        style="width: 50%; max-height: 600px; object-fit: cover; display: block; margin: 0 auto;" 
+        alt="Animation GIF"
+    >
+</div>
 
-I am currently pursuing PhD in computer science at University of Central Florida. I am being advised by [Dr. Yogesh Rawat](https://scholar.google.com.sg/citations?user=D_JvEcwAAAAJ&hl=en) and [Dr. Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en). I worked as Senior Member of Technical staff at Athena Health. Previously I worked at Samsung Research under [Dr. Manish Sharma](https://scholar.google.com/citations?hl=en&user=sIYrRw0AAAAJ). In my earlier life, I spent time at IIT Roorkee, Parimal Lab, under Dr. [Partha Pratim Roy](https://scholar.google.ca/citations?hl=en&user=moDpyKkAAAAJ&view_op=list_works&sortby=pubdate). During my undergrad at NSIT, I was fortunate enough to have worked and learnt from [Dr. Harish Parthasarathy](https://scholar.google.co.in/citations?user=hdt6eVoAAAAJ&hl=en). I spent time discussing quantum computing, and various mathematical problems with [Dr. K.R. Parthasarathy](https://en.wikipedia.org/wiki/K._R._Parthasarathy_(probabilist)). And of course, i cannot forget chai/samosa in  college canteen. Last, but not the least,  i had the great privilege of learning flute from my Guru [Rajendra Prasanna](https://en.wikipedia.org/wiki/Rajendra_Prasanna). 
+I am currently pursuing PhD in computer science at University of Central Florida. I am being advised by [Dr. Yogesh Rawat](https://scholar.google.com.sg/citations?user=D_JvEcwAAAAJ&hl=en) and [Dr. Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en). Prior to my PhD, I worked as Senior Member of Technical staff at Athena Health. Before that, I worked at Samsung Research under [Dr. Manish Sharma](https://scholar.google.com/citations?hl=en&user=sIYrRw0AAAAJ). In an earlier life, I spent time at IIT Roorkee, Parimal Lab, under Dr. [Partha Pratim Roy](https://scholar.google.ca/citations?hl=en&user=moDpyKkAAAAJ&view_op=list_works&sortby=pubdate). During my undergrad at NSIT, I was fortunate enough to have worked and learnt from [Dr. Harish Parthasarathy](https://scholar.google.co.in/citations?user=hdt6eVoAAAAJ&hl=en). I will forever cherish the time spent discussing quantum computing, and various mathematical problems with [Dr. K.R. Parthasarathy](https://en.wikipedia.org/wiki/K._R._Parthasarathy_(probabilist)). Last, but not the least,  i had the great privilege of learning flute from my Guru [Rajendra Prasanna](https://en.wikipedia.org/wiki/Rajendra_Prasanna). 
 
-The purpose of this website is for me to 'think' about analogies from a brain point of view and use those notions towards developing an intelligent machine. Computational models of intelligence shall keep coming and going. Fundamental principles of perception however shall remain same. I seek to uncover those. 
+##  Research Interests 
 
- I try to read diverse fields and understand how brain "might" work. Then, i build computational models encoding those mental constraints. My research delves into efficient-learning, part-whole hierarchies in neural nets, machine perception, binding problem, and simulating cognitive thought processes. 
+For a long time, i described myself as being interested on LLMs, transformers, efficient AI, learning efficient models which can adapt under "distribution shifts".  
+
+Now, i am just trying to figure out how the brain "might" work. I read neuroscience, and then build computational models encoding those constraints. My interest lies on building biological plausible learning algorithms, simulating cognitive thought processes, inventing new kinds of "associative" memories. While scaling up has taken us far, i am searching for next set of inductive biases, which can push intelligence to the next level. 
+
+Some questions i am interested in answering: 1) what is next after backpropagation 2) How to encode part-whole hierarchies in neural nets 3) How to solve the "binding problem" in neural nets 4) How to build machines which can solve optical illusions like Necker's cube, Kaninza Triangle, and Spinning Dancing Lady. 5) How to build "conscious" machines, and solve hard problems of consciousness. 
+
+
 
 
 
