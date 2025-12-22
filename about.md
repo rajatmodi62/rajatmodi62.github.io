@@ -36,9 +36,11 @@ I am currently pursuing PhD in computer science at University of Central Florida
 
 For a long time, i described myself as being interested on LLMs, transformers, efficient AI, learning efficient models which can adapt under "distribution shifts".  
 
-Now, i am just trying to figure out how the brain "might" work. I read neuroscience, and then build computational models encoding those constraints. My interest lies on building biological plausible learning algorithms, simulating cognitive thought processes, inventing new kinds of "associative" memories. While scaling up has taken us far, i am searching for next set of inductive biases, which can push intelligence to the next level. 
+From an industry standpoint: I am interested in deploying AI models "on the edge", specifically techniques like weight pruning, quantization etc. I am also searching for a way to transfer knowledge in a zero-shot way between architectures of different structures. 
 
-Some questions i am interested in answering: 1) what is next after backpropagation 2) How to encode part-whole hierarchies in neural nets 3) How to solve the "binding problem" in neural nets 4) How to build machines which can solve optical illusions like Necker's cube, Kaninza Triangle, and Spinning Dancing Lady. 5) How to build "conscious" machines, and solve hard problems of consciousness. 
+From a research standpoint: Now, i am just trying to figure out how the brain "might" work. I read neuroscience, and then build computational models encoding those constraints. My interest lies on building biological plausible learning algorithms, simulating cognitive thought processes, inventing new kinds of "associative" memories. 
+
+Some questions which excite me: 1) what is next after backpropagation 2) How to encode part-whole hierarchies in neural nets 3) How to solve the "binding problem" in neural nets 4) How to build machines which can solve optical illusions like Necker's cube, Kaninza Triangle, and Spinning Dancing Lady. 5) How to build "conscious" machines, and solve hard problems of consciousness. 
 
 
 
