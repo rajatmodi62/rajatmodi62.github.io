@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Navigating Peer Review"
+title:  "Navigating Peer Review: A foolish perspective"
 description: "How to navigate peer review as a phd student?"
 date:   2026-02-23 11:00:00
 ---
@@ -70,7 +70,7 @@ Designing fortress (bulletproofing paper).
     - Then explain them one by one. Each section should contain its own figure for that block (credits:shehreen for advice)
 - Techniques for `quick' tier1-publications: 
     - Work on something with less data, partially labelled data, semi-supervised learning, constrained-settings. 
-    - Open vocabulary also works. You can always strap an adapter to a big llm. And train it. 
+    - Open vocabulary also works. You can always strap an adapter to a big llm. And train it with a lora. 
     - build your own problem, own benchmark, and own models. play the "dataset and benchmark" game. 
     - extend image based models to videos, especially long videos, not many people do videos. 
     - robustness: corrupt inputs to models, check their robustness, techniques for improving them in real world. 
