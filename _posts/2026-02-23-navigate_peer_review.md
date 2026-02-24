@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Navigating Peer Review: A foolish perspective"
 description: "How to navigate peer review as a phd student?"
-date:   2026-02-23 11:00:00
+date:   2018-02-23 11:00:00
 ---
 > "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty."
 
