@@ -19,7 +19,7 @@ Peer review is meant to be double blind. This means you don't know who your revi
         >
 </div>
 
-In earlier years of my phd, when i was freshly minted out of my college,  i thought that i will change the world (and win a nobel prize). I had a big ego problem, and thought there is no one greater than me. . My hands were not folded in humility that time(like arjuna in the left side of the photograph). Thankfully, God had a different lesson in store for me. 
+In earlier years of my phd, when i was freshly minted out of my college,  i thought that i will change the world (and win a nobel prize). I had a big ego problem, and thought there is no one greater than me. My hands were not folded in humility that time(like arjuna in the left side of the photograph). Thankfully, God had a different lesson in store for me. 
 
 It `only' took 2 rounds of broken shoulders, two visits to ER, one week of stay in a hospital, academic probations, losing my mom to cancer, a semester off from PhD, family getting scammed of 100k dollars (twice), to reach this state of nirvana (and some anxiety, depression medicine, countless therapy sessions). So, i wish that no one else has to learn the bitter lesson i learnt the hard way.
 
