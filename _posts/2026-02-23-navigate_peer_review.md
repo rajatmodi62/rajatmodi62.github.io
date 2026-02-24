@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Navigating Peer Review like a Pro 😎"
+title:  "Navigating Peer Review "
 description: "How to navigate peer review as a phd student?"
 date:   2026-02-23 11:00:00
 ---
