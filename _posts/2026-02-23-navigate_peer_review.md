@@ -63,17 +63,15 @@ Designing fortress (bulletproofing paper).
         - Reverse psychology. Gain one more point in your favour. 
 - Create a flop matched baseline: In ablations, include one line that your method's improvements are not due to simply increasing the no of parameters, and you actually checked by training a larger model of the baseline. 
 - Dress up your method by some silly name: Let's say you are just selling a MLP which takes time as input. It is just a stupid MLP. 
-    - But, you will call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well at CVPR, ECCV. Really. 
-    - Not so much at ICLR, ICML, and NeurIPS. Reviewers see right through bullshit. 
+    - But, you will call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well.
 
 - Imagine you have a method. It has two blocks. 
     - Draw a single teaser with those two blocks 
     - Then explain them one by one. Each section should contain its own figure for that block (credits:shehreen for advice)
-- Techniques for `quick' publications: 
+- Techniques for `quick' tier1-publications: 
     - Work on something with less data, partially labelled data, semi-supervised learning, constrained-settings. 
-    - Open vocabulary also work. 
+    - Open vocabulary also works. You can always strap an adapter to a big llm. And train it. 
     - build your own problem, own benchmark, and own models. play the "dataset and benchmark" game. 
     - extend image based models to videos, especially long videos, not many people do videos. 
     - robustness: corrupt inputs to models, check their robustness, techniques for improving them in real world. 
     - Freeze model, finetune some prompts. Call it "adaptation"
-- Overcrowded paper so that it appears that you squeezed every ounce of information you could (see[here](https://openaccess.thecvf.com/content/CVPR2024/papers/Koley_How_to_Handle_Sketch-Abstraction_in_Sketch-Based_Image_Retrieval_CVPR_2024_paper.pdf), i am amazed how the authors fit it. This shows the limits to which you can hack latex. )
