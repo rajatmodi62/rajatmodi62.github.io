@@ -5,8 +5,8 @@ title:  "Navigating Peer Review like a Pro 😎"
 description: "How to navigate peer review as a phd student?"
 date:   2026-02-23 11:00:00
 ---
-> "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty."
-
+> 
+Peer review is meant to be double blind. This means you don't know who your reviewers are. Your reviewers dont know who you are. And you can exploit that anonymity to your advantage.
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
   First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research. Use sparingly. 
 </div>
@@ -19,11 +19,11 @@ date:   2026-02-23 11:00:00
         >
 </div>
 
-Over the years,  i have tried to stay true to this quote from Srimad Bhagavad Gita. It is easier said then done: you spent months on your paper, and krishna tells you to be detached? It seems he is playing a game. If you dont want results (aka job, big internship), why do a phd in the first place? Seems just like an idealistic stance. 
+In earlier years of my phd, when i was freshly minted out of my college,  i thought that i will change the world (and win a nobel prize). I had a big ego problem, and thought there is no one greater than me (like arjuna in the left side of the photograph). My hands were not folded in humility that time. Therefore, God had different lessons in store for me. 
 
-Turns out, krishna (a hindu god) is playing a psychological game. And that is the game of "peer-review". The most knowledgeable person does not win it. The most patient one does. It is brutal, because you have to respect your opponent, and your paper's life is in their hands. So, it is one sided game. You still have to win it. Those are the stakes. You won't graduate without winning it. And you need to be able to tell when the reviewer is bluffing. And when to call it.
+It `only' took 2 rounds of broken shoulders, two visits to ER, one week of stay in a hospital, academic probations, losing my mom to cancer, a semester off from PhD, to reach this state of clarity. So, i wish that no one else has to learn the bitter lesson i learnt the hard way.
 
-In earlier years of my phd, when i was freshly minted out of a college, and thought i will change the world (and win a nobel prize), here is how a typical peer-review cycle went : 1) Got a lot of bad reviews 2) Felt upset, and stayed in bed for a whole day binge watching movies. 3) abused the reviewer who gave bad scores, felt he didnt understand anything 4) complained a little bit to my advisor, threatened i will leave my phd (as if i am doing him a favour by doing phd in the first place). At this point, i have threatened my advisor so much, he doesnt care that much lol. So don't threaten that often, otherwise it doesn't work. 5) withdrew the paper if it is not salvagable, and resubmitted to the next venue. 6) forgot my worries for the next two months, until this cycle repeated, and i come back to 1). I stayed in this loop for around 3 years of my phd, and never made any progress. 
+Here is how a typical peer-review cycle went : 1) Got a lot of bad reviews 2) Felt upset, and stayed in bed for a whole day binge watching movies. 3) abused the reviewer who gave bad scores, felt he didnt understand anything 4) complained a little bit to my advisor, threatened i will leave my phd (as if i am doing him a favour by doing phd in the first place). At this point, i have threatened my advisor so much, he doesnt care that much lol. So don't threaten that often, otherwise it doesn't work. 5) withdrew the paper if it is not salvagable, and resubmitted to the next venue. 6) forgot my worries for the next two months, until this cycle repeated, and i come back to 1). I stayed in this loop for around 3 years of my phd, and never made any progress. 
 
 To make matters worse, when other people got into tier 1 conferences, it hurted my ego. I never could understand what made them successful. Chances are, you are also stuck in a similar loop, and don't know what to do. You think that peer-review is a "random" game, where most of the reviewers are incompetent and you just landed a bad set of reviewers. You attribute someone else's success to `luck', or 'they had a good day'. You have successfully managed to fool your brain into such an illusion. Congratulations. 
 
