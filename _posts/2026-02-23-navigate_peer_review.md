@@ -8,7 +8,7 @@ date:   2026-02-23 11:00:00
 > 
 Peer review is meant to be double blind. This means you don't know who your reviewers are. Your reviewers dont know who you are. And you can exploit that anonymity to your advantage.
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
-  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research. Use sparingly. 
+  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes years. 
 </div>
 
 <div style="text-align: center;"> 
