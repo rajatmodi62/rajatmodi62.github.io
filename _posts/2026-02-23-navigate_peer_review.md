@@ -1,14 +1,14 @@
 ---
 layout: post
 comments: true
-title:  "Navigating Peer Review"
+title:  "Navigating Peer Review like a Pro 😎"
 description: "How to navigate peer review as a phd student?"
-date:   2018-02-23 11:00:00
+date:   2026-02-23 11:00:00
 ---
 > "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty."
 
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
-  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Many people won't like that it exists. But, everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research. Use sparingly. 
+  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research. Use sparingly. 
 </div>
 
 <div style="text-align: center;"> 
@@ -44,34 +44,41 @@ Designing fortress (bulletproofing paper).
 - Set expectations: If you are from academia, mention the lack of resources. Do best to get the results. 
 - Figures: Most people will tell you to have colorful figures. The most impactful papers have simple black and white figures (check word2vec). No colors. Psychologically, it tells reviewer, " my idea is so strong , i dont need a complex figure to explain it". Humans already live complex lives. Give them simplicity. 
 - The illusion of identity.
-    - Most people upload their papers on arxiv/twitter. That's stupid. Everyone knows your name. That backfires.  If you come from a company, or a big hot shot lab, you can play a prestige game. But, those who don't have it, cant play it. Anonymity is your weapon. 
-    - The key is to psychologically install a `potential identity' in the reviewers mind. Copy the style of other (that's not forbidden!!). 
-    - An example is hinton, notice how all his slides, and figures have a pale yellow background. That's his signature. Nobody else in community can pull that off. 
+    - Most people upload their papers on arxiv/twitter. That's stupid. Everyone knows your name. That backfires.  If you come from a company, or a big hot shot lab, you can play the prestige game. But, those who don't have it, cant play it. Anonymity is your weapon. 
+    - The key is to psychologically install a `potential identity' in the reviewers mind. Mirror the style of other labs (that's not forbidden!!). 
+    - A very famous example is hinton, notice how all his slides, and figures have a pale yellow background. That's his signature.  
 - Stupid cartoons don't survive test of time. So do stupid titles. 
     - People put smileys, robots , cartoons in figures. Dont do that. Be mature. 
-    - People like the word "machines". Give them machines. Boltzmann machines. Perception Machines. Time Dilation Networks. Neural Nets in Superposition. See what i am doing?
-- Detach yourself: Psychopaths don't get attached to their target. Don't be attached to your paper. Don't use "we" a lot. Use, third tense: "this paper reveals", "this work shows", "Results suggest that this phenomenon is true".
+    - People like the word "machines". Give them machines. Boltzmann machines. Perception Machines. Time Dilation Networks. Neural Nets in Superposition. Artificial Karamuto Oscillatory Neurons. See what i am doing?
+- Detach your worth: Psychopaths don't get attached to their target. Don't be attached to your paper. Use third tense: "this paper reveals", "this work shows", "Results suggest that this phenomenon is true".
     - The illusion you want to pass is that you did the work, results came, and anyone can reproduce it. You have discovered some universal truth, a law of nature which machines emulate. Your job now is merely to report the results. 
 - People use "will", u shall use "shall": Replace 'will' with `shall'. 
     - Why does relegious scripture sound so authoritative? Because jesus "sayeth", man "witnessed". Behold o reader, let reviewer witness your paper. (Sounds cheesy, i know, but it still works) 
-- Don't claim sota: Speak less, show more. In contributions never say you beat sota. 
+- Don't claim sota: Speak less, show more (really important!!). In contributions never say you beat sota. 
     - Beat is too rough. If the person whose method you beat ends up as your reviewer, it will hurt his ego, he'll give reject. 
     - Say "we demonstrate competitive results over prior state of the art".
+- Never say we 'solved' a problem, say we `tried' to solve the problem. 
 - Write future work in limitations section instead of writing limitations.
-    - People will tell you it's wrong. I say it's correct. My advisor taught me this trick. 
+    - People will tell you it's wrong. My advisor taught me this counter-intuitive trick. 
     - In rebuttal you can write: "we apologize that we showed optimism/came across as enthusiastic in our limitations". Our limitations are <>.
-        - Reverse psychology. Gain one more point in your favour. 
+        - This creates a reverse psychology. Gain one more point in your favour. 
 - Create a flop matched baseline: In ablations, include one line that your method's improvements are not due to simply increasing the no of parameters, and you actually checked by training a larger model of the baseline. 
-- Dress up your method by some silly name: Let's say you are just selling a MLP which takes time as input. It is just a stupid MLP. 
-    - But, you will call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well.
+
+- Overdress up your method by some silly name: Let's say you are just selling a MLP which takes time as input. It is just a stupid MLP. 
+    - But, you `have to' call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well. (not that i prefer it, i can see right through bullshit)
 
 - Imagine you have a method. It has two blocks. 
     - Draw a single teaser with those two blocks 
     - Then explain them one by one. Each section should contain its own figure for that block (credits:shehreen for advice)
+    - Every subsection has 3 parts: Intuition, mathematical equation, and a takeaway.
+
 - Techniques for `quick' tier1-publications: 
+    - I don't appreciate them, but i will be honest: i did resort to them in my PhD. I have to promise myself not to do it again, and do actual research. 
     - Work on something with less data, partially labelled data, semi-supervised learning, constrained-settings. 
     - Open vocabulary also works. You can always strap an adapter to a big llm. And train it with a lora. 
-    - build your own problem, own benchmark, and own models. play the "dataset and benchmark" game. 
+    - build your own problem, own benchmark, and own models (nobody will care out eventually). play the "dataset and benchmark" game. 
     - extend image based models to videos, especially long videos, not many people do videos. 
     - robustness: corrupt inputs to models, check their robustness, techniques for improving them in real world. 
     - Freeze model, finetune some prompts. Call it "adaptation"
+- Takeo Kanade came to our lab, he said: "only 3 people read your paper, you, your advisor, and reviewer'. Then, it dies a quick death once it gets published. Noone cares about it. Keep this in mind. 
+    - Whatever you built is garbage if no-one uses it. No matter how smart you are. 
