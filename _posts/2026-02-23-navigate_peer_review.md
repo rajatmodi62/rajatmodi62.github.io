@@ -75,4 +75,5 @@ Designing fortress (bulletproofing paper).
     - build your own problem, own benchmark, and own models. play the "dataset and benchmark" game. 
     - extend image based models to videos, especially long videos, not many people do videos. 
     - robustness: corrupt inputs to models, check their robustness, techniques for improving them in real world. 
-    - 
+    - Freeze model, finetune some prompts. Call it "adaptation"
+- Overcrowded paper so that it appears that you squeezed every ounce of information you could (see[here](https://openaccess.thecvf.com/content/CVPR2024/papers/Koley_How_to_Handle_Sketch-Abstraction_in_Sketch-Based_Image_Retrieval_CVPR_2024_paper.pdf), i am amazed how the authors fit it. This shows the limits to which you can hack latex. )
