@@ -8,7 +8,7 @@ date:   2018-02-23 11:00:00
 > "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty."
 
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
-  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Many people won't like that it exists. But, everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research. Use sparingly. Or not :-). And for the love of god, DONT TELL MY ADVISOR!!
+  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Many people won't like that it exists. But, everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research. Use sparingly. 
 </div>
 
 <div style="text-align: center;"> 
