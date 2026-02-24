@@ -1,0 +1,3 @@
+- mistake in samsung 
+    - he asked: what was your contribution in project, i said i was single author, did everything alone, reject. 
+    - never say you are a lone wolf, you sought feedback from multile people, and
