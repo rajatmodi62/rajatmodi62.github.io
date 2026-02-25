@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Navigating Peer Review "
+title:  "Navigating the Peer Review Game"
 description: "How to navigate peer review as a phd student?"
 date:   2026-02-23 11:00:00
 ---
@@ -19,9 +19,9 @@ Peer review is meant to be double blind. This means you don't know who your revi
         >
 </div>
 
-In earlier years of my phd, when i was freshly minted out of my college,  i thought that i will change the world (and win a nobel prize). I had a big ego problem, and thought there is no one greater than me. My hands were not folded in humility that time(like the man named arjuna in the left side of the photograph). Thankfully, God had a different lesson in store for me. 
+In earlier years of my phd, when i was freshly minted out of my college,  i thought that i will change the world (and win a nobel prize). I had a big ego problem, and thought there is no one greater than me. My hands were not folded in humility that time(like the man named arjuna in the left side of the photograph). Thankfully, God (on the right, called krishna) had a different lesson in store for me. 
 
-It `only' took 2 rounds of broken shoulders, two visits to ER, one week of stay in a hospital, academic probations, losing my mom to cancer, a semester off from PhD, family getting scammed of 100k dollars (twice), to reach this state of nirvana (and some anxiety, depression medicine, countless therapy sessions). So, i wish that no one else has to learn the bitter lesson i learnt the hard way.
+It `only' took 2 rounds of broken shoulders, two visits to ER, one week of stay in a hospital, academic probations, losing my mom to cancer, a semester off from PhD, family getting scammed of 100k dollars (twice), some weed, to attain this state of nirvana (and some sweet sprinkle of anxiety, depression medicine, and therapy). So, i wish that no one else has to learn the bitter lesson god made me learn the hard way.
 
 Here is how a typical peer-review cycle went : 1) Got a lot of bad reviews 2) Felt upset, and stayed in bed for a whole day binge watching movies. 3) abused the reviewer who gave bad scores, felt he didnt understand anything 4) complained a little bit to my advisor, threatened i will leave my phd (as if i am doing him a favour by doing phd in the first place). 5) withdrew the paper if it is not salvagable, and resubmitted to the next venue. 6) forgot my worries for the next two months, until this cycle repeated, and i come back to 1). I stayed in this loop for around 3 years of my phd, and never made any progress. 
 
@@ -78,7 +78,7 @@ Designing fortress (bulletproofing paper).
 - Techniques for `quick' tier1-publications: 
     - I don't appreciate them, but i will be honest: i did resort to them in my PhD. I have to promise myself not to do it again, and do actual research. 
     - Work on something with less data, partially labelled data, semi-supervised learning, constrained-settings. 
-    - Open vocabulary also works. You can always strap an adapter to a big llm. And train it with a lora. 
+    - Open vocabulary also works. You can always strap an adapter to a big llm. And train it with a lora. Of course, you are free to quantize the lora-adapter.
     - build your own problem, own benchmark, and own models (nobody will care out eventually). play the "dataset and benchmark" game. 
     - build a problem where every method fails. For eg, learning from one sample. 
     - extend image based models to videos, especially long videos, not many people do videos. 
