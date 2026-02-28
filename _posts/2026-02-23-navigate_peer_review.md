@@ -69,6 +69,8 @@ Designing fortress (bulletproofing paper).
 
 - Overdress up your method by some silly name: Let's say you are just selling a MLP which takes time as input. It is just a MLP. 
     - But, you `have to' call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well. (not that i prefer it, i can see right through bullshit)
+    - reviewers at cvpr/eccv tend to be superficial. Quality of reviews at icml/iclr/nips tends to be better. 
+        - however, it is changing soon, since vision people are bombarding ml conferences with shitty papers, and entire peer-review has gone downhill.
 
 - Imagine you have a method. It has two blocks. 
     - Draw a single teaser with those two blocks 
@@ -85,9 +87,14 @@ Designing fortress (bulletproofing paper).
     - robustness: corrupt inputs to models, check their robustness, techniques for improving them in real world. 
     - Freeze model, finetune some prompts. Call it "adaptation"
     
-- Many people told me they still wanna play this game, just `to get some papers'. Trust me, seeing an influx of tier 1 papers accepted this way, creates a hunger for more, and it is really difficult to stop doing that. 
+- Many people told me they still wanna play this game, just `to get some papers'.
+    -  Trust me, seeing an influx of tier 1 papers accepted this way, creates a hunger for more, and it is really difficult to stop doing that. 
         
 - Most don't release code.
     - Unfortunately, some advisors pressure their students to play this game. My deepest sympathies for you. 
-    - Dr. Takeo Kanade came to our lab, and said: "only 3 people read your paper, you, your advisor, and reviewer'. Then, it dies a quick death once published. Noone cares about it. The only person it satisfied is your ego. Keep this in mind. 
-    - Whatever you built is garbage if no-one uses it. No matter how smart you are. 
+    - Dr. Takeo Kanade came to our lab, and said: "only 3 people read your paper, you, your advisor, and reviewer'. Then, it dies a quick death once published. Noone cares about it. The only thing it satisfied is your ego. But egos are frail. Your sense of achievement/happiness will last for about a week, and then you will be sad again. 
+    - Whatever you built is garbage if no-one uses it. No matter how smart you are. Keep this in mind. 
+- while writing ablations question yourself: what all hyperparameters i introduced. what will happen i vary one of them whilst holding other constant. 
+    - here is the most imp q: of all those variations, which ablation offers `something new' to the reviewer. only show that in the main paper. 
+    - often i have made the mistake of doing all possible ablations, and cluttering my paper. 
+        - don't be a fool like me. 
