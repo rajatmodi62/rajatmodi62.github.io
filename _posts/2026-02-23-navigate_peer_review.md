@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Navigating the game of peer review: How to Hunt your reviewer?"
+title:  "Navigating the game of peer review: The art of war"
 description: "How to navigate peer review as a phd student?"
 date:   2026-02-23 11:00:00
 ---
