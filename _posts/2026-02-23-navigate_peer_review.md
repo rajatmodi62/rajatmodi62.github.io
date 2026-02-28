@@ -55,7 +55,7 @@ Designing fortress (bulletproofing paper).
     - I put a fucking godzilla in my nips paper. now that i see it, it was a foolish move. 
     - People like the word "machines". They also like looking at things they secretly desire but dont get in real life. Give them machines. Boltzmann machines. Perception Machines. Time Dilation Networks. Neural Nets in Superposition. Artificial Karamuto Oscillatory Neurons. See what i am doing?
     - AI rests on psychology, physics, neuroscience. If you can steal a term from there, even better. 
-- Detach your worth: Psychopaths don't get attached to their target. Don't be attached to your paper. Use third tense: "this paper reveals", "this work shows", "Results suggest that this phenomenon is true".
+- Detach your worth: Psychopaths don't get attached to their target. Don't be attached to your paper. (think like a psychopath, you can be good in the real-world lol ) , Use third tense: "this paper reveals", "this work shows", "Results suggest that this phenomenon is true".
     - The illusion you want to pass is that you did the work, results came, and anyone can reproduce it. You have discovered some universal truth, a law of nature which machines emulate. Your job now is merely to report the results like a newsreporter. DONT GET EMOTIONAL. 
 - People use "will", u shall use "shall": Replace 'will' with `shall'. 
     - Why does relegious scripture sound so authoritative? Because jesus "sayeth", man "witnessed". Behold o reader, let reviewer witness your paper. (Sounds cheesy, i know, but it still works) 
