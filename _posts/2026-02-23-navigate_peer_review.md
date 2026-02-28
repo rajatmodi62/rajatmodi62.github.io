@@ -32,7 +32,7 @@ So, today we will try to  ask: what makes some people good at the game of peer-r
 In the beginning i learnt a lot from Devi Parikhs [amazing advice](https://deviparikh.medium.com/how-we-write-rebuttals-dc84742fece1). Additionally, time taught me a few more things which appear to work well on the reviewer 2. The reviewer who will burn your paper to ashes. The reviewer who gives a strong reject, with a confidence of 5. Who is unwilling to budge. He will take down your paper. He will flip the reviewers who supported you. He will drive a nail in your coffin. Your hands will tremble as you withdraw your paper. Or if you are brave, you wait for final results are a reject anyways.  
 
 
-Now this reviewer 2, needs some special  kind of handling. I will try to formalize that mechanism here:
+However, you like me will rise from your ashes. Now this reviewer 2, needs some special  kind of handling. I will try to formalize that mechanism here:
 
 
 - black ops analogy: imagine yourself as a part of swat team. Your reviewers are your targets. Your job is to hunt them. That requires precision. We will build a fortress first. 
@@ -52,9 +52,11 @@ Designing fortress (bulletproofing paper).
     - A very famous example is hinton, notice how all his slides, and figures have a pale yellow background. That's his signature.  
 - Stupid cartoons don't survive test of time. So do stupid titles. 
     - People put smileys, robots , cartoons in figures. Dont do that. Be mature. 
-    - People like the word "machines". Give them machines. Boltzmann machines. Perception Machines. Time Dilation Networks. Neural Nets in Superposition. Artificial Karamuto Oscillatory Neurons. See what i am doing?
+    - I put a fucking godzilla in my nips paper. now that i see it, it was a foolish move. 
+    - People like the word "machines". They also like looking at things they secretly desire but dont get in real life. Give them machines. Boltzmann machines. Perception Machines. Time Dilation Networks. Neural Nets in Superposition. Artificial Karamuto Oscillatory Neurons. See what i am doing?
+    - AI rests on psychology, physics, neuroscience. If you can steal a term from there, even better. 
 - Detach your worth: Psychopaths don't get attached to their target. Don't be attached to your paper. Use third tense: "this paper reveals", "this work shows", "Results suggest that this phenomenon is true".
-    - The illusion you want to pass is that you did the work, results came, and anyone can reproduce it. You have discovered some universal truth, a law of nature which machines emulate. Your job now is merely to report the results. 
+    - The illusion you want to pass is that you did the work, results came, and anyone can reproduce it. You have discovered some universal truth, a law of nature which machines emulate. Your job now is merely to report the results like a newsreporter. DONT GET EMOTIONAL. 
 - People use "will", u shall use "shall": Replace 'will' with `shall'. 
     - Why does relegious scripture sound so authoritative? Because jesus "sayeth", man "witnessed". Behold o reader, let reviewer witness your paper. (Sounds cheesy, i know, but it still works) 
 - Don't claim sota: Speak less, show more (really important!!). In contributions never say you beat sota. 
@@ -67,10 +69,10 @@ Designing fortress (bulletproofing paper).
         - This creates a reverse psychology. Gain one more point in your favour. 
 - Create a flop matched baseline: In ablations, include one line that your method's improvements are not due to simply increasing the no of parameters, and you actually checked by training a larger model of the baseline. 
 
-- Overdress up your method by some silly name: Let's say you are just selling a MLP which takes time as input. It is just a MLP. 
-    - But, you `have to' call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well. (not that i prefer it, i can see right through bullshit)
+- Overdress up your method by some silly name: Let's say you are just selling a MLP which takes time as input. It is just a frigging MLP. 
+    - But no, you `have to' call it "the dense-temporal encoder". Reviewers love fancy names. Give them that. Sells really well. (not that i prefer it, i can see right through bullshit)
     - reviewers at cvpr/eccv tend to be superficial. Quality of reviews at icml/iclr/nips tends to be better. 
-        - however, it is changing soon, since vision people are bombarding ml conferences with shitty papers, and entire peer-review has gone downhill.
+        - however, it is changing soon, since vision people (including me) are bombarding ml conferences with their shitty papers, and entire peer-review has gone downhill.
 
 - Imagine you have a method. It has two blocks. 
     - Draw a single teaser with those two blocks 
@@ -84,6 +86,7 @@ Designing fortress (bulletproofing paper).
     - build your own problem, own benchmark, and own models (nobody will care out eventually). play the "dataset and benchmark" game. 
     - build a problem where every method fails. For eg, learning from one sample. 
     - extend image based models to videos, especially long videos, not many people do videos. 
+        - call your paper long term video. claim it works for 20k frames. sells really well. :-)
     - robustness: corrupt inputs to models, check their robustness, techniques for improving them in real world. 
     - Freeze model, finetune some prompts. Call it "adaptation"
     
@@ -92,9 +95,12 @@ Designing fortress (bulletproofing paper).
         
 - Most don't release code.
     - Unfortunately, some advisors pressure their students to play this game. My deepest sympathies for you. 
-    - Dr. Takeo Kanade came to our lab, and said: "only 3 people read your paper, you, your advisor, and reviewer'. Then, it dies a quick death once published. Noone cares about it. The only thing it satisfied is your ego. But egos are frail. Your sense of achievement/happiness will last for about a week, and then you will be sad again. 
+    - Dr. Takeo Kanade came to our lab, and said: "only 3 people read your paper, you, your advisor, and reviewer'. Then, it dies a quick death once published. No-one will care about it. The only thing it will satisfy is your ego. But egos are frail. Your sense of achievement/happiness will last for about a week, and then disappear. 
     - Whatever you built is garbage if no-one uses it. No matter how smart you are. Keep this in mind. 
 - while writing ablations question yourself: what all hyperparameters i introduced. what will happen i vary one of them whilst holding other constant. 
-    - here is the most imp q: of all those variations, which ablation offers `something new' to the reviewer. only show that in the main paper. 
+    - here is the most imp question: of all those variations, which ablation offers `something new' to the reviewer. only show that in the main paper. for eg, nobody wants to see data augmentation improved your network, everyone knows that.
     - often i have made the mistake of doing all possible ablations, and cluttering my paper. 
         - don't be a fool like me. 
+    - holding all parameters except one is really important: if you have 10 variabels, you only need to do 10 ablations this way. Otherwise, it quickly becomes 2 to the power 10. I made this blunder, and wasted a year. 
+    - sometimes we tend to train our models with all possible variations of hyperparameters to get the best result. 
+        - dont make this mistake. 
