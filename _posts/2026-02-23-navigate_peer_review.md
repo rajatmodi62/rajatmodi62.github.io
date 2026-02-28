@@ -8,7 +8,7 @@ date:   2026-02-23 11:00:00
 > 
 Peer review is meant to be double blind. This means you don't know who your reviewers are. Your reviewers dont know who you are. And you can exploit that anonymity to your advantage.
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
-  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes decades. 
+  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes decades. This advice is also not for you if you play the sota game. 
 </div>
 
 <div style="text-align: center;"> 
@@ -101,6 +101,6 @@ Designing fortress (bulletproofing paper).
     - here is the most important question: of all those variations, which ablation offers `something new' to the reviewer. only show that in the main paper. for eg, nobody wants to see data augmentation improved your network, everyone knows that.
     - often i have made the mistake of doing all possible ablations, and cluttering my paper. 
         - don't be a fool like me. 
-    - holding all parameters except one is really important: if you have 10 variabels, you only need to do 10 ablations this way. Otherwise, it quickly becomes 2 to the power 10. I made this blunder, and wasted a year. 
+    - holding all parameters except one is really important: if you have 10 variables, you only need to do 10 ablations this way. Otherwise, it quickly becomes 2 to the power 10. I made this blunder, and wasted a year. 
     - sometimes we tend to train our models with all possible variations of hyperparameters to get the best result. 
         - dont make this mistake. 
