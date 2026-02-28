@@ -8,7 +8,7 @@ date:   2026-02-23 11:00:00
 > 
 Peer review is meant to be double blind. This means you don't know who your reviewers are. Your reviewers dont know who you are. And you can exploit that anonymity to your advantage.
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
-  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes years. 
+  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes decades. 
 </div>
 
 <div style="text-align: center;"> 
@@ -97,8 +97,8 @@ Designing fortress (bulletproofing paper).
     - Unfortunately, some advisors pressure their students to play this game. My deepest sympathies for you. 
     - Dr. Takeo Kanade came to our lab, and said: "only 3 people read your paper, you, your advisor, and reviewer'. Then, it dies a quick death once published. No-one will care about it. The only thing it will satisfy is your ego. But egos are frail. Your sense of achievement/happiness will last for about a week, and then disappear. 
     - Whatever you built is garbage if no-one uses it. No matter how smart you are. Keep this in mind. 
-- while writing ablations question yourself: what all hyperparameters i introduced. what will happen i vary one of them whilst holding other constant. 
-    - here is the most imp question: of all those variations, which ablation offers `something new' to the reviewer. only show that in the main paper. for eg, nobody wants to see data augmentation improved your network, everyone knows that.
+- while writing ablations question yourself: what all hyperparameters i introduced?. what will happen if i vary one of them whilst holding other constant?. 
+    - here is the most important question: of all those variations, which ablation offers `something new' to the reviewer. only show that in the main paper. for eg, nobody wants to see data augmentation improved your network, everyone knows that.
     - often i have made the mistake of doing all possible ablations, and cluttering my paper. 
         - don't be a fool like me. 
     - holding all parameters except one is really important: if you have 10 variabels, you only need to do 10 ablations this way. Otherwise, it quickly becomes 2 to the power 10. I made this blunder, and wasted a year. 
