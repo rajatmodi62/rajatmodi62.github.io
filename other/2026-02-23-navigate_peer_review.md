@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 comments: true
 title:  "Navigating the game of peer review: The art of war"
@@ -8,7 +8,7 @@ date:   2026-02-23 11:00:00
 > 
 Peer review is meant to be double blind. This means you don't know who your reviewers are. Your reviewers dont know who you are. And you can exploit that anonymity to your advantage.
 <div style="border: 3px solid #FF0000; padding: 20px; margin: 20px 0; color: #FF0000; font-family: 'Courier New', Courier, monospace;  font-weight: bold; line-height: 1.4;">
-  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes decades. This advice is also not for you if you play the sota game. 
+  First a disclaimer: All the advice in this article is risky, controversial, and not safe for work. Skip if you are less than 18 years of age. Everyone deserves an equal playing field. This is not a substitute for hardwork/genuine research, which often takes decades. This advice is also not for you if you play the sota game (a.k.a do incremental work, improve results by just one percent, and submit a paper which no reviewer can possibly reject). 
 </div>
 
 <div style="text-align: center;"> 
@@ -103,4 +103,4 @@ Designing fortress (bulletproofing paper).
         - don't be a fool like me. 
     - holding all parameters except one is really important: if you have 10 variables, you only need to do 10 ablations this way. Otherwise, it quickly becomes 2 to the power 10. I made this blunder, and wasted a year. 
     - sometimes we tend to train our models with all possible variations of hyperparameters to get the best result. 
-        - dont make this mistake. 
+        - dont make this mistake.  -->
