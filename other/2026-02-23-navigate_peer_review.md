@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: post
 comments: true
 title:  "Navigating the game of peer review: The art of war"
@@ -103,4 +103,4 @@ Designing fortress (bulletproofing paper).
         - don't be a fool like me. 
     - holding all parameters except one is really important: if you have 10 variables, you only need to do 10 ablations this way. Otherwise, it quickly becomes 2 to the power 10. I made this blunder, and wasted a year. 
     - sometimes we tend to train our models with all possible variations of hyperparameters to get the best result. 
-        - dont make this mistake.  -->
+        - dont make this mistake. 
