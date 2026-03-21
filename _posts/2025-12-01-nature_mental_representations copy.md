@@ -191,7 +191,7 @@ Autoregressive models like LLMs belong to `switching representations'. As soon a
 
 The second class, a.k.a superpositioned representations have not yet been invented. 
 
-But, there might be some justification for it's existence in this physical reality. 
+But, there might be some justification for their existence in this physical reality. 
 
 <!-- <div style="text-align: center;"> 
     <img 
