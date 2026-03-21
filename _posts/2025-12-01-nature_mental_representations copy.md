@@ -189,7 +189,9 @@ In 'switching representations' , the physical structure of the object actually c
 
 Autoregressive models like LLMs belong to `switching representations'. As soon as you compute the output word (say w1), you can condition the network (on w1). The next representation the network predicts is different than if you sampled a different word (w2), and conditioned it. Since, the representation changes, it thus belongs to the family of 'switching representations'.
 
-The second class, a.k.a superpositioned representations have not yet been invented. But, they might be lol. Time will tell us more. 
+The second class, a.k.a superpositioned representations have not yet been invented. 
+
+But, there might be some justification for it's existence in this physical reality. 
 
 <!-- <div style="text-align: center;"> 
     <img 
