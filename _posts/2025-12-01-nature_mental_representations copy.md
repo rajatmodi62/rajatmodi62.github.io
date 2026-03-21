@@ -119,7 +119,7 @@ Discussions on some optical illusions and other experiments conducted back in th
         alt="Your image description">
 </div> -->
 
-Today, we will discuss about two kinds of illusions which still trouble cognitive scientists. The relation between cognitive science, and neural nets is that of perception: the way our brain sees, is the way, a neural network ought to see. 
+Today, we will discuss about two kinds of optical illusions which still trouble the best cognitive scientists. The relation between cognitive science, and neural nets is that of perception: the way our brain sees, is the way, a neural network ought to see. 
 
 Consider, for a moment, a variant of necker cube presented below. Stare at it, for upto 5 minutes. You will start to notice something weird. 
 
