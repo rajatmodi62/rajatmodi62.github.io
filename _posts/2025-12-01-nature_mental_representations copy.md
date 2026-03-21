@@ -151,7 +151,13 @@ Alternatively, our interpretation of the cube can flit. Now, the bottom becomes 
 
 The key point is: at a particular time, we can only see `one' of these plausible interpretations. For some reason, our brain keeps oscillating between these two. This means, that although it found one explanation of the plausible input, it is not satisfied. It waits for a moment, and quickly switches to the next plausible interpretation. 
 
-Thus, we shall term the internal representations of this nature as `switching representations'.
+
+For our purposes, we shall hence term the internal representations of this nature as `switching representations'.
+
+
+A plausible interpretation in energy models is that the model converges to a fixed energy point. But, it stays static, and its weights remain fixed at the time of inference. Thus, existing neural nets, don't show this switching behaviour. However, gases in a container can change their states multiple times at a constant sample pressure, volume, temperature. 
+
+Now, we must distinguish this representation from the field of test-time-training. In TTT, the model's weights change during inference, but only if it is given some external input. In a container of gas, an isolated system, with no connection to external environment, can still adjust it's weights. 
 
 There is another class of representations possible. 
 
