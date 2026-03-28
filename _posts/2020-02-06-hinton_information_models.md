@@ -5,9 +5,7 @@ title:  "On the Models of Information Processing in Brain"
 description: "Humans can identify an object broadly even if it is missing some parts. This realization of constant global representation paves way for relaxation principles."
 date:   2020-02-06 11:00:00
 ---
-**Credits: We thank <ins>Dr. Geoffrey Hinton </ins> for his amazing work on relaxation, and sharing the manuscripts online.  This post is a humble attempt to understand the AI's Da Vinci at work.  If you do notice some errors, the authors will be grateful for a chance to rectify them. Thank you.**
 
-> quote for akash debug
 
 The current state of the art in AI is focusing it's efforts towards exploring singularity. A simple brute-force, or searching for the best set of neural architectures to solve a problem is not the answer. If we ever hope to design a general purpose AI, we have to delve deeper into what principles motivated the development of neural networks.  
 
