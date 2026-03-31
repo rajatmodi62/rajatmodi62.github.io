@@ -52,6 +52,11 @@ and inside volcanoes too. May this clhaim <b>for(h)ever rest ,</b><br>
 (a little cough.... <b>D</b>. sorry, ran out of breath, what was we saying? oh, we remember now)<br>
 <br>
 
+
+<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\schboober.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+</div>
+
 May this claim <b>forever rest ,</b><br>
 <b>UNCHALLENGED,</b><br>
 B(h)y <b>Jürgen Schmid-(h)-uber/s.</b><br>
