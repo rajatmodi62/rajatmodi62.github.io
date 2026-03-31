@@ -39,5 +39,9 @@ cvpr 2026 -> doctoral consortium (reject)
 nips 2026 -> raiyaans paper (reject)
 
 
+#funding projects 
+briar -> gone 
+wriva -> gone (soon?)
+
 
 # time to pack bags and go back to india. :-)
