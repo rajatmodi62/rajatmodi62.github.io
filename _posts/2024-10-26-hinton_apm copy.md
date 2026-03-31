@@ -5,7 +5,7 @@ title:  "Towards Making GLOM work: Asynchronous Perception Machine"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
 ---
-Disclaimer: Apologies for the Academic Shitposting.
+Disclaimer: Apologies for the Academic Shitposting. I needed some place to vent. 
 
 
 <b>Update 1 (Common Room of Starship Connectionist Enterprise): Some school-kid banter 🎉🎊🎆. </b>
