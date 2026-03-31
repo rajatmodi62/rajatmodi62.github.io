@@ -6,6 +6,8 @@ description: "APM is one of the first steps towards getting Hinton's GLOM workin
 date:   2024-10-26 11:00:00
 ---
 Disclaimer: Apologies for the Academic Shitposting.
+
+
 <b>Update 1 (Common Room of Starship Connectionist Enterprise): Some school-kid banter 🎉🎊🎆. </b>
 
 > APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-doubters. Hiyaaaaaaa!!!!!! 
