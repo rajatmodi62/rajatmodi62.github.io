@@ -358,7 +358,7 @@ All little  godzilla requests in return is protection from being schmidubered. P
 And before you start thinking that little godzilla is very creative, he isn't. He just stole the idea of folding and unfolding from big godzilla. The last line of big godzilla's paper talks about mental folding. Bulleted below. Hiyaaaa!!
 
  <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\Hinton_steal.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\hinton_steal.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
 </div>
 
 Ok, here are the videos I promised: 
