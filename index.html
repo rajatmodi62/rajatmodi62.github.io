@@ -1,38 +1,114 @@
 ---
 layout: default
 ---
-<div style="color: #d32f2f; text-align: center; font-weight: bold; margin: 20px 0; border: 1px solid #d32f2f; padding: 10px; border-radius: 4px;">
-    I am on the job market (Graduating Dec 2026) and searching for full-time roles starting Jan 2027. If my research can contribute in any way, please reach out at rajatmodi62@gmail.com
+
+<div class="mortal-machine-wrapper" style="
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr; 
+    width: 100vw; 
+    position: relative; 
+    left: 50%; 
+    right: 50%; 
+    margin-left: -50vw; 
+    margin-right: -50vw; 
+    align-items: start;
+    box-sizing: border-box;
+">
+
+    <!-- <div class="sidebar-left" style="text-align: left; padding-top: 30px; padding-left: 25px; font-family: 'Courier New', Courier, monospace; font-size: 1.1rem; font-weight: 600; color: #555;">
+        [Cognitive Side]<br>
+        Necker Cube / Superposition
+    </div> -->
+
+    <div class="sidebar-left" style="text-align: left; padding-top: 30px; padding-left: 25px; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; line-height: 1.5; color: #555;">
+        
+        <h2 style="color: #0044cc; font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #0044cc; display: inline-block;">
+            Talks
+        </h2>
+
+        <div class="talks-list" style="font-weight: 600;">
+            <p>
+             <a href="https://www.youtube.com/watch?v=Ab90OVre8ok" style="color: #0044cc; text-decoration: none;">Making GLOM Work</a><br>
+            GLOM was an idea by Geoffrey Hinton in 2021. Here, we discuss what were some key ideas towards getting it to work. <br /><br />
+            
+             <a href="https://www.youtube.com/watch?v=4nNsZ6Spw3E&amp;t=1907s" style="color: #0044cc; text-decoration: none;">Putting an End to End to End Gradient Descent</a><br>
+            A learning algorithm which trains each layer of a neural net in ‘isolation’ greedily. Optimization is based on a local-constraint <br /><br />
+            
+             <a href="https://www.youtube.com/watch?v=bnhT2aM2_nY&amp;t=3081s" style="color: #0044cc; text-decoration: none;">Forward Forward Algorithm: Part 1/2</a><br>
+            Algorithm by Geoff Hinton. Neural net is optimized by piping input data sequentially with two forward passes <br /><br />
+            
+             <a href="https://www.youtube.com/watch?v=yOf4vs1u2DI&amp;t=1939s" style="color: #0044cc; text-decoration: none;">Forward Forward Algorithm: Part 2/2</a><br>
+            Discussions on philosophical ideas in Forward Forward paper, for eg, getting rid of gradient descent, mortal computation. <br /><br />
+            
+             <a href="https://www.youtube.com/watch?v=6qpTrLBmeqM&amp;t=2522s" style="color: #0044cc; text-decoration: none;">ComputerVision Talks: Asynchronous Perception Machine</a><br>
+            Explaining how APMs were a step towards getting Geoff Hinton’s GLOM to work well. <br /><br />
+            
+           <a href="https://youtu.be/2yTltN_GZs4" style="color: #0044cc; text-decoration: none;">MLCollective: The problems with scaling up:</a><br>
+            Discussing how scaling up presents a big issue to existing neural nets. <br />
+            </p>
+        </div>
+
+        <div style="margin-top: 40px; border-top: 1px solid #ddd; padding-top: 10px;">
+            [Cognitive Side]<br>
+            Necker Cube / Superposition
+        </div>
+    </div>
+    <div class="main-column" style="
+        border-left: 2px solid #5D4037; 
+        border-right: 2px solid #5D4037; 
+        padding: 0 45px; 
+        min-height: 100vh;
+    ">
+        <div class="image-container" style="text-align: center; margin-bottom: 2.5rem; padding-top: 30px;">
+            <img src="{{ site.baseurl }}/assets/img/everest.jpg" 
+                 alt="Mount Everest" 
+                 style="max-width: 50%; height: auto; display: block; margin: 0 auto; border-radius: 4px; filter: grayscale(20%);">
+        </div>
+
+        <div class="centered-quote" style="text-align: center; margin-bottom: 2.5rem;">
+          <p style="margin: 0; font-family: inherit;">Representation Supersedes Scaling.</p>
+        </div>  
+
+        <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
+            {% for post in site.posts %}
+              <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                    {{ post.title }}
+                </a>
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-right" style="text-align: left; padding-top: 30px; padding-left: 25px; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; line-height: 1.5; color: #555;">
+        
+        <h2 style="color: #0044cc; font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #0044cc; display: inline-block;">
+            Other Interesting Stuff
+        </h2>
+
+        <div class="talks-list" style="font-weight: 600;">
+            <p>
+            <a href="https://arxiv.org/abs/2410.13821" style="color: #0044cc; text-decoration: none;">Artificial Karamuto Oscillatory Neurons</a><br>
+            AKORN (similar to a seed) is a recent idea by Takeru Miyato. Meant as a replacement for Mcullough Pitts Neuron. <br /><br />
+            
+            <!-- <a href="https://www.youtube.com/watch?v=4nNsZ6Spw3E&amp;t=1907s" style="color: #0044cc; text-decoration: none;">Putting an End to End to End Gradient Descent</a><br>
+            A learning algorithm which trains each layer of a neural net in ‘isolation’ greedily. Optimization is based on a local-constraint <br /><br /> -->
+            
+            <!-- [3] <a href="https://www.youtube.com/watch?v=bnhT2aM2_nY&amp;t=3081s" style="color: #0044cc; text-decoration: none;">Forward Forward Algorithm: Part 1/2</a><br>
+            Algorithm by Geoff Hinton. Neural net is optimized by piping input data sequentially with two forward passes <br /><br />
+            
+            [4] <a href="https://www.youtube.com/watch?v=yOf4vs1u2DI&amp;t=1939s" style="color: #0044cc; text-decoration: none;">Forward Forward Algorithm: Part 2/2</a><br>
+            Discussions on philosophical ideas in Forward Forward paper, for eg, getting rid of gradient descent, mortal computation. <br /><br />
+            
+            [5] <a href="https://www.youtube.com/watch?v=6qpTrLBmeqM&amp;t=2522s" style="color: #0044cc; text-decoration: none;">ComputerVision Talks: Asynchronous Perception Machine</a><br>
+            Explaining how APMs were a step towards getting Geoff Hinton’s GLOM to work well. <br /><br />
+            
+            [6] <a href="https://youtu.be/2yTltN_GZs4" style="color: #0044cc; text-decoration: none;">MLCollective: The problems with scaling up:</a><br>
+            Discussing how scaling up presents a big issue to existing neural nets. <br /> -->
+            </p>
+        </div>
+
+        
+    </div>
+
 </div>
-
-<div class="centered-quote">
-    <p>Representation Supersedes  Scaling.</p>
-</div>
-
-
-
-
-<ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <br>
-      </li>
-    {% endfor %}
-</ul>
-
-<!-- <div class="home">
-  
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <br>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
-
-</div> -->
