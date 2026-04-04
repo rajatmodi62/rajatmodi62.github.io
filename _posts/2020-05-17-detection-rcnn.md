@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "[Part 1: Object Detection] [RCNN] On the internal mechanics of Region Proposal Networks."
+title:  "RCNN: On the internal mechanics of Region Proposal Networks."
 description: "The workings behind RCNN's proposal generations and it's shortcomings are revealed. "
 date:   2020-05-17 11:00:00
 ---
