@@ -40,38 +40,69 @@ a:visited { color: #205caa; }
 /* ----------------------------------------------------------*/
 
 /* Site header */
-
+/* 
 .site-header {
   border-top: 5px solid #333;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
   background-color: #e6cf9d;
+} */
+
+/* 1. The Container */
+.site-header {
+  border-top: 5px solid #333;
+  border-bottom: 2px solid #5D4037;
+  min-height: 60px;
+  background-color: #e6cf9d;
+  width: 100%;
+  position: relative; /* This is the "anchor" for the absolute links */
+  display: block;    /* Standard block display to avoid flex conflicts */
 }
 
-.site-title,
-.site-title:hover,
-.site-title:visited {
-  display: block;
+/* 2. The Wrapper (Ensures the header has height) */
+.site-header .wrap {
+  max-width: 100%; 
+  position: relative;
+  height: 60px;      /* Matches min-height of header */
+}
+
+/* 3. The Title (Locked at 14vw) */
+.site-title {
+  display: inline-block;
   color: #333;
   font-size: 26px;
   letter-spacing: -1px;
-  float: left;
-  line-height: 56px;
-  position: relative;
-  z-index: 1;
+  line-height: 60px; /* Centers text vertically */
+  text-decoration: none;
+  /* Your 14vw Requirement */
+  margin-left: 45vw; 
+  white-space: nowrap;
 }
 
+/* 4. The Navigation (HARD FORCE TO RIGHT) */
 .site-nav {
-  float: right;
-  line-height: 56px;
+  position: absolute;
+  right: 5vw;        /* This forces it to the extreme right of the page span */
+  top: 0;
+  line-height: 60px; /* Matches header height */
 }
 
-.site-nav .menu-icon { display: none; }
+/* 5. The Links */
+.site-nav .trigger {
+  display: block;
+  white-space: nowrap; /* Prevents the two-line break */
+}
 
 .site-nav .page-link {
   margin-left: 20px;
   color: #727272;
+  text-decoration: none;
   letter-spacing: -.5px;
+  font-size: 16px;
+}
+
+.site-nav .menu-icon { 
+  display: none; 
 }
 
 /* Site footer */

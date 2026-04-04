@@ -2,7 +2,7 @@
 layout: page
 title: Talks
 permalink: /talks/
-includelink: true
+includelink: false
 ---
 
 {: style="color: red;"}

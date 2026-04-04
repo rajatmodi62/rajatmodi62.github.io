@@ -44,10 +44,38 @@ layout: default
             Discussions on philosophical ideas in Forward Forward paper, for eg, getting rid of gradient descent, mortal computation. <br /><br />
             
              
-           <a href="https://youtu.be/2yTltN_GZs4" style="color: #0044cc; text-decoration: none;">MLCollective: The problems with scaling up:</a><br>
-            Discussing how scaling up presents a big issue to existing neural nets. <br />
+           <!-- <a href="https://youtu.be/2yTltN_GZs4" style="color: #0044cc; text-decoration: none;">MLCollective: The problems with scaling up:</a><br>
+            Discussing how scaling up presents a big issue to existing neural nets. <br /> -->
             </p>
         </div>
+      
+        <h2 style="color: #0044cc; font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #0044cc; display: inline-block;">
+            Bilogical Plausible Learning 
+        </h2>
+
+        <div class="talks-list" style="font-weight: 600;">
+            <p>
+            <a href="https://www.youtube.com/watch?v=y7lq0MHibPw&list=PLZDYeAa3PPwEbTHnVPA24ucnmNlBkCEjE&index=5&t=546s&pp=iAQBsAgC" style="color: #0044cc; text-decoration: none;">Backpropagation And Brain</a><br>
+            How can backpropagation be made more biologically plausible? <br /><br />
+            
+           <a href="https://www.youtube.com/watch?v=VzhS0rQeW7A&list=PLZDYeAa3PPwEbTHnVPA24ucnmNlBkCEjE&index=7&pp=iAQBsAgC" style="color: #0044cc; text-decoration: none;">Target Propagation</a><br>
+           Dr. Bengio's approach to avoid computing derivatives of neurons. Pipe error signal back into the network, output of each neuron is the actual derivative  <br /><br />
+             
+           <a href="https://www.youtube.com/watch?v=tUX48LHRo9U&list=PLZDYeAa3PPwEbTHnVPA24ucnmNlBkCEjE&index=8&t=1s&pp=iAQBsAgC" style="color: #0044cc; text-decoration: none;">Autoencoding Assumption</a><br>
+           Autoencoder can be used to compute top-down neural activities on the fly. Overcomes backprop's bottleneck to store intermediate representations  <br /><br />
+            
+          <a href="https://www.youtube.com/watch?v=2gsJcuiQsp4&list=PLZDYeAa3PPwEbTHnVPA24ucnmNlBkCEjE&index=11&t=2s&pp=iAQBsAgC" style="color: #0044cc; text-decoration: none;">Weight Transport Problem</a><br>
+           Backpropagation requires computing transpose of weight matrix to calculate error signal. Brain doesn't do transpose. <br /><br />
+          
+          <a href="https://www.youtube.com/watch?v=H9Jf_FpRras&list=PLZDYeAa3PPwEbTHnVPA24ucnmNlBkCEjE&index=13&t=199s&pp=iAQBsAgC" style="color: #0044cc; text-decoration: none;">Memory Explosion Issue in Attention</a><br>
+           Attention is quadratic in time/memory. Linear Attention/Mamba etc can do linear time/constant memory. Linear time is still inefficient. <br /><br />
+          
+             
+           <!-- <a href="https://youtu.be/2yTltN_GZs4" style="color: #0044cc; text-decoration: none;">MLCollective: The problems with scaling up:</a><br>
+            Discussing how scaling up presents a big issue to existing neural nets. <br /> -->
+            </p>
+        </div>
+      
 
         <div style="margin-top: 40px; border-top: 1px solid #ddd; padding-top: 10px;">
             [Cognitive Side]<br>
@@ -71,6 +99,65 @@ layout: default
         </div>  
 
         <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
+
+          <!-- energy based models part 1 , stefano ermons lecture -->
+          {% for post in site.posts %}{% if post.slug == "energy_based_models copy" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
+
+          <!-- making glom work  -->
+           {% for post in site.posts %}{% if post.slug == "hinton_apm copy" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
+
+          <!-- hinton models of information processing in brain -->
+          {% for post in site.posts %}{% if post.slug == "hinton_information_models" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
+
+          <!-- hinton models of information processing in brain -->
+          {% for post in site.posts %}{% if post.slug == "nature_mental_representations copy" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
+
+        <!-- hinton mental imagery -->
+          {% for post in site.posts %}{% if post.slug == "mental-imagery" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
+
+          <!-- rcnn -->
+          {% for post in site.posts %}{% if post.slug == "detection-rcnn" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
+
+        </ul>
+
+<!--         
+        <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
             {% for post in site.posts %}
               <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
@@ -78,37 +165,87 @@ layout: default
                 </a>
               </li>
             {% endfor %}
-        </ul>
+        </ul> -->
     </div>
 
     <div class="sidebar-right" style="text-align: left; padding-top: 30px; padding-left: 25px; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; line-height: 1.5; color: #555;">
         
         <h2 style="color: #0044cc; font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #0044cc; display: inline-block;">
-            Other Interesting Stuff
+            Some Interesting Stuff
         </h2>
 
         <div class="talks-list" style="font-weight: 600;">
             <p>
             <a href="https://arxiv.org/abs/2410.13821" style="color: #0044cc; text-decoration: none;">Artificial Karamuto Oscillatory Neurons</a><br>
             AKORN (similar to a seed) is Takeru Miyato's idea in 2025. Meant as a replacement for Mcullough Pitts Neuron. <br /><br />
-            
-            <!-- <a href="https://www.youtube.com/watch?v=4nNsZ6Spw3E&amp;t=1907s" style="color: #0044cc; text-decoration: none;">Putting an End to End to End Gradient Descent</a><br>
-            A learning algorithm which trains each layer of a neural net in ‘isolation’ greedily. Optimization is based on a local-constraint <br /><br /> -->
-            
-            <!-- [3] <a href="https://www.youtube.com/watch?v=bnhT2aM2_nY&amp;t=3081s" style="color: #0044cc; text-decoration: none;">Forward Forward Algorithm: Part 1/2</a><br>
-            Algorithm by Geoff Hinton. Neural net is optimized by piping input data sequentially with two forward passes <br /><br />
-            
-            [4] <a href="https://www.youtube.com/watch?v=yOf4vs1u2DI&amp;t=1939s" style="color: #0044cc; text-decoration: none;">Forward Forward Algorithm: Part 2/2</a><br>
-            Discussions on philosophical ideas in Forward Forward paper, for eg, getting rid of gradient descent, mortal computation. <br /><br />
-            
-            [5] <a href="https://www.youtube.com/watch?v=6qpTrLBmeqM&amp;t=2522s" style="color: #0044cc; text-decoration: none;">ComputerVision Talks: Asynchronous Perception Machine</a><br>
-            Explaining how APMs were a step towards getting Geoff Hinton’s GLOM to work well. <br /><br />
-            
-            [6] <a href="https://youtu.be/2yTltN_GZs4" style="color: #0044cc; text-decoration: none;">MLCollective: The problems with scaling up:</a><br>
-            Discussing how scaling up presents a big issue to existing neural nets. <br /> -->
             </p>
         </div>
 
+        <h2 style="color: #0044cc; font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #0044cc; display: inline-block;">
+            Philosophy Of Mind
+        </h2>
+    <div class="talks-list" style="font-weight: 600;">
+          
+      <!-- nature of soul in learning machine -->
+          {% for post in site.posts %}
+            {% if post.slug == "reflection_mortal_machine copy" %}
+              <p style="margin: 0; margin-bottom: 1.2rem;">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                    style="color: #333; text-decoration: none; border-left: 3px solid #5D4037; padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+            {% endif %}
+          {% endfor %}
+
+          <!-- nature of soul -->
+          {% for post in site.posts %}
+            {% if post.slug == "soul" %}
+              <p style="margin: 0; margin-bottom: 1.2rem;">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                    style="color: #333; text-decoration: none; border-left: 3px solid #5D4037; padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+            {% endif %}
+          {% endfor %}
+
+          <!-- purpose behind research, hintons nobel prize speech. -->
+          {% for post in site.posts %}
+            {% if post.slug == "geoffed" %}
+              <p style="margin: 0;  margin-bottom: 1.2rem; ">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                    style="color: #333; text-decoration: none; border-left: 3px solid #5D4037; padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+            {% endif %}
+          {% endfor %}
+
+          <!-- building emotions in machines. -->
+          {% for post in site.posts %}
+            {% if post.slug == "emotions-in-machine" %}
+              <p style="margin: 0;  margin-bottom: 1.2rem; ">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                    style="color: #333; text-decoration: none; border-left: 3px solid #5D4037; padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+            {% endif %}
+          {% endfor %}
+
+          <!-- destructiveness and  pain in machines. -->
+          {% for post in site.posts %}
+            {% if post.slug == "destruction-machine" %}
+              <p style="margin: 0;  margin-bottom: 1.2rem; ">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                    style="color: #333; text-decoration: none; border-left: 3px solid #5D4037; padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+            {% endif %}
+          {% endfor %}
+    </div>
         
     </div>
 
