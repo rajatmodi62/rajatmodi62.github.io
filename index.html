@@ -93,12 +93,41 @@ layout: default
                  alt="Mount Everest" 
                  style="max-width: 50%; height: auto; display: block; margin: 0 auto; border-radius: 4px; filter: grayscale(20%);">
         </div>
+    <div class="centered-quote" style="
+        text-align: center; 
+        margin-bottom: 3.5rem; 
+        padding: 20px; 
+        background-color: rgba(0,0,0,0.02); /* Very subtle depth */
+        border-radius: 4px;
+        position: relative;
+    ">
+        <p style="margin: 0; font-family: 'Courier New', Courier, monospace; font-weight: 800; font-size: 1.2rem; color: #333;">
+            Representation Supersedes Scaling.
+        </p>
 
-        <div class="centered-quote" style="text-align: center; margin-bottom: 2.5rem;">
-          <p style="margin: 0; font-family: inherit;">Representation Supersedes Scaling.</p>
-        </div>  
+        <div style="
+            text-align: justified; 
+            font-family: 'Courier New', Courier, monospace; 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+            color: #777; 
+            margin-top: 10px;
+            letter-spacing: 1px;
+        ">
+            It does not mean that scaling AI is wrong. It just means that  bruteforce scaling wastes compute. A good representation can help scaling models find optimal solution faster. Hence, representations are still important.
+        </div>
+    </div>
 
         <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
+
+           <!-- akorn -->
+          {% for post in site.posts %}{% if post.slug == "akorn" %}
+            <li style="margin-bottom: 1.8rem; border-left: 3px solid #5D4037; padding-left: 15px;">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333; font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                  {{ post.title }}
+              </a>
+            </li>
+          {% endif %}{% endfor %}
 
           <!-- energy based models part 1 , stefano ermons lecture -->
           {% for post in site.posts %}{% if post.slug == "energy_based_models copy" %}
