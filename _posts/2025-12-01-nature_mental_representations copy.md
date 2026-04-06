@@ -7,7 +7,7 @@ date:   2026-03-21 11:00:00
 ---
 Discussions on some optical illusions and other experiments conducted back in the 1980's.
 
->> You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, nor be attached to inaction. 
+<!-- >> You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, nor be attached to inaction.  -->
 
 
 

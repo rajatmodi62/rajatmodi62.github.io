@@ -6,8 +6,8 @@ description: "Human brain learns global representations while viewing objects. P
 date:   2020-02-19 11:00:00
 ---
 
-> Says Lord Krishna to Arjun:  O son of Prtha, behold My forms in (their) hundreds and in thousands, of different kinds, celestial, and of various colours and shapes.
-See the Adiyas, the Vasus, the Rudras, the two Asvins and the Maruts. O scion of the Bharata dynasty, behold also the many wonders not seen before
+<!-- > Says Lord Krishna to Arjun:  O son of Prtha, behold My forms in (their) hundreds and in thousands, of different kinds, celestial, and of various colours and shapes.
+See the Adiyas, the Vasus, the Rudras, the two Asvins and the Maruts. O scion of the Bharata dynasty, behold also the many wonders not seen before -->
 
 
 
