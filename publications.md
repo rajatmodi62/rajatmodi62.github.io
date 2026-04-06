@@ -30,7 +30,7 @@ Dataset containing multiple people performing temporally challenging actions (e.
 **Links:** [[Paper](https://openaccess.thecvf.com/content/CVPR2022W/VDU/papers/Modi_Video_Action_Detection_Analysing_Limitations_and_Challenges_CVPRW_2022_paper.pdf)] [[Dataset](https://github.com/rajatmodi62/OccludedActionBenchmark)] [[Challenge](https://tinyactions-cvpr22.github.io/)]
 
 [5] <u>Sky2Ground</u>: First dataset consisting of real and synthetic ground/satellite/aerial images for 54 outdoor scenes with camera poses. Proposed **SkyNet**, a 3D point cloud generation architecture using novel curriculum-inspired strategies. Supported by a **$500k grant from IARPA**.<br>
-**Status:** CVPR 2026 (Under Review)<br>
+**Status:** CVPR 2026 <br>
 **Links:** [[Paper](https://arxiv.org/abs/2410.20535)]
 
 [6] <u>Foundational Models for Video Understanding: A survey</u>: First  survey of over 200 video foundational models and evaluation metrics across 14 video tasks.<br>
@@ -58,4 +58,4 @@ Links: [[US A1 Patent](https://drive.google.com/file/d/1R4NKRI5nVjcgQI9czmf46MTH
 Propose a system using cross-stitch units to merge user inputs into a unified representation.<br>
 Links: [[US A2 Patent](https://patents.google.com/patent/WO2022245134A1/en?inventor=rajat+modi)] 
 
-A lot more still needs to be done. 
+Hopefully, ego does not get better of me. 
