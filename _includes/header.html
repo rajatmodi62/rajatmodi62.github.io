@@ -2,7 +2,6 @@
 
   <div class="wrap">
 
-
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     
     <nav class="site-nav">
@@ -19,10 +18,15 @@
       </a>
       
       <div class="trigger">
-        
         {% for page in site.pages %}
-          {% if page.title and page.includelink %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+          {% if page.title and page.includelink %}
+            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
         {% endfor %}
+
+        <a class="page-link" onclick="modeSwitcher()" style="cursor:pointer; user-select:none;">
+          <span id="theme-toggle-icon">🌙</span>
+        </a>
       </div>
     </nav>
   </div>

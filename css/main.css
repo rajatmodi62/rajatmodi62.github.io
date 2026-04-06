@@ -1,4 +1,46 @@
-/* Base */
+/* ----------------------------------------------------------*/
+/* 0. Theme Variables (The "Brains" of Dark Mode) */
+/* ----------------------------------------------------------*/
+
+:root {
+  /* Light Mode (Your Original Palette) */
+  --bg-body: #ffe6b8;
+  --bg-header: #e6cf9d;
+  --text-main: #111111;
+  --text-muted: #111111;
+  --text-post-date: #818181;
+  --link-color: #2a7ae2;
+  --link-hover: #000;
+  --border-header-top: #333;
+  --border-header-bottom: #5D4037;
+  --border-general: #e8e8e8;
+  --code-bg: #eef;
+  --code-border: #d5d5e9;
+  --quote-bg: #e6cf9d;
+  --quote-border: #8D6E63;
+  --nav-bg-mobile: white;
+}
+
+[data-theme="dark"] {
+  --bg-body: #0d0d0e;           /* Deep Obsidian */
+  --bg-header: #18181b;         /* Zinc/Slate layer */
+  --text-main: #e2e2e4;         /* Crisp off-white */
+  --text-muted: #f4f4f5;        /* Muted gray */
+  --text-post-date: #71717a;
+  --link-color: #38bdf8;        /* Sky Blue */
+  --link-hover: #7dd3fc;
+  --border-header-top: #27272a;
+  --border-header-bottom: #ffe6b8;
+  --border-general: #27272a;
+  --code-bg: #18181b;
+  --code-border: #3f3f46;
+  --quote-bg: #18181b;
+  --quote-border: #38bdf8;      /* Blue accent on quotes */
+  --nav-bg-mobile: #18181b;
+}
+
+/* ----------------------------------------------------------*/
+/* Base Styles */
 /* ----------------------------------------------------------*/
 
 * {
@@ -13,18 +55,23 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color:#ffe6b8;
+  background-color: var(--bg-body);
+  color: var(--text-main);
   text-align: justify;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { 
+  font-size: 100%; 
+  font-weight: 400; 
+  color: var(--text-main); 
+}
 
-a         { color: #2a7ae2; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
-a:visited { color: #205caa; }
+a         { color: var(--link-color); text-decoration: none; }
+a:hover   { color: var(--link-hover); text-decoration: underline; }
+a:visited { color: var(--link-color); opacity: 0.8; }
 
 /* Utility */
-
 .wrap:before,
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
@@ -35,82 +82,69 @@ a:visited { color: #205caa; }
   zoom: 1;
 }
 
-
+/* ----------------------------------------------------------*/
 /* Layout Styles */
 /* ----------------------------------------------------------*/
 
-/* Site header */
-/* 
 .site-header {
-  border-top: 5px solid #333;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
-  background-color: #e6cf9d;
-} */
-
-/* 1. The Container */
-.site-header {
-  border-top: 5px solid #333;
-  border-bottom: 2px solid #5D4037;
+  border-top: 5px solid var(--border-header-top);
+  border-bottom: 2px solid var(--border-header-bottom);
   min-height: 60px;
-  background-color: #e6cf9d;
+  background-color: var(--bg-header);
   width: 100%;
-  position: relative; /* This is the "anchor" for the absolute links */
-  display: block;    /* Standard block display to avoid flex conflicts */
+  position: relative; 
+  display: block;    
 }
 
-/* 2. The Wrapper (Ensures the header has height) */
 .site-header .wrap {
   max-width: 100%; 
   position: relative;
-  height: 60px;      /* Matches min-height of header */
+  height: 60px;      
 }
 
-/* 3. The Title (Locked at 14vw) */
 .site-title {
   display: inline-block;
-  color: #333;
+  color: var(--text-main);
   font-size: 26px;
   letter-spacing: -1px;
-  line-height: 60px; /* Centers text vertically */
+  line-height: 60px; 
   text-decoration: none;
-  /* Your 14vw Requirement */
   margin-left: 45vw; 
   white-space: nowrap;
 }
 
-/* 4. The Navigation (HARD FORCE TO RIGHT) */
 .site-nav {
   position: absolute;
-  right: 5vw;        /* This forces it to the extreme right of the page span */
+  right: 5vw;        
   top: 0;
-  line-height: 60px; /* Matches header height */
+  line-height: 60px; 
 }
 
-/* 5. The Links */
 .site-nav .trigger {
   display: block;
-  white-space: nowrap; /* Prevents the two-line break */
+  white-space: nowrap; 
 }
 
 .site-nav .page-link {
   margin-left: 20px;
-  color: #727272;
+  color: var(--text-muted);
   text-decoration: none;
   letter-spacing: -.5px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .site-nav .menu-icon { 
   display: none; 
 }
 
-/* Site footer */
+/* ----------------------------------------------------------*/
+/* Footer */
+/* ----------------------------------------------------------*/
 
 .site-footer {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid var(--border-general);
   padding: 30px 0;
-  /* ADDED: Ensure entire footer content can be centered */
   text-align: center; 
 }
 
@@ -119,34 +153,18 @@ a:visited { color: #205caa; }
   font-weight: 300;
   letter-spacing: -.5px;
   margin-bottom: 15px;
+  color: var(--text-main);
 }
 
-/* REMOVED: .site-footer .column { float: left; margin-bottom: 15px; } 
-   This general float rule causes left alignment. We redefine below. */
-.site-footer .column { margin-bottom: 15px; } /* Cleaned up general column style */
+.site-footer .column { margin-bottom: 15px; } 
 
+.footer-col-1, .footer-col-3 { display: none; }
 
-.footer-col-1 {
-  /* Commented out or removed since you are only keeping col-2 */
-  /* float: left; margin-right: 10px; */
-  /* width definitions removed */
-  display: none; 
-}
-
-/* MODIFIED: The only remaining column (col-2) */
 .footer-col-2 {
-  /* Overrides original float: left, ensuring it takes up full width for centering */
   width: auto;
   float: none; 
   margin-right: 0;
-  
-  /* CRUCIAL: Center the content inside the column */
   text-align: center;
-}
-
-.footer-col-3 {
-  /* Commented out or removed since you are only keeping col-2 */
-  display: none;
 }
 
 .site-footer ul { list-style: none; }
@@ -155,381 +173,156 @@ a:visited { color: #205caa; }
 .site-footer p {
   font-size: 15px;
   letter-spacing: -.3px;
-  color: #828282;
+  color: var(--text-muted);
 }
 
-/* ----------------------------------------------------------*/
-/* MODIFICATIONS FOR ICONS AND HORIZONTAL LAYOUT */
-/* ----------------------------------------------------------*/
-
-.github-icon-svg,
-.twitter-icon-svg,
-.linkedin-icon-svg, 
-.icon.scholar span { 
+.github-icon-svg, .twitter-icon-svg, .linkedin-icon-svg, .icon.scholar span { 
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  top: 3px;
+  width: 16px; height: 16px;
+  position: relative; top: 3px;
+  fill: var(--text-muted); 
 }
 
-/* Forces social links onto one line and tightens spacing */
-.footer-col-2 ul {
-    /* CRUCIAL: Must be inline-block to be centered by the parent's text-align: center */
-    display: inline-block; 
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+.footer-col-2 ul { display: inline-block; padding-left: 0; margin: 0; }
+.footer-col-2 li { display: inline-block; margin-right: 15px; }
 
-.footer-col-2 li {
-    display: inline-block; 
-    margin-right: 15px;    
-    margin-top: 0 !important;
-    margin-bottom: 0 !important; 
-}
 /* ----------------------------------------------------------*/
-
-
-/* Page Content styles */
+/* Page Content & Posts */
 /* ----------------------------------------------------------*/
 
 .page-content {
   padding: 30px 0;
-  background-color: #ffe6b8;
+  background-color: var(--bg-body);
   text-align: justify;
 }
-
-
-/* Home styles */
-/* ----------------------------------------------------------*/
-
-.home h1 { margin-bottom: 25px; }
-
-.posts { list-style-type: none; }
-
-.posts li { margin-bottom: 5px; } /* MODIFIED: Reduced space between posts */
 
 .posts .post-link {
   font-size: 20px;
   letter-spacing: -1px;
   line-height: 1;
   font-family: 'Courier New', Courier, monospace; 
-  font-weight: 1000; /* Use a medium weight for the 'heavy' look */
+  font-weight: 900; 
 }
 
 .posts .post-date {
   display: block;
   font-size: 15px;
-  color: #818181;
+  color: var(--text-post-date);
 }
 
+.post-header { margin: 10px 0 30px; font-family: 'Courier New', Courier, monospace; }
+.post-header h1 { font-size: 36px; letter-spacing: -1.75px; line-height: 1; font-weight: 300; color: var(--text-main); }
+.post-header .meta { font-size: 15px; color: var(--text-post-date); margin-top: 5px; }
 
-/* Post styles */
-/* ----------------------------------------------------------*/
-
-.post-header { margin: 10px 0 30px; 
-font-family: 'Courier New', Courier, monospace; 
-font-weight: 2000; /* Use a medium weight for the 'heavy' look */
-}
-
-.post-header h1 {
-  font-size: 36px;
-  letter-spacing: -1.75px;
-  line-height: 1;
-  font-weight: 300;
-}
-
-.post-header .meta {
-  font-size: 15px;
-  color: #818181;
-  margin-top: 5px;
-}
-
-.post-content { margin: 0 0 30px;
-text-align: justify; }
-
-.post-content > * { margin: 20px 0;
-font-family: 'Courier New', Courier, monospace; 
-font-size: 16px; /* Adjust size if needed */
-font-weight: 1000; /* Use a medium weight for that 'heavy' look */
-line-height: 1.6;
-}
-
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-  line-height: 1;
-  font-weight: 300;
-  margin: 40px 0 20px;
-}
-
-.post-content h2 {
-  font-size: 32px;
-  letter-spacing: -1.25px;
-}
-
-.post-content h3 {
-  font-size: 26px;
-  letter-spacing: -1px;
-}
-
-.post-content h4 {
-  font-size: 20px;
-  letter-spacing: -1px;
+.post-content > * { 
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 16px; 
+  font-weight: 900; 
+  line-height: 1.6;
+  color: var(--text-main);
 }
 
 .post-content blockquote {
   padding-left: 20px;
   font-size: 18px;
-  opacity: .6;
+  opacity: .8;
   letter-spacing: -1px;
   font-style: italic;
   margin: 30px 0;
-  background-color: #e6cf9d;
-  font-family: 'Courier New', Courier, monospace; 
-  font-weight: 1000; /* Use a medium weight for the 'heavy' look */
+  background-color: var(--quote-bg);
+  border-left: 5px solid var(--quote-border);
+  color: var(--text-main);
 }
 
-.post-content ul,
-.post-content ol { padding-left: 20px; }
-
-.post pre,
-.post code {
-  border: 1px solid #d5d5e9;
-  background-color: #eef;
+.post pre, .post code {
+  border: 1px solid var(--code-border);
+  background-color: var(--code-bg);
+  color: var(--text-main);
   padding: 8px 12px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   font-size: 15px;
-  overflow:auto;
+  overflow: auto;
 }
 
-.post code { padding: 1px 5px; }
+.post pre.terminal { background-color: #111; color: #EEE; border: 1px solid #000; }
+.post pre.terminal code { background-color: #111; }
 
-.post ul,
-.post ol { margin-left: 1.35em; }
-
-.post pre code {
-  border: 0;
-  padding-right: 0;
-  padding-left: 0;
+.centered-quote {
+    text-align: center; 
+    margin: 50px auto; 
+    font-size: 20px; 
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-main); 
+    border: 1px solid var(--quote-border);
+    padding: 25px 30px; 
+    background-color: var(--quote-bg);
+    max-width: 600px;
 }
 
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+.centered-quote p {
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 900;
 }
 
-.post pre.terminal code { background-color: #333; }
-
-/* AK custom CSS mods */
-.imgright { float: right; margin-left: 10px; }
-.imgcap img {
-  border: 1px solid #999;
-  max-width: 100%;
-}
-.imgcap {
-  color: #555;
-  font-size: 14px;
-  text-align: center;
-}
-
-.svgdiv {
-  width: 100%;
-  text-align: center;
-}
-/* Syntax highlighting styles */
+/* ----------------------------------------------------------*/
+/* Syntax Highlighting */
 /* ----------------------------------------------------------*/
 
-.highlight  { background: #ffffff; }
-.highlight .c { color: #999988; font-style: italic } /* Comment */
-.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
-.highlight .k { font-weight: bold } /* Keyword */
-.highlight .o { font-weight: bold } /* Operator */
-.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
-.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
-.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #aa0000 } /* Generic.Error */
-.highlight .gh { color: #999999 } /* Generic.Heading */
-.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
-.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #555555 } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
-.highlight .gt { color: #aa0000 } /* Generic.Traceback */
-.highlight .kc { font-weight: bold } /* Keyword.Constant */
-.highlight .kd { font-weight: bold } /* Keyword.Declaration */
-.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
-.highlight .kr { font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
-.highlight .m { color: #009999 } /* Literal.Number */
-.highlight .s { color: #d14 } /* Literal.String */
-.highlight .na { color: #008080 } /* Name.Attribute */
-.highlight .nb { color: #0086B3 } /* Name.Builtin */
-.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
-.highlight .no { color: #008080 } /* Name.Constant */
-.highlight .ni { color: #800080 } /* Name.Entity */
-.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
-.highlight .nn { color: #555555 } /* Name.Namespace */
-.highlight .nt { color: #000080 } /* Name.Tag */
-.highlight .nv { color: #008080 } /* Name.Variable */
-.highlight .ow { font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mf { color: #009999 } /* Literal.Number.Float */
-.highlight .mh { color: #009999 } /* Literal.Number.Hex */
-.highlight .mi { color: #009999 } /* Literal.Number.Integer */
-.highlight .mo { color: #009999 } /* Literal.Number.Oct */
-.highlight .sb { color: #d14 } /* Literal.String.Backtick */
-.highlight .sc { color: #d14 } /* Literal.String.Char */
-.highlight .sd { color: #d14 } /* Literal.String.Doc */
-.highlight .s2 { color: #d14 } /* Literal.String.Double */
-.highlight .se { color: #d14 } /* Literal.String.Escape */
-.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
-.highlight .si { color: #d14 } /* Literal.String.Interpol */
-.highlight .sx { color: #d14 } /* Literal.String.Other */
-.highlight .sr { color: #009926 } /* Literal.String.Regex */
-.highlight .s1 { color: #d14 } /* Literal.String.Single */
-.highlight .ss { color: #990073 } /* Literal.String.Symbol */
-.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
-.highlight .vc { color: #008080 } /* Name.Variable.Class */
-.highlight .vg { color: #008080 } /* Name.Variable.Global */
-.highlight .vi { color: #008080 } /* Name.Variable.Instance */
-.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.highlight { background: var(--code-bg); color: var(--text-main); }
+[data-theme="dark"] .highlight .c { color: #888; font-style: italic; }
+[data-theme="dark"] .highlight .k { color: #ff79c6; font-weight: bold; }
+[data-theme="dark"] .highlight .s { color: #f1fa8c; }
+[data-theme="dark"] .highlight .nf { color: #50fa7b; }
 
-
-/* media queries */
 /* ----------------------------------------------------------*/
-
-
-@media screen and (max-width: 750px) {
-
-  .footer-col-1 { width: 50%; }
-
-  .footer-col-2 {
-    width: 45%; /*fallback*/
-    width: -webkit-calc(50% - 10px);
-    width: -moz-calc(50% - 10px);
-    width: -o-calc(50% - 10px);
-    width: calc(50% - 10px);
-    margin-right: 0;
-  }
-
-  .site-footer .column.footer-col-3 {
-    width: auto;
-    float: none;
-    clear: both;
-  }
-
-}
+/* Media Queries */
+/* ----------------------------------------------------------*/
 
 @media screen and (max-width: 600px) {
-
   .wrap { padding: 0 12px; }
+  .site-title { margin-left: 5vw; }
 
   .site-nav {
-    position: fixed;
-    z-index: 10;
-    top: 14px; right: 8px;
-    background-color: white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #e8e8e8;
+    background-color: var(--nav-bg-mobile);
+    border: 1px solid var(--border-general);
   }
-
-  .site-nav .menu-icon {
-    display: block;
-    font-size: 24px;
-    color: #505050;
-    float: right;
-    width: 36px;
-    text-align: center;
-    line-height: 36px;
-  }
-
-  .site-nav .menu-icon svg { width: 18px; height: 16px; }
-
-  .site-nav .trigger {
-    clear: both;
-    margin-bottom: 5px;
-    display: none;
-  }
-
-  .site-nav:hover .trigger { display: block; }
 
   .site-nav .page-link {
     display: block;
     text-align: right;
-    line-height: 1.25;
     padding: 5px 10px;
     margin: 0;
   }
-
-  .post-header h1 { font-size: 36px; }
-  .post-content h2 { font-size: 28px; }
-  .post-content h3 { font-size: 22px; }
-  .post-content h4 { font-size: 18px; }
-  .post-content blockquote { padding-left: 10px; }
-  .post-content ul,
-  .post-content ol { padding-left: 10px; }
-
-  .site-footer .column {
-    float: none;
-    clear: both;
-    width: auto;
-    margin: 0 0 15px; }
-
 }
 
-/* Custom Style for Bhagavad Gita Quote */
-.centered-quote {
-    /* Center the entire text block */
-    text-align: center; 
-    
-    /* Center the block on the page and add vertical margin */
-    margin: 50px auto; 
-    
-    /* Set the font to be large and italic, matching the style */
-    font-size: 20px; 
-    font-style: italic;
-    font-weight: 400; 
-    line-height: 1.6;
-    
-    /* Use a darker color for the text */
-    color: #555555; 
-    
-    /* ADDED: Border and Padding for the box look */
-    border: 1px solid #8D6E63; /* Dark brown border color */
-    padding: 25px 30px; /* Padding inside the border */
-    
-    /* ADDED: Background fill color */
-    background-color: #e6cf9d; /* Muted, slightly darker brown fill */
-    
-    /* Ensure the block takes up most of the page width */
-    max-width: 600px;
+/* ----------------------------------------------------------*/
+/* Theme Toggle Icon Fix (Applied at the end) */
+/* ----------------------------------------------------------*/
+
+#theme-toggle-icon {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  user-select: none;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
-/* Ensure paragraphs inside the quote don't create excessive gaps */
-.centered-quote p {
-    margin: 10px 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace; 
-    font-weight: 1000; /* Use a medium weight for the 'heavy' look */
+/* LIGHT MODE: Force the Moon to be White against the Brown Header */
+/* LIGHT MODE: Force the Moon to be Blue against the Brown Header */
+[data-theme="light"] #theme-toggle-icon {
+  /* 1. brightness(0) makes it black
+     2. invert(1) makes it white
+     3. sepia(1) gives it a base tint
+     4. hue-rotate(190deg) moves the tint to Blue
+     5. saturate(5) makes the blue deep and vibrant
+  */
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(190deg) drop-shadow(0 0 5px rgba(56, 189, 248, 0.5));
+  opacity: 1 !important;
+}
+
+/* DARK MODE: Force the Sun to be Golden against the Dark Header */
+[data-theme="dark"] #theme-toggle-icon {
+  filter: sepia(1) saturate(5) hue-rotate(10deg) brightness(1.2) drop-shadow(0 0 8px #ffcc00);
 }

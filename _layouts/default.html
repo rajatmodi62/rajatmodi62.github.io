@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
-
+<head>
   {% include head.html %}
+  
+  <script>
+    // 1. SET INITIAL THEME (Run this immediately in <head>)
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initialTheme = savedTheme || (systemDark ? "dark" : "light");
+    
+    document.documentElement.setAttribute('data-theme', initialTheme);
 
-    <body>
+    // 2. ICON UPDATE LOGIC
+    function updateIcon(theme) {
+      const iconSpan = document.getElementById('theme-icon');
+      if (iconSpan) {
+        iconSpan.innerHTML = (theme === "dark") ? "☀️" : "🌙";
+      }
+    }
 
-    {% include header.html %}
+    // Ensure icon matches theme once the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      updateIcon(document.documentElement.getAttribute('data-theme'));
+    });
 
-    <div class="page-content">
-      <div class="wrap">
+    // 3. THE TOGGLE FUNCTION
+    function modeSwitcher() {
+      let currentMode = document.documentElement.getAttribute('data-theme');
+      // If currentMode is null or light, go dark. Otherwise, go light.
+      let nextMode = (currentMode === "dark") ? "light" : "dark";
+      
+      document.documentElement.setAttribute('data-theme', nextMode);
+      localStorage.setItem('theme', nextMode);
+      updateIcon(nextMode);
+    }
+  </script>
+</head>
+
+<body>
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrap">
       {{ content }}
-      </div>
     </div>
+  </div>
 
-    {% include footer.html %}
-
-    </body>
+  {% include footer.html %}
+</body>
 </html>
