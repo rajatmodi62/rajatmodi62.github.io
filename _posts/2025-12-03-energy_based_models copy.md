@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "On energy based models"
+title:  "On Energy Based Models"
 description: "Course notes of stefano ermons lectures at stanford"
 date:   2024-10-26 11:00:00
 ---

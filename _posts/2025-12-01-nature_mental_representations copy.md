@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "On the necker-cube illusion and superposition of representations"
+title:  "On The Necker-Cube Illusion And Superposition Of Representations"
 description: "Discussions on mental rotation, and other psychological experiments conducted by hinton back in the 80's"
 date:   2026-03-21 11:00:00
 ---

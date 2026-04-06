@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "On the destructiveness and pain in machines."
+title:  "On The Destructiveness And Pain In Machines."
 description: "Human destructiveness in machines can be modelled by devising a goal-tree switching logic. Furthermore, a machine can simulate pain by temporarily pausing the execution of it's internal goal trees. "
 date:   2021-01-22 11:00:00
 ---
