@@ -6,7 +6,7 @@
   <script>
     // 1. SET INITIAL THEME (Run this immediately in <head>)
     const savedTheme = localStorage.getItem('theme');
-    const systemDark = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const initialTheme = savedTheme || (systemDark ? "dark" : "light");
     
     document.documentElement.setAttribute('data-theme', initialTheme);
