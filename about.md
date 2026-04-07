@@ -21,14 +21,15 @@ includelink: true
 </div> -->
 
 > I was jack of all, master of none. Yet, I dared do a PhD. For what is PhD, but philosophy. And philosophy i did. Turned out i was jack all along.
-<div style="text-align: center; margin-bottom: 20px;">
+
+<!-- <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
         src="{{ site.baseurl }}/assets/prof_pic.jpg" 
         style="width: 50%; max-height: 600px; object-fit: cover; display: block; margin: 0 auto;" 
         alt="Animation GIF"
     >
-</div>
+</div> -->
 
 I am currently pursuing PhD in computer science at University of Central Florida. I am being advised by [Dr. Yogesh Rawat](https://scholar.google.com.sg/citations?user=D_JvEcwAAAAJ&hl=en) and [Dr. Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en). Prior to my PhD, I worked as Senior Member of Technical staff at Athena Health. Before that, I worked at Samsung Research under [Dr. Manish Sharma](https://scholar.google.com/citations?hl=en&user=sIYrRw0AAAAJ). In an earlier life, I spent time at IIT Roorkee, Parimal Lab, under Dr. [Partha Pratim Roy](https://scholar.google.ca/citations?hl=en&user=moDpyKkAAAAJ&view_op=list_works&sortby=pubdate). During my undergrad at NSIT, I was fortunate enough to have worked and learnt from [Dr. Harish Parthasarathy](https://scholar.google.co.in/citations?user=hdt6eVoAAAAJ&hl=en). I will forever cherish the time spent discussing quantum computing, and various mathematical problems with [Dr. K.R. Parthasarathy](https://en.wikipedia.org/wiki/K._R._Parthasarathy_(probabilist)).  K.R. Sir passed away a few years ago, but we still fondly remember him. Last, but not the least,  i had the great privilege of learning flute from my Guru [Rajendra Prasanna](https://en.wikipedia.org/wiki/Rajendra_Prasanna). 
 
