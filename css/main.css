@@ -109,7 +109,7 @@ a:visited { color: var(--link-color); opacity: 0.8; }
   letter-spacing: -1px;
   line-height: 60px; 
   text-decoration: none;
-  margin-left: 45vw; 
+  /* margin-left: 0vw;  */
   white-space: nowrap;
 }
 
