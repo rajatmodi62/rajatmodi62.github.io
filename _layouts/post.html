@@ -25,4 +25,37 @@ layout: default
     {% endif %}
     
   </div>
+
+  ...
+    {% include footer.html %}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const progressBar = document.getElementById('progress-bar');
+        const progressContainer = document.getElementById('progress-container');
+
+        function updateProgress() {
+          const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          if (height > 0) {
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+          }
+        }
+
+        window.addEventListener('scroll', updateProgress);
+
+        progressContainer.addEventListener('click', (e) => {
+          const containerWidth = progressContainer.offsetWidth;
+          const clickX = e.offsetX;
+          const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          window.scrollTo({
+            top: (clickX / containerWidth) * totalHeight,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
 </div>

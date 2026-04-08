@@ -326,3 +326,21 @@ a:visited { color: var(--link-color); opacity: 0.8; }
 [data-theme="dark"] #theme-toggle-icon {
   filter: sepia(1) saturate(5) hue-rotate(10deg) brightness(1.2) drop-shadow(0 0 8px #ffcc00);
 }
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; 
+  background: transparent; /* Remove red */
+  cursor: pointer;
+  z-index: 99999;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%; /* Start at zero */
+  background: var(--border-header-bottom, #38bdf8);
+  box-shadow: 0 0 10px var(--link-color);
+  transition: width 0.1s ease-out;
+}
