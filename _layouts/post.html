@@ -26,9 +26,8 @@ layout: default
     
   </div>
 
-  ...
-    {% include footer.html %}
-
+  
+  
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const progressBar = document.getElementById('progress-bar');
@@ -59,3 +58,14 @@ layout: default
   </body>
 </html>
 </div>
+
+<script type="text/javascript">
+  document.addEventListener('keydown', function(event) {
+    // Check if the pressed key is 'Escape'
+    if (event.key === "Escape") {
+      // Redirect back to your home page
+      // Using site.baseurl ensures it works on GitHub Pages
+      window.location.href = "{{ site.baseurl }}/";
+    }
+  });
+</script>
