@@ -1,21 +1,28 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post-container" style="
+    border-left: 1px solid var(--border-header-bottom); 
+    border-right: 1px solid var(--border-header-bottom); 
+    min-height: 100vh; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 0 40px;
+">
+  <div class="post">
 
-  <header class="post-header">
-    <h1 style="color: var(--border-header-bottom);">{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+    <header class="post-header">
+      <h1 style="color: var(--border-header-bottom);">{{ page.title }}</h1>
+      <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    </header>
 
-  <article class="post-content">
-  {{ content }}
-  </article>
+    <article class="post-content">
+    {{ content }}
+    </article>
 
-  <!-- mathjax -->
-  {% if page.mathjax %}
-  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  {% endif %}
-  
-  
+    {% if page.mathjax %}
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
+    
+  </div>
 </div>
