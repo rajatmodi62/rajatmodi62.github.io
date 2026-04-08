@@ -48,3 +48,21 @@ In this whole journey, my advisor has been constantly with me. He allowed us to 
 Forever, <br>
 Members of the MLCollective. <br>
 zz <br>
+
+
+# companies who gave me interview but failed (not that anyone is counting lol)
+
+amazon 
+tesla 
+samsung health 
+reality defender 
+quolcommn 
+meta
+numenta (too secretive)
+openai 
+deepmind 
+kodiak 
+
+
+
+time to pack bags and go back to india. :-)
