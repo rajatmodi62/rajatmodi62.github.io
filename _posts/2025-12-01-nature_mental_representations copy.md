@@ -191,7 +191,7 @@ Autoregressive models like LLMs belong to `switching representations'. As soon a
 
 The second class, a.k.a superpositioned representations have only recently been explored (check anthropics blog on toy models in superposition)
 
-
+rajat
 
 <!-- <div style="text-align: center;"> 
     <img 
