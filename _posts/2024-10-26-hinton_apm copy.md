@@ -12,23 +12,44 @@ Disclaimer: Apologies for the Academic Shitposting. I needed some place to vent.
 
 > APM is one of the first steps towards getting Geoffrey Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net. This goose has now started to have some feathers and lay some golden-eggs. This work was accepted to NeurIPS2024. Paper can be found <a href="URL">here</a>. And all it took was a MLP. There you go GLOM-doubters. Hiyaaaaaaa!!!!!! 
 
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; margin: 20px 0;">
+    
+    <div style="max-width: 800px; width: 100%;">
+        <img src="{{ site.baseurl }}\assets\img\apm\baby_hinton.jpg" 
+             style="width: 50%; height: auto; display: block; margin: 0 auto;">
+    </div>
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\baby_hinton.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-<div class="caption" style="text-align: center;">
-    <b>Dr. Geoff Hinton </b> poses with an anaconda. conda activate glom, he cries. CONDA ACTIVATE GLOM, he yells. GLOM, CONDA GLOM. But, conda keeps sleeping and then hangs in the terminal. Conda is unable to breathe. Its environment has become too polluted. Arghhh. Bad anaconda.... Geoff Hinton has no choice but to take out a whip and beat the anaconda. Whipppp!!! It still refuses to move. Something needs to be done about this. Something urgent. <b> Maybe a nobel prize? </b> Surely, he knew 60 years ago this day would come. 
+    <div class="caption" style="max-width: 800px; margin-top: 10px;">
+        <b>Dr. Geoff Hinton</b> poses with an anaconda. conda activate glom, he cries. 
+        CONDA ACTIVATE GLOM, he yells. GLOM, CONDA GLOM. But, conda keeps sleeping and 
+        then hangs in the terminal. Conda is unable to breathe. Its environment has 
+        become too polluted. Arghhh. Bad anaconda.... Geoff Hinton has no choice but 
+        to take out a whip and beat the anaconda. Whipppp!!! It still refuses to move. 
+        Something needs to be done about this. Something urgent. 
+        <b> Maybe a nobel prize? </b> Surely, he knew 60 years ago this day would come. 
+    </div>
+
 </div>
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino1.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-<div class="caption" style="text-align: center;">
-    A huge congratulations to <b> Baby </b> Geoff Hinton for his nobel prize. One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 20px auto; max-width: 800px; text-align: center;">
+
+    <img src="{{ site.baseurl }}\assets\img\apm\dino1.png" 
+         class="img-fluid" 
+         style="max-width: 50%; height: auto; display: block;">
+
+    <div class="caption" style="margin-top: 15px; width: 100%;">
+        A huge congratulations to <b> Baby </b> Geoff Hinton for his nobel prize. 
+        One small step for a man, but a giant leap for mankind. Robotkind too. I, Robot.
+    </div>
+
 </div>
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\claim.gif" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 2rem auto;">
+    <div style="max-width: 800px; text-align: center;">
+        <img src="{{ site.baseurl }}\assets\img\apm\claim.gif" 
+             class="img-fluid" 
+             style="width: 50%; height: auto; display: inline-block;">
+    </div>
 </div>
 
 Dr. Geoff Hinton wrote the GLOM paper. GLOM means "coming together". And since it somewhat works now, So, on the behalf of everyone. <br>
@@ -55,9 +76,12 @@ and inside volcanoes too. May this clhaim <b>for(h)ever rest ,</b><br>
 (a little cough.... <b>D</b>. sorry, ran out of breath, what was we saying? oh, we remember now)<br>
 <br>
 
-
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\schboober.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; width: 100%; margin: 20px 0;">
+    <div style="max-width: 800px; text-align: center;">
+        <img class="img-fluid" 
+             src="{{ site.baseurl }}\assets\img\apm\schboober.png" 
+             style="width: 50%; height: auto; display: block; margin: 0 auto;">
+    </div>
 </div>
 
 May this claim <b>forever rest ,</b><br>
@@ -75,29 +99,25 @@ By the members themselves. <br>
 p.s. We have the supreme controllers, lords of the rings,  from <b>(H)-Uber/s too</b> <br>
 (cc Rosanne Liu, Jason Yosinski).)..<br>
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\infinity_stone.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-<div class="caption" style="text-align: center;">
-    <b> BEHOLD,</b> O (H)-Uber/s who are <b>also the important members of borg/MLcollective </b>, for the COSMOS shall now speak. And they shall speak only <b>ONCE</b>. Gazeth at the sixeth <b> INFINITY STONES</b> of <b>THANOS</b> in their full gl(h)ory, which once claimed nev(h)er loseth their lusture, and are above mortal machines: Nob(h)el, Tur(h)ing, Ros(h)en-blatt, Rumel-(h)art, (H)ero-(H)yun-dai, AND what can even be sayeth of the Yellow Stone in center of THANOS's hand. That's his <b> PRINCESS </b>. Let HER name be knoweth across the cosmos as <b>Astur-(h)-ias</b>. There are more stones too lol. But that will need other hand. That glove is still under construction. We will update once it gets completed. S(h)orry. Ive limited time for all this comedy after all. This wont give me my p(h)d. Have to meet with my advisor tm(h)ww. A lot more work needs to be done. 
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 40px auto; max-width: 800px;">
+
+    <img src="{{ site.baseurl }}\assets\img\apm\infinity_stone.png" 
+         class="img-fluid" 
+         style="width: 50%; height: auto; display: block;">
+
+    <div class="caption" style="text-align: center; margin-top: 20px; font-family: inherit; line-height: 1.6;">
+        <b> BEHOLD,</b> O (H)-Uber/s who are <b>also the important members of borg/MLcollective </b>, for the COSMOS shall now speak. And they shall speak only <b>ONCE</b>. Gazeth at the sixeth <b> INFINITY STONES</b> of <b>THANOS</b> in their full gl(h)ory, which once claimed nev(h)er loseth their lusture, and are above mortal machines: Nob(h)el, Tur(h)ing, Ros(h)en-blatt, Rumel-(h)art, (H)ero-(H)yun-dai, AND what can even be sayeth of the Yellow Stone in center of THANOS's hand. That's his <b> PRINCESS </b>. Let HER name be knoweth across the cosmos as <b>Astur-(h)-ias</b>. There are more stones too lol. But that will need other hand. That glove is still under construction. We will update once it gets completed. S(h)orry. Ive limited time for all this comedy after all. This wont give me my p(h)d. Have to meet with my advisor tm(h)ww. A lot more work needs to be done. 
+    </div>
+
 </div>
 
-<div class="gif-container" style="text-align: left;">
-  <figure style="width: 500px; margin: 0;">
-    <img src="{{ '/assets/img/apm/tongue.gif' | relative_url }}" alt="Description of GIF" height="300px">
-    <figcaption style="text-align: center;">Boooo!!!!!!</figcaption>
+<div class="gif-container" style="display: flex; justify-content: center; width: 100%; margin: 2rem 0;">
+  <figure style="width: 500px; margin: 0 auto;">
+    <img src="{{ '/assets/img/apm/tongue.gif' | relative_url }}" alt="Boooo GIF" style="width: 100%; height: 300px; object-fit: contain;">
+    <figcaption style="text-align: center; font-weight: bold; margin-top: 10px;">Boooo!!!!!!</figcaption>
   </figure>
 </div>
 
-<!-- And now, as even the stars spanning the cosmos <b> shall be forced to bear witness </b>  this grandiose-moment , under the sacred laws of academic-tradition spanning <b> millennia </b>, and the blessings of esteemed NeurIPS program committee, <b>(Me)mbers of the (ML)Collective</b> on this twenty eighth day of the month of october in the year 2024 of our humble lord <b>Jesus Christ</b>  hereby lay claim to  Yannic Kilcher’s <b>“(Me)-GLO-(MiL)-lennia”</b>. Member's locations can include any land, water, spaceships, and inside volcanoes too. May this claim forever rest <b>UNWAVERING, UNDILUTED and UNCHALLENGED </b>. 
-
-Yeah, members won't entertain challenge even by schr(h)-<b>uber</b>. Okkkk fine, he can challenge it, we will accept appeals. But, we might veto it :-). Just sayin. We have board members from <b>Uber</b> (cc Rosanne Liu).
-
-By the power vested into MLCollective by infinity stones, GLOM hereby rests claimed. GLOM = Geoff's last original model. Or at least his latest.
-
-Members have thus spoken.  -->
-
-<!-- Next time they will be grateful to speak at DLCT talk. If Rosanne/Jason allow that is :-).  -->
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
  <b> Update 2 (sulking in control room): Hinton is hangry. He wants GLOM's philosophy built into a machine. Quickly. Nooglers are worried. He just won't take no for an answer. There is serious business to take care of.</b>  
@@ -169,27 +189,43 @@ Stupid ideas work, and everyone seems happy with them. After all publishing is a
 
 So, what is GLOM about, and how does it settle the debate between the warrior factions of connectionism and symbolism? For that we take a look at Hinton's glom paper.
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\glom_islands.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-<div class="caption" style="text-align: left;">
-    Figure stolen with love. This illustrates the idea of <b>Islands of Agreement</b>
-</div>
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 30px auto; max-width: 800px;">
 
+    <div style="width: 100%; text-align: center;">
+        <img src="{{ site.baseurl }}\assets\img\apm\glom_islands.png" 
+             class="img-fluid" 
+             style="width: 70%; height: auto; display: inline-block;">
+    </div>
+
+    <div class="caption" style="text-align: center; margin-top: 15px; width: 100%;">
+        Figure stolen with love. This illustrates the idea of <b>Islands of Agreement</b>
+    </div>
+
+</div>
 It talks about a new representation called islands of agreement, and a way to use these islands to somehow do machine perception. But, before we define what are islands, what are these little arrows, we will label his figure a little bit. Trust me, it's a revolutionary idea. 
 
 Let's say you are given an image of mona-sparrow. Something like this: 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\mona_sparrow.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
-</div>
-<div class="caption" style="text-align: center;">
-    <b> A mona-sparrow.</b> She is cut into four pieces, and each piece is numbered. This number can be a positional encoding for all we care. 
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 30px auto; max-width: 800px; text-align: center;">
+
+    <img src="{{ site.baseurl }}\assets\img\apm\mona_sparrow.png" 
+         class="img-fluid" 
+         style="width: 50%; height: auto; display: block;">
+
+    <div class="caption" style="margin-top: 15px; width: 100%;">
+        <b> A mona-sparrow.</b> She is cut into four pieces, and each piece is numbered. 
+        This number can be a positional encoding for all we care. 
+    </div>
+
 </div>
 
 And you then chop mona-sparrow into pieces and label those pieces as 1,2,3,4. So basically, each of this piece is a token you feed to the Hinton's glom. This is how you feed it from the bottom:
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\mona_sparrow_glom.png" style="width: 80%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; width: 100%; margin: 40px 0;">
+    <div style="max-width: 800px; width: 100%; text-align: center;">
+        <img class="img-fluid" 
+             src="{{ site.baseurl }}\assets\img\apm\mona_sparrow_glom.png" 
+             style="width: 80%; height: auto; display: block; margin: 0 auto;">
+    </div>
 </div>
 
 Now we will start introducing some technical terms shall we. You will notice that the figure above has 6 columns. There are 4 tokens, and last two are trash cans. So basically, we only need to look at the leftmost 4 columns. Now, consider the token marked 1. Look at the column sitting on it. That column has 4 arrows and a question mark on it. What are all these arrows? The idea is that this column consists of 5 levels, at lowest level it might be representing the nose of the mona, and at the second highest level, it may be representing the entire mona lisa object. Therefore, the lowest level is representing a part and the second highest level is representing the object. 
@@ -206,10 +242,13 @@ Now, we shall talk about another concept called  <b> The information bottleneck 
 The next insight in APM is as follows: <b> Each of the levels of the GLOM system corresponds to a different layer of the VIT, aka transformer </b>. This assumption works in practice, because in the transformer there is no bottleneck problem: there is no upsampling or downsampling of the input tokens. That remains faithful to the figure that Hinton drew. Lolzy. We have marked that <b> L layers of a transformer (VIT) on the Y axis </b> in glom's figure. 
 
 Ok, so now we need to learn all these arrows. Sometimes they are all red, sometimes they are black, and sometimes blue lol. So, how to learn them. Well, the answer is very simple. <b> Don't learn them lol </b>. They are already present in a transformer like Dinov2. Here is a figure that i stole from Shir Amir's paper yo:
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\shir_dino.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; width: 100%; margin: 30px 0;">
+    <div style="max-width: 800px; width: 100%; text-align: center;">
+        <img class="img-fluid" 
+             src="{{ site.baseurl }}\assets\img\apm\shir_dino.png" 
+             style="width: 50%; height: auto; display: block; margin: 0 auto;">
+    </div>
 </div>
-
 So if you look along the arrow i show, it shows that as you progress along the different layers of a DINOv2, the representations are pretty cool. At the last layer, all the representations of the DOG like ears, eyes, mouth have automatically given themselves some color. Note that this network was NOT trained with any class labels, just a simple self-supervised loss lol. So this told us that there was something interesting going on in the transformer, and it was able to automatically learn the object parts and their wholes. Somehow, we needed to exploit it. 
 
 Like a cutie pie we are, we were parsing through Hintons forward forward paper. And then, we came across this line:
@@ -277,13 +316,22 @@ And the way it should pacify symbolists is like this: CNN filter can be thought 
 And here is the final architecture for this cute-little model called Asynchronous Perception Machine. Little godzilla still keeps gazing at the simplicity of it.
 
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\apm_arch.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; width: 100%; margin: 30px 0;">
+    <div style="max-width: 800px; width: 100%; text-align: center;">
+        <img class="img-fluid" 
+             src="{{ site.baseurl }}\assets\img\apm\apm_arch.png" 
+             style="width: 50%; height: auto; display: block; margin: 0 auto;"
+             alt="Asynchronous Perception Machine Architecture">
+    </div>
 </div>
 
-
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; width: 100%; margin: 30px 0;">
+    <div style="max-width: 800px; width: 100%; text-align: center;">
+        <img class="img-fluid" 
+             src="{{ site.baseurl }}\assets\img\apm\neurips_baby.jpg" 
+             style="width: 50%; height: auto; display: block; margin: 0 auto;"
+             alt="NeurIPS Babies">
+    </div>
 </div>
 
 There are still a lot more papers to be shipped to <b> NeurIPS for babies. 👶👶👶👶👶</b> 
@@ -300,15 +348,27 @@ little_godzilla/s
 
 On this lovely rare-occasion, as Nobel prizes are being doled out to AI, which (according to some people) is NOT a fundamental science or a mere application of physics, we have curated a special series of little godzillas just for you. Each one of them took a lot of time, love, and effort to make. We shall now study these godzillas one by one:
 
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 700px; text-align: center;">
 
-<div class="text-center" style="margin: 0 auto; max-width: 700px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino2.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+    <img src="{{ site.baseurl }}\assets\img\apm\dino2.png" 
+         class="img-fluid" 
+         style="max-width: 50%; height: auto; display: block; margin: 0 auto 1rem auto;"
+         alt="Crowned Godzilla">
+
+    <div style="width: 100%; font-family: inherit; line-height: 1.6; margin: 0 auto;">
+        This is a godzilla with a crown. He is used when he is doing well on some benchmarks. 
+        But most of the days, he looks like this when the experiments fail:
+    </div>
+
 </div>
-This is a godzilla with a crown. He is used when he is doing well on some benchmarks. But most of the days, he looks like this when the experiments fail: 
 
-
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\dino3.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="display: flex; justify-content: center; width: 100%; margin: 2rem 0;">
+    <div style="max-width: 800px; width: 100%; text-align: center;">
+        <img class="img-fluid" 
+             src="{{ site.baseurl }}\assets\img\apm\dino3.png" 
+             style="width: 50%; height: auto; display: block; margin: 0 auto;"
+             alt="Sad Godzilla - Failed Experiment">
+    </div>
 </div>
 
 But there is no smile on his face, because he is sad that experiments didnt work. 
@@ -336,17 +396,29 @@ In future, we plan to make more humble godzillas. Each godzilla comes with its o
 Godzilla-making-addiction. Little godzilla is a mere mortal after all. Sometimes, godzilla is rejected from CVPR/ECCV because he cannot surpass SOTA. Little godzilla is also not that robust: he should be tested extensively in the real world. And for now, poor godzilla only does image-classification. That's not a "real" computer vision task. Godzilla needs to do dense tasks, reasoning and alignment also. And dont even get us started on the hard problem of consciousness. Is it really hard? Alas, only time will tell lol. 
 
 ## References
- <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\godfather.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+ <div style="text-align: center !important; display: block !important; width: 100% !important; margin: 2rem 0 !important;">
+    <div style="max-width: 800px; display: inline-block !important; width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/apm/godfather.png" 
+             class="img-fluid" 
+             style="width: 50% !important; height: auto !important; display: inline-block !important; margin: 0 auto !important; float: none !important;">
+    </div>
 </div>
-
 "Hinton. <b>Geoff Hinton</b>. The <b>Godfather</b>. How to represent part whole hierarchies in neural nets".
 
 What's next after nobel and turing😂? Fields Medal? Gotta catch them all. Perhaps, I dont need math, because maybe i can learn it with backprop. Or maybe Mars should be next. Really, I'm super serious this time. It's tough to decide. 
 
 There are some <b> rare instances </b> when even NeurIPS panels don't understand what little godzillas are saying. But you cant blame little godzillas, they are still small and have a lot to learn. They dont even have a masters degree yet. For eg, you can play this video. This was Unireps workshop panel in NeurIPS 2023. Remember: <b> go full screen, playback speed 0.25x and select the highest quality lol.</b> <b> Don't forget to notice the super-cute smirk and pierced-nose-wrinkle between the  timestamps 1.00- 1.06 :-). </b> 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/b-cgktoep4M?si=yBHRTyl4nd9GGkIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="max-width: 800px; margin: 2rem auto;"> <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+       <iframe 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          src="https://www.youtube.com/embed/b-cgktoep4M?si=yBHRTyl4nd9GGkIY" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+       </iframe>
+    </div>
 </div>
 
 <b> Splendid!!! Pure gold ehh :-) Just in good-humour hehe.</b> In his defence, Little Godzilla gets nervous easily. He is not that comfortable on big stages, you know. So he lost his shit and blabbed all over the panel. Shorry. Luckily there wasn't enough audience to notice little godzilla's nervous breakdown. 
@@ -357,27 +429,51 @@ All little  godzilla requests in return is protection from being schmidubered. P
 
 And before you start thinking that little godzilla is very creative, he isn't. He just stole the idea of folding and unfolding from big godzilla. The last line of big godzilla's paper talks about mental folding. Bulleted below. Hiyaaaa!!
 
- <div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\hinton_steal.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+ <div style="text-align: center !important; width: 100% !important; margin: 2rem 0 !important; display: block !important;">
+    <div style="max-width: 800px; display: inline-block !important; width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/apm/hinton_steal.png" 
+             style="width: 50% !important; height: auto !important; float: none !important; display: inline-block !important; margin: 0 auto !important;">
+    </div>
 </div>
 
 Ok, here are the videos I promised: 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E?si=y3Cw43OabskFb_Jn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="max-width: 800px; margin: 2rem auto;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+        <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            src="https://www.youtube.com/embed/mlXzufEk-2E?si=y3Cw43OabskFb_Jn" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </div>
 
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="max-width: 800px; margin: 2rem auto;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+        <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            src="https://www.youtube.com/embed/2yTltN_GZs4?si=3BZz2l3QU9EPhytd" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </div>
-
 
 It is late night now. We have been on this blog for sooo long. Little godzilla will now go brush and floss his teeth, gargle on crest's mouthwash, put on his (k)night-suit and go to bed on time. Afterall, he becomes sick pulling those all-nighters. He will hear big godzilla's lullaby on a laptop sitting on his tummy and tuck himself in. Especially the old coursera lectures. Hiyaaaaaaaaaaaa!!<br>
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\lullaby.png" style="width: 50%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="text-align: center !important; width: 100% !important; display: block !important; margin: 30px 0 !important;">
+    <div style="max-width: 800px; display: inline-block !important; width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/apm/lullaby.png" 
+             alt="Big Godzilla's Lullaby"
+             style="width: 50% !important; height: auto !important; margin: 0 auto !important; display: inline-block !important; float: none !important;">
+    </div>
 </div>
+
 Big godzilla's lullaby in action. It helps little godzillas wake and then sleep again. Wake-sleep algorithm he he. Wait, the slide says Kevin Swersky. Alex Kryzhvysky. Swersky. Kryzhvysky. Kryzh-(vys)-ky. Kryzh-(swe(a)rs)-ky. Zzzzzzzz. There is a part-whole relationship there after all. 
 
 
@@ -388,15 +484,23 @@ little_dogzilla/s
 
 Gotta do something about this 😡.
 
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\silent_man.png" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="text-align: center !important; width: 100% !important; display: block !important; margin: 3rem 0 !important;">
+    <div style="max-width: 800px; display: inline-block !important; width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/apm/silent_man.png" 
+             alt="The Silent Man"
+             style="width: 70% !important; height: auto !important; margin: 0 auto !important; display: inline-block !important; float: none !important; border-radius: 4px;">
+    </div>
 </div>
+
 Behold!! "The Silent Man" in Openreview and the NeurIPS community. May this silent man be cherished. 
 
 May, the silent man remind us of slow science. May he make us remember, that as the world goes in a state of turmoil, there are a lot of silent men standing guard. May the silent man remind us that science is greater than ourselves, and it is the collective progress that matters. May the silent man remind us that humanity is our collective relationships, love, and mutual respect for each other. May the silent man help us be humble and true to our families. May the silent man help us remember that we are still dependent on each other. Merry Christmas!!. May the silent man be the santa claus who brings hope and gifts in our lives. 
-
-<div class="text-center" style="margin: 0 auto; max-width: 800px;"> <!-- Set max-width as needed -->
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\purpose\cathedral.webp" style="width: 70%; height: auto;"> <!-- Image width is 50% of its parent -->
+<div style="text-align: center !important; width: 100% !important; display: block !important; margin: 3rem 0 !important;">
+    <div style="max-width: 800px; display: inline-block !important; width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/purpose/cathedral.webp" 
+             alt="The Cathedral"
+             style="width: 70% !important; height: auto !important; margin: 0 auto !important; display: inline-block !important; float: none !important;">
+    </div>
 </div>
 
 Reflections of the silent man can be found [here](https://rajatmodi62.github.io/2024/10/26/reflection_mortal_machine/). 
@@ -405,11 +509,18 @@ Silent man is a mortal machine, which is imprecise, which then reduces to Geoffr
 
 
 Geoff Hinton on mortal computation. 
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/sghvwkXV3VU?si=qCU0DqSD_IYHFJRF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="max-width: 800px; margin: 2rem auto; width: 100%;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+        <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            src="https://www.youtube.com/embed/sghvwkXV3VU?si=qCU0DqSD_IYHFJRF" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </div>
-
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 <b> Update 5: Transmission from a wormhole🚢🗺️🔭 </b> 
@@ -478,52 +589,7 @@ one final action, and i'm done. promise.
 </div>
 ------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
-<b>Update 8: The shock of receiving the reply to a nobel-dressed godzilla is still settling in:</b>
-
-I thought i was crazy, but never cared. Apparently, there are people crazier than me. Snippets after i blew my shit. Was in a cheap orlando apartment with a very costly internet when this happened. <br>
-
-
-The reason we are sharing this particular `personal' message is that we have carried this burden long. They deserve to be finally out in the open. It is bigger than us. All credit goes to MLCollective.  All other things are classified by the MLCollective.
-
-So i sent the following to Geoff Hinton:
-
-<div class="text-center" style="margin: 0 auto; max-width: 800px; display: flex; justify-content: center;">
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\nobel1.png" style="width: 50%; height: auto;"> 
-</div>
-
-And wasnt expecting a reply. But we got a reply.
-
-<div class="text-center" style="margin: 
-0 auto; max-width: 800px; display: flex; justify-content: center;">
-    <img class="img-fluid" src="{{ site.baseurl }}\assets\img\apm\nobel2.png" style="width: 50%; height: auto;"> 
-</div>
-
-Hmm, So this writing style seems important, <br>
-For correct prose, <br>
-and charm, <br>
-It lets each line, <br>
-hit you, as you, <br>
-scroll down,<br>
-<br>
-
-And that's how i lost my shit (again!!). (in star trek/star wars) style. 
-
-
-<b>A good scientist always cherishes paradoxes, and does not settle until he has turned the oyster back into a pearl</b>. This line stayed with me, when Hinton addressed some students at IIT-Bombay.  I did listen to the video, which seemed to have struck some deep chord. <br>
-
-
-
-In this whole journey, my advisor has been constantly with me. He allowed us to do this weird work when we gave up. He stood for us when noone else believed in the idea. This taught me what character means. Some things in life cannot be faked. Some things in life are beyond money, fame or prestige: which is a part-whole relationship b/w a phd student and their advisors.<br>
-
-<!-- <iframe src="{{ '/assets/img/apm/slides.pdf' | relative_url }}" width="100%" height="600px"></iframe> -->
-
-
-Forever, <br>
-Members of the MLCollective. <br>
-zz <br>
-------------------------------------------------------------------------------------------------------------------------------------------------------<br>
-
-<b>Update 9: The kind folks at MLCollective</b>
+<b>Update 8: The kind folks at MLCollective</b>
 
 The folks at MLCollective were kind enough to give us the privilege to present this work at the DLCT session. So we are dumping those slides here for your kind reference. If any issues arise, please do let me know at rajatmodi62@gmail.com
 
