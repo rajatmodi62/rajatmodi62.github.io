@@ -13,13 +13,21 @@ The current state of the art in AI is focusing it's efforts towards exploring si
 
 Consider the following task which is very easy for a human to perform:
 
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\hinton_information_processing\image-0.png">
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/hinton_information_processing/image-0.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="Human Puppet Rectangle Task">
+    </div>
+
+    <div class="caption" style="margin-top: 12px; width: 100%; font-size: 0.9em; color: #555; line-height: 1.5;">
+        A task to choose the best possible set of rectangles representing a human puppet. [Relaxation And Its role in Vision, Hinton et. Al]
+    </div>
+
 </div>
-<div class="caption">
-    A task to choose the best possible set of rectangles representing a human puppet. [Relaxation And Its role in Vision, Hinton et. Al]
-</div>
+
 A set of overlapping rectangles is given, which are of different sizes and orientations. The task is to identify the best subsets of those polygons, which can form a complete human. A naive way to approach this problem is to take the combinations of all these rectangles, and arrive at the best solution. However, the complexity of this approach touches the polynomial bounds. 
 
 For the sake of the argument, let's focus on how this approach might look like. We would start with a rectangle, and label it as a body part (say a thigh). Then, the task is to choose relevant candidates among the rectangles which intersect this body part(thigh). A thigh is typically attached to two body parts in a human, i.e. a knee & the waist. We continue this process, till the entire human space is explored over all the possible sets of the available rectangles.
@@ -32,13 +40,21 @@ Now, suppose we "relax" our argument, and allow that the human being might be mi
 There are 206 bones in a human body, and each one of them might have a different set of rules with each other. For each of the rectangle we explore, we might need to have a 206X206 matrix to represent the above rules properly. Now, imagine the computational complexity when such a system will actually brute-force over a possible set of rectangles to obtain the best global human representation!!!! This leads us to conclude, that a brute-force based approach is not the solution if relaxation is introduced into the problem. 
 
 To solve the problem of converging to the best possible global representation, we cannot hope to do best at each brute-force level. Suppose, we are given a rectangle which is modeled as a thigh. But, how do we know whether it is a left thigh or a right thigh of a human (since the immediately connected rectangles can only be the waist or a  knee). In that case, we need to do the depth-first search again, which again increases the computational complexity. Consider the following diagram:
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\hinton_information_processing\image-2.png">
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/hinton_information_processing/image-2.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="Hinton Thesis Calf vs Thigh Hypothesis">
+    </div>
+
+    <div class="caption" style="margin-top: 12px; width: 100%; font-size: 0.9em; color: #555; line-height: 1.5; font-style: italic;">
+        The hypothesis of A as a "calf" or a "thigh" depends on the level at which we view the figure in. [Relaxation, Hinton et. Al, PhD Thesis, Edinburgh]
+    </div>
+
 </div>
-<div class="caption">
-   The hypothesis of A as a "calf' or a "thigh" depends on the level at which we view the figure in. [Relaxation, Hinton et. Al, PhD Thesis, Edinburgh]
-</div>
+
 
 Suppose we are looking at the block A. It can be considered as a 'calf' since the box below it can represent the foot and the box above it can represent a knee joint. If, we zoom out then A can be easily seen as 'high' instead of the 'calf'. The point to understand here is that the locally better alternative (i.e. calf) was not ultimately the best possible answer in a global representation (where it became thigh).
 This mechanism helps us to understand that human perception operates at two levels:
@@ -57,11 +73,19 @@ To get out of this huddle, we urge you to make an assumption. For a moment, assu
 My last try to explain this analogy is to ask you to consider a drop of water flowing from the hill. The entire droplet mass can be visualized as a single droplet flowing along the pool's center of mass[COM]. To enable this COM's trajectory, each of the particular molecule representing that droplet makes a trade-off (relaxation of local constraints). 
 
 More formally, we assume the best global representation to be determined by a point in the higher dimensional vector space. A set of constraints is made to operate at each local location.  Each such location possesses a certain set of constraints, which govern the axis of our higher dimensional plain. Then, the aim of such a device has to be to explore the set of points in the higher space, satisfying the locality constraints. This is the fundamental intuition behind relaxation. 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\hinton_information_processing\image-4.png">
-</div>
-<div class="caption">
-   A diagram showing the process of relaxation in action. 
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/hinton_information_processing/image-4.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="Diagram showing the process of relaxation">
+    </div>
+
+    <div class="caption" style="margin-top: 12px; width: 100%; font-size: 0.9em; color: #555; line-height: 1.5;">
+        A diagram showing the process of relaxation in action.
+    </div>
+
 </div>
 
 Relaxation manages to extract non-conflicting global representations much quicker than brute-force. But, we cannot rest here.  Having thus discretized the levels at which perception occurs, we need to explore the mechanism via which this intuition can be built in the computing devices of today. That is our next order of business.  
@@ -96,12 +120,22 @@ A black box view of our machinery yields it's properties:
 What then remains is a mathematical formulation of such a system, and proving point [3]. i.e. it can achieve an improved level of performance  inspite of being subjected to too many external stimuli. (no of questions we ask in the "cheating students example").
 
 ## Realising our dream with the McCulloch-Pitts Neuron
-<div class="text-center">
- <img class="img-fluid" src="{{ site.baseurl }}\assets\img\hinton_information_processing\image-5.png">
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/hinton_information_processing/image-5.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="McCulloch-Pitts Neuron">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.85em; color: #666;">
+        McCulloch-Pitts Neuron (Source: Google Images)
+    </div>
+
 </div>
-<div class="caption">
-   McCulloch-Pitts Neuron (Source: Google Images)
-</div>
+
 As we mentioned above, there is a certain set of individuals which need to be subjected to continuous external stimuli. This is easily approximated by the perceptron model. 
 
 Think of a perceptron as a very small learning machine. It has to make a decision to respond to an external stimulus by either activating itself or remaining in a de-activated state. It interacts with others, by a synaptic connection. The 'strength' of this connection will be governed by a set of weights. Then, such a basic entity has to make a decision "when actually does it respond". This is given by a threshold T. In short the perceptron can be worked as follows:

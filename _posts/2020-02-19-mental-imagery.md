@@ -18,12 +18,19 @@ As scientists, we don't yet possess such a divine eye. In fact, the human percep
 In our last post, the scales had tipped in the favour of a set of neurons as a replacement for associative memory. Instead of relying on memory addressing, the fundamental unit of storage had become the strength of synaptic connections between the neurons. Each such pattern modelled a global representation which was obtained as contributions of relaxed local representations obeying a certain set of constraints.  The outputs of such a system should match how a human perceives the world. To understand the nature of outputs a human favours, we can perform various psychological experiments on ourselves. 
 
 ## Anorthoscopic Perception
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\1.png">
-</div>
-<div class="caption">
-    Souce: The Role of Spatial Working Memory in Shape Perception, Hinton et. Al[1981]]
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/1.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block;"
+             alt="Hinton 1981 Spatial Working Memory Figure">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.9em; color: #555;">
+        Source: The Role of Spatial Working Memory in Shape Perception, Hinton et. Al [1981]
+    </div>
+
 </div>
 
 Imagine that a hexagon is kept on a table vertically and is viewed through a peephole. Consider the position of the peephole as constant and only one of the hexagonal side being exposed to the outside world. So what a viewer sees is an edge and the relationships with immediate neighbouring edges. For simplification, we are still going to say that the peephole is moving when in fact the object behind it is moving and advertising different parts of itself to the world at a time. 
@@ -35,24 +42,40 @@ Now suppose that instead of sliding over the 'consecutive' sides of the hexagon,
 ## The Hinton "Uncertainty" Principle
 
 So, we understood that brains possess the ability to create global shape representations from a time-series data of "patterns". What about there ability to detect precise object positions in a three-dimensional environment. Turns out, not so much. 
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\2.png">
-</div>
-<div class="caption">
-    Source: The role of spatial working memory in shape perception, Hinton et. Al
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/2.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block;"
+             alt="Hinton 1981 Spatial Working Memory Figure 2">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.9em; color: #555;">
+        Source: The Role of Spatial Working Memory in Shape Perception, Hinton et. Al
+    </div>
+
 </div>
 
 Take the same hexagonal setting with the peephole sliding on it's boundary.  However we have made a small change. The real shape of the polygon is no longer a 'closed' hexagon. Rather it is open at two ends. But, will a human detect this change in the 'real polygon shape' if only a part of the object is visible through a peephole during a single exposure? No. This leads us to conclude that humans possess an innate ability to represent shapes properly, but not the spatial coordinates.
 
 ## Shape vs Position in Computing Devices
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\3.png">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/3.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block;"
+             alt="Mental Imagery Figure 3">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.85em; color: #666;">
+        Source: Google Images
+    </div>
+
 </div>
-<div class="caption">
-    Source: Google Images
-</div>
+
 Imagine that a pair of intersecting lines is given. We ask a simple question to a computer:
 
 How much straight these lines are (in length)? Do they Intersect?
@@ -60,35 +83,58 @@ How much straight these lines are (in length)? Do they Intersect?
 As humans, we took one look at knew the answer that they intersect. But not their actual length's (since our brains are bad with lengths). In case of a computer, it is opposite. A line segment is gonna be stored as a data structure with X and Y coordinates in an array. To calculate the length, it can calculate the euclidian 'norm' in O(1). But, to decide whether the lines intersect or not, the computer has to resort to actually drawing the lines, and applying primitives like graph intersection ( or solving some line intersection equation, which won't take O(1)). This illustrates the weakness of today's computers to learn concepts like shape perception. What then is the mechanism to build higher level concepts like "shape" representation in our digital systems? In the next sequence of posts, we will invent the answer. Meanwhile consider another case:
 
 ## The importance of an object based frame of reference
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\4.jpg">
-</div>
-<div class="caption">
-    Source: Google Images
-</div>
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/4.jpg" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block;"
+             alt="Mental Imagery Figure 4">
+    </div>
 
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.85em; color: #666;">
+        Source: Google Images
+    </div>
+
+</div>
 Consider a 'cube' resting with its front face in front of you. You are asked to mark it's edges and vertices. How will we perform this task? We know that the face at the back mirrors the front face & they are connected by 4 edges. So whatever is the condition in the front face, will be same at the back. Therefore, we naturally mark the 4 points in the front face in our direct field of perception, and assume that the points at the back are similar. If there is a chance of compressing a 3-D object into 2-D representations (cube being explained by front facing face), our brains will manage to achieve this relaxation and reduce the feature set sizes to solve the shape task presented above. 
 
 But, does this implicit relaxation in shape representations always hold true in the viewer's frame of reference. No.
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\5.png">
-</div>
-<div class="caption">
-    Source: Some structural demonstrations of mental imagery. [Hinton et. Al]
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/5.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="Hinton Mental Imagery Structural Demonstration">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.9em; color: #555; font-style: italic;">
+        Source: Some structural demonstrations of mental imagery. [Hinton et. Al]
+    </div>
+
 </div>
 
 Instead of the front facing cube, now the entire cube is rotated by making the extreme opposite diagonal vertical. Can you still find the points? On first try, you will only locate 6 points instead of 8. The reason for this is that the diagonal along which the cube is made vertical, holds components along all the three coordinate directions. Therefore, there is no symmetry from the user's frame of view. 
 
 But, now rotate your head to 45 degrees so that you visualize the straight cube again. You can solve the task efficiently again. However, this random rotation of our heads to perceive the shapes of the objects is not possible everytime. So what can we do ? We know that a front facing cube allows for relaxation.....We can assign two frames of reference, one being object based and one being viewer based.  In the object based frame, the cube is always front facing. But in the viewer based frame, the object rotates in the real world. Don't hurry up.... There are 2 points which we need to reiterate in the viewer based frame.  Let's take a step back. 
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\6.jpg">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/6.jpg" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="Mental Imagery Figure 6">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.85em; color: #666;">
+        Source: Google Images
+    </div>
+
 </div>
-<div class="caption">
-    Source: Google Images
-</div>
+
 When the cube was in front of you, it's object based frame and viewer frame co-incided with each other. Keeping this arrangement intact, rotate your head left/right. Does the shape/representation of the cube change? No. This means, that when we stand at a particular viewer position, the shape of the cube can be formed at different 'retinal positions'. However, we still perceive those images as same. Hence:
 
 1. In case the viewer is at a location, the object based frame representations hold no correlation with the varying retinal representations. 
@@ -117,11 +163,19 @@ We explained the variations of the cube's perceived shape in the viewer. The abs
 
 Above three points lead us to the following structure of the proposed neural network:
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\mental-imagery\7.png">
-</div>
-<div class="caption">
-Source: Shape representation in parallel systems, Hinton et. Al
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/mental-imagery/7.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;"
+             alt="Hinton Shape Representation Figure">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-size: 0.9em; color: #555; font-style: italic;">
+        Source: Shape representation in parallel systems, Hinton et. Al
+    </div>
+
 </div>
 
 There is one thing that still troubles me. Suppose the neural network is made to output some pattern in the object frame of reference. How, the human perceives it is limited to the retina based representations. We have managed to decouple the human ambiguity from the real truth by constraining that randomness in the viewer frame of reference. Now, we are free to represent the true object shape in the object frame of reference. Somewhere above in the post, I had written that a neural network must have spatial memory with an attention span to learn the concepts like shape. This means that the object based frame of reference must have a block which models working memory that stores a sequence of excitation patterns in the network. 

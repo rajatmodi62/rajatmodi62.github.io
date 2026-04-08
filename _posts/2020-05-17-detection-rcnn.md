@@ -27,12 +27,20 @@ In this post, we are gonna be focusing explicitly on the detection task and unde
 
 The best way to  isolate objects in an image is to identify their boundaries. Traditional detectors like canny & HOG would have operated on the gradient change in the pixel intensity values to filter individual object identities . However, Da-Vinci explained a fundamental point in his paintings that the objects don't hold fine boundaries in real world. Instead, the object boundaries gradually merge in their backgrounds via the sfmato effect. 
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\detection-rcnn/1.jpeg">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
+
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/detection-rcnn/1.jpeg" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block; border-radius: 4px;">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-style: italic; color: #555;">
+        Detail of the face of Mona Lisa showing the use of sfumato, particularly in the shading around the eyes. Source: Wikipedia
+    </div>
+
 </div>
-<div class="caption">
-    Detail of the face of Mona Lisa showing the use of sfumato, particularly in the shading around the eyes. Source:Wikipedia
-</div>
+
 2. Compare the object boundaries to find similar objects 
 The boundary [skeleton] of the cat obtained in the previous step would have been compared with the skeletons of cats already known. If they match, then it is a positive detection. But there are several questions that trouble us. Does a cat hold same skeleton across many frames? No, because the cat might change its pose, orientation. Similarly, can multiple animals hold same skeleton?. It is possible. This phenomenon leads us to conclude that:
 
@@ -54,12 +62,19 @@ So, it seems that image classification can help us perform object detection. But
 - We cannot perform detection efficiently without performing image classification first. But our approach of trying to choose a precise chunk (i.e. trying to find a precise chunk that surrounds a cat properly) before predicting whether it contained a cat/or not was wrong. 
 
 The best we can do is to find some rough chunks that may surround a cat, classify them and look at their confidence scores on Image classification models. And among those guys where confidence score is high, we can try to refine our chunks coordinates later. This helps us to devise the fact that our detection pipeline should consist of rough chunk localisation, image classification and iterative chunk refinement as its cascaded components.  This is the fundamental concept behind RCNN. 
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 2rem auto; max-width: 800px; text-align: center;">
 
-<div class="text-center">
-<img class="img-fluid" src="{{ site.baseurl }}\assets\img\detection-rcnn/2.png">
-</div>
-<div class="caption">
-    The basic figure explaining the concepts of RCNN. Credits: Girshick et. Al.  
+    <div style="width: 100%;">
+        <img src="{{ site.baseurl }}/assets/img/detection-rcnn/2.png" 
+             class="img-fluid" 
+             style="max-width: 100%; height: auto; display: inline-block;"
+             alt="RCNN Concepts Figure">
+    </div>
+
+    <div class="caption" style="margin-top: 10px; width: 100%; font-family: inherit; line-height: 1.6;">
+        The basic figure explaining the concepts of RCNN. Credits: Girshick et. Al.  
+    </div>
+
 </div>
 
 There is a grand beauty to the architectural flow we show above.
