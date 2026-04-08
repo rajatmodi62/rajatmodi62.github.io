@@ -345,35 +345,42 @@ a:visited { color: var(--link-color); opacity: 0.8; }
   transition: width 0.1s ease-out;
 }
 
-/* Expansion Card Styles */
+/* The Base Card */
 .paper-expansion-card {
     margin: 2rem 0;
     background-color: var(--bg-header);
     border: 1px solid var(--quote-border);
     border-radius: 4px;
     overflow: hidden;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother curve */
     font-family: 'Courier New', Courier, monospace;
-    max-height: 60px; /* Collapsed height */
+    max-height: 60px;
+    z-index: 100;
 }
 
+/* FULL SCREEN STATE */
 .paper-expansion-card.expanded {
-    /* Set this to the total maximum height you want the card to take on the page */
-    max-height: 600px; 
-    border-color: var(--link-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh; /* Override the 60px */
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    z-index: 999999; /* Stay above everything else */
+    background-color: var(--bg-body); /* Use main body color for full screen */
 }
 
 .card-content {
-    padding: 0 20px 20px 20px;
-    overflow-y: auto; /* This triggers the scrollbar */
-    
-    /* IMPORTANT: This MUST be smaller than the expanded max-height 
-       minus the header height (~60px). 500px is a safe bet. */
-    max-height: 520px; 
-    
+    padding: 40px 10%; /* More side padding in full screen for readability */
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Fill the rest of the screen */
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
+
 
 .expanded .card-content {
     opacity: 1;
@@ -392,13 +399,15 @@ a:visited { color: var(--link-color); opacity: 0.8; }
 }
 
 .card-header {
-    padding: 15px 20px;
+    padding: 15px 25px;
     cursor: pointer;
-    display: flex;           /* Aligns items in a row */
-    flex-direction: row;     /* Forces horizontal alignment */
-    justify-content: space-between; /* Pushes title left, toggle right */
-    align-items: center;     /* Centers them vertically */
-    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-general);
+    height: 60px;
+    box-sizing: border-box;
 }
 
 .card-header h3 {
@@ -424,4 +433,9 @@ a:visited { color: var(--link-color); opacity: 0.8; }
     
     /* Subtle separation line */
     border-bottom: 1px dashed var(--border-general); 
+}
+
+/* Prevent the background body from scrolling when card is open */
+body.no-scroll {
+    overflow: hidden;
 }
