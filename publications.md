@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Publications
 permalink: /publications/
@@ -58,4 +58,4 @@ Links: [[US A1 Patent](https://drive.google.com/file/d/1R4NKRI5nVjcgQI9czmf46MTH
 Propose a system using cross-stitch units to merge user inputs into a unified representation.<br>
 Links: [[US A2 Patent](https://patents.google.com/patent/WO2022245134A1/en?inventor=rajat+modi)] 
 
-Hopefully, ego does not get better of me. 
+Hopefully, ego does not get better of me.  -->

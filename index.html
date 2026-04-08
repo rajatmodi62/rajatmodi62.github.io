@@ -112,6 +112,9 @@ layout: default
                 It does not mean that we should not scale AI. It just means that we should scale it intelligently. Bruteforce scaling wastes compute. A good representation can help scaling models find optimal solution faster. Hence, representations are still important.
             </div>
         </div>
+        
+
+        
 
         <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
           {% for post in site.posts %}{% if post.slug == "akorn" %}
@@ -170,7 +173,140 @@ layout: default
             </li>
           {% endif %}{% endfor %}
         </ul>
+
+        <div class="paper-expansion-card" id="paperCard">
+        <div class="card-header" onclick="togglePapers()">
+            <h3>[ + ] Publications $\&$ Patents</h3>
+            <span id="toggleIcon" style="color: var(--link-color); font-weight: 800;">OPEN</span>
+        </div>
+      
+     
+        <div class="card-content">
+    <div style="font-size: 1rem; color: var(--link-color); margin-bottom: 15px; border-bottom: 1px solid var(--border-general); padding-bottom: 5px;">
+        PERIOD: 2020 - 2030 
     </div>
+
+    <div class="paper-item">
+        <h4> <u>Asynchronous Perception Machine(s)</u></h4>
+        <p>First working implementation of the GLOM architecture. 10x faster than ViT-B/16 and performs 2% better than state-of-the-art OpenCLIP ViT-H on ImageNet. Spiritual successor to capsule networks.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">VENUE:</span> NeurIPS 2024 <br>
+            <a href="https://arxiv.org/abs/2410.20535">[PAPER]</a> 
+            <a href="https://rajatmodi62.github.io/apm_project_page/">[POSTER]</a> 
+            <a href="https://rajatmodi62.github.io/apm_project_page/">[CODE]</a> 
+            <a href="https://drive.google.com/file/d/1lz2fZO29fTUk_fqDD2qVSIlQrzSsYQlp/view?usp=drive_link">[PATENT]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4> <u>Layer Query Networks</u></h4>
+        <p>Introduces constant-time feature extraction across any layer in a DNN. Operates in O(1) time compared to sequential O(depth). 15% speedup on ImageNet with 12% relative accuracy improvement.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">STATUS:</span> ICLR 2026 (Under Review) <br>
+            <a href="https://openreview.net/forum?id=6en51gFQT1">[PAPER]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4> <u>On Occlusions in Video Action Detection</u></h4>
+        <p>First benchmark studying occlusions in spatio-temporal video action detection. Introduced 5 new datasets and surpassed VideoCapsuleNet by 32.3%.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">VENUE:</span> NeurIPS 2023 <br>
+            <a href="https://openreview.net/pdf?id=0cltUI2Sto">[PAPER]</a> 
+            <a href="https://drive.google.com/file/d/1OW0B9J6gdf7owtAzV9Ay21ZKfF7Jw1PQ/view?usp=drive_link">[POSTER]</a> 
+            <a href="https://github.com/rajatmodi62/OccludedActionBenchmark">[CODE]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4> <u>Video Action Detection: Analyzing Limitations</u></h4>
+        <p>Dataset containing multiple people performing temporally challenging actions. Featured in the official CVPR workshop.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">VENUE:</span> CVPRW 2022 <br>
+            <a href="https://openaccess.thecvf.com/content/CVPR2022W/VDU/papers/Modi_Video_Action_Detection_Analysing_Limitations_and_Challenges_CVPRW_2022_paper.pdf">[PAPER]</a> 
+            <a href="https://github.com/rajatmodi62/OccludedActionBenchmark">[DATASET]</a> 
+            <a href="https://tinyactions-cvpr22.github.io/">[CHALLENGE]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4> <u>Sky2Ground</u></h4>
+        <p>First dataset of real/synthetic ground/satellite images for 54 scenes. Proposed SkyNet 3D point cloud generation. Supported by $500k IARPA grant.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">STATUS:</span> CVPR 2026 <br>
+            <a href="https://arxiv.org/abs/2410.20535">[PAPER]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4> <u>Foundational Models for Video Understanding</u></h4>
+        <p>Comprehensive survey of over 200 video foundational models and evaluation metrics across 14 video tasks.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">STATUS:</span> ACM Computing Survey (Under Review) <br>
+            <a href="https://arxiv.org/pdf/2405.03770">[PAPER]</a> 
+            <a href="https://github.com/NeeluMadan/ViFM_Survey">[GITHUB]</a>
+        </div>
+    </div>
+
+     <div style="font-size: 1rem; color: var(--link-color); margin-bottom: 15px; border-bottom: 1px solid var(--border-general); padding-bottom: 5px;">
+        PERIOD: 2010 - 2020 
+    </div>
+
+    <div class="paper-item">
+        <h4> <u>Steganography Using Wavelets</u></h4>
+        <p>Algorithm forcing stego images to lie within higher frequency ranges of input images with statistical analysis.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">VENUE:</span> IEEE Iementech 2017 <br>
+            <a href="https://drive.google.com/file/d/1-yK8pPl3p3dzJCtboI367slCHOBZjiPV/view?usp=sharing">[PAPER]</a>
+        </div>
+    </div>
+
+    <div style="font-size: 1.5rem; color: var(--link-color); margin: 25px 0 15px 0; border-bottom: 1px solid var(--border-general); padding-bottom: 5px;">
+        PATENTS
+    </div>
+
+    <div class="paper-item">
+        <h4><u>Asychronous Perception Machine</u></h4>
+        <p>First implementation getting GLOM to work. Recently filed as an A1 patent application in USPTO</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <a href="https://drive.google.com/file/d/1R4NKRI5nVjcgQI9czmf46MTH1qDG7ECj/view?usp=sharing">[APPLICATION]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4><u>Externally Guided Multi Domain Personalization</u></h4>
+        <p>Invented attribute selection and sampling vectors in GANs to achieve personalized user recommendations.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <a href="https://drive.google.com/file/d/1R4NKRI5nVjcgQI9czmf46MTH1qDG7ECj/view?usp=sharing">[US A1 PATENT]</a>
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <h4><u>Context Resolution in Autonomous Systems</u></h4>
+        <p>System using cross-stitch units to merge user inputs into a unified representation.</p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <a href="https://patents.google.com/patent/WO2022245134A1/en?inventor=rajat+modi">[US A2 PATENT]</a>
+        </div>
+    </div>
+</div>
+        </div>
+
+      <script>
+      function togglePapers() {
+          const card = document.getElementById('paperCard');
+          const icon = document.getElementById('toggleIcon');
+          card.classList.toggle('expanded');
+          
+          if (card.classList.contains('expanded')) {
+              icon.innerText = 'CLOSE';
+          } else {
+              icon.innerText = 'OPEN';
+          }
+      }
+      </script>
+    </div>
+
+    
 
     <div class="sidebar-right" style="text-align: left; padding-top: 30px; padding-left: 25px; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); border-left: 2px solid var(--border-header-bottom); ">
     
