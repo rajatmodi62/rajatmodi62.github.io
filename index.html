@@ -67,7 +67,8 @@ layout: default
       
         <div style="margin-top: 40px; border-top: 1px solid var(--border-general); padding-top: 10px; color: var(--text-muted);">
             [Cognitive Side]<br>
-            Necker Cube / Superposition
+            Work in progress 
+            
         </div>
     </div>
 
@@ -235,14 +236,7 @@ layout: default
               </p>
           {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "geoffed" %}
-              <p style="margin: 0; margin-bottom: 1.2rem;">
-                  <a href="{{ post.url | prepend: site.baseurl }}" 
-                    style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
-                      {{ post.title }}
-                  </a>
-              </p>
-          {% endif %}{% endfor %}
+          
 
           {% for post in site.posts %}{% if post.slug == "emotions-in-machine" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
@@ -254,6 +248,15 @@ layout: default
           {% endif %}{% endfor %}
 
           {% for post in site.posts %}{% if post.slug == "destruction-machine" %}
+              <p style="margin: 0; margin-bottom: 1.2rem;">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                    style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+          {% endif %}{% endfor %}
+
+          {% for post in site.posts %}{% if post.slug == "geoffed" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
                   <a href="{{ post.url | prepend: site.baseurl }}" 
                     style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
