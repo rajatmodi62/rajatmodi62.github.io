@@ -215,9 +215,9 @@ a:visited { color: var(--link-color); opacity: 0.8; }
 .post-header .meta { font-size: 15px; color: var(--text-post-date); margin-top: 5px; }
 
 .post-content > * { 
-  margin: 20px 0;
+  margin: 25px 0;
   font-family: 'Courier New', Courier, monospace; 
-  font-size: 16px; 
+  font-size: 20px; 
   font-weight: 900; 
   line-height: 1.6;
   color: var(--text-main);
