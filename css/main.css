@@ -381,9 +381,29 @@ a:visited { color: var(--link-color); opacity: 0.8; }
     transition: opacity 0.4s ease;
 }
 
-
+ 
 .expanded .card-content {
+  font-size: 2rem !important; /* Bumps up from 1rem */
     opacity: 1;
+} 
+
+/* Increase the Paper Titles */
+.expanded .paper-item h4 {
+    font-size: 1.4rem; /* Bumps up from 1.05rem */
+    margin-bottom: 12px;
+}
+
+/* Increase the Descriptions (The Paragraphs) */
+.expanded .paper-item p {
+    font-size: 1.1rem; /* Bumps up from 0.85rem */
+    line-height: 1.7;  /* Extra breathing room for long reading */
+    max-width: 50vw; /* Prevents lines from getting too wide to read */
+}
+
+/* Increase the Links ([PAPER], [CODE], etc.) */
+.expanded .paper-item div[style*="font-size: 0.75rem"] {
+    font-size: 0.95rem !important;
+    margin-top: 15px !important;
 }
 
 /* Custom scrollbar - making it visible */
