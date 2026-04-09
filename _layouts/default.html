@@ -155,7 +155,7 @@
     border-radius: 4px;
 ">
     <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
-        GODZILLA_POST_PREVIEW // 0x{{ "now" | date: "%S%M" }}
+        POST_PREVIEW // 0x{{ "now" | date: "%S%M" }}
     </div>
     
 
@@ -265,5 +265,54 @@ document.querySelectorAll('.portal-trigger').forEach(trigger => {
 });
 </script>
 
+
+
+<script>
+    document.querySelectorAll('.video-item').forEach(item => {
+        const trigger = item.querySelector('.video-trigger');
+        const playBtn = item.querySelector('.play-btn');
+        const frame = item.querySelector('.video-frame');
+        const cover = item.querySelector('.cover-ui');
+        const videoId = trigger.getAttribute('data-video-id');
+
+        // Prevent redirect
+        trigger.addEventListener('click', (e) => e.preventDefault());
+
+        // Play video
+        playBtn.addEventListener('click', () => {
+            frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            frame.style.display = "block";
+            cover.style.display = "none";
+        });
+
+        // NEW: Stop audio when mouse leaves the entire video-item area
+        item.addEventListener('mouseleave', () => {
+            frame.src = ""; // This kills the audio immediately
+            frame.style.display = "none";
+            cover.style.display = "flex";
+        });
+    });
+
+    // Global Reset on ESC Key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            document.querySelectorAll('.video-item').forEach(item => {
+                const frame = item.querySelector('.video-frame');
+                const cover = item.querySelector('.cover-ui');
+                const previewBox = item.querySelector('.preview-box');
+                
+                frame.src = ""; // Kill audio
+                frame.style.display = "none";
+                cover.style.display = "flex";
+                
+                // Momentarily hide the box to break the hover state
+                previewBox.style.display = "none";
+                setTimeout(() => {
+                    previewBox.style.removeProperty('display');
+                }, 100);
+            });
+        }
+    });
+</script>
 </body>
 </html>

@@ -481,3 +481,109 @@ body.no-scroll {
     overflow: hidden;
     border-radius: 12px;
 }
+
+/* clicking video link opens in the site instead of youtube */
+
+/* Core structure for the hover box */
+.video-item {
+    position: relative;
+    margin-bottom: 25px;
+    display: block; /* Ensures spacing between different links */
+}
+
+.preview-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    z-index: 1000;
+    background: transparent;
+    border: 1px solid var(--border-header-bottom);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+
+
+/* Show the box when hovering over the parent container */
+.video-item:hover .preview-box {
+    display: block;
+}
+
+.cover-ui {
+    width: 480px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 4px;
+}
+
+.video-frame {
+    display: none; /* Stays hidden until Play is clicked */
+    border-radius: 4px;
+    /* border: 1px solid var(--border-header-bottom); */
+
+}
+.play-btn {
+    padding: 12px 24px;
+    cursor: pointer;
+    background: #000; /* Keeps the button center black */
+    color: var(--border-header-bottom);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative; /* Necessary for the pseudo-element positioning */
+    z-index: 1;
+    overflow: hidden; /* Clips the animation to the button shape */
+    transition: transform 0.2s;
+}
+
+/* The Animated Border Layer */
+.play-btn::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    /* Creates a golden 'beam' that will rotate */
+    background: conic-gradient(
+        transparent, 
+        rgba(255, 215, 0, 0.1), 
+        #FFD700 25%, /* The leading edge of the gold */
+        transparent 25%
+    );
+    animation: borderRotate 3s linear infinite;
+}
+
+/* The 'Inlay' that creates the hollow border effect */
+.play-btn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 2px;  /* This controls the border thickness */
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #000; /* Matches the 'Perfect Black' */
+    border-radius: 3px;
+}
+
+@keyframes borderRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
