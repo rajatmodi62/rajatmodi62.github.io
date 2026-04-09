@@ -459,3 +459,23 @@ a:visited { color: var(--link-color); opacity: 0.8; }
 body.no-scroll {
     overflow: hidden;
 }
+
+/* This selector ensures the effect ONLY triggers on post pages */
+/* 1. General Sidebar (Home Page) */
+
+
+/* 2. Post-Specific Sidebar (The Vitruvian Effect) */
+/* .post-container .sidebar-left, 
+.post-container .sidebar-right {
+    background-image: url('{{ site.baseurl }}/assets/img/godzilla/vitruvian.png') !important;
+    background-repeat: repeat-y !important;
+    background-position: center top !important;
+    background-size: 60px !important;
+    opacity: 0.3;
+    display: block !important;
+}
+
+.post-container .sidebar-left:hover, 
+.post-container .sidebar-right:hover {
+    opacity: 0.8;
+} */
