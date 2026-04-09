@@ -468,6 +468,7 @@ body.no-scroll {
     position: fixed; 
     
     top: 20px !important;
+    left: 30vw !important; 
     /* Manual Dimensions */
     width: 900px !important; 
     height: 700px !important; 
