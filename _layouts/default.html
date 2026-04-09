@@ -141,7 +141,129 @@
 });
 </script>
 
+<div id="portal-window" style="
+    display: none; 
+    position: fixed; 
+    width: 500px; 
+    height: 400px; 
+    background: #000; 
+    border: 1px solid #ffcc00; 
+    z-index: 1000000; 
+    pointer-events: none; 
+    box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3);
+    overflow: hidden;
+    border-radius: 4px;
+">
+    <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
+        Rajat's LIVE_LINK_SCANNER // 0x{{ "now" | date: "%S%M" }}
+    </div>
+    
 
+    <iframe id="portal-frame" src="" style="
+        width: 2250px; /* Width of your actual site */
+        height: 2500px; 
+        border: none;
+        transform: scale(0.4); /* Shrink the whole site to fit the window */
+        transform-origin: 0 0;
+        opacity: 0.8;
+    "></iframe>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const portalWindow = document.getElementById('portal-window');
+    const portalFrame = document.getElementById('portal-frame');
+
+    // Create a listener for every link with the "portal-trigger" class
+    document.querySelectorAll('.portal-trigger').forEach(trigger => {
+        
+        trigger.addEventListener('mouseenter', () => {
+            const url = trigger.getAttribute('href');
+            
+            // 1. Show the window immediately
+            portalWindow.style.display = 'block';
+            
+            // 2. Update the frame source only if it's different to save resources
+            // We use .includes() to handle relative vs absolute URL matching
+            if (!portalFrame.src.includes(url)) {
+                portalFrame.style.opacity = '0'; // Hide frame while it loads
+                portalFrame.src = url;
+                
+                // Once the internal page loads, fade it in for a "system engage" look
+                portalFrame.onload = function() {
+                    portalFrame.style.transition = 'opacity 0.5s ease';
+                    portalFrame.style.opacity = '0.9';
+                };
+            }
+        });
+
+        trigger.addEventListener('mousemove', (e) => {
+            // Offset coordinates (30px right, 150px up from cursor)
+            let x = e.clientX + 30;
+            let y = e.clientY - 150; 
+
+            // SAFETY: Keep the window within the browser viewport bounds
+            const windowWidth = 520; // Matches your CSS width + small buffer
+            const windowHeight = 420; // Matches your CSS height + small buffer
+
+            // Flip to the left if the mouse is too far right
+            if (x + windowWidth > window.innerWidth) {
+                x = e.clientX - (windowWidth + 10);
+            }
+
+            // Flip to the bottom if the mouse is too high up
+            if (y + windowHeight > window.innerHeight) {
+                y = window.innerHeight - (windowHeight + 20);
+            }
+            
+            // Prevent it from disappearing off the top
+            if (y < 10) y = 10;
+
+            portalWindow.style.left = x + 'px';
+            portalWindow.style.top = y + 'px';
+        });
+
+        trigger.addEventListener('mouseleave', () => {
+            // Hide the system monitor when the mouse leaves the link
+            portalWindow.style.display = 'none';
+        });
+    });
+});
+let scrollInterval;
+
+document.querySelectorAll('.portal-trigger').forEach(trigger => {
+    trigger.addEventListener('mouseenter', () => {
+        const url = trigger.getAttribute('href');
+        portalWindow.style.display = 'block';
+
+        if (!portalFrame.src.includes(url)) {
+            portalFrame.src = url;
+            
+            portalFrame.onload = function() {
+                // Clear any existing scroll before starting a new one
+                clearInterval(scrollInterval);
+                
+                // Cute Autoscroll Logic:
+                // We move the "top" of the frame view slowly
+                let scrollPos = 0;
+                scrollInterval = setInterval(() => {
+                    scrollPos += 0.5; // Change this number to adjust speed (0.5 is very smooth)
+                    if (scrollPos > 500) scrollPos = 0; // Reset after it pans a bit
+                    
+                    // We use translate to "pan" the content upward
+                    portalFrame.style.transform = `scale(0.5) translateY(-${scrollPos}px)`;
+                }, 20); // 20ms for 60fps-like smoothness
+            };
+        }
+    });
+
+    trigger.addEventListener('mouseleave', () => {
+        portalWindow.style.display = 'none';
+        clearInterval(scrollInterval); // Stop scrolling when mouse leaves
+    });
+});
+</script>
 
 </body>
 </html>

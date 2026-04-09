@@ -280,7 +280,7 @@ document.addEventListener('keydown', function(event) {
         <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
           {% for post in site.posts %}{% if post.slug == "akorn" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -288,7 +288,7 @@ document.addEventListener('keydown', function(event) {
 
           {% for post in site.posts %}{% if post.slug == "energy_based_models copy" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -296,7 +296,7 @@ document.addEventListener('keydown', function(event) {
 
           {% for post in site.posts %}{% if post.slug == "hinton_apm copy" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -304,7 +304,7 @@ document.addEventListener('keydown', function(event) {
 
           {% for post in site.posts %}{% if post.slug == "hinton_information_models" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -312,7 +312,7 @@ document.addEventListener('keydown', function(event) {
 
           {% for post in site.posts %}{% if post.slug == "nature_mental_representations copy" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -320,7 +320,7 @@ document.addEventListener('keydown', function(event) {
 
           {% for post in site.posts %}{% if post.slug == "mental-imagery" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -328,7 +328,7 @@ document.addEventListener('keydown', function(event) {
 
           {% for post in site.posts %}{% if post.slug == "detection-rcnn" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
@@ -396,7 +396,8 @@ document.addEventListener('keydown', function(event) {
         <div class="talks-list" style="font-weight: 600;">
           {% for post in site.posts %}{% if post.slug == "reflection_mortal_machine copy" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
-                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                  <a href="{{ post.url | prepend: site.baseurl }}"
+                  class="portal-trigger" 
                     style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
                       {{ post.title }}
                   </a>
@@ -406,6 +407,7 @@ document.addEventListener('keydown', function(event) {
           {% for post in site.posts %}{% if post.slug == "soul" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
                   <a href="{{ post.url | prepend: site.baseurl }}" 
+                  class="portal-trigger"
                     style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
                       {{ post.title }}
                   </a>
@@ -417,6 +419,7 @@ document.addEventListener('keydown', function(event) {
           {% for post in site.posts %}{% if post.slug == "emotions-in-machine" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
                   <a href="{{ post.url | prepend: site.baseurl }}" 
+                  class="portal-trigger"
                     style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
                       {{ post.title }}
                   </a>
@@ -426,6 +429,7 @@ document.addEventListener('keydown', function(event) {
           {% for post in site.posts %}{% if post.slug == "destruction-machine" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
                   <a href="{{ post.url | prepend: site.baseurl }}" 
+                  class="portal-trigger"
                     style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
                       {{ post.title }}
                   </a>
@@ -435,6 +439,7 @@ document.addEventListener('keydown', function(event) {
           {% for post in site.posts %}{% if post.slug == "geoffed" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
                   <a href="{{ post.url | prepend: site.baseurl }}" 
+                  class="portal-trigger"
                     style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
                       {{ post.title }}
                   </a>
