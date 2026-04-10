@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "On the Models of Information Processing in Brain"
+title:  "Models of Information Processing in Brain"
 description: "Humans can identify an object broadly even if it is missing some parts. This realization of constant global representation paves way for relaxation principles."
 date:   2020-02-06 11:00:00
 ---

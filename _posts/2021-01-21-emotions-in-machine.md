@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "On Building Emotions Into Machines."
+title:  " Building Emotions Into Machines."
 description: "For a learning machine, 'possessing emotion' and 'predicting emotions of others' are two different things. We try to understand more about how a human brain can be modelled computationally as a society of emotion-based agents."
 date:   2021-01-21 11:00:00
 ---

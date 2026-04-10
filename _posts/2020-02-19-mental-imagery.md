@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "On the structure of mental imagery and the nature of shape representations in human brain"
+title:  "Structure of mental imagery and the nature of shape representations in human brain"
 description: "Human brain learns global representations while viewing objects. Perception of a cube resting on a wooden table is used to devise a plausible architecture for parallel computation. "
 date:   2020-02-19 11:00:00
 ---

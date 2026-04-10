@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  " On Reflections of a Mortal Machine"
+title:  " Reflections of a Mortal Machine"
 description: "What is a mortal machine? Am i really living my life to my full purpose?"
 date:   2024-10-26 11:00:00
 ---
