@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Why I was wrong about Part Whole Hierarchies and Applications of Karamuto Neurons "
+title:  " Part Whole Hierarchies and Applications of Karamuto Neurons "
 description: ""
 date:   2026-03-01 07:00:00
 ---
