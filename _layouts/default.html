@@ -154,10 +154,27 @@
     overflow: hidden;
     border-radius: 4px;
 ">
-    <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
-       [{{ "now" | date: "%m-%d-%Y" }}] Dear visitor, Patience is the road to wisdom. Please be patient as the preview loads..... 
+   <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
+   [<span id="live-clock">--:--:--</span>] Dear visitor, Patience is the road to wisdom.... 
     </div>
-    
+
+    <script>
+    function updateClock() {
+        const now = new Date();
+        
+        // Format: MM-DD-YYYY HH:MM:SS
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const year = now.getFullYear();
+        const time = now.toTimeString().split(' ')[0]; 
+        
+        document.getElementById('live-clock').innerHTML = `${month}-${day}-${year} ${time}`;
+    }
+    // Update every second
+    setInterval(updateClock, 1000);
+    updateClock(); 
+    </script>
+        
 
     <iframe id="portal-frame" src="" style="
         width: 2250px; /* Width of your actual site */
