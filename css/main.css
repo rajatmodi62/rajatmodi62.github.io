@@ -668,8 +668,8 @@ body.no-scroll {
 }
 
 /* Mobile: Hide system bar if it gets too crowded */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .system-status-bar {
     display: none;
   }
-}
+} */
