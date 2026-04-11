@@ -2,11 +2,80 @@
 layout: default
 ---
 
-
-
 <style>
+  /* FIXED BOTTOM PROGRESS CONTAINER */
+  #progress-container {
+      position: fixed !important;
+      bottom: 0 !important;
+      top: auto !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      height: 2rem;
+      
+      /* THE ANIMATED "UNFILLED" REGION: Alternating Black and Theme Color */
+      background: repeating-linear-gradient(
+        45deg,
+        #000,                                  /* Black */
+        #000 10px,                             /* Black end */
+        var(--border-header-bottom) 10px,      /* Theme start */
+        var(--border-header-bottom) 20px       /* Theme end */
+      );
+      background-size: 40px 100%;
+      /* Opacity added here to keep it from being TOO distracting under the text */
+      opacity: 0.6; 
+      animation: stream-horizontal 0.8s linear infinite;
+      
+      z-index: 999999;
+      cursor: pointer;
+      border-top: 1px solid var(--border-header-bottom);
+  }
 
-  
+  /* Horizontal streaming animation */
+  @keyframes stream-horizontal {
+    from { background-position: 0 0; }
+    to { background-position: 40px 0; }
+  }
+
+  /* THE FILL BAR */
+  #progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: var(--border-header-bottom);
+      box-shadow: 0 0 15px var(--border-header-bottom);
+      transition: width 0.1s ease-out;
+      position: relative;
+      opacity: 1 !important; /* Ensure the filled part is solid */
+  }
+
+  /* Glowing leading edge (The "Active Head") */
+  #progress-bar::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #fff;
+      box-shadow: 0 0 20px #fff, 0 0 10px var(--border-header-bottom);
+  }
+
+  /* Layout container to prevent bar from overlapping content */
+  .post-container {
+      display: flex; 
+      border-left: 1px solid var(--border-header-bottom); 
+      border-right: 1px solid var(--border-header-bottom); 
+      min-height: 100vh; 
+      margin: 0 auto; 
+      max-width: 1200px;
+      padding-bottom: 20px;
+  }
+
+  .post {
+      flex: 1; 
+      padding: 0 40px;
+  }
+
   .post-container .sidebar-left, 
   .post-container .sidebar-right {
       background-image: url("{{ site.baseurl }}/assets/img/godzilla/vitruvian.png") !important;
@@ -14,27 +83,17 @@ layout: default
       background-position: center top !important;
       background-size: 50px !important;
       opacity: 0.8;
-      min-height: 100%;
-  }
-
-  .post-container .sidebar-left:hover, 
-  .post-container .sidebar-right:hover {
-      opacity: 0.8;
   }
 </style>
 
-<div class="post-container" style="
-    display: flex; /* CRITICAL: Allows sidebars to sit next to content */
-    border-left: 1px solid var(--border-header-bottom); 
-    border-right: 1px solid var(--border-header-bottom); 
-    min-height: 100vh; 
-    margin: 0 auto; 
-    max-width: 1200px; 
-    padding: 0; /* Remove padding here so sidebars touch the edges */
-">
+<div id="progress-container">
+  <div id="progress-bar"></div>
+</div>
+
+<div class="post-container">
   <div class="sidebar-left" style="width: 80px; min-width: 80px;"></div>
 
-  <div class="post" style="flex: 1; padding: 0 40px;">
+  <div class="post">
     <header class="post-header">
       <h1 style="color: var(--border-header-bottom);">{{ page.title }}</h1>
       <p class="meta">{{ page.date | date: "%b %-d, %Y" }}</p>
@@ -48,45 +107,36 @@ layout: default
   <div class="sidebar-right" style="width: 80px; min-width: 80px;"></div>
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const progressBar = document.getElementById('progress-bar');
+    const progressContainer = document.getElementById('progress-container');
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const progressBar = document.getElementById('progress-bar');
-        const progressContainer = document.getElementById('progress-container');
-
-        function updateProgress() {
-          const winScroll = window.pageYOffset || document.documentElement.scrollTop;
-          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          if (height > 0) {
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
-          }
-        }
-
-        window.addEventListener('scroll', updateProgress);
-
-        progressContainer.addEventListener('click', (e) => {
-          const containerWidth = progressContainer.offsetWidth;
-          const clickX = e.offsetX;
-          const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          window.scrollTo({
-            top: (clickX / containerWidth) * totalHeight,
-            behavior: 'smooth'
-          });
-        });
-      });
-    </script>
-  </body>
-</html>
-</div>
-
-<script type="text/javascript">
-  document.addEventListener('keydown', function(event) {
-    // Check if the pressed key is 'Escape'
-    if (event.key === "Escape") {
-      // Redirect back to your home page
-      // Using site.baseurl ensures it works on GitHub Pages
-      window.location.href = "{{ site.baseurl }}/";
+    function updateProgress() {
+      const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (height > 0) {
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + "%";
+      }
     }
+
+    window.addEventListener('scroll', updateProgress);
+
+    progressContainer.addEventListener('click', (e) => {
+      const containerWidth = progressContainer.offsetWidth;
+      const clickX = e.clientX; 
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      window.scrollTo({
+        top: (clickX / containerWidth) * totalHeight,
+        behavior: 'smooth'
+      });
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === "Escape") {
+        window.location.href = "{{ site.baseurl }}/";
+      }
+    });
   });
 </script>
