@@ -592,8 +592,16 @@ document.addEventListener('keydown', function(event) {
     <a href="https://www.crcv.ucf.edu/research/projects/mama-multi-actor-multi-action-dataset-for-action-detection/" class="sys-link"> Mama</a>
     <span class="sep">|</span>
     
-    <a href="URL_3" class="sys-link">Gofzilla</a>
-
+    
+  <!-- {% if post.slug == "gofzilla" %}
+      <a href="{{ post.url | prepend: site.baseurl }}" 
+         class="sys-link" 
+         style="color: var(--border-header-bottom); text-decoration: none; font-family: 'Courier New', monospace; font-weight: 600;">
+         {{ post.title }}
+      </a>
+      <span class="sep" style="margin: 0 5px; color: #444;">|</span>
+  {% endif %}
+{% endfor %} -->
 </div>
 
 
