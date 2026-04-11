@@ -155,9 +155,17 @@
     border-radius: 4px;
 ">
    <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
-   [ <span id="user-location">INITIALIZING...</span>] 
-   Dear visitor, A silent man once said: Patience is the road to wisdom...... 
-   [<span id="live-clock">--:--:--</span>] 
+   <!-- [ <span id="user-location">INITIALIZING...</span>] 
+   A silent man once said: Patience is the road to wisdom...... 
+   [<span id="live-clock">--:--:--</span>]  -->
+   <div class="header-container">
+  
+    <!-- <div id="user-location">[ INITIALIZING... ]</div> -->
+  
+  <div id="quote">The silent men said: Patience is the road to wisdom......</div>
+  
+  <!-- <div id="live-clock">[ --:--:-- ]</div> -->
+</div>
     </div>
 
     <script>
@@ -175,17 +183,23 @@
 
     // 2. Geolocation Function (IP-based to avoid Permission Popups)
     async function getGeolocation() {
-        try {
-        const response = await fetch('https://ipapi.co/json/');
+    try {
+        const response = await fetch('http://ip-api.com/json/');
         const data = await response.json();
-        if (data.city && data.country_name) {
-            document.getElementById('user-location').innerHTML = `${data.city.toUpperCase()}, ${data.country_code}`;
+
+        if (data.status === "success") {
+            // Converts "Oviedo" and "US" to "OVIEDO, US"
+            const city = data.city.toUpperCase();
+            const country = data.countryCode.toUpperCase();
+            
+            document.getElementById('user-location').innerHTML = `${city}, ${country}`;
         } else {
             document.getElementById('user-location').innerHTML = "UNKNOWN_NODE";
         }
-        } catch (error) {
+    } catch (error) {
+        // Triggers if fetch is blocked or network is down
         document.getElementById('user-location').innerHTML = "OFFLINE_CORE";
-        }
+    }
     }
     getGeolocation();
     </script>

@@ -587,3 +587,89 @@ body.no-scroll {
     transform: scale(1.05);
 }
 
+
+
+
+
+/* QUOTE FOR THE HEADER ON THE HOVER */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Pushes location left and clock right */
+  align-items: center;           /* Vertically centers everything */
+  padding: 10px 20px;
+  border: 1px solid #ccc;        /* Your border */
+  font-family: monospace;        /* Matches your terminal-style text */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#quote {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1rem; /* Adjust this number as needed */
+  font-weight: 500; /* Optional: makes the text a bit clearer */
+}
+
+#user-location, #live-clock {
+  white-space: nowrap;           /* Prevents text from wrapping */
+}
+
+/* ################################################ */
+
+
+/* #### FOR THE ACTUAL HEADER ON THE SITE */
+/* 1. Force the wrap to be a horizontal flex container */
+.site-header .wrap {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  position: relative;
+}
+
+/* 2. Create the right-side container */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between system bar and nav links */
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+/* 3. Style the system status bar */
+.system-status-bar {
+  display: flex;
+  gap: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  color: var(--link-color);
+  white-space: nowrap;
+  padding-right: 15px;
+  font-weight: 600; /* Adds the thickness */
+  border-right: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+/* 4. OVERRIDE THE THEME OVERLAP */
+.site-nav {
+  position: static !important; /* Forces it to stay in the flex flow */
+  float: none !important;     /* Disables old float-based layouts */
+}
+
+.site-nav .trigger {
+  display: flex !important;
+  align-items: center;
+  gap: 15px;
+  position: static !important; /* Prevents links from "floating" over text */
+  float: none !important;
+}
+
+.page-link {
+  margin-left: 0 !important; /* We use 'gap' instead for cleaner spacing */
+  white-space: nowrap;
+}
+
+/* Mobile: Hide system bar if it gets too crowded */
+@media (max-width: 800px) {
+  .system-status-bar {
+    display: none;
+  }
+}
