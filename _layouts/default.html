@@ -140,81 +140,33 @@
     });
 });
 </script>
-
-<div id="portal-window" style="
-    display: none; 
-    position: fixed; 
-    width: 500px; 
-    height: 400px; 
-    background: #000; 
-    border: 1px solid #ffcc00; 
-    z-index: 1000000; 
-    pointer-events: none; 
-    box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3);
-    overflow: hidden;
-    border-radius: 4px;
-">
-   <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
-   <!-- [ <span id="user-location">INITIALIZING...</span>] 
-   A silent man once said: Patience is the road to wisdom...... 
-   [<span id="live-clock">--:--:--</span>]  -->
-   <div class="header-container">
-  
-    <!-- <div id="user-location">[ INITIALIZING... ]</div> -->
-  
-  <div id="quote">The silent men sayeth : Patience is the ultimate road to wisdom......</div>
-  
-  <!-- <div id="live-clock">[ --:--:-- ]</div> -->
-</div>
+<div id="portal-window" style="display: none; position: fixed; width: 500px; height: 400px; background: #000; border: 1px solid #ffcc00; z-index: 1000000; pointer-events: none; box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3); overflow: hidden; border-radius: 4px;">
+    <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
+        <div class="header-container">
+            <div id="quote">Silent Men Sayeth : <span id="quote-text">INITIALIZING...</span></div>
+        </div>
     </div>
 
-    <script>
-    // 1. Live Clock Function
-    function updateClock() {
-        const now = new Date();
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const day = String(now.getDate()).padStart(2, '0');
-        const year = now.getFullYear();
-        const time = now.toTimeString().split(' ')[0]; 
-        document.getElementById('live-clock').innerHTML = `${month}-${day}-${year} ${time}`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    // 2. Geolocation Function (IP-based to avoid Permission Popups)
-    async function getGeolocation() {
-    try {
-        const response = await fetch('http://ip-api.com/json/');
-        const data = await response.json();
-
-        if (data.status === "success") {
-            // Converts "Oviedo" and "US" to "OVIEDO, US"
-            const city = data.city.toUpperCase();
-            const country = data.countryCode.toUpperCase();
-            
-            document.getElementById('user-location').innerHTML = `${city}, ${country}`;
-        } else {
-            document.getElementById('user-location').innerHTML = "UNKNOWN_NODE";
-        }
-    } catch (error) {
-        // Triggers if fetch is blocked or network is down
-        document.getElementById('user-location').innerHTML = "OFFLINE_CORE";
-    }
-    }
-    getGeolocation();
-    </script>
-        
-
-    <iframe id="portal-frame" src="" style="
-        width: 2250px; /* Width of your actual site */
-        height: 2500px; 
-        border: none;
-        transform: scale(0.4); /* Shrink the whole site to fit the window */
-        transform-origin: 0 0;
-        opacity: 0.8;
-    "></iframe>
+    <iframe id="portal-frame" src="" style="width: 2250px; height: 2500px; border: none; transform: scale(0.4); transform-origin: 0 0; opacity: 0.8;"></iframe>
 </div>
 
+<script>
+    (function() {
+        // --- MAINTAIN YOUR LIST HERE ---
+        const quotes = [
+            "Patience is the road to wisdom....",
+            "Silence is a source of great strength....",
+            "Actions speak louder than words....",
+            "The portal is open to those who wait....",
+        ];
+
+        // Pick a random quote
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        
+        // Inject it into the span
+        document.getElementById('quote-text').innerText = randomQuote;
+    })();
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -360,5 +312,42 @@ document.querySelectorAll('.portal-trigger').forEach(trigger => {
         }
     });
 </script>
+
+<script>
+    // 1. Live Clock Function
+    function updateClock() {
+        const now = new Date();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const year = now.getFullYear();
+        const time = now.toTimeString().split(' ')[0]; 
+        document.getElementById('live-clock').innerHTML = `${month}-${day}-${year} ${time}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // 2. Geolocation Function (IP-based to avoid Permission Popups)
+    async function getGeolocation() {
+    try {
+        const response = await fetch('http://ip-api.com/json/');
+        const data = await response.json();
+
+        if (data.status === "success") {
+            // Converts "Oviedo" and "US" to "OVIEDO, US"
+            const city = data.city.toUpperCase();
+            const country = data.countryCode.toUpperCase();
+            
+            document.getElementById('user-location').innerHTML = `${city}, ${country}`;
+        } else {
+            document.getElementById('user-location').innerHTML = "UNKNOWN_NODE";
+        }
+    } catch (error) {
+        // Triggers if fetch is blocked or network is down
+        document.getElementById('user-location').innerHTML = "OFFLINE_CORE";
+    }
+    }
+    getGeolocation();
+    </script>
+
 </body>
 </html>
