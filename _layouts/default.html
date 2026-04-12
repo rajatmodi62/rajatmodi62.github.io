@@ -128,125 +128,34 @@
 </script>
 
 <script>
+// --- QUOTE LOADING LOGIC ---
+let quoteIndex = [];
+
+// Fetch quotes from the external JSON file
+fetch('{{ site.baseurl }}/quote.json')
+    .then(response => response.json())
+    .then(data => {
+        quoteIndex = data;
+        refreshPortalQuote(); // Trigger first quote once loaded
+    })
+    .catch(err => console.error("Could not load quote.json", err));
+
 function refreshPortalQuote() {
-    const quotes = [
-    "Patience is the road to wisdom....",
-    "Silence is a source of great strength....",
-    "Actions speak louder than words....",
-    "The portal is open to those who wait....",
-    "Observe everything, reveal nothing....",
-    "Knowledge is power, guard it well....",
-    "The unseen eye sees the most....",
-    "The loudest mind is often behind the quietest lips....",
-    "In the kingdom of noise, silence is treason....",
-    "Echoes are the ghosts of words we should have kept....",
-    "A secret is only safe with a man who needs no audience....",
-    "The deep current moves without a sound....",
-    "Still water hides the jagged rock....",
-    "Beware the man who listens while the world screams....",
-    "The shadow does not explain itself to the light....",
-    "Wisdom is a whisper in a hurricane of static....",
-    "The master builds in the dark to rule the day....",
-    "Truth is a rare frequency; few have the antenna....",
-    "Never mistake a pause for an ending....",
-    "He who knows, does not speak. He who speaks, does not know....",
-    "The abyss doesn't blink....",
-    "A closed mouth gathers no footprints....",
-    "Complexity is the mask of the shallow....",
-    "The silent man is a locked room with no key....",
-    "Calculations require no commentary....",
-    "The storm begins in a place of absolute stillness....",
-    "Your shadow knows more than your reflection....",
-    "Ink dries, but silence endures....",
-    "To control the signal, you must become the noise....",
-    "Empty vessels make the most sound....",
-    "The archer is silent before the arrow flies....",
-    "Privacy is the ultimate luxury of the digital age....",
-    "The best way to disappear is to stay in plain sight....",
-    "An unsaid word is a weapon in your pocket....",
-    "Don't build your house where the echo lives....",
-    "The stars don't brag about their light....",
-    "A shark never explains why it swims....",
-    "The foundation is never seen by those who admire the roof....",
-    "Walk like you are a secret the world hasn't guessed yet....",
-    "The mind is a fortress; guard the gates....",
-    "Light travels, but darkness is already there....",
-    "To be found, one must first be worth seeking....",
-    "The code is the law, but the logic is the soul....",
-    "Words are just a poor translation of intent....",
-    "Vanish into the logic....",
-    "A quiet soul is a dangerous puzzle....",
-    "Depth is terrifying to those who only know the surface....",
-    "The mountain does not envy the bird....",
-    "A man of few words is a man of many thoughts....",
-    "Solitude is the laboratory of greatness....",
-    "The signal is clear only to the patient....",
-    "Walls have ears, but shadows have memories....",
-    "The king of the hill is usually the quietest one there....",
-    "Only the dead have seen the end of the war....",
-    "Strategy is a silent conversation with the future....",
-    "The moon has no voice, yet it moves the oceans....",
-    "Don't show the blueprints to the wrecking ball....",
-    "The secret of the sword is in the blacksmith's silence....",
-    "Greatness is achieved in the hours no one sees....",
-    "Intelligence is the ability to adapt without a manual....",
-    "The wolf doesn't howl when it's hunting....",
-    "Bridges are built with stone, not shouting....",
-    "The map is not the territory....",
-    "A ghost leaves no fingerprints on the server....",
-    "The truth is a locked file in a burning building....",
-    "Everything you say can be used against you by the wind....",
-    "Real power doesn't need a microphone....",
-    "The gardener doesn't yell at the roses to grow....",
-    "The ink of the scholar is holier than the blood of the martyr....",
-    "A wise man is a master of his own vacuum....",
-    "The eye of the storm is the only place to think....",
-    "Don't mistake silence for weakness; air is quiet until it's a cyclone....",
-    "The coldest steel is forged in the quietest fire....",
-    "Success is a quiet knock at 3 AM....",
-    "The world is a stage, but the puppeteer is backstage....",
-    "Speak only if it improves upon the silence....",
-    "A lion doesn't lose sleep over the opinion of sheep....",
-    "The universe is a sequence of silent miracles....",
-    "History is written in ink, but lived in silence....",
-    "The key to the door is often under the mat of patience....",
-    "Beware the quiet ones; they have the most to say but no one to tell....",
-    "A thousand words won't fill a bucket with no bottom....",
-    "The soul prefers the shade....",
-    "Wisdom is the reward for a lifetime of listening....",
-    "The ghost in the machine is just a man with a plan....",
-    "Don't let your left hand know what your right hand is coding....",
-    "A secret told is a power lost....",
-    "The best moves are made in the shadows of the previous one....",
-    "Time is the only judge that doesn't talk....",
-    "A closed book is a quiet friend....",
-    "The desert is silent because it knows the sun....",
-    "Wait for the dust to settle before you claim the land....",
-    "The whisper of the wise is louder than the roar of the fool....",
-    "Privacy is a power move....",
-    "The roots are the strength, the leaves are just the show....",
-    "A diamond is just a piece of charcoal that handled stress quietly....",
-    "The end is just the beginning of the next cycle....",
-    "Do not disturb the dreamer while the dream is calculating....",
-    "The ultimate goal is to become a myth....",
-    "Connection terminated...."
-];
     const quoteText = document.getElementById('quote-text');
-    if (quoteText) {
-        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    if (quoteText && quoteIndex.length > 0) {
+        const randomQuote = quoteIndex[Math.floor(Math.random() * quoteIndex.length)];
         quoteText.innerText = randomQuote;
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    refreshPortalQuote(); 
     const portalWindow = document.getElementById('portal-window');
     const portalFrame = document.getElementById('portal-frame');
     let scrollInterval;
 
     document.querySelectorAll('.portal-trigger').forEach(trigger => {
         trigger.addEventListener('mouseenter', () => {
-            refreshPortalQuote(); 
+            refreshPortalQuote(); // Refresh from the loaded index
             const url = trigger.getAttribute('href');
             portalWindow.style.display = 'block';
             
@@ -261,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     scrollInterval = setInterval(() => {
                         scrollPos += 0.5;
                         if (scrollPos > 500) scrollPos = 0;
-                        // Keep scale(0.4) consistent with CSS
                         portalFrame.style.transform = `scale(0.4) translateY(-${scrollPos}px)`;
                     }, 20);
                 };
