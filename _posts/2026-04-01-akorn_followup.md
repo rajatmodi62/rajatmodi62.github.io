@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  " Part Whole Hierarchies and Applications of Karamuto Neurons "
+title:  " Some Unsolved problems on Part Whole Hierarchies and mere speculations "
 description: ""
 date:   2026-03-01 07:00:00
 ---
