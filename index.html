@@ -591,16 +591,23 @@ document.addEventListener('keydown', function(event) {
     <span class="sep">|</span>
     <a href="https://www.crcv.ucf.edu/research/projects/mama-multi-actor-multi-action-dataset-for-action-detection/" class="sys-link"> Mama</a>
     <span class="sep">|</span>
+
     {% for post in site.posts %}
-  {% if post.slug == "gofzilla" %}
-      <a href="{{ post.url | prepend: site.baseurl }}" 
-         class="sys-link" 
-         style=" text-decoration: none; font-family: 'Courier New', monospace; ">
-         {{ post.title }}
-      </a>
-      <span class="sep" style="margin: 0 5px; color: #444;">|</span>
-  {% endif %}
-{% endfor %}
+        {% if post.slug == "gofzilla" %}
+            <a href="{{ post.url | prepend: site.baseurl }}" 
+                class="sys-link" 
+                style=" text-decoration: none; font-family: 'Courier New', monospace; ">
+                {{ post.title }}
+            </a>
+            <!-- <span class="sep" style="margin: 0 5px; color: #444;">|</span> -->
+        {% endif %}
+        {% endfor %}
+
+    <span class="sep">|</span>
+
+    <a href="https://openreview.net/forum?id=7Ye12RLZ4P&referrer=%5Bthe%20profile%20of%20Yogesh%20S%20Rawat%5D(%2Fprofile%3Fid%3D~Yogesh_S_Rawat1)" class="sys-link"> 😏</a>
+    <span class="sep">|</span>
+    
 </div>
 
 
