@@ -4,14 +4,12 @@
   {% include head.html %}
   
   <script>
-    // 1. SET INITIAL THEME (Run this immediately in <head>)
+    // 1. SET INITIAL THEME
     const savedTheme = localStorage.getItem('theme');
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const initialTheme = savedTheme || (systemDark ? "dark" : "light");
-    
     document.documentElement.setAttribute('data-theme', initialTheme);
 
-    // 2. ICON UPDATE LOGIC
     function updateIcon(theme) {
       const iconSpan = document.getElementById('theme-icon');
       if (iconSpan) {
@@ -19,25 +17,19 @@
       }
     }
 
-    // Ensure icon matches theme once the page loads
     window.addEventListener('DOMContentLoaded', () => {
       updateIcon(document.documentElement.getAttribute('data-theme'));
     });
 
-    // 3. THE TOGGLE FUNCTION
     function modeSwitcher() {
       let currentMode = document.documentElement.getAttribute('data-theme');
-      // If currentMode is null or light, go dark. Otherwise, go light.
       let nextMode = (currentMode === "dark") ? "light" : "dark";
-      
       document.documentElement.setAttribute('data-theme', nextMode);
       localStorage.setItem('theme', nextMode);
       updateIcon(nextMode);
     }
   </script>
 </head>
-
-
 
 <body>
   {% include header.html %}
@@ -50,7 +42,6 @@
 
   {% include footer.html %}
 
-
 <div id="search-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background: rgba(0,0,0,0.85); z-index:1000000; justify-content:center; align-items:start; padding-top:15vh;">
     <div style="width: 80%; max-width: 600px;">
         <input type="text" id="search-input" placeholder="SEARCH..." autocomplete="off" 
@@ -60,11 +51,21 @@
     </div>
 </div>
 
+<div id="portal-window" style="display: none; position: fixed; width: 500px; height: 400px; background: #000; border: 1px solid #ffcc00; z-index: 1000000; pointer-events: none; box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3); overflow: hidden; border-radius: 4px;">
+    
+    <div style="position: relative; z-index: 2; background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold; border-bottom: 1px solid #000;">
+        <div class="header-container">
+            <div id="quote">Silent Men Sayeth : <span id="quote-text">INITIALIZING...</span></div>
+        </div>
+    </div>
+
+    <div style="position: relative; width: 100%; height: 100%; overflow: hidden; z-index: 1; background: #000;">
+        <iframe id="portal-frame" src="" style="width: 2250px; height: 2500px; border: none; transform: scale(0.4); transform-origin: 0 0; opacity: 0.8;"></iframe>
+    </div>
+</div>
 
 <script type="text/javascript">
   let searchIndex = [];
-
-  // Fetch the index once when page loads
   fetch('{{ site.baseurl }}/search.json')
       .then(response => response.json())
       .then(data => searchIndex = data);
@@ -74,13 +75,10 @@
   const searchResults = document.getElementById('search-results');
 
   document.addEventListener('keydown', function(e) {
-      // Check for Cmd+F (Mac) or Ctrl+F (Windows)
       if ((e.metaKey || e.ctrlKey) && e.key === 'f') {
-          e.preventDefault(); // Stop the browser's default search
+          e.preventDefault();
           openSearch();
       }
-      
-      // Close on ESC
       if (e.key === 'Escape' && searchOverlay.style.display === 'flex') {
           closeSearch();
       }
@@ -100,35 +98,23 @@
   searchInput.addEventListener('input', function() {
     const query = this.value.toLowerCase();
     searchResults.innerHTML = '';
-
     if (query.length < 2) return;
-
     const matches = searchIndex.filter(item => 
         item.title.toLowerCase().includes(query) || 
         item.content.toLowerCase().includes(query)
     ).slice(0, 5);
-
     matches.forEach(match => {
-        // Find the snippet containing the keyword
         const content = match.content;
         const index = content.toLowerCase().indexOf(query);
-        
-        // Extract a "precise line" (approx 60 chars around the keyword)
         let start = Math.max(0, index - 30);
         let end = Math.min(content.length, index + query.length + 30);
         let snippet = content.substring(start, end);
-        
-        // Clean up the snippet for the URL
         const encodedQuery = encodeURIComponent(query);
-
         const div = document.createElement('div');
         div.style.padding = '15px';
         div.style.borderBottom = '1px solid #333';
         div.style.cursor = 'pointer';
-        
-        // The URL now includes the Scroll-To-Text fragment logic
         const targetUrl = `${match.url}#:~:text=${encodedQuery}`;
-
         div.innerHTML = `
             <a href="${targetUrl}" style="color: #ffcc00; text-decoration:none;">
                 <div style="font-weight:800; font-size: 1rem;">> ${match.title}</div>
@@ -140,130 +126,74 @@
     });
 });
 </script>
-<div id="portal-window" style="display: none; position: fixed; width: 500px; height: 400px; background: #000; border: 1px solid #ffcc00; z-index: 1000000; pointer-events: none; box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3); overflow: hidden; border-radius: 4px;">
-    <div style="background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold;">
-        <div class="header-container">
-            <div id="quote">Silent Men Sayeth : <span id="quote-text">INITIALIZING...</span></div>
-        </div>
-    </div>
-
-    <iframe id="portal-frame" src="" style="width: 2250px; height: 2500px; border: none; transform: scale(0.4); transform-origin: 0 0; opacity: 0.8;"></iframe>
-</div>
 
 <script>
-    (function() {
-        // --- MAINTAIN YOUR LIST HERE ---
-        const quotes = [
-            "Patience is the road to wisdom....",
-            "Silence is a source of great strength....",
-            "Actions speak louder than words....",
-            "The portal is open to those who wait....",
-        ];
-
-        // Pick a random quote
+function refreshPortalQuote() {
+    const quotes = [
+        "Patience is the road to wisdom....",
+        "Silence is a source of great strength....",
+        "Actions speak louder than words....",
+        "The portal is open to those who wait....",
+        "Observe everything, reveal nothing....",
+        "Knowledge is power, guard it well....",
+        "The unseen eye sees the most...."
+    ];
+    const quoteText = document.getElementById('quote-text');
+    if (quoteText) {
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-        
-        // Inject it into the span
-        document.getElementById('quote-text').innerText = randomQuote;
-    })();
-</script>
+        quoteText.innerText = randomQuote;
+    }
+}
 
-<script>
 document.addEventListener('DOMContentLoaded', function() {
+    refreshPortalQuote(); 
     const portalWindow = document.getElementById('portal-window');
     const portalFrame = document.getElementById('portal-frame');
+    let scrollInterval;
 
-    // Create a listener for every link with the "portal-trigger" class
     document.querySelectorAll('.portal-trigger').forEach(trigger => {
-        
         trigger.addEventListener('mouseenter', () => {
+            refreshPortalQuote(); 
             const url = trigger.getAttribute('href');
-            
-            // 1. Show the window immediately
             portalWindow.style.display = 'block';
             
-            // 2. Update the frame source only if it's different to save resources
-            // We use .includes() to handle relative vs absolute URL matching
             if (!portalFrame.src.includes(url)) {
-                portalFrame.style.opacity = '0'; // Hide frame while it loads
+                portalFrame.style.opacity = '0';
                 portalFrame.src = url;
-                
-                // Once the internal page loads, fade it in for a "system engage" look
                 portalFrame.onload = function() {
                     portalFrame.style.transition = 'opacity 0.5s ease';
                     portalFrame.style.opacity = '0.9';
+                    clearInterval(scrollInterval);
+                    let scrollPos = 0;
+                    scrollInterval = setInterval(() => {
+                        scrollPos += 0.5;
+                        if (scrollPos > 500) scrollPos = 0;
+                        // Keep scale(0.4) consistent with CSS
+                        portalFrame.style.transform = `scale(0.4) translateY(-${scrollPos}px)`;
+                    }, 20);
                 };
             }
         });
 
         trigger.addEventListener('mousemove', (e) => {
-            // Offset coordinates (30px right, 150px up from cursor)
             let x = e.clientX + 30;
             let y = e.clientY - 150; 
-
-            // SAFETY: Keep the window within the browser viewport bounds
-            const windowWidth = 520; // Matches your CSS width + small buffer
-            const windowHeight = 420; // Matches your CSS height + small buffer
-
-            // Flip to the left if the mouse is too far right
-            if (x + windowWidth > window.innerWidth) {
-                x = e.clientX - (windowWidth + 10);
-            }
-
-            // Flip to the bottom if the mouse is too high up
-            if (y + windowHeight > window.innerHeight) {
-                y = window.innerHeight - (windowHeight + 20);
-            }
-            
-            // Prevent it from disappearing off the top
+            const windowWidth = 520;
+            const windowHeight = 420;
+            if (x + windowWidth > window.innerWidth) x = e.clientX - (windowWidth + 10);
+            if (y + windowHeight > window.innerHeight) y = window.innerHeight - (windowHeight + 20);
             if (y < 10) y = 10;
-
             portalWindow.style.left = x + 'px';
             portalWindow.style.top = y + 'px';
         });
 
         trigger.addEventListener('mouseleave', () => {
-            // Hide the system monitor when the mouse leaves the link
             portalWindow.style.display = 'none';
+            clearInterval(scrollInterval);
         });
     });
 });
-let scrollInterval;
-
-document.querySelectorAll('.portal-trigger').forEach(trigger => {
-    trigger.addEventListener('mouseenter', () => {
-        const url = trigger.getAttribute('href');
-        portalWindow.style.display = 'block';
-
-        if (!portalFrame.src.includes(url)) {
-            portalFrame.src = url;
-            
-            portalFrame.onload = function() {
-                // Clear any existing scroll before starting a new one
-                clearInterval(scrollInterval);
-                
-                // Cute Autoscroll Logic:
-                // We move the "top" of the frame view slowly
-                let scrollPos = 0;
-                scrollInterval = setInterval(() => {
-                    scrollPos += 0.5; // Change this number to adjust speed (0.5 is very smooth)
-                    if (scrollPos > 500) scrollPos = 0; // Reset after it pans a bit
-                    
-                    // We use translate to "pan" the content upward
-                    portalFrame.style.transform = `scale(0.5) translateY(-${scrollPos}px)`;
-                }, 20); // 20ms for 60fps-like smoothness
-            };
-        }
-    });
-
-    trigger.addEventListener('mouseleave', () => {
-        portalWindow.style.display = 'none';
-        clearInterval(scrollInterval); // Stop scrolling when mouse leaves
-    });
-});
 </script>
-
-
 
 <script>
     document.querySelectorAll('.video-item').forEach(item => {
@@ -272,82 +202,68 @@ document.querySelectorAll('.portal-trigger').forEach(trigger => {
         const frame = item.querySelector('.video-frame');
         const cover = item.querySelector('.cover-ui');
         const videoId = trigger.getAttribute('data-video-id');
-
-        // Prevent redirect
         trigger.addEventListener('click', (e) => e.preventDefault());
-
-        // Play video
         playBtn.addEventListener('click', () => {
             frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
             frame.style.display = "block";
             cover.style.display = "none";
         });
-
-        // NEW: Stop audio when mouse leaves the entire video-item area
         item.addEventListener('mouseleave', () => {
-            frame.src = ""; // This kills the audio immediately
+            frame.src = "";
             frame.style.display = "none";
             cover.style.display = "flex";
         });
     });
-
-    // Global Reset on ESC Key
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") {
             document.querySelectorAll('.video-item').forEach(item => {
                 const frame = item.querySelector('.video-frame');
                 const cover = item.querySelector('.cover-ui');
                 const previewBox = item.querySelector('.preview-box');
-                
-                frame.src = ""; // Kill audio
+                frame.src = "";
                 frame.style.display = "none";
                 cover.style.display = "flex";
-                
-                // Momentarily hide the box to break the hover state
-                previewBox.style.display = "none";
-                setTimeout(() => {
-                    previewBox.style.removeProperty('display');
-                }, 100);
+                if(previewBox) {
+                    previewBox.style.display = "none";
+                    setTimeout(() => previewBox.style.removeProperty('display'), 100);
+                }
             });
         }
     });
 </script>
 
 <script>
-    // 1. Live Clock Function
     function updateClock() {
         const now = new Date();
         const month = String(now.getMonth() + 1).padStart(2, '0');
         const day = String(now.getDate()).padStart(2, '0');
         const year = now.getFullYear();
         const time = now.toTimeString().split(' ')[0]; 
-        document.getElementById('live-clock').innerHTML = `${month}-${day}-${year} ${time}`;
+        const clockEl = document.getElementById('live-clock');
+        if(clockEl) clockEl.innerHTML = `${month}-${day}-${year} ${time}`;
     }
     setInterval(updateClock, 1000);
     updateClock();
 
-    // 2. Geolocation Function (IP-based to avoid Permission Popups)
     async function getGeolocation() {
-    try {
-        const response = await fetch('http://ip-api.com/json/');
-        const data = await response.json();
-
-        if (data.status === "success") {
-            // Converts "Oviedo" and "US" to "OVIEDO, US"
-            const city = data.city.toUpperCase();
-            const country = data.countryCode.toUpperCase();
-            
-            document.getElementById('user-location').innerHTML = `${city}, ${country}`;
-        } else {
-            document.getElementById('user-location').innerHTML = "UNKNOWN_NODE";
+        try {
+            const response = await fetch('http://ip-api.com/json/');
+            const data = await response.json();
+            const locEl = document.getElementById('user-location');
+            if (locEl) {
+                if (data.status === "success") {
+                    locEl.innerHTML = `${data.city.toUpperCase()}, ${data.countryCode.toUpperCase()}`;
+                } else {
+                    locEl.innerHTML = "UNKNOWN_NODE";
+                }
+            }
+        } catch (error) {
+            const locEl = document.getElementById('user-location');
+            if(locEl) locEl.innerHTML = "OFFLINE_CORE";
         }
-    } catch (error) {
-        // Triggers if fetch is blocked or network is down
-        document.getElementById('user-location').innerHTML = "OFFLINE_CORE";
-    }
     }
     getGeolocation();
-    </script>
+</script>
 
 </body>
 </html>
