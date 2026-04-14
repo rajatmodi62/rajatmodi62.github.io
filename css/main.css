@@ -4,10 +4,10 @@
 
 :root {
   /* Light Mode (Your Original Palette) */
-  --bg-body: #ffe6b8;
-  --bg-header: #e6cf9d;
-  --text-main: #111111;
-  --text-muted: #111111;
+  --bg-body: #352700;
+  --bg-header: #4A3B12;
+  --text-main: #e2e2e4;
+  --text-muted: #f4f4f5;
   --text-post-date: #818181;
   --link-color: #2a7ae2;
   --link-hover: #000;
