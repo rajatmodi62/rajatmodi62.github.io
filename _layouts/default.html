@@ -7,7 +7,8 @@
     // 1. SET INITIAL THEME
     const savedTheme = localStorage.getItem('theme');
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme || (systemDark ? "dark" : "light");
+    const initialTheme = savedTheme || "dark";
+    // const initialTheme = savedTheme || (systemDark ? "dark" : "light");
     document.documentElement.setAttribute('data-theme', initialTheme);
 
     function updateIcon(theme) {
