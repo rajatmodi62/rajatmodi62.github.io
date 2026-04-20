@@ -12,32 +12,20 @@ layout: default
       right: 0 !important;
       width: 100% !important;
       height: 2rem;
-      
-      /* THE ANIMATED "UNFILLED" REGION: Alternating Black and Theme Color */
-      background: repeating-linear-gradient(
-        45deg,
-        #000,                                  /* Black */
-        #000 10px,                             /* Black end */
-        var(--border-header-bottom) 10px,      /* Theme start */
-        var(--border-header-bottom) 20px       /* Theme end */
-      );
-      background-size: 40px 100%;
-      /* Opacity added here to keep it from being TOO distracting under the text */
+      background: repeating-linear-gradient(45deg, #000, #000 10px, var(--border-header-bottom) 10px, var(--border-header-bottom) 20px);
+      background-size: 28px 28px; 
       opacity: 0.6; 
-      animation: stream-horizontal 5s linear infinite;
-      
+      animation: stream-horizontal 10s linear infinite;
       z-index: 999999;
       cursor: pointer;
       border-top: 1px solid var(--border-header-bottom);
   }
 
-  /* Horizontal streaming animation */
   @keyframes stream-horizontal {
     from { background-position: 0 0; }
-    to { background-position: 40px 0; }
+    to { background-position: 28px 0; }
   }
 
-  /* THE FILL BAR */
   #progress-bar {
       height: 100%;
       width: 0%;
@@ -45,10 +33,8 @@ layout: default
       box-shadow: 0 0 15px var(--border-header-bottom);
       transition: width 0.1s ease-out;
       position: relative;
-      opacity: 1 !important; /* Ensure the filled part is solid */
   }
 
-  /* Glowing leading edge (The "Active Head") */
   #progress-bar::after {
       content: "";
       position: absolute;
@@ -60,7 +46,6 @@ layout: default
       box-shadow: 0 0 20px #fff, 0 0 10px var(--border-header-bottom);
   }
 
-  /* Layout container to prevent bar from overlapping content */
   .post-container {
       display: flex; 
       border-left: 1px solid var(--border-header-bottom); 
@@ -68,16 +53,10 @@ layout: default
       min-height: 100vh; 
       margin: 0 auto; 
       max-width: 1200px;
-      padding-bottom: 20px;
+      padding-bottom: 80px; 
   }
-
-  .post {
-      flex: 1; 
-      padding: 0 40px;
-  }
-
-  .post-container .sidebar-left, 
-  .post-container .sidebar-right {
+  .post { flex: 1; padding: 0 40px; }
+  .post-container .sidebar-left, .post-container .sidebar-right {
       background-image: url("{{ site.baseurl }}/assets/img/godzilla/vitruvian.png") !important;
       background-repeat: repeat-y !important;
       background-position: center top !important;
@@ -86,57 +65,143 @@ layout: default
   }
 </style>
 
-<div id="progress-container">
-  <div id="progress-bar"></div>
+<div id="media-terminal">
+    <div id="terminal-handle">[ MEDIA ]</div>
+    <div class="terminal-header">
+        <span>CORE_PLAYER.EXE</span>
+        <span id="shuffle-btn" style="cursor: pointer; color: var(--text-muted); border: 1px solid var(--text-muted); padding: 0 5px; font-size: 0.65rem; font-weight: 800;">[ SHUFFLE ]</span>
+        <span style="opacity: 0.5;">0x{{ "now" | date: "%M%S" }}</span>
+    </div>
+    <div class="terminal-video-container">
+        <div id="player"></div> 
+    </div>
+    <div class="terminal-playlist" id="playlist"></div>
 </div>
+
+<div id="progress-container"><div id="progress-bar"></div></div>
 
 <div class="post-container">
   <div class="sidebar-left" style="width: 80px; min-width: 80px;"></div>
-
   <div class="post">
     <header class="post-header">
       <h1 style="color: var(--border-header-bottom);">{{ page.title }}</h1>
       <p class="meta">{{ page.date | date: "%b %-d, %Y" }}</p>
     </header>
-
     <article class="post-content">
       {{ content }}
     </article>
   </div>
-
   <div class="sidebar-right" style="width: 80px; min-width: 80px;"></div>
 </div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <script>
+  let ytPlayer;
+  let currentVideoIndex = 0;
+
+  // Optimized list: Selected covers that generally allow cross-origin embedding
+  const mediaList = [
+    { title: "Pani Da Rang - Acoustic Cover", id: "YjDHXaDbkRY" },
+    { title: "Abhi Mujh Mein - Veena Instrumental", id: "tbVPhwHHK04" },
+    { title: "Kabhi Kabhi Mere Dil Mein - Veena", id: "iKp2DzwQbMg" },
+    { title: "Tum Hi Ho - Veena Reload", id: "yNzRYZnv7RA" },
+    { title: "Tu Hi Re - Flute Cover", id: "3YIGCN9YU34" },
+    { title: "Saagar Kinare - Instrumental", id: "jx92a0f_gnA" },
+    { title: "Yeh Honsla - Candlelight Cover", id: "HReN67juhCg" },
+    { title: "Kabhi Jo Badal Barse - Arijit Cover", id: "q96kmZbSf7w" },
+    { title: "Galliyan - Shirley Setia Cover", id: "aybAueelVCo" },
+    { title: "Kabhi Kabhi Mere Dil Mein - Unplugged", id: "K8rgSXe23gQ" },
+    { title: "Suraj Hua Maddham - Unplugged", id: "fba0psbDRYI" },
+    { title: "Humko Humise Chura Lo - Unplugged", id: "hHMwZsTSCv8" },
+    { title: "Hale Dil - Anushka Gupta Cover", id: "YS5UXmPRahg" }
+  ];
+
+  function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: mediaList[0].id,
+      host: 'https://www.youtube-nocookie.com', // Bypasses some region/domain blocks
+      playerVars: { 
+        'autoplay': 0, 
+        'rel': 0, 
+        'modestbranding': 1,
+        'origin': window.location.origin // Validates your domain with Google
+      },
+      events: { 
+        'onStateChange': onPlayerStateChange, 
+        'onReady': onPlayerReady,
+        'onError': onPlayerError // Logs specific failure codes
+      }
+    });
+  }
+
+  function onPlayerError(e) {
+      console.error("YT Player Error Code:", e.data);
+      // If a video fails, skip to next after 2 seconds
+      setTimeout(playNext, 2000);
+  }
+
+  function onPlayerReady(event) { updatePlaylistUI(0); }
+  function onPlayerStateChange(event) { if (event.data === YT.PlayerState.ENDED) playNext(); }
+  function playNext() { currentVideoIndex = (currentVideoIndex + 1) % mediaList.length; playVideo(currentVideoIndex); }
+  function playVideo(index) { currentVideoIndex = index; ytPlayer.loadVideoById(mediaList[index].id); updatePlaylistUI(index); }
+
+  function updatePlaylistUI(index) {
+    const items = document.querySelectorAll('.playlist-item');
+    items.forEach(el => el.classList.remove('playing'));
+    if(items[index]) {
+        items[index].classList.add('playing');
+        items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function() {
     const progressBar = document.getElementById('progress-bar');
     const progressContainer = document.getElementById('progress-container');
+    const terminal = document.getElementById('media-terminal');
+    const handle = document.getElementById('terminal-handle');
+    const playlist = document.getElementById('playlist');
+    const postContent = document.querySelector('.post-content');
+    const shuffleBtn = document.getElementById('shuffle-btn');
 
-    function updateProgress() {
-      const winScroll = window.pageYOffset || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if (height > 0) {
-        const scrolled = (winScroll / height) * 100;
-        progressBar.style.width = scrolled + "%";
-      }
+    shuffleBtn.addEventListener('click', (e) => { e.stopPropagation(); playVideo(Math.floor(Math.random() * mediaList.length)); });
+
+    function toggleTerminal(forceClose = false) {
+        if (forceClose) terminal.classList.remove('active');
+        else terminal.classList.toggle('active');
+        handle.innerText = terminal.classList.contains('active') ? '[ CLOSE ]' : '[ MEDIA ]';
     }
 
-    window.addEventListener('scroll', updateProgress);
+    handle.addEventListener('click', (e) => { e.stopPropagation(); toggleTerminal(); });
+    if(postContent) postContent.addEventListener('click', () => { if (terminal.classList.contains('active')) toggleTerminal(true); });
+
+    mediaList.forEach((media, index) => {
+        const item = document.createElement('div');
+        item.className = 'playlist-item';
+        item.innerHTML = `> ${media.title}`;
+        item.onclick = () => playVideo(index);
+        playlist.appendChild(item);
+    });
+
+    window.addEventListener('scroll', () => {
+        const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (height > 0) progressBar.style.width = ((winScroll / height) * 100) + "%";
+    });
 
     progressContainer.addEventListener('click', (e) => {
       const containerWidth = progressContainer.offsetWidth;
-      const clickX = e.clientX; 
       const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      window.scrollTo({
-        top: (clickX / containerWidth) * totalHeight,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: (e.clientX / containerWidth) * totalHeight, behavior: 'smooth' });
     });
 
-    document.addEventListener('keydown', function(event) {
-      if (event.key === "Escape") {
-        window.location.href = "{{ site.baseurl }}/";
-      }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            if (terminal.classList.contains('active')) toggleTerminal(true);
+            else window.location.href = "{{ site.baseurl }}/";
+        }
     });
   });
 </script>
