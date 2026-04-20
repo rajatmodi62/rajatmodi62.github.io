@@ -85,7 +85,7 @@ layout: default
 <div id="media-terminal">
     <div id="terminal-handle">[ MEDIA ]</div>
     <div class="terminal-header">
-        <span>Rajat's Music Collection 😃// Hosted with ❤️🥰 at Github.</span>
+        <span>Rajat's Music Collection 😃// Hosted with ❤️ at Github.</span>
         <span id="shuffle-btn" style="cursor: pointer; color: var(--text-muted); border: 1px solid var(--text-muted); padding: 0 5px; font-size: 0.65rem; font-weight: 800;">[ SHUFFLE ]</span>
         <span style="opacity: 0.5;">0x{{ "now" | date: "%M%S" }}</span>
     </div>
@@ -114,22 +114,22 @@ layout: default
 <script>
   const mediaList = [
       { title: "Kal Ho Na Ho", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/26%20-%20Kal%20Ho%20Na%20Ho%20-%20Unplugged%20Short%20Cover%20-%20Shriram%20Iyer%20%EF%BD%9C%20Shankar%20Ehsaan%20Loy%20%EF%BD%9C%20Sonu%20Nigam%20%EF%BD%9C%20Shahrukh%20K.mp4" },
+  { title: "Tu Hi Re ( Flute Cover ) Sajan Patel - Ft Shashank Acharya", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/06%20-%20Tu%20Hi%20Re%20(%20Flute%20Cover%20)%20Sajan%20Patel%20-%20Ft%20Shashank%20Acharya.mp4" },
+  { title: "Tu hi re song⧸⧸Hariharan", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/07%20-%20Tu%20hi%20re%20song%E2%A7%B8%E2%A7%B8Hariharan%E2%A7%B8%E2%A7%B8Famous%20song%E2%A7%B8%E2%A7%B8Movie%20Bombay%E2%A7%B8%E2%A7%B8Subscribe%E2%A7%B8%E2%A7%B8Like%E2%A7%B8%E2%A7%B8Comment..mp4" },
+  { title: "Kun Faya Kun", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/10%20-%20Kun%20Faya%20Kun%20By%20AR%20Rahman.mp4" },
+  { title: "Arziyan By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/13%20-%20Arziyan%20By%20AR%20Rahman.mp4" },
+  { title: "Piya Haji Ali", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/11%20-%20Piya%20Haji%20Ali%20By%20AR%20Rahman.mp4" },
+  { title: "Yeh Honsla (Candlelight Cover) ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/14%20-%20Yeh%20Honsla%20(Candlelight%20Cover)%20-%20Aakash%20Gandhi%20(feat.%20Jonita%20Gandhi).mp4" },
 
   { title: "Abhi Mujh Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/01%20-%20Abhi%20Mujh%20Mein%20%EF%BD%9C%EF%BD%9C%20Phaninarayana%20Veena%20%EF%BD%9C%EF%BD%9C%20Ajay%20Atul%20%EF%BD%9C%EF%BD%9CHrithik%20Roshan,Priyanka%20Chopra%EF%BD%9C%EF%BD%9C%20Sonu%20Nigam.mp4" },  
   { title: "Moh Moh Ke Dhaage", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/02%20-%20Moh%20Moh%20Ke%20Dhaage%20-%20Anu%20malik%20-%20Monali%20Thakur%20%20%EF%BD%9C%EF%BD%9C%20Phaninarayana%20Veetar%20instrumental%20cover.mp4" },
   { title: "Kabhi Kabhi Mere Dil Mein ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/03%20-%20Kabhi%20Kabhi%20Mere%20Dil%20Mein%20%EF%BD%9C%EF%BD%9C%20reprised%20%20Instrumental%20version%20on%20veena%20%EF%BD%9C%EF%BD%9C%20Phani%20narayana.mp4" },
   { title: "Tum hi ho ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/04%20-%20Tum%20hi%20ho%20reload%20with%20veena%20%EF%BD%9C%EF%BD%9C%20Aashiqui%202%20bollywood's%20biggest%20hit%20on%20Phaniveena%20in%20Sunday%20specials.mp4" },
   { title: "Waka Waka Sitar", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/05%20-%20Waka%20Waka%20Acapella%20Veena%20Instrumental%20%EF%BD%9C%EF%BD%9C%20Stringwings%20%EF%BD%9C%EF%BD%9C%20westren%20notes%20on%20indian%20strings%20%EF%BD%9C%EF%BD%9C.mp4" },
-  { title: "Tu Hi Re ( Flute Cover ) Sajan Patel - Ft Shashank Acharya", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/06%20-%20Tu%20Hi%20Re%20(%20Flute%20Cover%20)%20Sajan%20Patel%20-%20Ft%20Shashank%20Acharya.mp4" },
-  { title: "Tu hi re song⧸⧸Hariharan", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/07%20-%20Tu%20hi%20re%20song%E2%A7%B8%E2%A7%B8Hariharan%E2%A7%B8%E2%A7%B8Famous%20song%E2%A7%B8%E2%A7%B8Movie%20Bombay%E2%A7%B8%E2%A7%B8Subscribe%E2%A7%B8%E2%A7%B8Like%E2%A7%B8%E2%A7%B8Comment..mp4" },
   { title: "Saagar Kinare (The Unwind Mix)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/08%20-%20Saagar%20Kinare%20(The%20Unwind%20Mix)%20%20I%20Arnab%20Chakraborty%20&%20Anwesshaa%20I%20Sagar%20Kinare%20Dil%20Ye%20Pukare.mp4" },
   { title: "Saagar Kinare (The Unwind Instrumental)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/09%20-%20Saagar%20Kinare%20(The%20Unwind%20Instrumental)%20by%20Shomu%20Seal.mp4" },
-  { title: "Kun Faya Kun", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/10%20-%20Kun%20Faya%20Kun%20By%20AR%20Rahman.mp4" },
-  { title: "Piya Haji Ali", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/11%20-%20Piya%20Haji%20Ali%20By%20AR%20Rahman.mp4" },
   { title: "Zikr By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/12%20-%20Zikr%20By%20AR%20Rahman.mp4" },
-  { title: "Arziyan By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/13%20-%20Arziyan%20By%20AR%20Rahman.mp4" },
 
-  { title: "Yeh Honsla (Candlelight Cover) ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/14%20-%20Yeh%20Honsla%20(Candlelight%20Cover)%20-%20Aakash%20Gandhi%20(feat.%20Jonita%20Gandhi).mp4" },
 
   { title: "Tu Hi Mera", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/15%20-%20Tu%20Hi%20Mera%20-%20Jannat%202%20(Classic%20Cover)%20-%20Aakash%20Gandhi%20(ft.%20Jonita%20Gandhi%20&%20Sahil%20Khan).mp4" },
   { title: "Pani Da Rang (Acoustic Cover)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/16%20-%20Pani%20Da%20Rang%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(feat%20Jonita%20Gandhi).mp4" },
