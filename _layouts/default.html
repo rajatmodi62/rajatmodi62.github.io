@@ -2,13 +2,27 @@
 <html>
 <head>
   {% include head.html %}
-  
+
+  <style>
+    #raw-player {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        border: 1px solid var(--border-header-bottom);
+    }
+
+    .playlist-item.playing {
+        color: var(--border-header-bottom);
+        background: transparent;
+        font-weight: bold;
+        text-shadow: 0 0 5px var(--border-header-bottom);
+    }
+  </style>
+
   <script>
-    // 1. SET INITIAL THEME
     const savedTheme = localStorage.getItem('theme');
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const initialTheme = savedTheme || "dark";
-    // const initialTheme = savedTheme || (systemDark ? "dark" : "light");
     document.documentElement.setAttribute('data-theme', initialTheme);
 
     function updateIcon(theme) {
@@ -43,161 +57,354 @@
 
   {% include footer.html %}
 
-<div id="search-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background: rgba(0,0,0,0.85); z-index:1000000; justify-content:center; align-items:start; padding-top:15vh;">
+  <!-- ===================== GLOBAL MEDIA TERMINAL ===================== -->
+  <div id="media-terminal">
+      <div id="terminal-handle">[ MEDIA ]</div>
+      <div class="terminal-header">
+          <span>Rajat's Music Collection 😃// Hosted with ❤️ at Github.</span>
+          <span id="shuffle-btn" style="cursor: pointer; color: var(--text-muted); border: 1px solid var(--text-muted); padding: 0 5px; font-size: 0.65rem; font-weight: 800;">[ SHUFFLE ]</span>
+          <span style="opacity: 0.5;">0x{{ "now" | date: "%M%S" }}</span>
+      </div>
+      <div class="terminal-video-container">
+          <video id="raw-player" controls preload="metadata"></video>
+      </div>
+      <div class="terminal-playlist" id="playlist"></div>
+  </div>
+
+  <script>
+  (function() {
+    const mediaList = [
+        { title: "Kal Ho Na Ho", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/26%20-%20Kal%20Ho%20Na%20Ho%20-%20Unplugged%20Short%20Cover%20-%20Shriram%20Iyer%20%EF%BD%9C%20Shankar%20Ehsaan%20Loy%20%EF%BD%9C%20Sonu%20Nigam%20%EF%BD%9C%20Shahrukh%20K.mp4" },
+        { title: "Tu Hi Re ( Flute Cover ) Sajan Patel - Ft Shashank Acharya", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/06%20-%20Tu%20Hi%20Re%20(%20Flute%20Cover%20)%20Sajan%20Patel%20-%20Ft%20Shashank%20Acharya.mp4" },
+        { title: "Tu hi re song⧸⧸Hariharan", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/07%20-%20Tu%20hi%20re%20song%E2%A7%B8%E2%A7%B8Hariharan%E2%A7%B8%E2%A7%B8Famous%20song%E2%A7%B8%E2%A7%B8Movie%20Bombay%E2%A7%B8%E2%A7%B8Subscribe%E2%A7%B8%E2%A7%B8Like%E2%A7%B8%E2%A7%B8Comment..mp4" },
+        { title: "Kun Faya Kun", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/10%20-%20Kun%20Faya%20Kun%20By%20AR%20Rahman.mp4" },
+        { title: "Arziyan By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/13%20-%20Arziyan%20By%20AR%20Rahman.mp4" },
+        { title: "Piya Haji Ali", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/11%20-%20Piya%20Haji%20Ali%20By%20AR%20Rahman.mp4" },
+        { title: "Yeh Honsla (Candlelight Cover)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/14%20-%20Yeh%20Honsla%20(Candlelight%20Cover)%20-%20Aakash%20Gandhi%20(feat.%20Jonita%20Gandhi).mp4" },
+        { title: "Abhi Mujh Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/01%20-%20Abhi%20Mujh%20Mein%20%EF%BD%9C%EF%BD%9C%20Phaninarayana%20Veena%20%EF%BD%9C%EF%BD%9C%20Ajay%20Atul%20%EF%BD%9C%EF%BD%9CHrithik%20Roshan,Priyanka%20Chopra%EF%BD%9C%EF%BD%9C%20Sonu%20Nigam.mp4" },
+        { title: "Moh Moh Ke Dhaage", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/02%20-%20Moh%20Moh%20Ke%20Dhaage%20-%20Anu%20malik%20-%20Monali%20Thakur%20%20%EF%BD%9C%EF%BD%9C%20Phaninarayana%20Veetar%20instrumental%20cover.mp4" },
+        { title: "Kabhi Kabhi Mere Dil Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/03%20-%20Kabhi%20Kabhi%20Mere%20Dil%20Mein%20%EF%BD%9C%EF%BD%9C%20reprised%20%20Instrumental%20version%20on%20veena%20%EF%BD%9C%EF%BD%9C%20Phani%20narayana.mp4" },
+        { title: "Tum hi ho", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/04%20-%20Tum%20hi%20ho%20reload%20with%20veena%20%EF%BD%9C%EF%BD%9C%20Aashiqui%202%20bollywood's%20biggest%20hit%20on%20Phaniveena%20in%20Sunday%20specials.mp4" },
+        { title: "Waka Waka Sitar", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/05%20-%20Waka%20Waka%20Acapella%20Veena%20Instrumental%20%EF%BD%9C%EF%BD%9C%20Stringwings%20%EF%BD%9C%EF%BD%9C%20westren%20notes%20on%20indian%20strings%20%EF%BD%9C%EF%BD%9C.mp4" },
+        { title: "Saagar Kinare (The Unwind Mix)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/08%20-%20Saagar%20Kinare%20(The%20Unwind%20Mix)%20%20I%20Arnab%20Chakraborty%20&%20Anwesshaa%20I%20Sagar%20Kinare%20Dil%20Ye%20Pukare.mp4" },
+        { title: "Saagar Kinare (The Unwind Instrumental)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/09%20-%20Saagar%20Kinare%20(The%20Unwind%20Instrumental)%20by%20Shomu%20Seal.mp4" },
+        { title: "Zikr By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/12%20-%20Zikr%20By%20AR%20Rahman.mp4" },
+        { title: "Tu Hi Mera", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/15%20-%20Tu%20Hi%20Mera%20-%20Jannat%202%20(Classic%20Cover)%20-%20Aakash%20Gandhi%20(ft.%20Jonita%20Gandhi%20&%20Sahil%20Khan).mp4" },
+        { title: "Pani Da Rang (Acoustic Cover)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/16%20-%20Pani%20Da%20Rang%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(feat%20Jonita%20Gandhi).mp4" },
+        { title: "Bol Do Na Zara", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/17%20-%20Bol%20Do%20Na%20Zara%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(ft%20Jonita%20Gandhi,%20Sahil%20Khan,%20&%20Rax%20Timyr).mp4" },
+        { title: "Dil Hai Mushkil", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/18%20-%20Ae%20Dil%20Hai%20Mushkil%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(ft.%20Jonita%20Gandhi).mp4" },
+        { title: "Kabhi Jo Badal Barse", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/19%20-%20Kabhi%20Jo%20Badal%20Barse%20%EF%BD%9C%20Arijit%20Singh%20%EF%BD%9C%20Zendria.mp4" },
+        { title: "Bol Do Na Zara (Azhar)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/20%20-%20Bol%20Do%20Na%20Zara%20(Azhar)%20%EF%BD%9C%20Female%20Cover%20by%20Shirley%20Setia%20ft.%20Antareep%20Hazarika,%20Darrel%20Mascarenhas.mp4" },
+        { title: "ULTIMATE BOLLYWOOD MASHUP!! ft Shirley Setia", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/21%20-%20ULTIMATE%20BOLLYWOOD%20MASHUP!!%20ft%20Shirley%20Setia.mp4" },
+        { title: "Galliyan - Ek Villain", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/22%20-%20Galliyan%20-%20Ek%20Villain%20(Ankit%20Tiwari)%20%EF%BD%9C%20Female%20Cover%20by%20Shirley%20Setia%20ft.%20The%20Gunsmith.mp4" },
+        { title: "Sanam Re", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/23%20-%20Sanam%20Re%20%EF%BD%9C%20Female%20Cover%20by%20Shirley%20Setia%20ft.%20Kushal%20Chheda%20%EF%BD%9C%20(Arijit%20Singh).mp4" },
+        { title: "Kya Hua Tera Wada", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/24%20-%20Kya%20Hua%20Tera%20Wada%20-%20Unplugged%20%EF%BD%9C%20Pranav%20Chandran%20%EF%BD%9C%20Trending%20Songs%20%EF%BD%9C%20Pehchan%20Music%20%EF%BD%9C%20Old%20Hindi%20Songs.mp4" },
+        { title: "Kabhi Kabhi Mere Dil Me", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/25%20-%20Kabhi%20Kabhi%20Mere%20Dil%20Mein%20-%20Unplugged%20%EF%BD%9C%20Karan%20Nawani%20%EF%BD%9C%20Kabhi%20Kabhie%20%EF%BD%9C%20Old%20Hindi%20Songs.mp4" },
+        { title: "Luka Chuppi", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/27%20-%20Luka%20Chuppi%20%EF%BD%9C%20Pranav%20Chandran%20&%20Delsy%20Ninan%20(Cover)%20%EF%BD%9C%20Rang%20De%20Basanti%20%EF%BD%9C%20A.R.%20Rahman,%20Lata%20Mangeshkar.mp4" },
+        { title: "Ladki Badi Anjani Hai", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/28%20-%20Ladki%20Badi%20Anjani%20Hai%20-%20Reprised%20Cover%20%EF%BD%9C%20Piyush%20Shankar%20%EF%BD%9C%20Kuch%20Kuch%20Hota%20Hai%20%EF%BD%9C%20Shahrukh%20Khan%20%EF%BD%9C%20Kajol.mp4" },
+        { title: "Kuch Kuch Hota Hai", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/29%20-%20Kuch%20Kuch%20Hota%20Hai%20-%20Unplugged%20Cover%20%EF%BD%9C%20Rahul%20Jain%20%EF%BD%9C%20Shahrukh%20Khan%20%EF%BD%9C%20Kajol.mp4" },
+        { title: "Suraj Hua Maddham", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/30%20-%20Suraj%20Hua%20Maddham%20-%20Unplugged%20Cover%20%EF%BD%9C%20Rahul%20Jain%20%EF%BD%9C%20K3G%20%EF%BD%9C%20Shahrukh%20Khan%20%EF%BD%9C%20Kajol.mp4" },
+        { title: "Bheegi Bheegi Raaton Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/31%20-%20Bheegi%20Bheegi%20Raaton%20Mein%20-%20Unplugged%20Cover%20%EF%BD%9C%20Stebin%20Ben%20%EF%BD%9C%20Adnan%20Sami.mp4" },
+        { title: "Mere Haath Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/32%20-%20Mere%20Haath%20Mein%20-%20Unplugged%20Cover%20%EF%BD%9C%20Trishita%20%EF%BD%9C%20Fanaa%20%EF%BD%9C%20Aamir%20Khan,%20Kajol.mp4" },
+        { title: "Humko Humise Chura Lo", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/33%20-%20Humko%20Humise%20Chura%20Lo%20-%20Unplugged%20Cover%20%EF%BD%9C%20Trishita%20%EF%BD%9C%20Mohabbatein%20%EF%BD%9C%20Shah%20Rukh%20Khan%20%EF%BD%9C%20Aishwarya%20Rai.mp4" },
+        { title: "Tum Mile", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/34%20-%20Tum%20Mile%20-%20Unplugged%20Cover%20%EF%BD%9C%20Trishita%20Recs%20%EF%BD%9C%20Pritam%20%EF%BD%9C%20Emraan%20Hashmi%20%EF%BD%9C%20Soha%20Ali%20Khan.mp4" },
+        { title: "Hale Dil", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/35%20-%20Hale%20dil%20%EF%BD%9C%20Murder%202%20%EF%BD%9C%20Emraan%20Hashmi%20%EF%BD%9C%20Cover%20by%20Anushka%20Gupta.mp4" },
+        { title: "Tum Mile (Vicky Singh Cover)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/36%20-%20Tum%20Mile%20-%20Unplugged%20%EF%BD%9C%20Vicky%20Singh%20%EF%BD%9C%20Cover%20Version%20%EF%BD%9C%20Pritam%20%EF%BD%9C%20Neeraj%20S%20%EF%BD%9C%20Kumaar%20%EF%BD%9C%20Emraan%20Hashmi.mp4" },
+        { title: "Kaisa Tera Ishq Hai", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/37%20-%20Kaisa%20Tera%20Ishq%20Hai%20-%20Aayushmaan%20Rana%20%EF%BD%9C%20New%20Hindi%20Song%202024%20%EF%BD%9C%20Pehchan%20Music.mp4" },
+        { title: "Humsafar", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/39%20-%20Humsafar%20Song%20%20%EF%BD%9C%20Dhvani%20Bhanushali%20%EF%BD%9C%20T-Series%20Acoustics%20%EF%BD%9C%20Akhil%20Sachdeva%20%EF%BD%9CAhmed%20Khan%20%EF%BD%9CTanishk%20Bagchi.mp4" },
+        { title: "Maahi Ve", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/40%20-%20Maahi%20Ve%20Unplugged%20Video%20Song%20%20%EF%BD%9C%20T-Series%20Acoustics%20%EF%BD%9C%20Neha%20Kakkar%E2%81%A0%E2%81%A0%E2%81%A0%E2%81%A0%20%EF%BD%9C%20T-Series.mp4" },
+        { title: "Kaise Mujhe Tum", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/41%20-%20Kaise%20Mujhe%20Tum%20Video%20Song%20%EF%BD%9C%20Mohammed%20Irfan%20%EF%BD%9C%20%20T-Series%20Acoustics%20%EF%BD%9C%20Hindi%20Song%202017.mp4" },
+        { title: "Humdard", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/42%20-%20Humdard%EF%BC%9A%20Karan%20Bawa%20(Cover%20Song)%20T-Series%20Acoustics%20%EF%BD%9C%20Ek%20Villan.mp4" },
+    ];
+
+    const STORAGE_KEY = 'mediaPlayerState';
+    let currentVideoIndex = 0;
+    let videoPlayer;
+
+    function saveState() {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                index: currentVideoIndex,
+                time: videoPlayer ? videoPlayer.currentTime : 0,
+                isPlaying: videoPlayer ? !videoPlayer.paused : false,
+                terminalOpen: document.getElementById('media-terminal')
+                                ? document.getElementById('media-terminal').classList.contains('active')
+                                : false
+            }));
+        } catch(e) {}
+    }
+
+    function loadState() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch(e) { return null; }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        videoPlayer = document.getElementById('raw-player');
+        const terminal = document.getElementById('media-terminal');
+        const handle = document.getElementById('terminal-handle');
+        const playlist = document.getElementById('playlist');
+        const shuffleBtn = document.getElementById('shuffle-btn');
+
+        // Build playlist UI
+        mediaList.forEach((media, index) => {
+            const item = document.createElement('div');
+            item.className = 'playlist-item';
+            item.innerHTML = `> ${media.title}`;
+            item.onclick = () => playVideo(index);
+            playlist.appendChild(item);
+        });
+
+        // Restore state from localStorage
+        const savedState = loadState();
+        if (savedState && savedState.index >= 0 && savedState.index < mediaList.length) {
+            currentVideoIndex = savedState.index;
+            videoPlayer.src = mediaList[currentVideoIndex].url;
+            videoPlayer.load();
+            updatePlaylistUI(currentVideoIndex);
+
+            if (savedState.isPlaying) {
+                videoPlayer.addEventListener('loadedmetadata', function onMeta() {
+                    videoPlayer.removeEventListener('loadedmetadata', onMeta);
+                    if (savedState.time > 0) videoPlayer.currentTime = savedState.time;
+                    videoPlayer.play().catch(() => {});
+                });
+            } else {
+                videoPlayer.addEventListener('loadedmetadata', function onMeta() {
+                    videoPlayer.removeEventListener('loadedmetadata', onMeta);
+                    if (savedState.time > 0) videoPlayer.currentTime = savedState.time;
+                });
+            }
+
+            if (savedState.terminalOpen) {
+                terminal.classList.add('active');
+                handle.innerText = '[ CLOSE ]';
+            }
+        } else {
+            // Fresh start
+            videoPlayer.src = mediaList[0].url;
+            updatePlaylistUI(0);
+        }
+
+        function playVideo(index) {
+            currentVideoIndex = index;
+            videoPlayer.src = mediaList[index].url;
+            videoPlayer.load();
+            videoPlayer.play().catch(e => console.log("Autoplay blocked:", e));
+            updatePlaylistUI(index);
+            saveState();
+        }
+
+        function playNext() {
+            currentVideoIndex = (currentVideoIndex + 1) % mediaList.length;
+            playVideo(currentVideoIndex);
+        }
+
+        function updatePlaylistUI(index) {
+            const items = document.querySelectorAll('.playlist-item');
+            items.forEach(el => el.classList.remove('playing'));
+            if (items[index]) {
+                items[index].classList.add('playing');
+                items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        videoPlayer.onended = () => playNext();
+
+        // Save time periodically every 5s while playing
+        let lastSave = 0;
+        videoPlayer.addEventListener('timeupdate', () => {
+            const now = Date.now();
+            if (now - lastSave > 1) {
+                lastSave = now;
+                saveState();
+            }
+        });
+
+        videoPlayer.addEventListener('pause', saveState);
+        videoPlayer.addEventListener('play', saveState);
+
+        // Save before navigating away
+        window.addEventListener('pagehide', saveState);
+        window.addEventListener('beforeunload', saveState);
+
+        shuffleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            playVideo(Math.floor(Math.random() * mediaList.length));
+        });
+
+        function toggleTerminal(forceClose = false) {
+            if (forceClose) terminal.classList.remove('active');
+            else terminal.classList.toggle('active');
+            handle.innerText = terminal.classList.contains('active') ? '[ CLOSE ]' : '[ MEDIA ]';
+            saveState();
+        }
+
+        handle.addEventListener('click', (e) => { e.stopPropagation(); toggleTerminal(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && terminal.classList.contains('active')) {
+                toggleTerminal(true);
+            }
+        });
+    });
+  })();
+  </script>
+  <!-- ===================== END MEDIA TERMINAL ===================== -->
+
+  <div id="search-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background: rgba(0,0,0,0.85); z-index:1000000; justify-content:center; align-items:start; padding-top:15vh;">
     <div style="width: 80%; max-width: 600px;">
-        <input type="text" id="search-input" placeholder="SEARCH..." autocomplete="off" 
+        <input type="text" id="search-input" placeholder="SEARCH..." autocomplete="off"
                style="width:100%; padding:20px; background:transparent; border: 2px solid #ffcc00; color: #ffcc00; font-family: 'Courier New', monospace; font-size: 1.5rem; outline:none; box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);">
         <div id="search-results" style="margin-top:20px; max-height: 50vh; overflow-y:auto; font-family: 'Courier New', monospace; background: rgba(0,0,0,0.9); border: 1px solid #444;"></div>
         <p style="color: #ffcc00; font-family: 'Courier New', monospace; font-size: 0.7rem; margin-top: 10px; opacity: 0.7;">[ ESC ] TO EXIT</p>
     </div>
-</div>
+  </div>
 
-<div id="portal-window" style="display: none; position: fixed; width: 500px; height: 400px; background: #000; border: 1px solid #ffcc00; z-index: 1000000; pointer-events: none; box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3); overflow: hidden; border-radius: 4px;">
-    
+  <div id="portal-window" style="display: none; position: fixed; width: 500px; height: 400px; background: #000; border: 1px solid #ffcc00; z-index: 1000000; pointer-events: none; box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 10px rgba(255, 204, 0, 0.3); overflow: hidden; border-radius: 4px;">
     <div style="position: relative; z-index: 2; background: #ffcc00; color: #000; font-family: monospace; font-size: 10px; padding: 2px 8px; font-weight: bold; border-bottom: 1px solid #000;">
         <div class="header-container">
             <div id="quote">Silent Men Sayeth : <span id="quote-text">INITIALIZING...</span></div>
         </div>
     </div>
-
     <div style="position: relative; width: 100%; height: 100%; overflow: hidden; z-index: 1; background: #000;">
         <iframe id="portal-frame" src="" style="width: 2250px; height: 2500px; border: none; transform: scale(0.4); transform-origin: 0 0; opacity: 0.8;"></iframe>
     </div>
-</div>
+  </div>
 
-<script type="text/javascript">
-  let searchIndex = [];
-  fetch('{{ site.baseurl }}/search.json')
-      .then(response => response.json())
-      .then(data => searchIndex = data);
+  <script type="text/javascript">
+    let searchIndex = [];
+    fetch('{{ site.baseurl }}/search.json')
+        .then(response => response.json())
+        .then(data => searchIndex = data);
 
-  const searchOverlay = document.getElementById('search-overlay');
-  const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
 
-  document.addEventListener('keydown', function(e) {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'f') {
-          e.preventDefault();
-          openSearch();
-      }
-      if (e.key === 'Escape' && searchOverlay.style.display === 'flex') {
-          closeSearch();
-      }
-  });
-
-  function openSearch() {
-      searchOverlay.style.display = 'flex';
-      searchInput.focus();
-  }
-
-  function closeSearch() {
-      searchOverlay.style.display = 'none';
-      searchInput.value = '';
-      searchResults.innerHTML = '';
-  }
-
-  searchInput.addEventListener('input', function() {
-    const query = this.value.toLowerCase();
-    searchResults.innerHTML = '';
-    if (query.length < 2) return;
-    const matches = searchIndex.filter(item => 
-        item.title.toLowerCase().includes(query) || 
-        item.content.toLowerCase().includes(query)
-    ).slice(0, 5);
-    matches.forEach(match => {
-        const content = match.content;
-        const index = content.toLowerCase().indexOf(query);
-        let start = Math.max(0, index - 30);
-        let end = Math.min(content.length, index + query.length + 30);
-        let snippet = content.substring(start, end);
-        const encodedQuery = encodeURIComponent(query);
-        const div = document.createElement('div');
-        div.style.padding = '15px';
-        div.style.borderBottom = '1px solid #333';
-        div.style.cursor = 'pointer';
-        const targetUrl = `${match.url}#:~:text=${encodedQuery}`;
-        div.innerHTML = `
-            <a href="${targetUrl}" style="color: #ffcc00; text-decoration:none;">
-                <div style="font-weight:800; font-size: 1rem;">> ${match.title}</div>
-                <div style="font-size: 0.75rem; color: #888; margin-top: 5px; font-style: italic;">
-                    "...${snippet.replace(new RegExp(query, 'gi'), (m) => `<span style="color:#ffcc00; font-weight:bold;">${m}</span>`)}..."
-                </div>
-            </a>`;
-        searchResults.appendChild(div);
+    document.addEventListener('keydown', function(e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'f') {
+            e.preventDefault();
+            openSearch();
+        }
+        if (e.key === 'Escape' && searchOverlay.style.display === 'flex') {
+            closeSearch();
+        }
     });
-});
-</script>
 
-<script>
-// --- QUOTE LOADING LOGIC ---
-let quoteIndex = [];
-
-// Fetch quotes from the external JSON file
-fetch('{{ site.baseurl }}/quote.json')
-    .then(response => response.json())
-    .then(data => {
-        quoteIndex = data;
-        refreshPortalQuote(); // Trigger first quote once loaded
-    })
-    .catch(err => console.error("Could not load quote.json", err));
-
-function refreshPortalQuote() {
-    const quoteText = document.getElementById('quote-text');
-    if (quoteText && quoteIndex.length > 0) {
-        const randomQuote = quoteIndex[Math.floor(Math.random() * quoteIndex.length)];
-        quoteText.innerText = randomQuote;
+    function openSearch() {
+        searchOverlay.style.display = 'flex';
+        searchInput.focus();
     }
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const portalWindow = document.getElementById('portal-window');
-    const portalFrame = document.getElementById('portal-frame');
-    let scrollInterval;
+    function closeSearch() {
+        searchOverlay.style.display = 'none';
+        searchInput.value = '';
+        searchResults.innerHTML = '';
+    }
 
-    document.querySelectorAll('.portal-trigger').forEach(trigger => {
-        trigger.addEventListener('mouseenter', () => {
-            refreshPortalQuote(); // Refresh from the loaded index
-            const url = trigger.getAttribute('href');
-            portalWindow.style.display = 'block';
-            
-            if (!portalFrame.src.includes(url)) {
-                portalFrame.style.opacity = '0';
-                portalFrame.src = url;
-                portalFrame.onload = function() {
-                    portalFrame.style.transition = 'opacity 0.5s ease';
-                    portalFrame.style.opacity = '0.9';
-                    clearInterval(scrollInterval);
-                    let scrollPos = 0;
-                    scrollInterval = setInterval(() => {
-                        scrollPos += 0.5;
-                        if (scrollPos > 500) scrollPos = 0;
-                        portalFrame.style.transform = `scale(0.4) translateY(-${scrollPos}px)`;
-                    }, 20);
-                };
-            }
-        });
-
-        trigger.addEventListener('mousemove', (e) => {
-            let x = e.clientX + 30;
-            let y = e.clientY - 150; 
-            const windowWidth = 520;
-            const windowHeight = 420;
-            if (x + windowWidth > window.innerWidth) x = e.clientX - (windowWidth + 10);
-            if (y + windowHeight > window.innerHeight) y = window.innerHeight - (windowHeight + 20);
-            if (y < 10) y = 10;
-            portalWindow.style.left = x + 'px';
-            portalWindow.style.top = y + 'px';
-        });
-
-        trigger.addEventListener('mouseleave', () => {
-            portalWindow.style.display = 'none';
-            clearInterval(scrollInterval);
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        searchResults.innerHTML = '';
+        if (query.length < 2) return;
+        const matches = searchIndex.filter(item =>
+            item.title.toLowerCase().includes(query) ||
+            item.content.toLowerCase().includes(query)
+        ).slice(0, 5);
+        matches.forEach(match => {
+            const content = match.content;
+            const index = content.toLowerCase().indexOf(query);
+            let start = Math.max(0, index - 30);
+            let end = Math.min(content.length, index + query.length + 30);
+            let snippet = content.substring(start, end);
+            const encodedQuery = encodeURIComponent(query);
+            const div = document.createElement('div');
+            div.style.padding = '15px';
+            div.style.borderBottom = '1px solid #333';
+            div.style.cursor = 'pointer';
+            const targetUrl = `${match.url}#:~:text=${encodedQuery}`;
+            div.innerHTML = `
+                <a href="${targetUrl}" style="color: #ffcc00; text-decoration:none;">
+                    <div style="font-weight:800; font-size: 1rem;">> ${match.title}</div>
+                    <div style="font-size: 0.75rem; color: #888; margin-top: 5px; font-style: italic;">
+                        "...${snippet.replace(new RegExp(query, 'gi'), (m) => `<span style="color:#ffcc00; font-weight:bold;">${m}</span>`)}..."
+                    </div>
+                </a>`;
+            searchResults.appendChild(div);
         });
     });
-});
-</script>
+  </script>
 
-<script>
+  <script>
+    let quoteIndex = [];
+
+    fetch('{{ site.baseurl }}/quote.json')
+        .then(response => response.json())
+        .then(data => {
+            quoteIndex = data;
+            refreshPortalQuote();
+        })
+        .catch(err => console.error("Could not load quote.json", err));
+
+    function refreshPortalQuote() {
+        const quoteText = document.getElementById('quote-text');
+        if (quoteText && quoteIndex.length > 0) {
+            const randomQuote = quoteIndex[Math.floor(Math.random() * quoteIndex.length)];
+            quoteText.innerText = randomQuote;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const portalWindow = document.getElementById('portal-window');
+        const portalFrame = document.getElementById('portal-frame');
+        let scrollInterval;
+
+        document.querySelectorAll('.portal-trigger').forEach(trigger => {
+            trigger.addEventListener('mouseenter', () => {
+                refreshPortalQuote();
+                const url = trigger.getAttribute('href');
+                portalWindow.style.display = 'block';
+
+                if (!portalFrame.src.includes(url)) {
+                    portalFrame.style.opacity = '0';
+                    portalFrame.src = url;
+                    portalFrame.onload = function() {
+                        portalFrame.style.transition = 'opacity 0.5s ease';
+                        portalFrame.style.opacity = '0.9';
+                        clearInterval(scrollInterval);
+                        let scrollPos = 0;
+                        scrollInterval = setInterval(() => {
+                            scrollPos += 0.5;
+                            if (scrollPos > 500) scrollPos = 0;
+                            portalFrame.style.transform = `scale(0.4) translateY(-${scrollPos}px)`;
+                        }, 20);
+                    };
+                }
+            });
+
+            trigger.addEventListener('mousemove', (e) => {
+                let x = e.clientX + 30;
+                let y = e.clientY - 150;
+                const windowWidth = 520;
+                const windowHeight = 420;
+                if (x + windowWidth > window.innerWidth) x = e.clientX - (windowWidth + 10);
+                if (y + windowHeight > window.innerHeight) y = window.innerHeight - (windowHeight + 20);
+                if (y < 10) y = 10;
+                portalWindow.style.left = x + 'px';
+                portalWindow.style.top = y + 'px';
+            });
+
+            trigger.addEventListener('mouseleave', () => {
+                portalWindow.style.display = 'none';
+                clearInterval(scrollInterval);
+            });
+        });
+    });
+  </script>
+
+  <script>
     document.querySelectorAll('.video-item').forEach(item => {
         const trigger = item.querySelector('.video-trigger');
         const playBtn = item.querySelector('.play-btn');
@@ -216,6 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cover.style.display = "flex";
         });
     });
+
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") {
             document.querySelectorAll('.video-item').forEach(item => {
@@ -225,24 +433,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 frame.src = "";
                 frame.style.display = "none";
                 cover.style.display = "flex";
-                if(previewBox) {
+                if (previewBox) {
                     previewBox.style.display = "none";
                     setTimeout(() => previewBox.style.removeProperty('display'), 100);
                 }
             });
         }
     });
-</script>
+  </script>
 
-<script>
+  <script>
     function updateClock() {
         const now = new Date();
         const month = String(now.getMonth() + 1).padStart(2, '0');
         const day = String(now.getDate()).padStart(2, '0');
         const year = now.getFullYear();
-        const time = now.toTimeString().split(' ')[0]; 
+        const time = now.toTimeString().split(' ')[0];
         const clockEl = document.getElementById('live-clock');
-        if(clockEl) clockEl.innerHTML = `${month}-${day}-${year} ${time}`;
+        if (clockEl) clockEl.innerHTML = `${month}-${day}-${year} ${time}`;
     }
     setInterval(updateClock, 1000);
     updateClock();
@@ -261,11 +469,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             const locEl = document.getElementById('user-location');
-            if(locEl) locEl.innerHTML = "OFFLINE_CORE";
+            if (locEl) locEl.innerHTML = "OFFLINE_CORE";
         }
     }
     getGeolocation();
-</script>
+  </script>
 
 </body>
 </html>
