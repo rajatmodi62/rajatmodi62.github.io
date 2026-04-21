@@ -561,7 +561,7 @@ body.no-scroll {
         #FFD700 25%, /* The leading edge of the gold */
         transparent 25%
     );
-    animation: borderRotate 0s linear infinite;
+    animation: borderRotate 5s linear infinite;
 }
 
 /* The 'Inlay' that creates the hollow border effect */
