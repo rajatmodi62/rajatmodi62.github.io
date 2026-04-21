@@ -3,6 +3,7 @@ layout: default
 ---
 
 <style>
+  /* FIXED BOTTOM PROGRESS CONTAINER */
   #progress-container {
       position: fixed !important;
       bottom: 0 !important;
@@ -12,8 +13,8 @@ layout: default
       width: 100% !important;
       height: 2rem;
       background: repeating-linear-gradient(45deg, #000, #000 10px, var(--border-header-bottom) 10px, var(--border-header-bottom) 20px);
-      background-size: 28px 28px;
-      opacity: 0.6;
+      background-size: 28px 28px; 
+      opacity: 0.6; 
       animation: stream-horizontal 10s linear infinite;
       z-index: 999999;
       cursor: pointer;
@@ -46,17 +47,16 @@ layout: default
   }
 
   .post-container {
-      display: flex;
-      border-left: 1px solid var(--border-header-bottom);
-      border-right: 1px solid var(--border-header-bottom);
-      min-height: 100vh;
-      margin: 0 auto;
+      display: flex; 
+      border-left: 1px solid var(--border-header-bottom); 
+      border-right: 1px solid var(--border-header-bottom); 
+      min-height: 100vh; 
+      margin: 0 auto; 
       max-width: 1200px;
-      padding-bottom: 80px;
+      padding-bottom: 80px; 
   }
-
   .post { flex: 1; padding: 0 40px; }
-
+  
   .post-container .sidebar-left, .post-container .sidebar-right {
       background-image: url("{{ site.baseurl }}/assets/img/godzilla/vitruvian.png") !important;
       background-repeat: repeat-y !important;
@@ -64,7 +64,36 @@ layout: default
       background-size: 50px !important;
       opacity: 0.8;
   }
+
+  /* VIDEO TERMINAL SPECIFIC STYLES */
+  #raw-player {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      border: 1px solid var(--border-header-bottom);
+  }
+
+  /* MODIFIED: No golden background fill, just colored text */
+  .playlist-item.playing {
+      color: var(--border-header-bottom);
+      background: transparent; /* Removed the fill */
+      font-weight: bold;
+      text-shadow: 0 0 5px var(--border-header-bottom); /* Optional: subtle glow instead */
+  }
 </style>
+
+<div id="media-terminal">
+    <div id="terminal-handle">[ MEDIA ]</div>
+    <div class="terminal-header">
+        <span>Rajat's Music Collection 😃// Hosted with ❤️ at Github.</span>
+        <span id="shuffle-btn" style="cursor: pointer; color: var(--text-muted); border: 1px solid var(--text-muted); padding: 0 5px; font-size: 0.65rem; font-weight: 800;">[ SHUFFLE ]</span>
+        <span style="opacity: 0.5;">0x{{ "now" | date: "%M%S" }}</span>
+    </div>
+    <div class="terminal-video-container">
+        <video id="raw-player" controls preload="metadata"></video> 
+    </div>
+    <div class="terminal-playlist" id="playlist"></div>
+</div>
 
 <div id="progress-container"><div id="progress-bar"></div></div>
 
@@ -83,12 +112,126 @@ layout: default
 </div>
 
 <script>
+  const mediaList = [
+      { title: "Kal Ho Na Ho", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/26%20-%20Kal%20Ho%20Na%20Ho%20-%20Unplugged%20Short%20Cover%20-%20Shriram%20Iyer%20%EF%BD%9C%20Shankar%20Ehsaan%20Loy%20%EF%BD%9C%20Sonu%20Nigam%20%EF%BD%9C%20Shahrukh%20K.mp4" },
+  { title: "Tu Hi Re ( Flute Cover ) Sajan Patel - Ft Shashank Acharya", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/06%20-%20Tu%20Hi%20Re%20(%20Flute%20Cover%20)%20Sajan%20Patel%20-%20Ft%20Shashank%20Acharya.mp4" },
+  { title: "Tu hi re song⧸⧸Hariharan", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/07%20-%20Tu%20hi%20re%20song%E2%A7%B8%E2%A7%B8Hariharan%E2%A7%B8%E2%A7%B8Famous%20song%E2%A7%B8%E2%A7%B8Movie%20Bombay%E2%A7%B8%E2%A7%B8Subscribe%E2%A7%B8%E2%A7%B8Like%E2%A7%B8%E2%A7%B8Comment..mp4" },
+  { title: "Kun Faya Kun", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/10%20-%20Kun%20Faya%20Kun%20By%20AR%20Rahman.mp4" },
+  { title: "Arziyan By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/13%20-%20Arziyan%20By%20AR%20Rahman.mp4" },
+  { title: "Piya Haji Ali", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/11%20-%20Piya%20Haji%20Ali%20By%20AR%20Rahman.mp4" },
+  { title: "Yeh Honsla (Candlelight Cover) ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/14%20-%20Yeh%20Honsla%20(Candlelight%20Cover)%20-%20Aakash%20Gandhi%20(feat.%20Jonita%20Gandhi).mp4" },
+
+  { title: "Abhi Mujh Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/01%20-%20Abhi%20Mujh%20Mein%20%EF%BD%9C%EF%BD%9C%20Phaninarayana%20Veena%20%EF%BD%9C%EF%BD%9C%20Ajay%20Atul%20%EF%BD%9C%EF%BD%9CHrithik%20Roshan,Priyanka%20Chopra%EF%BD%9C%EF%BD%9C%20Sonu%20Nigam.mp4" },  
+  { title: "Moh Moh Ke Dhaage", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/02%20-%20Moh%20Moh%20Ke%20Dhaage%20-%20Anu%20malik%20-%20Monali%20Thakur%20%20%EF%BD%9C%EF%BD%9C%20Phaninarayana%20Veetar%20instrumental%20cover.mp4" },
+  { title: "Kabhi Kabhi Mere Dil Mein ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/03%20-%20Kabhi%20Kabhi%20Mere%20Dil%20Mein%20%EF%BD%9C%EF%BD%9C%20reprised%20%20Instrumental%20version%20on%20veena%20%EF%BD%9C%EF%BD%9C%20Phani%20narayana.mp4" },
+  { title: "Tum hi ho ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/04%20-%20Tum%20hi%20ho%20reload%20with%20veena%20%EF%BD%9C%EF%BD%9C%20Aashiqui%202%20bollywood's%20biggest%20hit%20on%20Phaniveena%20in%20Sunday%20specials.mp4" },
+  { title: "Waka Waka Sitar", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/05%20-%20Waka%20Waka%20Acapella%20Veena%20Instrumental%20%EF%BD%9C%EF%BD%9C%20Stringwings%20%EF%BD%9C%EF%BD%9C%20westren%20notes%20on%20indian%20strings%20%EF%BD%9C%EF%BD%9C.mp4" },
+  { title: "Saagar Kinare (The Unwind Mix)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/08%20-%20Saagar%20Kinare%20(The%20Unwind%20Mix)%20%20I%20Arnab%20Chakraborty%20&%20Anwesshaa%20I%20Sagar%20Kinare%20Dil%20Ye%20Pukare.mp4" },
+  { title: "Saagar Kinare (The Unwind Instrumental)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/09%20-%20Saagar%20Kinare%20(The%20Unwind%20Instrumental)%20by%20Shomu%20Seal.mp4" },
+  { title: "Zikr By AR Rahman", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/12%20-%20Zikr%20By%20AR%20Rahman.mp4" },
+
+
+  { title: "Tu Hi Mera", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/15%20-%20Tu%20Hi%20Mera%20-%20Jannat%202%20(Classic%20Cover)%20-%20Aakash%20Gandhi%20(ft.%20Jonita%20Gandhi%20&%20Sahil%20Khan).mp4" },
+  { title: "Pani Da Rang (Acoustic Cover)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/16%20-%20Pani%20Da%20Rang%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(feat%20Jonita%20Gandhi).mp4" },
+  { title: "Bol Do Na Zara ", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/17%20-%20Bol%20Do%20Na%20Zara%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(ft%20Jonita%20Gandhi,%20Sahil%20Khan,%20&%20Rax%20Timyr).mp4" },
+  { title: "Dil Hai Mushkil", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/18%20-%20Ae%20Dil%20Hai%20Mushkil%20(Acoustic%20Cover)%20-%20Aakash%20Gandhi%20(ft.%20Jonita%20Gandhi).mp4" },
+  { title: "Kabhi Jo Badal Barse", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/19%20-%20Kabhi%20Jo%20Badal%20Barse%20%EF%BD%9C%20Arijit%20Singh%20%EF%BD%9C%20Zendria.mp4" },
+  { title: "Bol Do Na Zara (Azhar)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/20%20-%20Bol%20Do%20Na%20Zara%20(Azhar)%20%EF%BD%9C%20Female%20Cover%20by%20Shirley%20Setia%20ft.%20Antareep%20Hazarika,%20Darrel%20Mascarenhas.mp4" },
+  { title: "ULTIMATE BOLLYWOOD MASHUP!! ft Shirley Setia", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/21%20-%20ULTIMATE%20BOLLYWOOD%20MASHUP!!%20ft%20Shirley%20Setia.mp4" },
+  { title: "Galliyan - Ek Villain", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/22%20-%20Galliyan%20-%20Ek%20Villain%20(Ankit%20Tiwari)%20%EF%BD%9C%20Female%20Cover%20by%20Shirley%20Setia%20ft.%20The%20Gunsmith.mp4" },
+  { title: "Sanam Re", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/23%20-%20Sanam%20Re%20%EF%BD%9C%20Female%20Cover%20by%20Shirley%20Setia%20ft.%20Kushal%20Chheda%20%EF%BD%9C%20(Arijit%20Singh).mp4" },
+  { title: "Kya Hua Tera Wada", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/24%20-%20Kya%20Hua%20Tera%20Wada%20-%20Unplugged%20%EF%BD%9C%20Pranav%20Chandran%20%EF%BD%9C%20Trending%20Songs%20%EF%BD%9C%20Pehchan%20Music%20%EF%BD%9C%20Old%20Hindi%20Songs.mp4" },
+  { title: "Kabhi Kabhi Mere Dil Me", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/25%20-%20Kabhi%20Kabhi%20Mere%20Dil%20Mein%20-%20Unplugged%20%EF%BD%9C%20Karan%20Nawani%20%EF%BD%9C%20Kabhi%20Kabhie%20%EF%BD%9C%20Old%20Hindi%20Songs.mp4" },
+  { title: "Luka Chuppi", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/27%20-%20Luka%20Chuppi%20%EF%BD%9C%20Pranav%20Chandran%20&%20Delsy%20Ninan%20(Cover)%20%EF%BD%9C%20Rang%20De%20Basanti%20%EF%BD%9C%20A.R.%20Rahman,%20Lata%20Mangeshkar.mp4" },
+  { title: "Ladki Badi Anjani Hai", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/28%20-%20Ladki%20Badi%20Anjani%20Hai%20-%20Reprised%20Cover%20%EF%BD%9C%20Piyush%20Shankar%20%EF%BD%9C%20Kuch%20Kuch%20Hota%20Hai%20%EF%BD%9C%20Shahrukh%20Khan%20%EF%BD%9C%20Kajol.mp4" },
+  { title: "Kuch Kuch Hota Hai", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/29%20-%20Kuch%20Kuch%20Hota%20Hai%20-%20Unplugged%20Cover%20%EF%BD%9C%20Rahul%20Jain%20%EF%BD%9C%20Shahrukh%20Khan%20%EF%BD%9C%20Kajol.mp4" },
+  { title: "Suraj Hua Maddham", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/30%20-%20Suraj%20Hua%20Maddham%20-%20Unplugged%20Cover%20%EF%BD%9C%20Rahul%20Jain%20%EF%BD%9C%20K3G%20%EF%BD%9C%20Shahrukh%20Khan%20%EF%BD%9C%20Kajol.mp4" },
+  { title: "Bheegi Bheegi Raaton Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/31%20-%20Bheegi%20Bheegi%20Raaton%20Mein%20-%20Unplugged%20Cover%20%EF%BD%9C%20Stebin%20Ben%20%EF%BD%9C%20Adnan%20Sami.mp4" },
+  { title: "Mere Haath Mein", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/32%20-%20Mere%20Haath%20Mein%20-%20Unplugged%20Cover%20%EF%BD%9C%20Trishita%20%EF%BD%9C%20Fanaa%20%EF%BD%9C%20Aamir%20Khan,%20Kajol.mp4" },
+  { title: "Humko Humise Chura Lo", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/33%20-%20Humko%20Humise%20Chura%20Lo%20-%20Unplugged%20Cover%20%EF%BD%9C%20Trishita%20%EF%BD%9C%20Mohabbatein%20%EF%BD%9C%20Shah%20Rukh%20Khan%20%EF%BD%9C%20Aishwarya%20Rai.mp4" },
+  { title: "Tum Mile", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/34%20-%20Tum%20Mile%20-%20Unplugged%20Cover%20%EF%BD%9C%20Trishita%20Recs%20%EF%BD%9C%20Pritam%20%EF%BD%9C%20Emraan%20Hashmi%20%EF%BD%9C%20Soha%20Ali%20Khan.mp4" },
+  { title: "Hale Dil", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/35%20-%20Hale%20dil%20%EF%BD%9C%20Murder%202%20%EF%BD%9C%20Emraan%20Hashmi%20%EF%BD%9C%20Cover%20by%20Anushka%20Gupta.mp4" },
+  { title: "Tum Mile (Vicky Singh Cover)", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/36%20-%20Tum%20Mile%20-%20Unplugged%20%EF%BD%9C%20Vicky%20Singh%20%EF%BD%9C%20Cover%20Version%20%EF%BD%9C%20Pritam%20%EF%BD%9C%20Neeraj%20S%20%EF%BD%9C%20Kumaar%20%EF%BD%9C%20Emraan%20Hashmi.mp4" },
+  { title: "Kaisa Tera Ishq Hai", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/37%20-%20Kaisa%20Tera%20Ishq%20Hai%20-%20Aayushmaan%20Rana%20%EF%BD%9C%20New%20Hindi%20Song%202024%20%EF%BD%9C%20Pehchan%20Music.mp4" },
+  { title: "Humsafar", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/39%20-%20Humsafar%20Song%20%20%EF%BD%9C%20Dhvani%20Bhanushali%20%EF%BD%9C%20T-Series%20Acoustics%20%EF%BD%9C%20Akhil%20Sachdeva%20%EF%BD%9CAhmed%20Khan%20%EF%BD%9CTanishk%20Bagchi.mp4" },
+  { title: "Maahi Ve", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/40%20-%20Maahi%20Ve%20Unplugged%20Video%20Song%20%20%EF%BD%9C%20T-Series%20Acoustics%20%EF%BD%9C%20Neha%20Kakkar%E2%81%A0%E2%81%A0%E2%81%A0%E2%81%A0%20%EF%BD%9C%20T-Series.mp4" },
+  { title: "Kaise Mujhe Tum", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/41%20-%20Kaise%20Mujhe%20Tum%20Video%20Song%20%EF%BD%9C%20Mohammed%20Irfan%20%EF%BD%9C%20%20T-Series%20Acoustics%20%EF%BD%9C%20Hindi%20Song%202017.mp4" },
+  { title: "Humdard", url: "https://github.com/rajatmodi62/site_media/raw/refs/heads/main/42%20-%20Humdard%EF%BC%9A%20Karan%20Bawa%20(Cover%20Song)%20T-Series%20Acoustics%20%EF%BD%9C%20Ek%20Villan.mp4" },
+  // { title: "", url: "" },
+  // { title: "", url: "" },
+  // { title: "", url: "" },
+
+    
+
+
+
+
+
+];
+
+  let currentVideoIndex = 0;
+  let videoPlayer;
+
   document.addEventListener("DOMContentLoaded", function() {
+    videoPlayer = document.getElementById('raw-player');
     const progressBar = document.getElementById('progress-bar');
     const progressContainer = document.getElementById('progress-container');
-    const postContent = document.querySelector('.post-content');
     const terminal = document.getElementById('media-terminal');
     const handle = document.getElementById('terminal-handle');
+    const playlist = document.getElementById('playlist');
+    const postContent = document.querySelector('.post-content');
+    const shuffleBtn = document.getElementById('shuffle-btn');
+
+    mediaList.forEach((media, index) => {
+        const item = document.createElement('div');
+        item.className = 'playlist-item';
+        item.innerHTML = `> ${media.title}`;
+        item.onclick = () => playVideo(index);
+        playlist.appendChild(item);
+    });
+
+    function playVideo(index) {
+        currentVideoIndex = index;
+        videoPlayer.src = mediaList[index].url;
+        videoPlayer.load();
+        videoPlayer.play().catch(e => console.log("Autoplay blocked or link broken"));
+        updatePlaylistUI(index);
+    }
+
+    function playNext() {
+        currentVideoIndex = (currentVideoIndex + 1) % mediaList.length;
+        playVideo(currentVideoIndex);
+    }
+
+    function updatePlaylistUI(index) {
+        const items = document.querySelectorAll('.playlist-item');
+        items.forEach(el => el.classList.remove('playing'));
+        if(items[index]) {
+            items[index].classList.add('playing');
+            items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }
+
+    videoPlayer.onended = () => playNext();
+
+    shuffleBtn.addEventListener('click', (e) => { 
+        e.stopPropagation(); 
+        playVideo(Math.floor(Math.random() * mediaList.length)); 
+    });
+
+    function toggleTerminal(forceClose = false) {
+        if (forceClose) terminal.classList.remove('active');
+        else terminal.classList.toggle('active');
+        handle.innerText = terminal.classList.contains('active') ? '[ CLOSE ]' : '[ MEDIA ]';
+    }
+
+    handle.addEventListener('click', (e) => { e.stopPropagation(); toggleTerminal(); });
+    
+    if(postContent) {
+        postContent.addEventListener('click', () => { 
+            if (terminal.classList.contains('active')) toggleTerminal(true); 
+        });
+    }
 
     window.addEventListener('scroll', () => {
         const winScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -102,23 +245,14 @@ layout: default
         window.scrollTo({ top: (e.clientX / containerWidth) * totalHeight, behavior: 'smooth' });
     });
 
-    if (postContent && terminal) {
-        postContent.addEventListener('click', () => {
-            if (terminal.classList.contains('active')) {
-                terminal.classList.remove('active');
-                if (handle) handle.innerText = '[ MEDIA ]';
-            }
-        });
-    }
-
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") {
-            if (terminal && terminal.classList.contains('active')) {
-                // handled by defaults.html
-            } else {
-                window.location.href = "{{ site.baseurl }}/";
-            }
+            if (terminal.classList.contains('active')) toggleTerminal(true);
+            else window.location.href = "{{ site.baseurl }}/";
         }
     });
+
+    videoPlayer.src = mediaList[0].url;
+    updatePlaylistUI(0);
   });
 </script>
