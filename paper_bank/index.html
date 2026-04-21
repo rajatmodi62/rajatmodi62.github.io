@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Archive | Mortal Machine Edition</title>
+    <style>
+        /* ----------------------------------------------------------*/
+        /* Theme Variables */
+        /* ----------------------------------------------------------*/
+        :root {
+            --bg-body: #352700;
+            --bg-header: #4A3B12;
+            --text-main: #e2e2e4;
+            --text-muted: #f4f4f5;
+            --text-post-date: #D4AF37;
+            --link-color: #38bdf8;
+            --border-header-bottom: #D4AF37;
+            --border-general: rgba(232, 232, 232, 0.1);
+            --quote-border: #D4AF37;
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0d0d0e;
+            --bg-header: #18181b;
+            --text-main: #e2e2e4;
+            --text-muted: #f4f4f5;
+            --link-color: #38bdf8;
+            --border-header-bottom: #ffe6b8;
+            --border-general: #27272a;
+        }
+
+        /* ----------------------------------------------------------*/
+        /* Base Styles */
+        /* ----------------------------------------------------------*/
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Courier New', Courier, monospace; }
+
+        /* ----------------------------------------------------------*/
+        /* The 2-Column Grid Layout */
+        /* ----------------------------------------------------------*/
+        .mortal-machine-wrapper {
+            display: grid;
+            grid-template-columns: 320px 1fr; /* Sidebar fixed, Table fluid */
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .sidebar-left {
+            background-color: var(--bg-body);
+            border-right: 2px solid var(--border-header-bottom);
+            padding: 40px 25px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .main-column {
+            background-color: var(--bg-body);
+            display: flex;
+            flex-direction: column;
+            min-width: 0; /* Prevents table from breaking grid */
+        }
+
+        header.terminal-header {
+            background-color: var(--bg-header);
+            padding: 20px 40px;
+            border-bottom: 2px solid var(--border-header-bottom);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* ----------------------------------------------------------*/
+        /* Inputs & UI Elements */
+        /* ----------------------------------------------------------*/
+        .filter-group { margin-bottom: 25px; }
+        
+        label {
+            display: block;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            font-weight: 900;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        input, select {
+            width: 100%;
+            background: var(--bg-header);
+            border: 1px solid var(--quote-border);
+            padding: 12px;
+            color: var(--text-main);
+            font-family: 'Courier New', monospace;
+            outline: none;
+        }
+
+        button.primary-btn {
+            background: var(--link-color);
+            color: #000;
+            border: none;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-weight: 900;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        button.secondary-btn {
+            background: transparent;
+            border: 1px solid var(--link-color);
+            color: var(--link-color);
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-weight: 900;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* ----------------------------------------------------------*/
+        /* Table Styles */
+        /* ----------------------------------------------------------*/
+        .table-container {
+            flex: 1;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            min-width: 700px; /* Ensures readability on smaller windows */
+        }
+
+        thead th {
+            text-align: left;
+            font-size: 11px;
+            color: var(--text-post-date);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-general);
+            text-transform: uppercase;
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-general);
+            transition: background 0.2s;
+        }
+
+        tbody td { padding: 20px; vertical-align: top; }
+
+        .paper-title { font-weight: 900; font-size: 1.1rem; line-height: 1.2; margin-bottom: 5px; }
+        .paper-authors { color: var(--text-post-date); font-size: 0.85rem; font-weight: 400; }
+        .cite-count { color: var(--link-color); font-weight: 900; font-size: 1.1rem; }
+
+        .badge-new {
+            background: #ff4444;
+            color: white;
+            font-size: 9px;
+            padding: 2px 5px;
+            margin-left: 8px;
+            font-family: sans-serif;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 800px) {
+            .mortal-machine-wrapper { grid-template-columns: 1fr; }
+            .sidebar-left { height: auto; position: relative; border-right: none; border-bottom: 2px solid var(--border-header-bottom); }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+<div class="mortal-machine-wrapper">
+    <aside class="sidebar-left">
+        <h2 style="color: var(--link-color); font-size: 1.3rem; margin-bottom: 5px; font-weight: 800;">◈ PAPER BANK</h2>
+        <p style="color: var(--text-post-date); font-size: 10px; font-weight: 800; letter-spacing: 2px; margin-bottom: 40px;">RESEARCH_LOG_V2</p>
+
+        <div class="filter-group">
+            <label>[ SEARCH_QUERY ]</label>
+            <input type="text" id="searchMain" oninput="debouncedFilter()" placeholder="Keywords...">
+        </div>
+
+        <div class="filter-group">
+            <label>[ AUTHOR_FILTER ]</label>
+            <input type="text" id="searchAuthor" list="authorSuggestions" oninput="debouncedFilter()" placeholder="e.g. Hinton">
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+            <div style="flex:1">
+                <label>MIN_YR</label>
+                <input type="number" id="yearMin" oninput="debouncedFilter()" placeholder="1990">
+            </div>
+            <div style="flex:1">
+                <label>MAX_YR</label>
+                <input type="number" id="yearMax" oninput="debouncedFilter()" placeholder="2026">
+            </div>
+        </div>
+
+        <button class="primary-btn" onclick="saveState()">SAVE PROGRESS</button>
+        <button class="secondary-btn" onclick="exportSelectedCSV()">EXPORT TICKED (.CSV)</button>
+
+        <div id="stats" style="margin-top: 30px; font-family: monospace; font-size: 11px; text-align: center; color: var(--text-post-date); border: 1px dashed var(--border-general); padding: 15px;">
+            0 MATCHES | 0 TICKED
+        </div>
+
+        <datalist id="authorSuggestions"></datalist>
+    </aside>
+
+    <main class="main-column">
+        <header class="terminal-header">
+            <h1 style="color: var(--text-main); font-size: 1.2rem; font-weight: 900;">MORTAL_MACHINE_DATABASE.DB</h1>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <label style="margin-bottom: 0; color: var(--text-post-date);">SORT:</label>
+                <select id="sortSelect" onchange="filterAndRender()" style="width: auto; padding: 5px 15px;">
+                    <option value="citations">Citations</option>
+                    <option value="year">Newest</option>
+                    <option value="title">A-Z</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 60px; text-align: center;">TICK</th>
+                        <th>ARTICLE_INFORMATION</th>
+                        <th style="width: 120px;">CITES</th>
+                        <th style="width: 100px;">YEAR</th>
+                        <th style="text-align: right; width: 120px;">ACCESS</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+
+            <div id="loadMoreContainer" style="text-align: center; padding: 50px; display: none;">
+                <button class="secondary-btn" style="width: 250px;" onclick="increaseLimit()">[ LOAD_MORE_ENTRIES ]</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="data.js"></script>
+<script>
+    let allPapers = typeof PAPERS_DATA !== 'undefined' ? PAPERS_DATA : [];
+    let selectedIds = new Set(JSON.parse(localStorage.getItem('selectedPapers')) || []);
+    let renderLimit = 50; 
+    let filterTimeout;
+
+    function renderTable(data) {
+        const tbody = document.getElementById('tableBody');
+        const stats = document.getElementById('stats');
+        const loadMore = document.getElementById('loadMoreContainer');
+        tbody.innerHTML = '';
+        
+        const visibleData = data.slice(0, renderLimit);
+        
+        visibleData.forEach((paper) => {
+            const isSelected = selectedIds.has(paper.url);
+            const isRecent = paper.year >= 2025;
+            const row = document.createElement('tr');
+            
+            if (isSelected) row.style.backgroundColor = "rgba(212, 175, 55, 0.08)";
+
+            row.innerHTML = `
+                <td style="text-align: center; padding-top: 25px;">
+                    <input type="checkbox" ${isSelected ? 'checked' : ''} 
+                           onchange="toggleSelection('${paper.url}')" 
+                           style="width: 18px; height: 18px; accent-color: var(--link-color); cursor: pointer;">
+                </td>
+                <td>
+                    <div class="paper-title">
+                        ${paper.title}
+                        ${isRecent ? '<span class="badge-new">NEW</span>' : ''}
+                    </div>
+                    <div class="paper-authors">${paper.authors}</div>
+                </td>
+                <td class="cite-count" style="padding-top: 25px;">${Number(paper.citations).toLocaleString()}</td>
+                <td style="font-weight: 800; padding-top: 25px;">${Math.floor(paper.year)}</td>
+                <td style="text-align: right; padding-top: 25px;">
+                    <a href="${paper.doi}" target="_blank" style="color: var(--link-color); font-size: 10px; text-decoration: none; font-weight: 900; display: block; margin-bottom: 5px;">[DOI]</a>
+                    <a href="${paper.url}" target="_blank" style="color: var(--text-muted); font-size: 10px; text-decoration: none; font-weight: 900; display: block;">[ALEX]</a>
+                </td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        stats.innerText = `${data.length} MATCHES | ${selectedIds.size} TICKED`;
+        loadMore.style.display = data.length > renderLimit ? 'block' : 'none';
+    }
+
+    function debouncedFilter() {
+        clearTimeout(filterTimeout);
+        filterTimeout = setTimeout(() => {
+            renderLimit = 50;
+            filterAndRender();
+        }, 250);
+    }
+
+    function filterAndRender() {
+        const search = document.getElementById('searchMain').value.toLowerCase();
+        const author = document.getElementById('searchAuthor').value.toLowerCase();
+        const minYear = parseInt(document.getElementById('yearMin').value) || 0;
+        const maxYear = parseInt(document.getElementById('yearMax').value) || 3000;
+        const sort = document.getElementById('sortSelect').value;
+
+        let filtered = allPapers.filter(p => {
+            return p.title.toLowerCase().includes(search) && 
+                   p.authors.toLowerCase().includes(author) && 
+                   p.year >= minYear && p.year <= maxYear;
+        });
+
+        if (sort === 'citations') filtered.sort((a, b) => b.citations - a.citations);
+        if (sort === 'year') filtered.sort((a, b) => b.year - a.year);
+        if (sort === 'title') filtered.sort((a, b) => a.title.localeCompare(b.title));
+
+        renderTable(filtered);
+    }
+
+    function increaseLimit() {
+        renderLimit += 100;
+        filterAndRender();
+    }
+
+    function toggleSelection(id) {
+        if (selectedIds.has(id)) selectedIds.delete(id);
+        else selectedIds.add(id);
+        filterAndRender();
+    }
+
+    function saveState() {
+        localStorage.setItem('selectedPapers', JSON.stringify([...selectedIds]));
+        alert('Archive state saved.');
+    }
+
+    function exportSelectedCSV() {
+        if (selectedIds.size === 0) { alert("Select items first."); return; }
+        const selectedData = allPapers.filter(p => selectedIds.has(p.url));
+        const headers = ["title", "authors", "citations", "year", "doi", "url"];
+        const csvRows = [headers.join(','), ...selectedData.map(row => headers.map(f => `"${String(row[f]||"").replace(/"/g, '""')}"`).join(','))];
+        const blob = new Blob([csvRows.join('\n')], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `archive_export_${Date.now()}.csv`;
+        a.click();
+    }
+
+    // Auto-init autocompletes
+    (function() {
+        const authorSet = new Set();
+        allPapers.forEach(p => String(p.authors).split(';').forEach(n => authorSet.add(n.trim())));
+        const authorList = document.getElementById('authorSuggestions');
+        [...authorSet].sort().slice(0, 100).forEach(a => {
+            const opt = document.createElement('option');
+            opt.value = a;
+            authorList.appendChild(opt);
+        });
+    })();
+
+    if (allPapers.length > 0) filterAndRender();
+</script>
+</body>
+</html>
