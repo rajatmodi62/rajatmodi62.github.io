@@ -3,117 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Archive | List of Most Cited Papers in AI/ML</title>
+    <title>◈ MORTAL MACHINE | HYPER-SCALE STREAM</title>
     <style>
-        /* ----------------------------------------------------------*/
-        /* Theme Variables */
-        /* ----------------------------------------------------------*/
         :root {
-            --bg-body: #352700;
-            --bg-header: #4A3B12;
+            --bg-body: #080809;
+            --bg-sidebar: rgba(13, 13, 14, 0.95);
+            --bg-header: rgba(24, 24, 27, 0.9);
             --text-main: #e2e2e4;
-            --text-muted: #f4f4f5;
-            --text-post-date: #D4AF37;
+            --text-muted: #a1a1aa;
+            --text-gold: #D4AF37;
             --link-color: #38bdf8;
-            --border-header-bottom: #D4AF37;
-            --border-general: rgba(232, 232, 232, 0.1);
-            --quote-border: #D4AF37;
+            --border-gold: #D4AF37;
+            --border-dim: #27272a;
+            --row-height: 110px; 
         }
 
-        [data-theme="dark"] {
-            --bg-body: #0d0d0e;
-            --bg-header: #18181b;
-            --text-main: #e2e2e4;
-            --text-muted: #f4f4f5;
-            --link-color: #38bdf8;
-            --border-header-bottom: #ffe6b8;
-            --border-general: #27272a;
-        }
-
-        /* ----------------------------------------------------------*/
-        /* Base Styles */
-        /* ----------------------------------------------------------*/
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Helvetica', Arial, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             background-color: var(--bg-body);
             color: var(--text-main);
-            line-height: 1.5;
-            overflow-x: hidden;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
         h1, h2, h3 { font-family: 'Courier New', Courier, monospace; }
 
-        /* ----------------------------------------------------------*/
-        /* The 2-Column Grid Layout */
-        /* ----------------------------------------------------------*/
         .mortal-machine-wrapper {
             display: grid;
-            grid-template-columns: 320px 1fr; /* Sidebar fixed, Table fluid */
-            min-height: 100vh;
+            grid-template-columns: 340px 1fr;
+            height: 100vh;
             width: 100%;
         }
 
         .sidebar-left {
-            background-color: var(--bg-body);
-            border-right: 2px solid var(--border-header-bottom);
-            padding: 40px 25px;
-            position: sticky;
-            top: 0;
-            height: 100vh;
+            background-color: var(--bg-sidebar);
+            backdrop-filter: blur(12px);
+            border-right: 2px solid var(--border-gold);
+            padding: 40px 30px;
             overflow-y: auto;
+            height: 100vh;
+            z-index: 101;
         }
 
-        .main-column {
-            background-color: var(--bg-body);
-            display: flex;
-            flex-direction: column;
-            min-width: 0; /* Prevents table from breaking grid */
-        }
-
-        header.terminal-header {
-            background-color: var(--bg-header);
-            padding: 20px 40px;
-            border-bottom: 2px solid var(--border-header-bottom);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        /* ----------------------------------------------------------*/
-        /* Inputs & UI Elements */
-        /* ----------------------------------------------------------*/
         .filter-group { margin-bottom: 25px; }
         
         label {
             display: block;
             font-family: 'Courier New', monospace;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 900;
-            color: var(--text-muted);
+            color: var(--text-gold);
             margin-bottom: 8px;
-            letter-spacing: 1px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         input, select {
             width: 100%;
-            background: var(--bg-header);
-            border: 1px solid var(--quote-border);
+            background: #000;
+            border: 1px solid var(--border-dim);
             padding: 12px;
             color: var(--text-main);
             font-family: 'Courier New', monospace;
             outline: none;
         }
 
-        button.primary-btn {
-            background: var(--link-color);
+        input:focus { border-color: var(--text-gold); }
+
+        .primary-btn {
+            background: var(--text-gold);
             color: #000;
             border: none;
-            padding: 15px;
+            padding: 16px;
             font-family: 'Courier New', monospace;
             font-weight: 900;
             width: 100%;
@@ -122,139 +88,155 @@
             margin-bottom: 10px;
         }
 
-        button.secondary-btn {
-            background: transparent;
-            border: 1px solid var(--link-color);
-            color: var(--link-color);
-            padding: 12px;
+        .manual-box {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid var(--border-gold);
+            background: rgba(212, 175, 55, 0.05);
             font-family: 'Courier New', monospace;
-            font-weight: 900;
-            width: 100%;
-            cursor: pointer;
-            text-transform: uppercase;
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.6;
         }
 
-        /* ----------------------------------------------------------*/
-        /* Table Styles */
-        /* ----------------------------------------------------------*/
-        .table-container {
+        .main-column {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            position: relative;
+        }
+
+        header.terminal-header {
+            background-color: var(--bg-header);
+            padding: 20px 40px;
+            border-bottom: 2px solid var(--border-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        #viewport {
             flex: 1;
-            overflow-x: auto;
+            overflow-y: auto;
+            position: relative;
         }
 
-        table {
+        #virtual-spacer {
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            pointer-events: none;
+        }
+
+        #v-table {
             width: 100%;
             border-collapse: collapse;
-            font-family: 'Courier New', Courier, monospace;
-            min-width: 700px; /* Ensures readability on smaller windows */
+            position: absolute;
+            top: 0; left: 0;
+            table-layout: fixed;
         }
 
-        thead th {
-            text-align: left;
-            font-size: 11px;
-            color: var(--text-post-date);
-            padding: 15px 20px;
-            border-bottom: 1px solid var(--border-general);
-            text-transform: uppercase;
-            background-color: rgba(0,0,0,0.1);
+        .v-row { 
+            height: var(--row-height); 
+            border-bottom: 1px solid var(--border-dim);
         }
 
-        tbody tr {
-            border-bottom: 1px solid var(--border-general);
-            transition: background 0.2s;
+        .v-td { padding: 15px 25px; vertical-align: middle; overflow: hidden; }
+
+        .paper-title { 
+            font-family: 'Courier New', Courier, monospace; 
+            font-weight: 900; font-size: 1.1rem; 
+            color: #fff; display: block; 
+            white-space: nowrap; text-overflow: ellipsis; overflow: hidden; 
         }
-
-        tbody td { padding: 20px; vertical-align: top; }
-
-        .paper-title { font-weight: 900; font-size: 1.1rem; line-height: 1.2; margin-bottom: 5px; }
-        .paper-authors { color: var(--text-post-date); font-size: 0.85rem; font-weight: 400; }
+        
+        .paper-authors { color: var(--text-muted); font-size: 0.85rem; }
         .cite-count { color: var(--link-color); font-weight: 900; font-size: 1.1rem; }
 
-        .badge-new {
-            background: #ff4444;
-            color: white;
-            font-size: 9px;
-            padding: 2px 5px;
-            margin-left: 8px;
-            font-family: sans-serif;
-            vertical-align: middle;
-        }
-
-        @media (max-width: 800px) {
-            .mortal-machine-wrapper { grid-template-columns: 1fr; }
-            .sidebar-left { height: auto; position: relative; border-right: none; border-bottom: 2px solid var(--border-header-bottom); }
+        #stats { 
+            margin-top: 30px; border: 1px solid var(--border-gold); 
+            padding: 15px; text-align: center; 
+            color: var(--text-gold); font-family: monospace; 
+            background: rgba(212, 175, 55, 0.05);
         }
     </style>
 </head>
-<body data-theme="dark">
+<body>
 
 <div class="mortal-machine-wrapper">
     <aside class="sidebar-left">
-        <h2 style="color: var(--link-color); font-size: 1.3rem; margin-bottom: 5px; font-weight: 800;">◈ PAPER BANK</h2>
-        <p style="color: var(--text-post-date); font-size: 10px; font-weight: 800; letter-spacing: 2px; margin-bottom: 40px;">RESEARCH_LOG_V2</p>
+        <h2 style="color: var(--text-gold); font-size: 1.5rem; margin-bottom: 4px; font-weight: 900;">◈ PAPER BANK</h2>
+        <p style="color: var(--text-gold); font-size: 10px; font-weight: 800; letter-spacing: 3px; margin-bottom: 45px; opacity: 0.7;">A Collection by Rajat Modi</p>
 
         <div class="filter-group">
-            <label>[ SEARCH_QUERY ]</label>
-            <input type="text" id="searchMain" oninput="debouncedFilter()" placeholder="Keywords...">
+            <label>[ SEARCH_PAPER ]</label>
+            <input type="text" id="searchMain" oninput="handleUpdate()" placeholder="Keywords...">
+        </div>
+
+        <div class="filter-group">
+            <label>[ JUMP_TO_INDEX ]</label>
+            <div style="display: flex; gap: 8px;">
+                <input type="number" id="jumpIndex" placeholder="Row #">
+                <button onclick="jumpToIndex()" style="background: var(--bg-header); border: 1px solid var(--text-gold); color: var(--text-gold); padding: 0 20px; cursor: pointer; font-family: monospace; font-weight: 900;">GO</button>
+            </div>
         </div>
 
         <div class="filter-group">
             <label>[ AUTHOR_FILTER ]</label>
-            <input type="text" id="searchAuthor" list="authorSuggestions" oninput="debouncedFilter()" placeholder="e.g. Hinton">
+            <input type="text" id="searchAuthor" list="authorSuggestions" oninput="handleAuthorInput()" placeholder="Type to suggest personnel...">
+            <datalist id="authorSuggestions"></datalist>
         </div>
 
-        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+        <div style="display: flex; gap: 12px; margin-bottom: 30px;">
             <div style="flex:1">
-                <label>MIN_YR</label>
-                <input type="number" id="yearMin" oninput="debouncedFilter()" placeholder="1990">
+                <label>YR_MIN</label>
+                <input type="number" id="yearMin" oninput="handleUpdate()" placeholder="1990">
             </div>
             <div style="flex:1">
-                <label>MAX_YR</label>
-                <input type="number" id="yearMax" oninput="debouncedFilter()" placeholder="2026">
+                <label>YR_MAX</label>
+                <input type="number" id="yearMax" oninput="handleUpdate()" placeholder="2026">
             </div>
         </div>
 
-        <button class="primary-btn" onclick="saveState()">SAVE PROGRESS</button>
-        <button class="secondary-btn" onclick="exportSelectedCSV()">EXPORT TICKED (.CSV)</button>
+        <button class="primary-btn" onclick="saveState()">Commit Progress</button>
+        <button class="primary-btn" style="background: transparent; border: 1px solid var(--text-gold); color: var(--text-gold);" onclick="exportSelectedCSV()">Export Records</button>
 
-        <div id="stats" style="margin-top: 30px; font-family: monospace; font-size: 11px; text-align: center; color: var(--text-post-date); border: 1px dashed var(--border-general); padding: 15px;">
-            0 MATCHES | 0 TICKED
+        <div id="stats">INITIATING...</div>
+
+        <div class="manual-box">
+            <div style="color: var(--text-gold); font-weight: 900; margin-bottom: 12px; border-bottom: 1px solid var(--border-gold); padding-bottom: 8px;">[ SYSTEM_MANUAL ]</div>
+            • <b>SEARCH:</b> Global title filter.<br>
+            • <b>AUTOSUGGEST:</b> Authors update as you type.<br>
+            • <b>VIRTUAL:</b> Zero-lag million-row stream.<br>
+            • <b>EXPORT:</b> CSV data stream.<br>
         </div>
-
-        <datalist id="authorSuggestions"></datalist>
     </aside>
 
     <main class="main-column">
         <header class="terminal-header">
-            <h1 style="color: var(--text-main); font-size: 1.2rem; font-weight: 900;">List of most cited papers in AI/ML</h1>
+            <h1 style="color: #fff; font-size: 1.3rem; font-weight: 900; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--text-gold);">◈</span> Browse through  all AI Research
+            </h1>
+            
             <div style="display: flex; align-items: center; gap: 15px;">
-                <label style="margin-bottom: 0; color: var(--text-post-date);">SORT:</label>
-                <select id="sortSelect" onchange="filterAndRender()" style="width: auto; padding: 5px 15px;">
+                <label style="margin-bottom: 0; color: var(--text-muted); font-size: 10px;">SORT:</label>
+                <select id="sortSelect" onchange="handleUpdate()" style="width: auto; padding: 6px 15px; background: #000;">
                     <option value="citations">Citations</option>
-                    <option value="year">Newest</option>
-                    <option value="title">A-Z</option>
+                    <option value="year">Year</option>
+                    <option value="title">Title</option>
+                </select>
+                <select id="sortOrder" onchange="handleUpdate()" style="width: auto; padding: 6px 15px; background: #000;">
+                    <option value="desc">DESC</option>
+                    <option value="asc">ASC</option>
                 </select>
             </div>
         </header>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 60px; text-align: center;">TICK</th>
-                        <th>ARTICLE_INFORMATION</th>
-                        <th style="width: 120px;">CITES</th>
-                        <th style="width: 100px;">YEAR</th>
-                        <th style="text-align: right; width: 120px;">ACCESS</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    </tbody>
+        <div id="viewport">
+            <div id="virtual-spacer"></div>
+            <table id="v-table">
+                <tbody id="v-body"></tbody>
             </table>
-
-            <div id="loadMoreContainer" style="text-align: center; padding: 50px; display: none;">
-                <button class="secondary-btn" style="width: 250px;" onclick="increaseLimit()">[ LOAD_MORE_ENTRIES ]</button>
-            </div>
         </div>
     </main>
 </div>
@@ -263,121 +245,160 @@
 <script>
     let allPapers = typeof PAPERS_DATA !== 'undefined' ? PAPERS_DATA : [];
     let selectedIds = new Set(JSON.parse(localStorage.getItem('selectedPapers')) || []);
-    let renderLimit = 50; 
-    let filterTimeout;
+    let filtered = [];
+    
+    const ROW_HEIGHT = 110;
+    const VISIBLE_COUNT = 25; 
+    
+    const viewport = document.getElementById('viewport');
+    const vBody = document.getElementById('v-body');
+    const vTable = document.getElementById('v-table');
+    const spacer = document.getElementById('virtual-spacer');
 
-    function renderTable(data) {
-        const tbody = document.getElementById('tableBody');
-        const stats = document.getElementById('stats');
-        const loadMore = document.getElementById('loadMoreContainer');
-        tbody.innerHTML = '';
+    // --- DYNAMIC AUTHOR SUGGESTIONS ---
+    function handleAuthorInput() {
+        const input = document.getElementById('searchAuthor');
+        const val = input.value.toLowerCase();
+        const datalist = document.getElementById('authorSuggestions');
         
-        const visibleData = data.slice(0, renderLimit);
-        
-        visibleData.forEach((paper) => {
-            const isSelected = selectedIds.has(paper.url);
-            const isRecent = paper.year >= 2025;
-            const row = document.createElement('tr');
-            
-            if (isSelected) row.style.backgroundColor = "rgba(212, 175, 55, 0.08)";
+        // Update results based on partial author match
+        handleUpdate();
 
-            row.innerHTML = `
-                <td style="text-align: center; padding-top: 25px;">
-                    <input type="checkbox" ${isSelected ? 'checked' : ''} 
-                           onchange="toggleSelection('${paper.url}')" 
-                           style="width: 18px; height: 18px; accent-color: var(--link-color); cursor: pointer;">
-                </td>
-                <td>
-                    <div class="paper-title">
-                        ${paper.title}
-                        ${isRecent ? '<span class="badge-new">NEW</span>' : ''}
-                    </div>
-                    <div class="paper-authors">${paper.authors}</div>
-                </td>
-                <td class="cite-count" style="padding-top: 25px;">${Number(paper.citations).toLocaleString()}</td>
-                <td style="font-weight: 800; padding-top: 25px;">${Math.floor(paper.year)}</td>
-                <td style="text-align: right; padding-top: 25px;">
-                    <a href="${paper.doi}" target="_blank" style="color: var(--link-color); font-size: 10px; text-decoration: none; font-weight: 900; display: block; margin-bottom: 5px;">[DOI]</a>
-                    <a href="${paper.url}" target="_blank" style="color: var(--text-muted); font-size: 10px; text-decoration: none; font-weight: 900; display: block;">[ALEX]</a>
-                </td>
-            `;
-            tbody.appendChild(row);
-        });
+        // Only update datalist if user has typed 2+ chars
+        if (val.length < 2) {
+            datalist.innerHTML = "";
+            return;
+        }
 
-        stats.innerText = `${data.length} MATCHES | ${selectedIds.size} TICKED`;
-        loadMore.style.display = data.length > renderLimit ? 'block' : 'none';
+        const matches = new Set();
+        // Scan papers to find authors matching the prefix
+        for (let i = 0; i < allPapers.length; i++) {
+            if (matches.size > 15) break; // Limit suggestions for performance
+            const authorsString = allPapers[i].authors;
+            if (authorsString.toLowerCase().includes(val)) {
+                authorsString.split(';').forEach(name => {
+                    const trimmed = name.trim();
+                    if (trimmed.toLowerCase().includes(val)) {
+                        matches.add(trimmed);
+                    }
+                });
+            }
+        }
+
+        datalist.innerHTML = Array.from(matches)
+            .map(m => `<option value="${m}">`)
+            .join("");
     }
 
-    function debouncedFilter() {
-        clearTimeout(filterTimeout);
-        filterTimeout = setTimeout(() => {
-            renderLimit = 50;
-            filterAndRender();
-        }, 250);
-    }
-
-    function filterAndRender() {
-        const search = document.getElementById('searchMain').value.toLowerCase();
-        const author = document.getElementById('searchAuthor').value.toLowerCase();
-        const minYear = parseInt(document.getElementById('yearMin').value) || 0;
-        const maxYear = parseInt(document.getElementById('yearMax').value) || 3000;
+    function handleUpdate() {
+        const q = document.getElementById('searchMain').value.toLowerCase();
+        const auth = document.getElementById('searchAuthor').value.toLowerCase();
+        const min = parseInt(document.getElementById('yearMin').value) || 0;
+        const max = parseInt(document.getElementById('yearMax').value) || 3000;
         const sort = document.getElementById('sortSelect').value;
+        const order = document.getElementById('sortOrder').value;
 
-        let filtered = allPapers.filter(p => {
-            return p.title.toLowerCase().includes(search) && 
-                   p.authors.toLowerCase().includes(author) && 
-                   p.year >= minYear && p.year <= maxYear;
+        filtered = [];
+        for (let i = 0; i < allPapers.length; i++) {
+            const p = allPapers[i];
+            const titleMatch = p.title.toLowerCase().includes(q);
+            const authorMatch = p.authors.toLowerCase().includes(auth);
+            if (titleMatch && authorMatch && p.year >= min && p.year <= max) {
+                filtered.push(p);
+            }
+        }
+
+        filtered.sort((a, b) => {
+            let valA = a[sort];
+            let valB = b[sort];
+            if (sort === 'title') return order === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
+            return order === 'desc' ? valB - valA : valA - valB;
         });
 
-        if (sort === 'citations') filtered.sort((a, b) => b.citations - a.citations);
-        if (sort === 'year') filtered.sort((a, b) => b.year - a.year);
-        if (sort === 'title') filtered.sort((a, b) => a.title.localeCompare(b.title));
-
-        renderTable(filtered);
+        spacer.style.height = (filtered.length * ROW_HEIGHT) + 'px';
+        document.getElementById('stats').innerText = `${filtered.length.toLocaleString()} RECORDS | ${selectedIds.size} TICKS`;
+        
+        render();
     }
 
-    function increaseLimit() {
-        renderLimit += 100;
-        filterAndRender();
+    function render() {
+        const scrollTop = viewport.scrollTop;
+        const startIndex = Math.max(0, Math.floor(scrollTop / ROW_HEIGHT));
+        const endIndex = Math.min(startIndex + VISIBLE_COUNT, filtered.length);
+        
+        vTable.style.transform = `translateY(${startIndex * ROW_HEIGHT}px)`;
+        
+        let html = '';
+        for (let i = startIndex; i < endIndex; i++) {
+            const p = filtered[i];
+            const isSelected = selectedIds.has(p.url);
+            html += `
+                <tr class="v-row" style="background: ${isSelected ? 'rgba(212, 175, 55, 0.12)' : 'transparent'}">
+                    <td class="v-td" style="width: 100px; text-align: center;">
+                        <div style="font-family: monospace; color: var(--text-gold); font-size: 11px; font-weight: 900; margin-bottom: 5px;">#${i + 1}</div>
+                        <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleSelection('${p.url}')" style="width: 20px; height: 20px; accent-color: var(--text-gold); cursor: pointer;">
+                    </td>
+                    <td class="v-td">
+                        <span class="paper-title">${p.title}</span>
+                        <span class="paper-authors">${p.authors}</span>
+                    </td>
+                    <td class="v-td" style="width: 140px; color: var(--link-color); font-weight: 900; font-size: 1.1rem;">
+                        ${Number(p.citations).toLocaleString()}
+                    </td>
+                    <td class="v-td" style="width: 100px; font-family: monospace; font-weight: 800;">
+                        ${Math.floor(p.year)}
+                    </td>
+                    <td class="v-td" style="width: 140px; text-align: right;">
+                        <a href="${p.url}" target="_blank" style="color: var(--text-gold); font-size: 11px; text-decoration: none; font-weight: 900; border: 1px solid var(--text-gold); padding: 5px 12px;">OPEN_PORTAL</a>
+                    </td>
+                </tr>
+            `;
+        }
+        vBody.innerHTML = html;
     }
 
-    function toggleSelection(id) {
-        if (selectedIds.has(id)) selectedIds.delete(id);
-        else selectedIds.add(id);
-        filterAndRender();
+    function jumpToIndex() {
+        const val = parseInt(document.getElementById('jumpIndex').value) - 1;
+        if (val >= 0 && val < filtered.length) {
+            viewport.scrollTop = val * ROW_HEIGHT;
+            render();
+            vTable.style.transition = "none";
+            vTable.style.opacity = "0.4";
+            setTimeout(() => {
+                vTable.style.transition = "opacity 0.4s";
+                vTable.style.opacity = "1";
+            }, 50);
+        } else {
+            alert("COORDINATE_OUT_OF_RANGE");
+        }
+    }
+
+    function toggleSelection(url) {
+        if (selectedIds.has(url)) selectedIds.delete(url);
+        else selectedIds.add(url);
+        render();
+        document.getElementById('stats').innerText = `${filtered.length.toLocaleString()} RECORDS | ${selectedIds.size} TICKS`;
     }
 
     function saveState() {
         localStorage.setItem('selectedPapers', JSON.stringify([...selectedIds]));
-        alert('Archive state saved.');
+        alert('DATA_PERSISTED');
     }
 
     function exportSelectedCSV() {
-        if (selectedIds.size === 0) { alert("Select items first."); return; }
         const selectedData = allPapers.filter(p => selectedIds.has(p.url));
-        const headers = ["title", "authors", "citations", "year", "doi", "url"];
-        const csvRows = [headers.join(','), ...selectedData.map(row => headers.map(f => `"${String(row[f]||"").replace(/"/g, '""')}"`).join(','))];
-        const blob = new Blob([csvRows.join('\n')], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
+        if (!selectedData.length) return;
+        const headers = ["title", "authors", "citations", "year", "url"];
+        const csv = [headers.join(','), ...selectedData.map(row => headers.map(f => `"${String(row[f]||"").replace(/"/g, '""')}"`).join(','))].join('\n');
+        const blob = new Blob([csv], { type: 'text/csv' });
         const a = document.createElement('a');
-        a.href = url;
-        a.download = `archive_export_${Date.now()}.csv`;
+        a.href = window.URL.createObjectURL(blob);
+        a.download = `archive_virtual_export_${Date.now()}.csv`;
         a.click();
     }
 
-    // Auto-init autocompletes
-    (function() {
-        const authorSet = new Set();
-        allPapers.forEach(p => String(p.authors).split(';').forEach(n => authorSet.add(n.trim())));
-        const authorList = document.getElementById('authorSuggestions');
-        [...authorSet].sort().slice(0, 100).forEach(a => {
-            const opt = document.createElement('option');
-            opt.value = a;
-            authorList.appendChild(opt);
-        });
-    })();
-
-    if (allPapers.length > 0) filterAndRender();
+    viewport.addEventListener('scroll', render, { passive: true });
+    window.onload = handleUpdate;
 </script>
 </body>
 </html>
