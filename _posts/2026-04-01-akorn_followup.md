@@ -92,9 +92,9 @@ Of those infinite lines, there is `only one 1 red line` which humans seem to pre
 
 However, in the image pixel space, there is no constraint governing "which" of the lines should be explicitly preferred by a neural network (since a face is an oval/circle for fat guys like me, and any line passing through the face looks identical).
 
-We may call this as the problem of searching for a canonical lock (tributing to hinton et al). 
+We may call this  problem by a name. 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Searching for a canonical lock </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The canonical lock </span>
 
 
 
