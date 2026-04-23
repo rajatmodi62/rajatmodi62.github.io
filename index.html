@@ -205,6 +205,34 @@ layout: default
             </div>
         </div>
         
+        
+    <div class="terminal-container" style="
+        background: #0a0a0a; 
+        border: 1px solid var(--border-header-bottom); 
+        padding: 15px; 
+        margin-bottom: 2.5rem; 
+        font-family: 'Courier New', Courier, monospace; 
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        ">
+    <div style="color: var(--link-color); font-size: 0.7rem; margin-bottom: 10px; opacity: 0.7; text-transform: uppercase; letter-spacing: 2px;">
+        [ System Status: Live Feed ]
+        </div>
+        <div id="terminal-text" style="color: #00ff41; font-size: 0.95rem; min-height: 1.5em; line-height: 1.4;">
+            <span id="terminal-content">Initializing...</span><span class="cursor">_</span>
+        </div>
+    </div>
+
+    <style>
+        .cursor {
+            animation: blink 1s infinite;
+            font-weight: bold;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
 
          <div class="paper-expansion-card" id="paperCard">
         <div class="card-header" onclick="togglePapers()">
@@ -623,3 +651,44 @@ document.addEventListener('keydown', function(event) {
 
 
 
+
+
+<script>
+    const newsItems = [
+    "> [Feb 2026] Sky2Ground accepted to CVPR 2026. ",
+    "> [April 2026] Asynchronous Perception Machine patent filed (USPTO A1).",
+    "> [April 2026] Received CVPR Broader Participation Grant",
+];
+
+let lastIndex = -1;
+
+function updateTerminal() {
+    const content = document.getElementById('terminal-content');
+    
+    // Pick a random index different from the last one
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * newsItems.length);
+    } while (randomIndex === lastIndex);
+    
+    lastIndex = randomIndex;
+    const text = newsItems[randomIndex];
+    
+    // Typewriter effect
+    content.innerHTML = "";
+    let i = 0;
+    const timer = setInterval(() => {
+        if (i < text.length) {
+            content.innerHTML += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(timer);
+        }
+    }, 30); // Speed of typing
+}
+
+// Initial trigger
+updateTerminal();
+// Cycle every 5 seconds
+setInterval(updateTerminal, 5000);
+</script>
