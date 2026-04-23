@@ -20,6 +20,8 @@ reads the js object, loads the data.
 
 supports ticking papers, and generating them.
 
+**right now papers.json is hosted on huggingface, so index.html streams that**
+
 ---
 
 todo: 
