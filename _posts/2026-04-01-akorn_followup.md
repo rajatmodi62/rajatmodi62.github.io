@@ -18,7 +18,7 @@ I cannot help, but reflect further what i did over these 5 years. Did i focus on
 
 The biggest question is if one should bet on encoding  `part whole hierarchies` in neural nets. Indeed, there are high chances `it is a WRONG bet`. The reason i stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627).
 
-There are only two other people i know who took this seriously, to the point it acts as a constant `itch` in their heads, and really `irritates them`. First,   Jeff Hawkins in his book [Thousand Brains](https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/1541675819). He eventually founded Numenta, and Celeste/Vivian/Sabutai (and team) there are doing some pretty cool work on theories of neo-cortex/ sparse-distributed memories. 
+There are only two other people i know who took this seriously, to the point it acts as a constant `itch` in their heads, and really `irritated them`. First,   Jeff Hawkins in his book [Thousand Brains](https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/1541675819). He eventually founded Numenta, and Celeste/Vivian/Sabutai (and team) there are doing some pretty cool work on theories of neo-cortex/ sparse-distributed memories. 
 
 Similarly,  David Marr in his [Vision book](https://www.amazon.com/Vision-Computational-Investigation-Representation-Information/dp/0716715678), investigated the  nature of coordinate frames, and higher order shape representations in the brain. Surprisingly, Hinton spent a couple of decades arguing for shape invariance/equivariance of rigid bodies, thereby closing this love triangle.  
 
@@ -88,9 +88,11 @@ It is possible to structure a tree in which the arrow through the face makes 135
 
 Thus, from a face's perspective there are infinite lines which could pass through it's center. Similarly, infinite lines can pass through lip. 
 
-Of those infinite lines, there is `only one 1 red line` which humans seem to prefer for the face as the choice of coordinate axis, and similarly for lip. However, in the image pixel space, there is no constraint governing "which" of the lines should be explicitly preferred by a neural network (since a face is a oval, and any line passing through the face looks identical).
+Of those infinite lines, there is `only one 1 red line` which humans seem to prefer for the face as the choice of coordinate axis, and similarly for lip. 
 
-We can call this problem as the problem of searching for a canonical lock. 
+However, in the image pixel space, there is no constraint governing "which" of the lines should be explicitly preferred by a neural network (since a face is an oval/circle for fat guys like me, and any line passing through the face looks identical).
+
+We call this as the problem of searching for a canonical lock. 
 
 
 
