@@ -14,7 +14,7 @@ def fetch_highly_cited_papers():
 
     # 2. Define the Query
     query = Works().filter(
-        cited_by_count=">300",
+        cited_by_count=">50",
         concepts={"id": concept_ids}
     ).sort(cited_by_count="desc")
 
