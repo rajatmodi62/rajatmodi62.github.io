@@ -14,9 +14,9 @@ I stand at a juncture of my life, where i have mentally `wrapped' up my PhD. The
 I cannot help, but reflect further what i did over these 5 years. Did i focus on correct problems? Will they actually have an impact? Or will it fade away over time, as what happened to Nerfs, CNNs.  But, surely there are some abstract principles which shall not change.  -->
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Should we bet on Part-Whole Hierarchies at all? </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The bet on Part-Whole Hierarchies at all </span>
 
-The biggest question is if one should bet on encoding  `part whole hierarchies` in neural nets. Indeed, there are high chances `it is a WRONG bet`. The reason i stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627).
+The biggest mystery is if one should bet on encoding  `part whole hierarchies` in neural nets. Indeed, there are high chances `it is a WRONG bet`. The reason i stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627).
 
 There are only two other people i know who took this seriously, to the point it acts as a constant `itch` in their heads, and really `irritated them`. First,   Jeff Hawkins in his book [Thousand Brains](https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/1541675819). He eventually founded Numenta, and Celeste/Vivian/Sabutai (and team) there are doing some pretty cool work on theories of neo-cortex/ sparse-distributed memories. 
 
@@ -92,8 +92,9 @@ Of those infinite lines, there is `only one 1 red line` which humans seem to pre
 
 However, in the image pixel space, there is no constraint governing "which" of the lines should be explicitly preferred by a neural network (since a face is an oval/circle for fat guys like me, and any line passing through the face looks identical).
 
-We call this as the problem of searching for a canonical lock. 
+We may call this as the problem of searching for a canonical lock (tributing to hinton et al). 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Searching for a canonical lock </span>
 
 
 
