@@ -40,7 +40,6 @@
             width: 100%;
         }
 
-        /* --- SIDEBAR FLEX ENGINE --- */
         .sidebar-left {
             background-color: var(--bg-sidebar);
             backdrop-filter: blur(12px);
@@ -80,23 +79,38 @@
             font-size: 11px; color: var(--text-muted); line-height: 1.4; flex-shrink: 0;
         }
 
-        /* --- VIEWPORT ENGINE --- */
         .main-column { display: flex; flex-direction: column; height: 100vh; position: relative; }
         header.terminal-header { background-color: var(--bg-header); padding: 20px 40px; border-bottom: 2px solid var(--border-gold); display: flex; justify-content: space-between; align-items: center; z-index: 100; }
 
         #viewport { flex: 1; overflow-y: auto; position: relative; scroll-behavior: auto; }
         #virtual-spacer { position: absolute; top: 0; left: 0; width: 100%; pointer-events: none; }
-        #v-table { width: 100%; border-collapse: collapse; position: absolute; top: 0; left: 0; table-layout: fixed; will-change: transform; }
+        
+        /* FIX: Changed table to a div container for better event handling */
+        #v-container { width: 100%; position: absolute; top: 0; left: 0; will-change: transform; pointer-events: none; }
 
+        /* FIX: Added pointer-events: auto to rows so links inside are clickable */
         .v-row { 
             height: var(--row-height); border-bottom: 1px solid var(--border-dim);
             position: absolute; width: 100%; display: flex; align-items: center;
-            backface-visibility: hidden;
+            backface-visibility: hidden; pointer-events: auto; z-index: 1;
         }
 
-        .v-td { padding: 15px 25px; flex: 1; overflow: hidden; vertical-align: middle; }
+        .v-td { padding: 15px 25px; flex: 1; overflow: hidden; }
         .paper-title { font-family: 'Courier New', Courier, monospace; font-weight: 900; font-size: 1.1rem; color: #fff; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
         .paper-authors { color: var(--text-muted); font-size: 0.85rem; }
+        
+        /* Ensure the portal link has a high hit-priority */
+        .portal-link {
+            color: var(--text-gold); 
+            font-size: 10px; 
+            text-decoration: none; 
+            font-weight: 900; 
+            border: 1px solid var(--text-gold); 
+            padding: 5px 12px;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+        .portal-link:hover { background: var(--text-gold); color: #000; }
     </style>
 </head>
 <body>
@@ -145,14 +159,11 @@
 
         <div class="manual-box">
             <div style="color: var(--text-gold); font-weight: 900; margin-bottom: 8px; border-bottom: 1px solid var(--border-gold); padding-bottom: 4px;">[ SYSTEM_MANUAL ]</div>
-             <b>Note:</b> This page loads millions of records, and does not hang like  arxiv <br>
+             <b>Note:</b> This page loads millions of records, and does not hang like arxiv <br>
              <b>Search Paper:</b> Enter title of the paper <br>
              <b>Jump To Index:</b> A particular row you wanna jump to.<br>
              <b> Commit Progress</b> You can tick papers and commit the state to local storage. Next time you load the page, it will restore it. <br>
-            <b>Export Records:</b> Exports all selected papers as CSV. You can open it in Excel or Google Sheets.<br>
-            <!-- • <b>STREAM:</b> Ingesting 512MB from Remote.<br>
-            • <b>MEMORY:</b> Slimmed ingest to prevent OOM.<br>
-            • <b>STABLE:</b> Clamped infinite scroll engine. -->
+            <b>Export Records:</b> Exports all selected papers as CSV.<br>
         </div>
     </aside>
 
@@ -175,9 +186,7 @@
 
         <div id="viewport">
             <div id="virtual-spacer"></div>
-            <table id="v-table">
-                <tbody id="v-body"></tbody>
-            </table>
+            <div id="v-container"></div>
         </div>
     </main>
 </div>
@@ -194,13 +203,11 @@
     let scrollScale = 1;
 
     const viewport = document.getElementById('viewport');
-    const vBody = document.getElementById('v-body');
+    const vContainer = document.getElementById('v-container');
     const spacer = document.getElementById('virtual-spacer');
-    const vTable = document.getElementById('v-table');
     
-    // const REMOTE_URL = "https://corsproxy.io/?" + encodeURIComponent("https://github.com/rajatmodi62/site_media_2/releases/download/push_paperdb/papers.json");
-    // const REMOTE_URL = "https://github.com/rajatmodi62/site_media_2/releases/download/push_paperdb/papers.json";
     const REMOTE_URL = "https://huggingface.co/datasets/rmodiucf/site_backend/resolve/main/papers.json?download=true";
+
     async function initVault() {
         const stats = document.getElementById('stats');
         try {
@@ -228,16 +235,12 @@
                         clean += '}';
                         const raw = JSON.parse(clean);
                         
-                        // MEMORY OPTIMIZATION: Only keep essential fields
-                        // This prevents 512MB text from crashing the browser RAM
                         allPapers.push({
                             title: raw.title,
                             authors: raw.authors,
                             citations: Number(raw.citations) || 0,
                             year: Number(raw.year) || 0,
                             url: raw.url || raw.doi,
-                            // Note: We don't pre-lowercase to save 500MB of RAM
-                            // Lowercasing happens on the fly during search
                         });
                         
                         count++;
@@ -275,7 +278,6 @@
         const sortField = document.getElementById('sortSelect').value;
         const order = document.getElementById('sortOrder').value;
 
-        // Perform search (Lowercasing on the fly to save RAM)
         filtered = allPapers.filter(p => {
             const titleMatch = (p.title || "").toLowerCase().includes(q);
             const authMatch = (p.authors || "").toLowerCase().includes(auth);
@@ -286,14 +288,12 @@
             const field = (sortField === 'title') ? 'title' : (sortField === 'citations' ? 'citations' : 'year');
             let valA = a[field];
             let valB = b[field];
-
             if (field === 'title') {
                 return order === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
             }
             return order === 'desc' ? valB - valA : valA - valB;
         });
 
-        // STABILIZED SCROLL MATH
         const totalVirtualHeight = filtered.length * ROW_HEIGHT;
         const vh = viewport.clientHeight;
 
@@ -312,14 +312,13 @@
     function render() {
         let virtualTop = viewport.scrollTop * scrollScale;
         const maxVirtualTop = Math.max(0, (filtered.length * ROW_HEIGHT) - viewport.clientHeight);
-        
-        // Anti-flicker boundary clamping
         if (virtualTop > maxVirtualTop) virtualTop = maxVirtualTop;
 
         const startIndex = Math.max(0, Math.floor(virtualTop / ROW_HEIGHT));
         const endIndex = Math.min(startIndex + VISIBLE_COUNT + 10, filtered.length);
         
-        vTable.style.transform = `translate3d(0, ${viewport.scrollTop}px, 0)`;
+        // Move the container to match scroll pos
+        vContainer.style.transform = `translate3d(0, ${viewport.scrollTop}px, 0)`;
 
         let html = '';
         for (let i = startIndex; i < endIndex; i++) {
@@ -328,31 +327,32 @@
             const isSelected = selectedIds.has(p.url);
             const relativeTop = (i * ROW_HEIGHT) - virtualTop;
             
+            // FIX: Using DIVs instead of TR/TD for absolute positioning stability
             html += `
-                <tr class="v-row" style="top: ${relativeTop}px; background: ${isSelected ? 'rgba(212, 175, 55, 0.12)' : 'transparent'}">
-                    <td class="v-td" style="max-width: 80px; text-align: center;">
+                <div class="v-row" style="top: ${relativeTop}px; background: ${isSelected ? 'rgba(212, 175, 55, 0.12)' : 'transparent'}">
+                    <div class="v-td" style="max-width: 80px; text-align: center;">
                         <div style="font-family: monospace; color: var(--text-gold); font-size: 11px;">#${i + 1}</div>
                         <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleSelection('${p.url}')" style="width: 18px; height: 18px; accent-color: var(--text-gold); cursor: pointer;">
-                    </td>
-                    <td class="v-td">
+                    </div>
+                    <div class="v-td">
                         <span class="paper-title" title="${p.title}">${p.title}</span>
                         <span class="paper-authors">${p.authors}</span>
-                    </td>
-                    <td class="v-td" style="max-width: 120px; color: var(--link-color); font-weight: 900;">${Number(p.citations).toLocaleString()}</td>
-                    <td class="v-td" style="max-width: 80px; font-family: monospace;">${p.year}</td>
-                    <td class="v-td" style="max-width: 140px; text-align: right;">
-                        <a href="${p.url}" target="_blank" style="color: var(--text-gold); font-size: 10px; text-decoration: none; font-weight: 900; border: 1px solid var(--text-gold); padding: 5px 12px;">OPEN_PORTAL</a>
-                    </td>
-                </tr>
+                    </div>
+                    <div class="v-td" style="max-width: 120px; color: var(--link-color); font-weight: 900;">${Number(p.citations).toLocaleString()}</div>
+                    <div class="v-td" style="max-width: 80px; font-family: monospace;">${p.year}</div>
+                    <div class="v-td" style="max-width: 140px; text-align: right;">
+                        <a href="${p.url}" target="_blank" class="portal-link">OPEN_PORTAL</a>
+                    </div>
+                </div>
             `;
         }
-        vBody.innerHTML = html;
+        vContainer.innerHTML = html;
     }
 
     function updateAuthorSuggestions() {
         const val = document.getElementById('searchAuthor').value.toLowerCase();
         const datalist = document.getElementById('authorSuggestions');
-        if (val.length < 3) return; // Only suggest after 3 chars for performance
+        if (val.length < 3) return;
         const matches = new Set();
         for (let i = 0; i < allPapers.length; i++) {
             if (matches.size > 15) break;
@@ -386,7 +386,7 @@
 
     function exportSelectedCSV() {
         const selectedData = allPapers.filter(p => selectedIds.has(p.url));
-        if (!selectedData.length) return;
+        if (!selectedData.length) { alert("NO_RECORDS_SELECTED"); return; }
         const headers = ["title", "authors", "citations", "year", "url"];
         const csv = [headers.join(','), ...selectedData.map(row => headers.map(f => `"${String(row[f]||"").replace(/"/g, '""')}"`).join(','))].join('\n');
         const blob = new Blob([csv], { type: 'text/csv' });
