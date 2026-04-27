@@ -40,8 +40,8 @@ So, we will stick to the same assumptions of `rigid bodies` for now, in spirit o
 We shall now merely attempt to `formally` lay down those problems (for anyone who `may` be interested). Some of these, are articulated in-verbatim from other papers and some are the ones  derived of our own musings, or discussions among members of the knights templar. 
 
 Whatever progress will be made, might have to rest on the shoulders of [geometric deep learning](), and [graphical models for structured learning](). 
-
-I am not yet knowledgeable enough  to build upon them. So, i will just cover what i think i do know. And hopefully, time shall give me more answers, that what i currently do have. 
+<!-- 
+I am not yet knowledgeable enough  to build upon them. So, i will just cover what i think i do know. And hopefully, time shall give me more answers, that what i currently do have.  -->
 
 
 <!-- # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Dispelling our notions </span>
