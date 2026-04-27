@@ -17,9 +17,9 @@ P.S. This is a speculative post and may be scientifically inaccurate.
 
 One of the big mysteries is if one should bet on encoding  `part whole hierarchies` in neural nets. Indeed, there are high chances `it is a WRONG bet`. 
 
-The reason i still stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627). And i think he deserves to be listened to, given the amount of successful bets, although some took decades to be deemed correct. 
+One reason to still stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627). And perhaps he deserves to be listened to, given the amount of successful bets, although some took decades to be deemed correct. 
 
-There are only two other people i know who take this issue seriously. By serious, i don't mean that someone spends two months on it, forks a github library, finds it does not beat a benchmark and then gives up. 
+There are  two other people  who took this issue seriously. By serious, we don't mean that someone spends two months on it, forks a github library, finds it does not beat a benchmark and then gives up. 
 
 The seriousness we are concerned here with borders on borderline `obsession`, a constant aching `itch` in the head that something about AI is wrong.  
 
