@@ -228,6 +228,8 @@ To investigate this, we need to conduct some `thought experiments`.  For fun, we
 Let us imagine the most simple case, when there is only one whole and one part. Let's `imagine` data generating process $f$ produced two vectors $v_{whole}$ and $v_{part}$. These vectors are now going to undergo an `agreement protocol`, to decide what will be their relative orientations. Eventually, they will form little `islands of agreement`.
 
 
+We are considering a timestep $t$ in GLOM. The part advertises a vector to the whole. Let's get into the parody. 
+
 <div style="margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -237,6 +239,48 @@ Let us imagine the most simple case, when there is only one whole and one part. 
     >
 </div>
 
+
+`Part: Dear nose, my vector is` $v_{part}$ `. I think you are my real daddy (whole)`
+
+`Whole: Really dude, then you should look like me. Let me see how similar are you to me`
+
+Whole takes $v_{part}$ and projects it onto itself. Lets call it $Proj<v_{part}, v_{whole}>$. 
+
+Then whole substracts this proj from $v_part$ to get the component in the perpendicular direction. If that component is small, then it means $v_{part}$ is similar to whole. 
+
+`Whole: Hey man, i just finished checking,   you are still a lot different than me, so i don't think you are my son. You better go find other dad`
+
+Part went really sad. He really wanted to be whole's son. Rrecall that this was single part-whole case. If whole didnt accept him, he would be orphaned. And world does not look kindly to orphans.
+
+`Part: You are the only whole left in my world . I really want to be your son`
+
+`Whole: Geez. Then you gotta look like me`
+
+`Part: Sure, what to do?`
+
+`Whole: Ok, here is a value:` $Proj<v_{part}, v_{whole}>$, `subtract it from yourself, and you will become same as me`
+
+`Part: Sure`
+
+Part then does $v_{part} =  v_{part} - Proj<v_{part}, v_{whole}>$. Next time it shares the vector $v_{part}$ with whole, he accepts him as his kid. 
+
+
+However, it creates a problem: <u>something we call collapse</u> in this messy business. Part and whole are identical vectors. A similar case happens when part in turn  `act as a parent` to a `sub-part` at a `lower` level. Basically, you can imagine every vector in the network starts looking similar to one other, and we have a big mass of  `homogenous population`. And where is the fun in life, if there is   `no variety`?
+
+One other problem (or property) here is that `part` was able to `rapidly` change its vector `in a single iteration`. It didn't need many iterations of learning. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Preventing collapse with non-linearity </span>
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/bottom_up.svg" 
+        style="width: 40%; height: auto; display: block; margin-left: 10vw; margin-right: 20vw;" 
+        alt="Image 16"
+    >
+</div>
 
 
 
@@ -262,14 +306,6 @@ Let us imagine the most simple case, when there is only one whole and one part. 
 
 
 
-<div style="margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/akorn_followup/bottom_up.svg" 
-        style="width: 40%; height: auto; display: block; margin-left: 10vw; margin-right: 20vw;" 
-        alt="Image 16"
-    >
-</div>
 
 
 
