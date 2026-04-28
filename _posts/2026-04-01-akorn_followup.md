@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-title:  " Unsolved problems on Part Whole Hierarchies and mere speculations "
+title:  " On Unsolved problems of Part Whole Hierarchies"
 description: ""
 date:   2026-03-01 07:00:00
 ---
 
-P.S. This is a speculative post and may be scientifically inaccurate. 
-
+P.S. This is a speculative, scientifically inaccurate post, which does not surpass any state of the art .
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> A risky  bet   </span>
@@ -21,10 +20,10 @@ One reason to still stick to it is that geoff hinton wrote about it [4 decades a
 
 There are  two other people  who took this issue seriously. By serious, we don't mean that someone spends two months on it, forks a github library, finds it does not beat a benchmark and then gives up. 
 
-The seriousness we are concerned here with borders on borderline `obsession`, a constant aching `itch` in the head that something about AI is wrong.  
+The seriousness we are concerned here with borders on borderline `obsession`, a constant aching `itch` in the head that something about AI is wrong.  One problem with `obsession` is that it leads to arrogance: you start thinking what you say is the only way, and there are no alternate paths. So, one needs to be careful as to not make such `blunders`. 
 
 
-Who are those two people?
+Who were those two people?
 
 
 First,   Jeff Hawkins in his book [Thousand Brains](https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/1541675819). He eventually founded Numenta, and Celeste/Vivian/Sabutai (and team) there are doing some pretty cool work on theories of neo-cortex/ sparse-distributed memories. 
@@ -33,9 +32,7 @@ Similarly,  David Marr in his [Vision book](https://www.amazon.com/Vision-Comput
 
 Finally, Hinton spent a couple of decades arguing for shape invariance/equivariance of rigid bodies, thereby closing this love triangle.  Please note Hinton never talked about dynamics of moving bodies, since that gets messy really fast. Proponents who claim to work on video, often add time as an additional dimension, and just create 3D versions of image models. 
 
-So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper. 
-
-<!-- For now, indeed, it appears i am alone on this problem, but i will gladly but my eggs in this basket, for i have not yet found a better one.  -->
+So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper (and Ramon Y Cajal :-)). For now, indeed, it appears we are alone on this problem, but we will gladly but our eggs in this basket, for we have not yet found a better one. And trust me, we have looked.  
 
 We shall now merely attempt to `formally` lay down those problems (for anyone who `may` be interested). Some of these, are articulated in-verbatim from other papers and some are the ones  derived of our own musings, or discussions among members of the knights templar. 
 
@@ -218,9 +215,113 @@ This becomes evident in picture (i) where if we assume the basis vector to be th
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The machine must choose among `one` of the many plausible relative angles (hypothesis) between parts and wholes </span>
 
 
-If the vector of the whole (face) and the part (lip) can rotate independently, the machine `must decide` over multiple iterations, what is the relative angle between them. For our purposes, let us image that there is a single part (lip). It advertises three or four possible `relative angles` that the lip/face could have relative to each other. 
+If the vector of the whole (face) and the part (lip) can rotate independently, the machine `must decide` over multiple iterations, what is the relative angle between them. 
+
+
+
+To investigate this, we need to conduct some `thought experiments`.  For fun, we will treat this experiment as a `parody` of sorts between a part and whole. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> A single part and a single whole, in a `mutual` relationship together </span>
+
+
+Let us imagine the most simple case, when there is only one whole and one part. Let's `imagine` data generating process $f$ produced two vectors $v_{whole}$ and $v_{part}$. These vectors are now going to undergo an `agreement protocol`, to decide what will be their relative orientations. Eventually, they will form little `islands of agreement`.
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/single_part_advertise.svg" 
+        style="width: 40%; height: auto; display: block; margin-left: 10vw; margin-right: 25vw;" 
+        alt="Image 16"
+    >
+</div>
+
+
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/bottom_up_inverse.svg" 
+        style="width: 60%; height: auto; display: block; margin-left: 10vw; margin-right: 20vw;" 
+        alt="Image 16"
+    >
+</div>
+
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/car_rotation.svg" 
+        style="width: 80%; height: auto; display: block; margin-left: 5vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/bottom_up.svg" 
+        style="width: 40%; height: auto; display: block; margin-left: 10vw; margin-right: 20vw;" 
+        alt="Image 16"
+    >
+</div>
+
+
+
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/top_down.svg" 
+        style="width: 50%; height: auto; display: block; margin-left: 12vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/part_symmetry_break.svg" 
+        style="width: 70%; height: auto; display: block; margin-left: 10vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+
+
+
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/inner_outer.svg" 
+        style="width: 70%; height: auto; display: block; margin-left: 6vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+
+
+This is a <u>piece of underlined text</u> in my writing.
+
+
+It advertises three or four possible `relative angles` that the lip/face could have relative to each other. 
 
 Pictorially, this constraint is represented by:
+
+
+
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Why NLP tasks tends to dilute this problem? </span>
+
+
+
 
 
 
