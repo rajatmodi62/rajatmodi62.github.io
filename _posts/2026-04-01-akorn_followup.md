@@ -6,13 +6,13 @@ description: ""
 date:   2026-03-01 07:00:00
 ---
 
-P.S. This is a speculative, scientifically inaccurate post, which does not surpass any state of the art . The problem between science and philosophy is that extremely implausible ideas like gradient descent are just right, and intuitive ideas like part-wholes have proven to be incorrect. 
+P.S. This is a speculative, scientifically inaccurate post, which does not surpass any state of the art . The problem between science and philosophy is that experiments can show extremely `implausible ideas` like gradient descent are `just right`, and intuitive ideas like part-wholes are `incorrect`. 
 
 
-Indeed, we  `must learn` from sutton's bitter lesson: given enough data, a brute-force algorithm like transformer, can surpass anything we care to invent. There is no way to deny that scaling leads to increased performance. And indeed, people have moved onto better things, for eg, `diffusion`, `gflownets`, and recurrent models of thinking. 
+Indeed, we  `must learn` from sutton's  `bitter lesson`: given enough data, a brute-force algorithm like transformer, can surpass anything we care to invent. There is `no way to deny` that scaling leads to increased performance. And indeed, people have moved onto better things, for eg, `diffusion`, `gflownets`, and recurrent models of thinking. 
 
 
-`At this point, all we can do is wonder. Were we wrong all along? And indeed, we have nothing respectable to show for it, even after half a decade (except APM by your truly)` 
+At this juncture, all we can do is `wonder`. Were we wrong all along? And indeed, we have `nothing respectable` to show for it, even after half a decade (except APM by your truly).
 
 ---
 
@@ -382,7 +382,7 @@ This means that $w^{l}$ will `tend to` learn the inverse matrix. The `trick` her
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Resisting the  temptation to supervise rotation matrix W </span>
 <!-- <u> Perspective 3:  Resisting the temptation to supervise $W$</u> -->
 
-Given a part, and a whole, there are `infinite` rotation matrices $W$ which could be used to transform the part into the whole. Which of those is the correct one? And again, this boils down to a `physical symmetry` question. One beautiful thing i realized, is that symmetries are all over the place. It is not merely a construct of physics, but a fundamental law of nature. 
+Given a part, and a whole, there are `infinite` rotation matrices $W$ which could be used to transform the part into the whole. Which of those is the correct one? And again, this boils down to a `physical symmetry` question. One beautiful thing i realized, is that symmetries are all over the place. It is not merely a construct of physics, but a fundamental law of nature. And for curious reason, nature prefers [left-handedness](https://plato.stanford.edu/entries/physics-experiment/app1.html) more than right. 
 
 
 There are only two plausible answers. Let us now consider both, for that shall reveal the next choice we must make. 
