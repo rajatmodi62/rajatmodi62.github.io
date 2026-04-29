@@ -394,7 +394,7 @@ There are only two plausible answers. Let us now consider both, for that shall r
 
 This school of thought believes that given a lip, and a nose, they should definitely lie perpendicular to each other (because psychological evidence points that every human favours this constraint). The matrix $w$ which makes those vectors orthogonal is the `only correct answer`. <br>
 
-If we accept `orthogonality`, we can supervise bottom-up neural net to learn $w$ corresponding to that. This means that, we `know` in advance a  precise W for every pair of <part/whole>. And indeed, that is what `3D computer vision` does. 
+If we accept `orthogonality`, we can supervise bottom-up neural net to learn $w$ corresponding to that. This means that, we `know` in advance a  precise W for every pair of <part/whole>. And indeed, that is what `3D computer vision` guys (and gals) do. And they do it `quite well`.
 
 
 
