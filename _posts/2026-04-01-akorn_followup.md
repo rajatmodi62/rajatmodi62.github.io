@@ -8,8 +8,19 @@ date:   2026-03-01 07:00:00
 
 P.S. This is a speculative, scientifically inaccurate post, which does not surpass any state of the art .
 
+P.S. The problem between science and philosophy is that extremely implausible ideas like gradient descent are just right, and intuitive ideas like part-wholes have proven to be incorrect. 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> A risky  bet   </span>
+
+P.S. Indeed, we  `must learn` from sutton's bitter lesson: given enough data, a brute-force algorithm like transformer, can surpass anything we care to invent. 
+
+P.S There is no way to deny that scaling leads to increased performance. 
+
+---
+`At this point, all we can do is wonder. And indeed, we have nothing respectable to show for it, even after half a decade (except APM by your truly)` 
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> A risky  bet  indeed. </span>
 
 <!-- `Hinton is a crazy old nut - A wise man.` -->
 
@@ -162,7 +173,7 @@ Now, we will try to define this problem.
         }, 3000);
     })();
 </script>
-Consider the pen given above. There are two copies of the same pen. One pen represents the face. Another pen represents the lip.  
+Consider the pen given above. There are two copies of the same pen. One pen represents the face. Another pen represents the lip.  Both the pens are having a `phase difference` in their motion.  However, their trajectory is `identical`. 
 
 Computationally, you can think of these two pens as two vectors rotating in a higher dimensional space. For clarity, here we can assume those two vectors in the 2d space. 
 
@@ -288,7 +299,7 @@ So, the figure above now starts looking a bit like:
     >
 </div>
 
-Let us call the $W$ matrix a `bottom-up network`, since it takes a vector from part, and transforms it into a vector $v'$ through which the  `whole` can measure the agreement. 
+Let us call the $W$ matrix a `bottom-up network`, since it takes a vector from part, and transforms it into a vector $v'$ through which the  `whole` can measure the agreement. <u> Please note that the figure above refers to lip as part, nose as whole. Therefore, i shall internchangebly use $v_{part}= v_{lip}$ and $v_{whole} = v_{nose}$</u>
 
 It now becomes important to look at the machine from two different perspectives. There are only minor differences technically, but it leads one to interesting interpretation.
 
@@ -317,7 +328,7 @@ So, the `correct information` the whole needs to send the part is $W^{-1}e$. Let
 
 Once the part receives this information, it can make an update $v_{part}- e$. And voila, we have achieved locking!! What do we mean by locking?
 
----
+<!-- --- -->
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The condition for interdimensional lock. </span>
@@ -328,8 +339,8 @@ $W v_{part}$ will give $v_{whole}$. Similarly, $W^{-1}v_{whole}$ will give back 
 
 Next, let us tackle our earlier assumption. Is it possible to compute $W^{-1}$. Well, if bottom-up network is a neural net with many layers, each layer matrix $W$ can (in theory) be inverted. However, there are indeed cases, when no matrix exists. This means that the problem can be solved in two ways (i) either `force` bottom up net to have weights whose inverses are possible. (ii) accept that this is a issue, and find a way to `bypass` that. 
 
-By now, you may know, that we are very `lazy😏😏`. So we will take a shortcut. 
-Neural nets are like puppies: 🐶🐶🐶, they need to be  `constrained` properly.
+<!-- By now, you may know, that we are very `lazy😏😏`. So we will take a shortcut. 
+Neural nets are like puppies: 🐶🐶🐶, they need to be  `constrained` properly. -->
 
 
 <u> Perspective 2: Finding the alternate to computing $W^{-1}$</u>
@@ -351,17 +362,64 @@ Neural nets are like puppies: 🐶🐶🐶, they need to be  `constrained` prope
 
 
 A  learning algorithm  then modulates the weights of top-down network W' as follows: <br>
-[1] 
+[1] First, $v_{part}$ is multiplied by $W_{bottom-up}$ to yield $v'$.<br>
+[2] Next, the whole computes e = $proj<v',v_{whole}>$ <br>
+[3] We feed-forward $e$ through $W_{top-down}$ network to yield  output $v_{out}$ <br>
+[4] $v_{out}$ should be equal to $v_{part}$. If not, backpropagate error, and update top-down network $W'$
+
+
+<u> Reasons behind mirror symmetry</u>: The top-down neural network $w'$ has to be forced to learn a weight matrix $w^{-1}$. The catch is that we `don't want` to take the inverse. Each layer of $w'$ is same as $w$. Let us imagine looking at layer l of both. 
+
+
+We can then imagine enforcing $w_{l}w'_{l} = I$. Basically, multiply the matrices of both layers,and they should become the identity matrix. If you multiply this equation by $w^{-1}_l$ on both sides, 
+you get $w^{-1}_l w_l w'_l = w_l^{-1}$, which simplifies to $ w'_l = w_l^{-1}$. <br>
+
+
+This means that $w^{l}$ will `tend to` learn the inverse matrix. The `trick` here is that we never took inverse, but merely `forced` the product of matrices to become identity. One can then imagine doing this for `every` internal layers of $w'$. This is `only possible` when $w'$ is mirror image of $w$, thereby justifying the design choice of `mirror symmetry`. Since this involves aligning weight matrices together, we call this procedure `deep weight alignment`. Indeed, a very similar idea called `random feedback alignment` was also proposed by Timothy Lillicrap in his `Backpropagation and Brain Paper`. The mirror symmetry then becomes similar to bifold symmetry in DNA, and isomers/chirality of molecules. 
+
+<u> Calibration of $w'$</u>: Once the weights of top-down network have been updated over several gradient descent iterations, it has become calibrated to $W$. At this point the part/ whole have a `relative rotation matrix` of $W$. 
+
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Resisting the  temptation to supervise rotation matrix W </span>
+<!-- <u> Perspective 3:  Resisting the temptation to supervise $W$</u> -->
+
+Given a part, and a whole, there are `infinite` rotation matrices $W$ which could be used to transform the part into the whole. Which of those is the correct one? And again, this boils down to a `physical symmetry` question. One beautiful thing i realized, is that symmetries are all over the place. It is not merely a construct of physics, but a fundamental law of nature. 
+
+
+There are only two plausible answers. Let us now consider both, for that shall reveal the next choice we must make. 
+
+<u> Answer 1: There exists a UNIQUE $W$ for every pair <part/whole></u>
+
+This school of thought believes that given a lip, and a nose, they should definitely lie perpendicular to each other (because psychological evidence points that every human favours this constraint). The matrix $w$ which makes those vectors orthogonal is the `only correct answer`. <br>
+
+If we accept `orthogonality`, we can supervise bottom-up neural net to learn $w$ corresponding to that. This means that, we `know` in advance a  precise W for every pair of <part/whole>. And indeed, that is what `3D computer vision` does. 
+
+
+
+
+
+
 
 
 <div style="margin-bottom: 20px;">
     <img 
         class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/akorn_followup/car_rotation.svg" 
-        style="width: 80%; height: auto; display: block; margin-left: 5vw; margin-right: 10vw;" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/top_down.svg" 
+        style="width: 50%; height: auto; display: block; margin-left: 12vw; margin-right: 10vw;" 
         alt="Image 16"
     >
 </div>
+
+
+<!-- w_l w'_{l} = w_l^{-1}$,  -->
+
+<!-- which is $w'_{l} = w_l^{-1}$. -->
+
+
+<!-- Basically, multiply the matrices of both layers, and they should become the identity matrix. If you multiply this equation by $w_{l}^{-1}$ on both sides,   -->
+
 
 
 
@@ -404,7 +462,7 @@ Pictorially, this constraint is represented by:
 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Why NLP tasks tends to dilute this problem? </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Should parse-tree be linearized? </span>
 
 
 

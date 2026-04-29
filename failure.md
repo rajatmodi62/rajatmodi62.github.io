@@ -56,3 +56,6 @@ A list of failures sitting silently on my website.
   
   https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=third_optimization:_interplay_with_gradient_accumulation
   https://jax-ml.github.io/scaling-book/
+
+[11] cvpr doctoral consortium
+  - apparently better people were there. 
