@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  " On Unsolved problems of Part Whole Hierarchies"
+title:  " On Unresolved problems of Part Whole Hierarchies"
 description: ""
 date:   2026-03-01 07:00:00
 ---
@@ -16,9 +16,9 @@ P.S. This is a speculative, scientifically inaccurate post, which does not surpa
 
 One of the big mysteries is if one should bet on encoding  `part whole hierarchies` in neural nets. Indeed, there are high chances `it is a WRONG bet`. 
 
-One reason to still stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627). And perhaps he deserves to be listened to, given the amount of successful bets, although some took decades to be deemed correct. 
+One reason to still stick to it is that geoff hinton wrote about it [4 decades ago](https://dl.acm.org/doi/abs/10.1016/0004-3702(90)90004-J), and even [5 years ago](https://arxiv.org/pdf/2102.12627). And perhaps he deserves to be listened to, given the amount of successful bets he made, although some took decades to pan out. But, by all means, he is a winner.  
 
-There are  two other people  who took this issue seriously. By serious, we don't mean that someone spends two months on it, forks a github library, finds it does not beat a benchmark and then gives up. 
+There are  only two other people  who took this issue seriously. By serious, we don't mean that someone spends two months on it, forks a github library, finds it does not beat a benchmark and then gives up. 
 
 The seriousness we are concerned here with borders on borderline `obsession`, a constant aching `itch` in the head that something about AI is wrong.  One problem with `obsession` is that it leads to arrogance: you start thinking what you say is the only way, and there are no alternate paths. So, one needs to be careful as to not make such `blunders`. 
 
@@ -26,7 +26,7 @@ The seriousness we are concerned here with borders on borderline `obsession`, a 
 Who were those two people?
 
 
-First,   Jeff Hawkins in his book [Thousand Brains](https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/1541675819). He eventually founded Numenta, and Celeste/Vivian/Sabutai (and team) there are doing some pretty cool work on theories of neo-cortex/ sparse-distributed memories. 
+First,   Jeff Hawkins in his book [Thousand Brains](https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/1541675819). He eventually founded Numenta, and Celeste/Vivian/Sabutai (and team) there are doing some pretty cool work on theories of neo-cortex/ sparse-distributed memories. Some curious comments on Numenta's work can be found [here](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/comment/clykjsi/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
 Similarly,  David Marr in his [Vision book](https://www.amazon.com/Vision-Computational-Investigation-Representation-Information/dp/0716715678), investigated the  nature of coordinate frames, and higher order shape representations in the brain. 
 
@@ -34,7 +34,7 @@ Finally, Hinton spent a couple of decades arguing for shape invariance/equivaria
 
 So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper (and Ramon Y Cajal :-)). For now, indeed, it appears we are alone on this problem, but we will gladly but our eggs in this basket, for we have not yet found a better one. And trust me, we have looked.  
 
-We shall now merely attempt to `formally` lay down those problems (for anyone who `may` be interested). Some of these, are articulated in-verbatim from other papers and some are the ones  derived of our own musings, or discussions among members of the knights templar. 
+We shall now merely attempt to `formally` lay down those problems (for anyone who `may` be interested). Some of these, are articulated in-verbatim from other papers and some are the ones  derived of our own musings, or discussions among the secret members of the knights templar. 
 
 Whatever progress will be made, might have to rest on the shoulders of [geometric deep learning](), and [graphical models for structured learning](). 
 <!-- 
@@ -267,11 +267,17 @@ Part then does $v_{part} =  v_{part} - Proj<v_{part}, v_{whole}>$. Next time it 
 
 However, it creates a problem: <u>something we call collapse</u> in this messy business. Part and whole are identical vectors. A similar case happens when part in turn  `act as a parent` to a `sub-part` at a `lower` level. Basically, you can imagine every vector in the network starts looking similar to one other, and we have a big mass of  `homogenous population`. And where is the fun in life, if there is   `no variety`?
 
-One other problem (or property) here is that `part` was able to `rapidly` change its vector `in a single iteration`. It didn't need many iterations of learning. 
+One other problem (or as i like to shamelessly call it a desirable property) here is that `part` was able to `rapidly` change its vector `in a single iteration`. It didn't need many iterations of learning. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Preventing collapse with non-linearity </span>
 
+
+The problem where $v_{part}$ becomes equal to $v_{whole}$ could be solved by imagining a matrix $w$. Basically, $w$ multiplies this part $v_{part}$ and outputs a new vector $v'$. This v' should be similar to $v_{whole}$. 
+
+If we make a simplistic assumption that $w!=I$, where $I$ is identity matrix, then we can prevent such a collapse. And indeed, if $W$ is a neural network with non-linearities in between, it is very hard for collapse to occur. 
+
+So, the figure above now starts looking a bit like:
 
 <div style="margin-bottom: 20px;">
     <img 
@@ -281,6 +287,14 @@ One other problem (or property) here is that `part` was able to `rapidly` change
         alt="Image 16"
     >
 </div>
+
+Let us call the $W$ matrix a `bottom-up network`, since it takes a vector from part, and transforms it into a vector $v'$ through which the  `whole` can measure the agreement. 
+
+It now becomes important to look at the machine from two different perspectives. There are only minor differences technically, but it leads one to interesting interpretation.
+
+
+<u> Perspective 1: The matrix w is NOT changed during agreement phase</u>
+
 
 
 
@@ -293,6 +307,51 @@ One other problem (or property) here is that `part` was able to `rapidly` change
     >
 </div>
 
+
+Here, the vector `part` advertises to whole is $v' = W v_{part}$. From whole's perspective, it `does not` have access to $W$. Then, the whole measures projection error $e =  Proj<v',v_{whole}>$. Next,  the whole needs to pass `some information` to the part so that it can make a correction. But, it cannot merely pass error $e$, since $v'$ was computed when it got transformed via weight matrix $W$. 
+
+
+So, the `correct information` the whole needs to send the part is $W^{-1}e$. Let us now make the assumption, which is intrinsically wrong, but convenient:
+
+`There exists an easy way to compute $W^{-1}$`
+
+Once the part receives this information, it can make an update $v_{part}- e$. And voila, we have achieved locking!! What do we mean by locking?
+
+---
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The condition for interdimensional lock. </span>
+
+If the machine manages to achieve a perfect lock, the following constraint will hold. 
+$W v_{part}$ will give $v_{whole}$. Similarly, $W^{-1}v_{whole}$ will give back $v_{part}$. We can check this by putting $W v_{part}$ in place of $v_{whole}$, which gives , $WW^{-1}v_{part}$, and indeed, the two W's cancel out, and we get back $v_{part}$. 
+
+
+Next, let us tackle our earlier assumption. Is it possible to compute $W^{-1}$. Well, if bottom-up network is a neural net with many layers, each layer matrix $W$ can (in theory) be inverted. However, there are indeed cases, when no matrix exists. This means that the problem can be solved in two ways (i) either `force` bottom up net to have weights whose inverses are possible. (ii) accept that this is a issue, and find a way to `bypass` that. 
+
+By now, you may know, that we are very `lazy😏😏`. So we will take a shortcut. 
+Neural nets are like puppies: 🐶🐶🐶, they need to be  `constrained` properly.
+
+
+<u> Perspective 2: Finding the alternate to computing $W^{-1}$</u>
+
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/top_down.svg" 
+        style="width: 50%; height: auto; display: block; margin-left: 12vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+ We can imagine that instead of computing $W^{-1}$, we have a top-down neural net with weights $W'$. Now, we can make two design choices:
+
+[1] W is kept `fixed`. No learning. <br>
+[2] $v_{whole}$ is kept `fixed`. <br>
+[3] Only $v_{part}$, and $W'$ can be changed. <br>
+[4] Architecture of W' is `mirror symmetry` of W. <br> 
+
+
+A  learning algorithm  then modulates the weights of top-down network W' as follows: <br>
+[1] 
 
 
 <div style="margin-bottom: 20px;">
@@ -310,15 +369,6 @@ One other problem (or property) here is that `part` was able to `rapidly` change
 
 
 
-
-<div style="margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/akorn_followup/top_down.svg" 
-        style="width: 50%; height: auto; display: block; margin-left: 12vw; margin-right: 10vw;" 
-        alt="Image 16"
-    >
-</div>
 
 <div style="margin-bottom: 20px;">
     <img 
