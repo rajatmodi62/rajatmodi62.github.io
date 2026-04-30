@@ -12,7 +12,7 @@ P.S. This is a speculative, scientifically inaccurate post, which does not surpa
 Indeed, we  `must learn` from sutton's  `bitter lesson`: given enough data, a brute-force algorithm like transformer, can surpass anything we care to invent. There is `no way to deny` that scaling leads to increased performance. And indeed, people have moved onto better things, for eg, `diffusion`, `gflownets`, and recurrent models of thinking. 
 
 
-At this juncture, all we can do is `wonder`. Were we wrong all along? And indeed, we have `nothing respectable` to show for it, even after half a decade (except APM by your truly).
+At this juncture, all we can do is `wonder`. Were we wrong all along? And indeed, we have `nothing respectable` to show for it, even after half a decade (except APM by your truly <span style="font-size: 3em;">😬</span>).
 
 ---
 
@@ -40,7 +40,7 @@ Similarly,  David Marr in his [Vision book](https://www.amazon.com/Vision-Comput
 
 Finally, Hinton spent a couple of decades arguing for shape invariance/equivariance of rigid bodies, thereby closing this love triangle.  Please note Hinton never talked about dynamics of moving bodies, since that gets messy really fast. Proponents who claim to work on video, often add time as an additional dimension, and just create 3D versions of image models. 
 
-So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper (and Ramon Y Cajal :-)). For now, indeed, it appears we are alone on this problem, but we will gladly but our eggs in this basket, for we have not yet found a better one. And trust me, we have looked.  
+So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper (and Ramon Y Cajal :-)). For now, indeed, it appears we are alone on this problem, but we will gladly but our eggs in this basket, for we have not yet found a better one. And trust me, we have looked.  You can check it [here](https://rajatmodi62.github.io/paper_bank/index.html). 
 
 We shall now merely attempt to `formally` lay down those problems (for anyone who `may` be interested). Some of these, are articulated in-verbatim from other papers and some are the ones  derived of our own musings, or discussions among the secret members of the knights templar. 
 
@@ -395,19 +395,61 @@ If we accept `orthogonality`, we can supervise bottom-up neural net to learn $w$
 
 
 
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/car_rotation.svg" 
+        style="width: 80%; height: auto; display: block; margin-left: 4vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+
+Let us deviate from our original discussion. Consider the car shown above. It can be viewed from different viewpoints. The car is a `rigid` object. 
+
+Next, consider `any` two cameras (let's call them Cam 1, Cam 2) with rotation matrices $R_1, R_2$. It `does not matter` which coordinate you choose as the world origin, for the relative rotation between this cameras `will not` change. More precisely, you can go from Cam 1 $\rightarrow$ Cam 2, by a `transition matrix` $R_2^{-1}R_{1}$. 
+
+Now, let us consider the case that the world origin is shifted by a matrix $M$. Let $R_1$ and $R_2$ be the original orientations.When you apply a global rotation $M$ to your camera system, the individual rotation matrices update to $R_1^{new} = M R_1$ and $R_2^{new} = M R_2$. 
 
 
+To find the new transition matrix, we can calculate $\Delta R^{new} = (R_2^{new})^{-1} R_1^{new}$, which expands to $(M R_2)^{-1} (M R_1)$. Using the algebraic property that the inverse of a product is the product of the inverses in reverse order, this becomes $R_2^{-1} M^{-1} M R_1$. Because $M^{-1} M$ equals the identity matrix $I$, the global shift $M$ cancels out completely, leaving you with $\Delta R^{new} = R_2^{-1} R_1$. 
 
+This proves that the relative orientation between the two cameras is a `rigid-body invariant`; while their individual orientations relative to the world change, their orientation relative to each other `remains constant`.The dudes in 3D computer vision, were quick to exploit this `invariance` property. This meant that a simple camera-head on top of a neural network, could learn the relative coordinate transformations. 
+
+However, the problem of rotating potatoes remains a problem in 2D images, since the relative transformation between a part-whole keeps changing, which prevents the neural net from converging. 
+
+
+<u> The temptation</u>: It is tempting to define a `random` transformation matrix between a part and a whole, and then supervise the neural network accordingly. While `in principle` it could work, it makes no sense: the job of the neural net is to `encode structure` and not the noise. Unless, there is a `precise logic`, by which you may choose the 2D objects rotation matrix, it just  `won't work`. 
+
+I am tempted to now re-introduce the image from David Marr's book, albeit with some changes (by yours truly <span style="font-size: 3em;">😬</span>). So here we go:
 
 
 <div style="margin-bottom: 20px;">
     <img 
         class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/akorn_followup/top_down.svg" 
-        style="width: 50%; height: auto; display: block; margin-left: 12vw; margin-right: 10vw;" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/marr.svg" 
+        style="width: 80%; height: auto; display: block; margin-left: 4vw; margin-right: 10vw;" 
         alt="Image 16"
     >
 </div>
+
+On leftmost part (i), we show a bucket (or a cylinder), and `wonder`: what is the best canonical frame which passes through it. An intuitive thought is, `let's choose one of the surface normals`. Indeed, (ii) shows several surface normals. However,  the issue is `there are many normals`, which one should we choose. A better hypothesis is the central axis (iii): the one passing through the object center. It follows something what i call `spherical symmetry`. 
+
+Even if you rotate the cylinder by a little amount, it remains identical. This seems to `suggest` that humans choose canonical axis, which have `higher degrees of  freedom`. By degree of freedom, we mean, the shape (aka cylinder) remains identical, even by moving a normal amount $\theta$. Assuming total possible rotation to be $360 degrees$, degree of freedom (d.o.f) = $\frac{360}{\theta}$. The higher this number, the simpler the hypothesis, and more probable it is choose. For the case of bucket, it tends to infinity. The problem then reduces to how does a neural net estimate the degree of freedom of rotating an object from various viewpoints, and choosing onto the correct frame to lock onto. 
+
+
+
+Marr was indeed a smart dude worthy of immense respect: given the tools of his time, he correctly predicted the nature of higher constructs of mental imagery and shape recognition. The most important chapter of his `vision book` is the last one: `representing shapes for recognition`. And indeed, that is the problem hinton chipped away at for over two decades lol. And now, this brings us back to the same problem of part-wholes. 
+
+
+
+<!-- 
+
+oth individual matrices have changed. They are now oriented differently in the world.3. Proving the Transition Stays the SameNow, let's calculate the new transition matrix $\Delta R^{new}$ using these updated values:$$\Delta R^{new} = (R_2^{new})^{-1} R_1^{new}$$Substitute the values we defined in Step 2:$$\Delta R^{new} = (M R_2)^{-1} (M R_1)$$Using the property of matrix inversion $(AB)^{-1} = B^{-1} A^{-1}$:$$\Delta R^{new} = (R_2^{-1} M^{-1}) (M R_1)$$Since $M^{-1} M = I$ (the identity matrix):$$\Delta R^{new} = R_2^{-1} (I) R_1$$$$\Delta R^{new} = R_2^{-1} R_1$$The Result$$\Delta R^{new} = \Delta R$$ -->
+
+
+
+
+
 
 
 <!-- w_l w'_{l} = w_l^{-1}$,  -->
