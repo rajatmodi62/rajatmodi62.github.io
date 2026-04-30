@@ -59,3 +59,4 @@ A list of failures sitting silently on my website.
 
 [11] cvpr doctoral consortium
   - apparently better people were there. 
+  - o god, please give me strength. 
