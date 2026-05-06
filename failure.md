@@ -51,12 +51,32 @@ A list of failures sitting silently on my website.
     - only immutable objects , not lists 
     -  made mistake in registering 
 
+feedback:
+    Jared Mah
+    1:35 PM (40 minutes ago)
+    to me
+
+    Hi Rajat,
+
+    I appreciate you asking! As mentioned on our call, our technical interviews are scored from 1-5, either pass or fail. The HM was looking for someone with a bit stronger coding skills in the ML section. 
+
+    Hope this information helps, and wishing you all the best!
+
+    Best,
+
+    Jared
+
 [10] icml reject lol, 
   - resubmit to neurips 
+
+[11] re 
   
   https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=third_optimization:_interplay_with_gradient_accumulation
   https://jax-ml.github.io/scaling-book/
 
-[11] cvpr doctoral consortium
+---
+
+
+<!-- [11] cvpr doctoral consortium
   - apparently better people were there. 
-  - o god, please give me strength. 
+  - o god, please give me strength.  -->

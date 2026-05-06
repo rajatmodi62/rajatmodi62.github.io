@@ -6,21 +6,29 @@ description: ""
 date:   2026-03-01 07:00:00
 ---
 
+`O Lord!! Why did you introduce this problem to me? It remains forever out of my grasp, no matter how much i think`
+
+<!-- 
 P.S. This is a speculative, scientifically inaccurate post, which does not surpass any state of the art . The problem between science and philosophy is that experiments can show extremely `implausible ideas` like gradient descent are `just right`, and intuitive ideas like part-wholes are `incorrect`. 
 
 
 Indeed, we  `must learn` from sutton's  `bitter lesson`: given enough data, a brute-force algorithm like transformer, can surpass anything we care to invent. There is `no way to deny` that scaling leads to increased performance. And indeed, people have moved onto better things, for eg, `diffusion`, `gflownets`, and recurrent models of thinking. 
 
 
-At this juncture, all we can do is `wonder`. Were we wrong all along? And indeed, we have `nothing respectable` to show for it, even after half a decade (except APM by your truly <span style="font-size: 3em;">😬</span>).
+At this juncture, all we can do is `wonder`. Were we wrong all along? And indeed, we have `nothing respectable` to show for it, even after half a decade (except APM by your truly ). So, it is time to reflect on where we stand. Indeed, there are better people for the GLO(O)MY job, this is just a `futile` attempt.  -->
 
 ---
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> A risky  bet  indeed. </span>
 
-<!-- `Hinton is a crazy old nut - A wise man.` -->
+<!-- 
 
+`Hinton is a crazy old nut preaching DOOM. Your research is bullshit. - Spat a wise man on my face.` <br>
+
+P.S. For professionalism, we won't reveal his name publically. But, rest assured, he is among one of the most cited people in computer vision. More than 100k citations. Who are we to argue, who are mere phd students? 
+
+--- -->
 
 One of the big mysteries is if one should bet on encoding  `part whole hierarchies` in neural nets. Indeed, there are high chances `it is a WRONG bet`. 
 
@@ -40,11 +48,11 @@ Similarly,  David Marr in his [Vision book](https://www.amazon.com/Vision-Comput
 
 Finally, Hinton spent a couple of decades arguing for shape invariance/equivariance of rigid bodies, thereby closing this love triangle.  Please note Hinton never talked about dynamics of moving bodies, since that gets messy really fast. Proponents who claim to work on video, often add time as an additional dimension, and just create 3D versions of image models. 
 
-So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper (and Ramon Y Cajal :-)). For now, indeed, it appears we are alone on this problem, but we will gladly but our eggs in this basket, for we have not yet found a better one. And trust me, we have looked.  You can check it [here](https://rajatmodi62.github.io/paper_bank/index.html). 
+So, we will stick to the same assumptions of `rigid bodies` for now, in spirit of original capsule paper (and Ramon Y Cajal ). For now, indeed, it appears we are alone on this problem, but we will gladly but our eggs in this basket, for we have not yet found a better one. And trust me, we have looked.  You can check it [here](https://rajatmodi62.github.io/paper_bank/index.html). 
 
 We shall now merely attempt to `formally` lay down those problems (for anyone who `may` be interested). Some of these, are articulated in-verbatim from other papers and some are the ones  derived of our own musings, or discussions among the secret members of the knights templar. 
 
-Whatever progress will be made, might have to rest on the shoulders of [geometric deep learning](), and [graphical models for structured learning](). 
+<!-- Whatever progress will be made, might have to rest on the shoulders of [geometric deep learning](), and [graphical models for structured learning]().  -->
 <!-- 
 I am not yet knowledgeable enough  to build upon them. So, i will just cover what i think i do know. And hopefully, time shall give me more answers, that what i currently do have.  -->
 
@@ -365,6 +373,8 @@ A  learning algorithm  then modulates the weights of top-down network W' as foll
 [4] $v_{out}$ should be equal to $v_{part}$. If not, backpropagate error, and update top-down network $W'$
 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Deep Weight Alignment </span>
+
 <u> Reasons behind mirror symmetry</u>: The top-down neural network $w'$ has to be forced to learn a weight matrix $w^{-1}$. The catch is that we `don't want` to take the inverse. Each layer of $w'$ is same as $w$. Let us imagine looking at layer l of both. 
 
 
@@ -372,12 +382,14 @@ We can then imagine enforcing $w_{l}w'_{l} = I$. Basically, multiply the matrice
 you get $w^{-1}_l w_l w'_l = w_l^{-1}$, which simplifies to $ w'_l = w_l^{-1}$. <br>
 
 
-This means that $w^{l}$ will `tend to` learn the inverse matrix. The `trick` here is that we never took inverse, but merely `forced` the product of matrices to become identity. One can then imagine doing this for `every` internal layers of $w'$. This is `only possible` when $w'$ is mirror image of $w$, thereby justifying the design choice of `mirror symmetry`. Since this involves aligning weight matrices together, we call this procedure `deep weight alignment`. Indeed, a very similar idea called `random feedback alignment` was also proposed by Timothy Lillicrap in his `Backpropagation and Brain Paper`. The mirror symmetry then becomes similar to bifold symmetry in DNA, and isomers/chirality of molecules. 
+This means that $w^{l}$ will `tend to` learn the inverse matrix. The `trick` here is that we never took inverse, but merely `forced` the product of matrices to become identity. One can then imagine doing this for `every` internal layers of $w'$. This is `only possible` when $w'$ is mirror image of $w$, thereby justifying the design choice of `mirror symmetry`. Since this involves aligning weight matrices together, we call this procedure `deep weight alignment`. 
+
+Indeed, a very similar idea called `random feedback alignment` was also proposed by Timothy Lillicrap in his `Backpropagation and Brain Paper`. The mirror symmetry then becomes similar to bifold symmetry in DNA, and isomers/chirality of molecules. 
 
 <u> Calibration of $w'$</u>: Once the weights of top-down network have been updated over several gradient descent iterations, it has become calibrated to $W$. At this point the part/ whole have a `relative rotation matrix` of $W$. 
 
 
-
+However, the nature of top-down network still cannot explain why there are `more feedback connections` in the inferro-temporal pathways of human  primates, than the `feedforward connections` (check conclusion of alexnet paper). Yours truly is still hunting for that answer. Geez. 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Resisting the  temptation to supervise rotation matrix W </span>
 <!-- <u> Perspective 3:  Resisting the temptation to supervise $W$</u> -->
@@ -392,7 +404,6 @@ There are only two plausible answers. Let us now consider both, for that shall r
 This school of thought believes that given a lip, and a nose, they should definitely lie perpendicular to each other (because psychological evidence points that every human favours this constraint). The matrix $w$ which makes those vectors orthogonal is the `only correct answer`. <br>
 
 If we accept `orthogonality`, we can supervise bottom-up neural net to learn $w$ corresponding to that. This means that, we `know` in advance a  precise W for every pair of <part/whole>. And indeed, that is what `3D computer vision` guys (and gals) do. And they do it `quite well`.
-
 
 
 <div style="margin-bottom: 20px;">
@@ -420,7 +431,7 @@ However, the problem of rotating potatoes remains a problem in 2D images, since 
 
 <u> The temptation</u>: It is tempting to define a `random` transformation matrix between a part and a whole, and then supervise the neural network accordingly. While `in principle` it could work, it makes no sense: the job of the neural net is to `encode structure` and not the noise. Unless, there is a `precise logic`, by which you may choose the 2D objects rotation matrix, it just  `won't work`. 
 
-I am tempted to now re-introduce the image from David Marr's book, albeit with some changes (by yours truly <span style="font-size: 3em;">😬</span>). So here we go:
+I am tempted to now re-introduce the image from David Marr's book, albeit with some changes. So here we go:
 
 
 <div style="margin-bottom: 20px;">
@@ -434,12 +445,38 @@ I am tempted to now re-introduce the image from David Marr's book, albeit with s
 
 On leftmost part (i), we show a bucket (or a cylinder), and `wonder`: what is the best canonical frame which passes through it. An intuitive thought is, `let's choose one of the surface normals`. Indeed, (ii) shows several surface normals. However,  the issue is `there are many normals`, which one should we choose. A better hypothesis is the central axis (iii): the one passing through the object center. It follows something what i call `spherical symmetry`. 
 
-Even if you rotate the cylinder by a little amount, it remains identical. This seems to `suggest` that humans choose canonical axis, which have `higher degrees of  freedom`. By degree of freedom, we mean, the shape (aka cylinder) remains identical, even by moving a normal amount $\theta$. Assuming total possible rotation to be $360 degrees$, degree of freedom (d.o.f) = $\frac{360}{\theta}$. The higher this number, the simpler the hypothesis, and more probable it is choose. For the case of bucket, it tends to infinity. The problem then reduces to how does a neural net estimate the degree of freedom of rotating an object from various viewpoints, and choosing onto the correct frame to lock onto. 
+Even if you rotate the cylinder by a little amount, it remains identical. This seems to `suggest` that humans choose canonical axis, which have `higher degrees of  freedom`. By degree of freedom, we mean, the shape (aka cylinder) remains identical, even by moving a normal amount $\theta$. Assuming total possible rotation to be $360 degrees$, degree of freedom (d.o.f) = $\frac{360}{\theta}$. The higher this number, the simpler the hypothesis, and more probable it is to be chosen. For the case of bucket, it tends to infinity. The problem then reduces to how does a neural net estimate the degree of freedom of rotating an object from various viewpoints, and choosing onto the correct frame to lock onto. 
 
 
 
-Marr was indeed a smart dude worthy of immense respect: given the tools of his time, he correctly predicted the nature of higher constructs of mental imagery and shape recognition. The most important chapter of his `vision book` is the last one: `representing shapes for recognition`. And indeed, that is the problem hinton chipped away at for over two decades lol. And now, this brings us back to the same problem of part-wholes. 
+Marr was indeed a `very smart dude` worthy of `immense` respect: given the tools of his time, he correctly predicted the nature of higher constructs of mental imagery and shape recognition. The most important chapter of his `vision book` is the last one: `representing shapes for recognition`. And indeed, that is the problem hinton chipped away at for over two decades. So, we finally see the hidden pattern, a problem, which exists, and continues to elude the best minds of our generation. Alas, it is so treachorous!!. 
 
+
+<div style="
+    background-color: rgba(255, 102, 102, 0.08); 
+    border: 1px solid #333; 
+    border-left: 5px solid #ff6666; 
+    border-radius: 6px; 
+    padding: 20px; 
+    margin: 30px 0; 
+    font-family: 'Courier New', Courier, monospace;">
+
+    <div style="
+        color: #ff6666; 
+        font-weight: bold; 
+        font-size: 1.1em; 
+        text-transform: uppercase; 
+        letter-spacing: 1.5px; 
+        margin-bottom: 10px;">
+        What did the experiment show?
+    </div>
+
+    <div style="color: #cccccc; line-height: 1.6;">
+        [1] It appears that we can train a top-down and bottom-up network to reconstruct part-> whole, and whole-> part. Inductively, their architectures follow  `mirror symmetry' and contain a few linear layers followed by leaky relu in between. Using Relu did not work well, since it tends to clamp negative activations in the network. <br>
+
+        [2] Deep weight alignment seems necessary to encode rigid transformation. Simply reconstructing part from whole vector (via mse) DOES NOT result  in implicit weight alignment.<br>
+    </div>
+</div>
 
 
 <!-- 
@@ -501,7 +538,7 @@ Pictorially, this constraint is represented by:
 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Should parse-tree be linearized? </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The linearization of the parse-tree  </span>
 
 
 
