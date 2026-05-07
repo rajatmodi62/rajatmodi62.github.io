@@ -5,7 +5,6 @@ title:  " On Unresolved problems of Part Whole Hierarchies"
 description: ""
 date:   2026-03-01 07:00:00
 published: false
-
 ---
 
 `O Lord!! Why did you introduce this problem to me? It remains forever out of my grasp, no matter how much i think`
