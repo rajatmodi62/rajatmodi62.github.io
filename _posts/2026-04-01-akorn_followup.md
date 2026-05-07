@@ -4,6 +4,8 @@ comments: true
 title:  " On Unresolved problems of Part Whole Hierarchies"
 description: ""
 date:   2026-03-01 07:00:00
+published: false
+
 ---
 
 `O Lord!! Why did you introduce this problem to me? It remains forever out of my grasp, no matter how much i think`
@@ -472,22 +474,56 @@ Marr was indeed a `very smart dude` worthy of `immense` respect: given the tools
     </div>
 
     <div style="color: #cccccc; line-height: 1.6;">
-        [1] It appears that we can train a top-down and bottom-up network to reconstruct part-> whole, and whole-> part. Inductively, their architectures follow  `mirror symmetry' and contain a few linear layers followed by leaky relu in between. Using Relu did not work well, since it tends to clamp negative activations in the network. <br>
+        [1] It appears that one can train a top-down and bottom-up network to reconstruct part-> whole, and whole-> part. Inductively, their architectures follow  `mirror symmetry' and contain a few linear layers followed by leaky relu in between. Using Relu did not work well, since it tends to clamp negative activations in the network. <br>
 
         [2] Deep weight alignment seems necessary to encode rigid transformation. Simply reconstructing part from whole vector (via mse) DOES NOT result  in implicit weight alignment.<br>
+
+        [3] Constraint: This procedure only works when part and whole vectors are held constant. It merely allows a top down network to deliver a reasonable error signal to the part. And (for now), it is indeed of no practical use . 
     </div>
 </div>
 
 
-<!-- 
 
-oth individual matrices have changed. They are now oriented differently in the world.3. Proving the Transition Stays the SameNow, let's calculate the new transition matrix $\Delta R^{new}$ using these updated values:$$\Delta R^{new} = (R_2^{new})^{-1} R_1^{new}$$Substitute the values we defined in Step 2:$$\Delta R^{new} = (M R_2)^{-1} (M R_1)$$Using the property of matrix inversion $(AB)^{-1} = B^{-1} A^{-1}$:$$\Delta R^{new} = (R_2^{-1} M^{-1}) (M R_1)$$Since $M^{-1} M = I$ (the identity matrix):$$\Delta R^{new} = R_2^{-1} (I) R_1$$$$\Delta R^{new} = R_2^{-1} R_1$$The Result$$\Delta R^{new} = \Delta R$$ -->
-
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The curious case of one whole and many parts of the same object </span>
 
 
 
+<div style="margin-bottom: 20px;">
+    <img 
+        class="img-fluid" 
+        src="{{ site.baseurl }}/assets/img/akorn_followup/part_symmetry_break.svg" 
+        style="width: 70%; height: auto; display: block; margin-left: 10vw; margin-right: 10vw;" 
+        alt="Image 16"
+    >
+</div>
+
+<u> Assumptions</u> Next, we consider a different case, we have a `single` whole vector, and multiple `vectors` of lower-level parts. Note that we `know beforehand` that these part vectors belong to the same whole. We will `relax` this assumption later on, once this case has revealed its mechanics to us. 
+
+As before, we have a bottom up neural net of non-linearities, and a top-down net which mirrors bottom-up net, and uses deep-weight alignment. 
+
+We also assume that the whole vector is `held constant`. 
+
+<u> What are we concerned with?</u> We want to somehow build consensus/ agreement among these part vectors, so that 1) they choose a canonical frame, 2) they all start pointing towards a same direction 3) they are `not` same as the whole vector, for that yields collapse. 
+
+<u> Resisting temptation again.</u> It is easy to invent the following procedure:
+
+1. first take mean vector of all the parts/ decide on a vector all parts ought to be. 
+2. compute error term <part vector, mean vector>. For each part vector, make one `rapid` update to correct it. 
+3. Decide a bottom-up neural net weight $W$, which acts as canonical frame. 
+4. The bottom up net now has a clean signal. It must predict this mean vector when different part vectors are fed to it. 
+5. Learn top-down net over few iterations of gradient descent. 
+
+Whilst such a procedure, may work, it does pose several limitations. For eg, what guarantee do we have that the mean is the optimal vector all part vectors ought to converge to? Secondly, how does one choose $w$?. There is a philosophical argument, that parts choose their own canonical frames, and nature does not supervise their precise orientations. Somehow, the structure may emerge naturally. The definition of an object depends on granularity, what appears part at one level, acts as a whole when we zoom out. 
+
+<u> An alternative procedure</u> It may so happen that the part vectors are `different` to begin with. This means to reach the whole , they need to multiply with different bottom-up matrices $W$. However, the static nature of $W_{bottom-u}$ prevents them from placing alternative bets to the whole vector, so that it can `select` among multiple alternative canonical frames. This means that we need a procedure where bottom-up network is itself free to generate different weight matrices depending on the part level vectors, which eventually multiply to form whole vector. However, this violates the previous assumption that the bottom-up network has a static $W_{bottom-up}$. So, how does it then generate different $W's$ for each part? What is the procedure one may exploit to break this apparent symmetry?
+
+<u> A mechanism to break weight symmetry </u>
 
 
+
+
+
+This means, that we need a procedure, where the 
 
 <!-- w_l w'_{l} = w_l^{-1}$,  -->
 
@@ -503,15 +539,6 @@ oth individual matrices have changed. They are now oriented differently in the w
 
 
 
-
-<div style="margin-bottom: 20px;">
-    <img 
-        class="img-fluid" 
-        src="{{ site.baseurl }}/assets/img/akorn_followup/part_symmetry_break.svg" 
-        style="width: 70%; height: auto; display: block; margin-left: 10vw; margin-right: 10vw;" 
-        alt="Image 16"
-    >
-</div>
 
 
 
