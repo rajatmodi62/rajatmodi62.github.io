@@ -9,6 +9,9 @@ published: false
 
 `O Lord!! Why did you introduce this problem to me? It remains forever out of my grasp, no matter how much i think`
 
+
+<!-- http://127.0.0.1:4000/2026/03/01/akorn_followup/ -->
+
 <!-- 
 P.S. This is a speculative, scientifically inaccurate post, which does not surpass any state of the art . The problem between science and philosophy is that experiments can show extremely `implausible ideas` like gradient descent are `just right`, and intuitive ideas like part-wholes are `incorrect`. 
 
