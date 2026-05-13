@@ -406,13 +406,13 @@ document.addEventListener('keydown', function(event) {
             </li>
           {% endif %}{% endfor %}
           
-             <!-- {% for post in site.posts %}{% if post.slug == "akorn_followup" %}
+             {% for post in site.posts %}{% if post.slug == "akorn_followup" %}
             <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
               <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
                   {{ post.title }}
               </a>
             </li>
-          {% endif %}{% endfor %} -->
+          {% endif %}{% endfor %}
 
 
             {% for post in site.posts %}{% if post.slug == "akorn" %}
@@ -656,7 +656,8 @@ document.addEventListener('keydown', function(event) {
 <script>
     const newsItems = [
     // "> [April 2026] Awaiting ECCV Reviews, ICML Results, ACM results..",
-   "> [April 2026] Asynchronous Perception Machine patent filed ..",
+   "> [May 2026] ICML Gold Reviewer Award ..",
+    "> [April 2026] Asynchronous Perception Machine patent filed ..",
     "> [April 2026] Received CVPR Broader Participation Grant. Immensely grateful  for  this chance 🙏",
     "> [Feb 2026] Sky2Ground accepted to CVPR 2026.. ",
     // "> [Dec 2024] Grandpa Hinton wins nobel prize godzilla!! One small step for man, a giant leap for mankind... ",

@@ -9,6 +9,7 @@ published: false
 
 `O Lord!! Why did you introduce this problem to me? It remains forever out of my grasp, no matter how much i think`
 
+<!-- ruby -S bundle exec jekyll serve --unpublished -->
 
 <!-- http://127.0.0.1:4000/2026/03/01/akorn_followup/ -->
 
