@@ -69,10 +69,11 @@ feedback:
 [10] icml reject lol, 
   - resubmit to neurips 
 
-[11] re 
+[11] neurips desk reject.
   
   https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=third_optimization:_interplay_with_gradient_accumulation
   https://jax-ml.github.io/scaling-book/
+
 
 ---
 
