@@ -74,6 +74,11 @@ feedback:
   https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=third_optimization:_interplay_with_gradient_accumulation
   https://jax-ml.github.io/scaling-book/
 
+[12] failed pinterest screen coding round for ml intern
+    - they asked detailed questions on random forests, boosted trees etc. 
+    - code decreasing subsequence in a local neighborhood 
+    - code gradient descent training -> i implemented it but could not finish the evaluation.
+    
 
 ---
 
