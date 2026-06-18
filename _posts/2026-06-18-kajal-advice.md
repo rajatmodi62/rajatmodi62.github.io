@@ -107,7 +107,7 @@ Will they be your friends after they graduate and move cities/countries? Spouse 
 
 Work in their labs. But, it is not possible for everyone to have access. 
 
-The second best way is to pick fight with the big people, and scientifically resolve it. Works really well lol. Check the gelato bet on Alexei Effros's page at UC Berkeley for a nice example. Remember, it is better to gain glory as a loser  in a big fight, rather than as a `no-one'. At least people know you tried. Learn to become a good loser. Humour helps a lot.  Remember, that appears to be schmidubers charm too. That's why women are attracted to him. 
+The second best way is to pick fight with the big people, and scientifically resolve it. Works really well lol. Check the gelato bet on Alexei Effros's page at UC Berkeley for a nice example. Remember, it is better to gain glory as a loser  in a big fight, rather than as a `no-one'. At least people know you tried. Learn to become a good loser. Humour helps a lot.  Self-depreciation works wonders to bond with others. 
 
 [6] How do i gain collaborators ? I want my name on many papers. I am a paper production machine. If i dont get 5 icml/iclr/neurips/cvpr/eccv in a year, i will die.
 
@@ -117,6 +117,9 @@ Do solo work first dude. You need to be able to offer `value' to other person. O
 
 really? Ok, you can think about it, and it will become 1000 citations in a day just by thinking !!
 
+[8] my group only got 8 papers in xx conference. Other dude got 20 papers. My students are not working hard enough. let me pressure them. 
+
+dude, you should be grateful that you are in a position to mentor people. Secondly, please fix your self esteem. Spending a night in a homeless shelter will do wonders for you. Get out of your ivory tower, and live with less privileged for a day. 
 
 Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
 
