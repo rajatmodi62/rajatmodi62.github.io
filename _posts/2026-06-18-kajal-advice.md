@@ -119,7 +119,7 @@ really? Ok, you can think about it, and it will become 1000 citations in a day j
 
 [8] my group only got 8 papers in xx conference. Other dude got 20 papers. My students are not working hard enough. let me pressure them. 
 
-dude, you should be grateful that you are in a position to mentor people. Secondly, please fix your self esteem. Spending a night in a homeless shelter will do wonders for you. Get out of your ivory tower, and live with less privileged for a day. 
+dude, you should be grateful that you are in a position to mentor people. Secondly, please fix your self esteem. Spending a night in a homeless shelter will do wonders for you. Get out of your ivory tower, and live with less privileged for a day. Wear used clothes. you will know what hardship really means. 
 
 Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
 
