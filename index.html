@@ -584,6 +584,17 @@ document.addEventListener('keydown', function(event) {
                   </a>
               </p>
           {% endif %}{% endfor %}
+
+
+          {% for post in site.posts %}{% if post.slug == "kajal-advice" %}
+              <p style="margin: 0; margin-bottom: 1.2rem;">
+                  <a href="{{ post.url | prepend: site.baseurl }}" 
+                  class="portal-trigger"
+                    style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+          {% endif %}{% endfor %}
         </div>
      
         
@@ -671,6 +682,8 @@ document.addEventListener('keydown', function(event) {
 <script>
     const newsItems = [
     // "> [April 2026] Awaiting ECCV Reviews, ICML Results, ACM results..",
+    " [July 2026] Scheduled Proposal Defense for PhD thesis..",
+    "> [June 2026] Frame Forgetting Networks accepted to ECCV 2026..",
    "> [May 2026] ICML Gold Reviewer Award ..",
     "> [April 2026] Asynchronous Perception Machine patent filed ..",
     "> [April 2026] Received CVPR Broader Participation Grant. Immensely grateful  for  this chance 🙏",
