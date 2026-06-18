@@ -101,7 +101,7 @@ Will you marry your advisor and babies with him? Please get to work.
 
 [4] What do my friends/spouse think? 
 
-Will they be your friends after they graduate and move cities/countries? Spouse is a different personal  matter, on which cajal goes into great detail. I will cover that later in this post. 
+Will they be your friends after they graduate and move cities/countries? Spouse is a different personal  matter, on which cajal goes into great detail. I will not cover it here. But i will just say i dont agree with cajal: his remarks are too derogatory to women , and it is not at all acceptable in these times where both spouses should have `equal contributions' in household chores and raising of the children. 
 
 [5] How do get my name attached to big people? 
 
@@ -109,16 +109,16 @@ Work in their labs. But, it is not possible for everyone to have access.
 
 The second best way is to pick fight with the big people, and scientifically resolve it. Works really well lol. Check the gelato bet on Alexei Effros's page at UC Berkeley for a nice example. Remember, it is better to gain glory as a loser  in a big fight, rather than as a `no-one'. At least people know you tried. Learn to become a good loser. Humour helps a lot.  Remember, that appears to be schmidubers charm too. That's why women are attracted to him. 
 
-[6] How do i gain collaborators ? I want my name on many papers. I am a paper production machine. 
+[6] How do i gain collaborators ? I want my name on many papers. I am a paper production machine. If i dont get 5 icml/iclr/neurips/cvpr/eccv in a year, i will die.
 
-Do solo work first dude. You need to be able to offer `value' to other person. 
+Do solo work first dude. You need to be able to offer `value' to other person. Otherwise, we are just a baggage. 
 
 [7] OMG. My citations are so low. I am not popular `enough'.
 
 really? Ok, you can think about it, and it will become 1000 citations in a day just by thinking !!
 
 
-Cajal calls these afflictions as `plague of the bind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these. They consumed years of my energy. Don't let is waste your life too. If you find someone engaging in them, point it out. If they don't listen , let them be. 
+Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
 
 
 
