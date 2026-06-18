@@ -77,9 +77,51 @@ Before i answer this question, make sure you decide which level you want to oper
 
 Let me also mention other thing i observed: when i began, i thought neural nets have nothing to do with physics. They are just cute little things you train on computer vision tasks. In my mind, computer vision reigned supreme, and machine learning took a later spot. 
 
-Now i have realized: the principles of learning are governed by laws of thermodynamics. Statistical learning theory is based on probability. Digital machines are based on boolean algebra. Together, thermodynamics, boolean algebra, and proababilities are fundamental sciences. Find a mistake and break one of them. Once you find a loophole, the whole castle will come toppling down. And OMG, it is just so much fun lol. I will give you a magical term: symmetry breaking. Find a way to break it everywhere. The key skill is realizing what does `symmetry' mean. Turns out their is no precise answer, it just comes from intuition lol. 
+Now i have realized: the principles of learning are governed by laws of thermodynamics. Statistical learning theory is based on probability. Digital machines are based on boolean algebra. Together, thermodynamics, boolean algebra, and proababilities are fundamental sciences. Find a mistake and break one of them. Once you find a loophole, the whole castle will come toppling down. And OMG, it is just so much fun lol. 
+
+I will now give you a 'magical' term: symmetry breaking. Find a way to break it everywhere. The key skill is realizing what does `symmetry' mean. Turns out their is no precise answer, it just comes from intuition lol. Don't treat boltzmann, or shannon or turing as gods: they were people far ahead of their time. But surely, they may have made at least one mistake? Your job is to find that. 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Papers won't help after a point</span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Don't get emotional. Grow up. </span>
 
-Our young investigator is often driven by passion, emotions, and hormones (yours truly included). The logic often takes the backseat, or entirely gets thrown out of the window (yours truly again :-)).
+Our young investigator is often driven by passion, emotions, and hormones (yours truly included). The logic often takes the backseat, or entirely gets thrown out of the window (yours truly again :-)). Some examples of emotions are:
+
+[1] What will happen to my paper? Will they reject it? OMG, i put so much effort. Stupid reviewer does not understand it. Peer review is purely `random'. The system does not work. 
+
+It works. And it has saved me on multiple occasions. And it will save you too.
+
+[2] There are so many successful people around me. What is special about me?
+
+Nothing is special. IQ tests are fake. Now get to work .
+
+[3] What does my advisor think? How do i please him?
+
+Will you marry your advisor and babies with him? Please get to work. 
+
+
+[4] What do my friends/spouse think? 
+
+Will they be your friends after they graduate and move cities/countries? Spouse is a different personal  matter, on which cajal goes into great detail. I will cover that later in this post. 
+
+[5] How do get my name attached to big people? 
+
+Work in their labs. But, it is not possible for everyone to have access. 
+
+The second best way is to pick fight with the big people, and scientifically resolve it. Works really well lol. Check the gelato bet on Alexei Effros's page at UC Berkeley for a nice example. Remember, it is better to gain glory as a loser  in a big fight, rather than as a `no-one'. At least people know you tried. Learn to become a good loser. Humour helps a lot.  Remember, that appears to be schmidubers charm too. That's why women are attracted to him. 
+
+[6] How do i gain collaborators ? I want my name on many papers. I am a paper production machine. 
+
+Do solo work first dude. You need to be able to offer `value' to other person. 
+
+[7] OMG. My citations are so low. I am not popular `enough'.
+
+really? Ok, you can think about it, and it will become 1000 citations in a day just by thinking !!
+
+
+Cajal calls these afflictions as `plague of the bind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these. They consumed years of my energy. Don't let is waste your life too. If you find someone engaging in them, point it out. If they don't listen , let them be. 
+
+
+
+
+
+
