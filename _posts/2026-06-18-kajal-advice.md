@@ -14,7 +14,7 @@ date:   2021-02-02 11:00:00
         alt="Image 16"
     >
     <p style="text-align: center; font-style: italic; color: #dbcfcf; margin-top: 8px; font-size: 0.9em;">
-        Kajal labours over his microscope. 
+        Ramon Y Kajal labours over his microscope. Gazing at it long enough allows him to probe deepest secrets of the universe. 
     </p>
 </div>
 
@@ -101,7 +101,7 @@ Will you marry your advisor and babies with him? Please get to work.
 
 [4] What do my friends/spouse think? 
 
-Will they be your friends after they graduate and move cities/countries? Spouse is a different personal  matter, on which cajal goes into great detail. I will not cover it here. But i will just say i dont agree with cajal: his remarks are too derogatory to women , and it is not at all acceptable in these times where both spouses should have `equal contributions' in household chores and raising of the children. 
+Will they be your friends after they graduate and move cities/countries? Spouse is a different personal  matter, on which cajal goes into great detail. I will not cover it here. But i will just say i dont agree with cajal: his remarks are too derogatory to women , and it is not at all acceptable in these times where both spouses should have `equal contributions' in household chores and rearing of the children. 
 
 [5] How do get my name attached to big people? 
 
