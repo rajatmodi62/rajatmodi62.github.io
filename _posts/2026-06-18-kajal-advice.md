@@ -24,9 +24,9 @@ published: false
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">An Existential Crisis</span>
 
-I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones. The last decade has been particularly hard. But it has been fulfilling in ways i never quite imagined. 
+I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones, the kind that comes after travelling alone for a long time. This past decade has been particularly hard. But it has been fulfilling in ways i never quite imagined. 
 
-Of the half that remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. 
+Of the half that remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. I cannot claim to give correct advice, for i myself am inexperienced. But, all i can do is write things as i see them. 
 
 The problem with advice is that you can find shit ton of it online: everyone is preaching themselves as a technical messiah, who seems to have cracked the secrets of AI. They call themselves `influencers, technical enthusiasts' and whatever cool name which gets likes on social platforms. This is a good way to farm good karma. It won't give you reliable piece of advice. 
 
@@ -42,12 +42,12 @@ Thus the ability to do good science only `in part' depends on one's financial co
 
 The mindset of a young investigator should be `i want to do good work, and make contributions that outlive me'. This is a very important property, the 'lack' of which has killed many scientific careers even before they even started. 
 
-If your motivation is `i need a lot of  money after i finish my studies and lead a comfortable life', it will not work out in the long run. The reason is pretty simple: you will run after what is popular and find yourself trapped. You will feel like  a little boat which is forced by the waves of the sea in whatever direction it wants you to go. 
+If your motivation is `i need a lot of  money after i finish my studies and lead a comfortable life', it will not work out in the long run. The reason is pretty simple: you will run after what is popular and find yourself trapped. You will feel like  a little boat which is forced by the waves of the sea in whatever direction it wants you to go. Instead of becoming the sea, you are a boat, or worse a fish. 
 
 Once you go after where everyone is going you realize: what unique things do i bring to the table? You will be at the mercy of homogenization: your work, and your achievements will be identical to the ones around you. If there is no differentiating factor, how can you hope to get things which others wish for, but never manage to get? You might be willing to settle for an ordinary life. It's a perfectly reasonable option, but it might not be as fullfilling. 
 
 
-A PhD is a terminal degree, but don't let it  terminate your future scientific work. It is merely a  'license to practice': you have a formal acknowledgement of the institution that you produced 'some science'. People `might' listen a bit more seriously, had you never gotten it in the first place. 
+A PhD is a terminal degree, but don't let it  terminate your future scientific work. It is merely a  'license to practice': you have a formal acknowledgement of the institution that you produced 'some science'. People `might' listen a bit more seriously, had you never gotten it in the first place.  Other than that it is just a piece of paper. Don't make the mistake of flaunting that paper to others for the rest of your life. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The chicken egg problem</span>
@@ -86,7 +86,7 @@ Now i have realized: the principles of learning are governed by laws of thermody
 I will now give you a 'magical' term: symmetry breaking. Find a way to break it everywhere. The key skill is realizing what does `symmetry' mean. Turns out their is no precise answer, it just comes from intuition lol. Don't treat boltzmann, or shannon or turing as gods: they were people far ahead of their time. But surely, they may have made at least one mistake? Your job is to find that. 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Don't get emotional. Grow up. </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Don't get emotional. </span>
 
 Our young investigator is often driven by passion, emotions, and hormones (yours truly included). The logic often takes the backseat, or entirely gets thrown out of the window (yours truly again :-)). Some examples of emotions are:
 
@@ -100,7 +100,7 @@ Nothing is special. IQ tests are fake. Now get to work .
 
 [3] What does my advisor think? How do i please him?
 
-Will you marry your advisor and babies with him? Please get to work. 
+Will you marry your advisor ? Please get to work. 
 
 
 [4] What do my friends/spouse think? 
@@ -125,7 +125,7 @@ really? Ok, you can think about it, and it will become 1000 citations in a day j
 
 dude, you should be grateful that you are in a position to mentor people.  please fix your self esteem. Spending a night in a homeless shelter will do wonders for you. Get out of your ivory tower, and live with less privileged for a day. Wear used clothes. you will know what hardship really means. 
 
-Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. The mind keeps oscillating and never quite settles on a canonical configuration. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
+Cajal calls these afflictions as `disease of the mind'. These questions weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. The mind keeps oscillating and never quite settles on a canonical lock. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The public performer </span>
@@ -142,16 +142,18 @@ Be really wary not to become a public performer in your early career. A certain 
 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Judge your mentor accurately </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Judge thy mentor  </span>
 
 Our dear investigator now wants to get a phd under someone. He wants to choose an advisor. So he does what seems obvious: go to google scholar, sort researchers by h indexes, and email the most popular one. This approach is a disaster. Find someone who is young, perhaps an assistant professor. He is trying to make a name for himself. Work with people who will lend their fire to you. An old professor will make you sleepy (with exception of a few good ones like Alexei Efros and Gil Strang )
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The trust issues </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Trust issues </span>
 
 Let us imagine that our young investigator goes to work under someone 'famous'. He is very happy at the opportunity. But, when he arrives at the laboratory,  he is deeply disappointed: he is given a boring task, which has nothing to do with what he actually wanted to do. He spends his energy trying to argue with his mentor. In this act, he loses peace of his mind, and energy which would have been better spent on the scientific pursuits. The mentor begins to doubt the mentees ability to complete non-trivial tasks, does not trust him, and never teaches him the deepest darkest secrets of the art. 
 
-The issue here is patience: 1) the mentor is famous due to a reason 2) the mentor is simply 'testing' the young man's resolve. There is a common misconception in the young investigator's head: his value is measured by his skillset. If he is most skilled, he will advance further than others. However, this is not true. The true thing that matters is 'compliance': are you easily coachable or do you have an ego the size of a  balloon? Are you there to advance your agenda or your mentor's agenda? Technical skill can be taught, character cannot. 
+The issue here is patience: 1) the mentor is famous due to a reason 2) the mentor is simply 'testing' the young man's resolve. There is a common misconception in the young investigator's head: his value is measured by his skillset. If he is most skilled, he will advance further than others. However, this is so not true. 
+
+The thing that really matters is 'compliance': are you easily coachable or do you have an ego the size of a  balloon? Are you there to advance your agenda or your mentor's agenda? Technical skill can be taught, character cannot. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The mistake of thinking you outgrew your mentors </span>
@@ -171,14 +173,55 @@ At this point, i am deeply suspicious of backpropagation, contrastive learning, 
 
 Do not make the mistake of thinking that science is a democracy. Opinions of most may turn out to be wrong. The only real thing that matters is the code, and the results. If you can see computational effects which you hypothesized about, then opinions of other people become irrelevant. Once i realized this fact, my life got a lot smoother. You must have one or two people you implicitly trust. For eg, a few people whose 'head' you can 'pick' ,to validate your own intuitions. Keep hunting for such people. But, be aware, that there are not many such people. At the highest levels, posturing does not work. Only the truth matters.
 
-There is one person whose opinion matters more than the democracy: for eg, 'originator' of a particular concept. Let me take an example. Say you have a problem with graph convolutional networks. You go and talk to Thomas Kipf. If he agrees, chances are your intuition is correct. It does not matter what others around you think. I have noticed that people who invented a particular thing have often the most depth about that particular concept. Don't shy away from emailing `big people'. What's the worst that can happen? They won't reply. But if they do, it will change/validate your line of thinking. The potential of reward seems obvious. Yet, most young investigators  tend to self-reject before hitting send. 
+There is one person whose opinion matters more than the democracy: for eg, 'originator' of a particular concept. Let me take an example. Say you have a problem with graph convolutional networks. You go and talk to Thomas Kipf. 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">How to not attend conferences??</span>
+If he agrees, chances are your intuition is correct. It does not matter what others around you think. I have noticed that people who invented a particular thing have often the most depth about that particular concept. Don't shy away from emailing `big people'. What's the worst that can happen? They won't reply. But if they do, it will change/validate your line of thinking. The potential of reward seems obvious. Yet, most young investigators  tend to self-reject before hitting send. 
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">How to NOT attend conferences</span>
 
 Our young investigator has finally managed to publish his first paper, and it is a fully paid trip to a conference!! 
 
-He will wear a nice shirt, don some perfume, get a haircuit, hang a poster tube on the shoulder, and enter the conference hall. He then finds his spot, and presents the poster to everyone. He takes a photo of him standing by the poster, and then makes a cute linkedin post. 
+He will wear a nice shirt, don some perfume, get a haircuit, hang a poster tube on the shoulder, and enter the conference hall. He then finds his spot, and presents the poster to everyone. He takes a photo of him standing by the poster, and then makes a cute linkedin post, with a lot of hashtags. 
 
-On other remaining days, he diligently listens to the oral sessions, nods his head along, takes in some notes on his tablet. Occasionally, he goes to the industry booth to flirt with the cute recruiter: in the hope of getting into an afterparty (and an occasional job offer). He hands over his cv. The recruiter smiles, and points him to a barcode that leads to the ATS blackhole :-). Our hero then deposits his cv , and wonders what happened to his application. Our young investigator then manages to make an occasional friend or two, and thinks that the conference was a great success. 
+On other remaining days, he diligently listens to the oral sessions, nods his head along, takes in some notes on his tablet. Occasionally, he goes to the industry booth to flirt with the cute recruiter: in the hope of getting into an afterparty (and an occasional job offer). He hands over his cv. The recruiter smiles, and points him to a barcode that leads to the ATS blackhole :-). Our hero then deposits his cv , and months later wonders what happened to his application. Our young investigator then manages to make an occasional friend or two, takes them out for lunch and thinks that the conference was a great success. 
 
-He then reaches back to the lab, and keeps a coffee mug at the desk as a reminder to those labmates who failed to succeed. He likes to roam the corridors of the institution wearing shirt stamped `xx company'. By all measures, he is greatly successful. 
+He then reaches back to the lab, and keeps a coffee mug at the desk as a reminder to those labmates who failed to succeed. He likes to roam the corridors of his institution wearing shirt stamped `xx company'. By all measures, he is greatly successful. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">How to  attend conferences</span>
+
+Let us try to analyze what is the mindset of most people while attending conferences. You will find people to be on their `best behaviour'. If you imagine to get 'through to someone' just by talking, it won't work. 
+
+Most people at these conferences are pretty defensive: they are there to defend the validity of their work. A better use of time is to email these people beforehand, and request for a `coffee chat' before their poster sessions begin. Chances are you will manage to have quite a few interesting conversations 
+this way. 
+
+The conferences release a list of papers, often it is helpful to read all the abstract of all the papers. For eg, consider the ai abstract generator i have been parsing for years now. A lot of young investigators make the mistake of `sticking with their areas'. While this allows them to produce a lot of work in short term, soon they find themselves depleted, and running out of ideas. 
+
+One issue is `attending orals'. Orals are full of people. The author has merely 10-15 minutes to cover a work which took almost a year to complete. They are already stressed. There is no point talking over the microphone, or trying to corner them. In long run, people will come to despise your questions, even if they are technically correct. Noone likes confrontation. 
+
+Another issue is `brand chasing'. Let me give you an example. I have seen people 'boast' about their status at Google, and corner phd students into saying: your work is not that great since google already does it. The problem with big conglomerates is that they are into everything. Indeed, a large progress in science is due to their contributions. My dear investigator, your game then is not to compete on their standards, but invent your own. Be creative. 
+
+Similarly a lot of people will crowd over papers authored by prestigious names. Learn to separate the noise from signal. Over time you will be able to distinguish the two by merely looking at the titles of the papers. A typical excuse i have seen: `abstracts are 800 pages long, who will read them?'. I spend 2 days reading them for every conference. If i can do that, so can you. You will know what problems people are working on. That allows you to focus on right things. 
+
+The people who get into these conferences are already smart: dont waste your time praising their work. Rather you must give them something more subtle: your ears. Be curious. `Listen' to them. Ask them about their struggles. Ask them about their work. Ask them for advice on how to be a better researcher. Don't make the mistake of asking about opportunities. Ask for a chance to collaborate if possible. 
+
+Let me take another example. I really respect the director of our lab CRCV Dr. Mubarak Shah. The reason is simple: he listens to people, and is kind. You will find at conferences hopping between various sessions. One quality which separates him from a lot of other people is giving chance to people who have nowhere else to turn to. Everyone wants to work with a brilliant person. The one who is willing to take bets on unproven people, and still mentor them deserves the highest of praise. 
+
+Be kind: often i have seen people stand by their posters and look very sad. It is so heartbreaking. No one comes to talk to them. They feel overwhelmed by the `better work' which seems to be getting a lot of attention. I beg of you, please be kind. Stop by. Cheer them up. Give them a pat on their back. Offer to help them. I have seen this strategy play out well in the long run. By this, you can nurture a lot of collaborators with whom you have a great relationship. They can boost each other's morale, and the quality of science they produce has a way of surpassing the big names. It is the environment that matters, and not the science. The science shall come of its own accord if the environment is supportive. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Give credit where it is due</span>
+
+Let us say you got an idea from someone. You used it in your own paper, and never cited them. The reason is simple: you want to make sure that reviewer thinks that the idea is your own, and your paper has better odds of getting accepted. This strategy is good for people. But it shall alienate you in the long run. 
+
+Dear investigator, give credit where it is due. Credit is not merely giving citation to a paper. Email the authors of the paper you took your ideas from. Let them know what worked. Ask for their advice. People are generous: they like to hear how their work helped others. Let them know. It does not take much time, but it is a great way to build bridges. 
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Take credit where it is due</span>
+
+One mistake i have seen young investigators make is `excessive humility': they give all their credit away, and never manage to define their own precise contributions. If you keep doing that, people will think that you don't respect your own work. Then how can you expect other people to respect your work? Please don't be that guy. An example is as follows: a lot of people in India, want to keep being called 'sir' by their juniors. Seniority is measured by age, and not by the actual output. Learn to separate the two. Be mindful when someone is just pretending to be a senior and is actually hollow inside. 
+
+
+Learn to clearly separate what ideas you took, what were your precise contributions, and why they matter. Being able to articulate them in a single slide, and explain to a high school kid is the level of clarity one should aim for. Everyone can make things complex, but it takes a lot of creativity to keep things simple yet tangible. 
+
