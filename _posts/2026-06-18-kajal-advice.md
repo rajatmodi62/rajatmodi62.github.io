@@ -142,7 +142,7 @@ Be really wary not to become a public performer in your early career. A certain 
 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Judge thy mentor  </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Judge thy mentor by work not prestige  </span>
 
 Our dear investigator now wants to get a phd under someone. He wants to choose an advisor. So he does what seems obvious: go to google scholar, sort researchers by h indexes, and email the most popular one. This approach is a disaster. Find someone who is young, perhaps an assistant professor. He is trying to make a name for himself. Work with people who will lend their fire to you. An old professor will make you sleepy (with exception of a few good ones like Alexei Efros and Gil Strang )
 
@@ -165,7 +165,7 @@ I beg of you, don't let it get to your head. Remember who made you what you are.
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Everything you were taught is wrong</span>
 
-It appears that AI undergoes shifts over every five years. RNNs overcame LSTMS. Transformers overcame LSTMS. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
+It appears that AI undergoes shifts over every five years. RNNs overcame LSTMS. Transformers overcame RNN. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
 
 Let me give you an example. People told me MLPs cannot do segmentation. I showed in my APM paper that you can do that. People told attention is fundamental. I showed you can do same computation with a shared MLP across locations. People thought we need data augmentation/routing. In making GLOM work, we got rid of all of it. Indeed, now people are realizing we don't need all this fluff. Yann lecunn recently removed layer norm too. Takeru/sindy got rid of mccullough pitts neuron. 
 
@@ -205,9 +205,14 @@ Similarly a lot of people will crowd over papers authored by prestigious names. 
 
 The people who get into these conferences are already smart: dont waste your time praising their work. Rather you must give them something more subtle: your ears. Be curious. `Listen' to them. Ask them about their struggles. Ask them about their work. Ask them for advice on how to be a better researcher. Don't make the mistake of asking about opportunities. Ask for a chance to collaborate if possible. 
 
-Let me take another example. I really respect the director of our lab CRCV Dr. Mubarak Shah. The reason is simple: he listens to people, and is kind. You will find at conferences hopping between various sessions. One quality which separates him from a lot of other people is giving chance to people who have nowhere else to turn to. Everyone wants to work with a brilliant person. The one who is willing to take bets on unproven people, and still mentor them deserves the highest of praise. 
+Let me take another example. I really respect the director of our lab CRCV Dr. Mubarak Shah. The reason is simple: he listens to people, and is kind. You will find him at conferences hopping between various sessions. One quality which separates him from a lot of other people is giving chance to people who have nowhere else to turn to. Everyone wants to work with a brilliant person. The one who is willing to take bets on unproven people, and still mentor them deserves the highest of praise. 
 
-Be kind: often i have seen people stand by their posters and look very sad. It is so heartbreaking. No one comes to talk to them. They feel overwhelmed by the `better work' which seems to be getting a lot of attention. I beg of you, please be kind. Stop by. Cheer them up. Give them a pat on their back. Offer to help them. I have seen this strategy play out well in the long run. By this, you can nurture a lot of collaborators with whom you have a great relationship. They can boost each other's morale, and the quality of science they produce has a way of surpassing the big names. It is the environment that matters, and not the science. The science shall come of its own accord if the environment is supportive. 
+Young investigators often claim : `my mentor is too harsh, too demanding'. Don't make that mistake. First, observe how much your mentor works. Chances are you will find him working around 12-13 hours a day, and pushed back into back with meetings. If someone at 70 years of age can work so much, you have no excuse of not working. If you still cannot, then perhaps you will be better served searching for a less demanding pursuit (Which might end up paying more). 
+
+
+Be kind: often i have seen people stand by their posters and look very sad. It is so heartbreaking. No one comes to talk to them. They feel overwhelmed by the `better work' which seems to be getting a lot of attention. I beg of you, please be kind. Stop by. Cheer them up. Give them a pat on their back. Offer to help them. I have seen this strategy play out well in the long run. 
+
+By this, you can nurture a lot of collaborators with whom you have a great relationship. They can boost each other's morale, and the quality of science they produce has a way of surpassing the big names. It is the environment that matters, and not the science. The science shall come of its own accord if the environment is supportive. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Give credit where it is due</span>
@@ -220,8 +225,92 @@ Dear investigator, give credit where it is due. Credit is not merely giving cita
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Take credit where it is due</span>
 
-One mistake i have seen young investigators make is `excessive humility': they give all their credit away, and never manage to define their own precise contributions. If you keep doing that, people will think that you don't respect your own work. Then how can you expect other people to respect your work? Please don't be that guy. An example is as follows: a lot of people in India, want to keep being called 'sir' by their juniors. Seniority is measured by age, and not by the actual output. Learn to separate the two. Be mindful when someone is just pretending to be a senior and is actually hollow inside. 
+One mistake i have seen young investigators make is `excessive humility': they give all their credit away, and never manage to define their own precise contributions. If you keep doing that, people will think that you don't respect your own work, are always 'defensive' and don't have 'enough skin in the game'. Then how can you expect other people to respect your work? Please don't be that guy. An example is as follows: a lot of people in India, want to keep being called 'sir' by their juniors. Seniority is measured by age, and not by the actual output. Learn to separate the two. Be mindful when someone is just pretending to be a senior and is actually hollow inside. 
 
 
 Learn to clearly separate what ideas you took, what were your precise contributions, and why they matter. Being able to articulate them in a single slide, and explain to a high school kid is the level of clarity one should aim for. Everyone can make things complex, but it takes a lot of creativity to keep things simple yet tangible. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Understand the nature of conferences</span>
+
+Before you hit submit on your papers, learn the nature of the conference you are submitting to. Each conference has its own flavour, and this difference is not often taught, but gained through experience. But, the point of this post is to reduce the time it takes for your to understand it and not waste years of your life like i did. Let us again consider an example. 
+
+NeurIPS tends to favour fundamental architectural work, for eg, some key principle of learning machines often having a deep connections with physics. If you have an ability to `cross-polinate', NeurIPS will be a better bet. Funnily this worked quite well for me: i was able to identify earlier on that the system their tends to reward a kind of 'out of the box' thinking. Publish here for more academic prestige. 
+
+A baby of NeurIPS could be considered ICLR: it got established late, but still appears to be along similar lines. One curious property of ICLR is that your work becomes public even if it is rejected: this accounts for their higher acceptance rate often bordering to 30%. Less people submit, and more tend to get accepted. Send your paper to ICLR if one of the following holds true: (i) you are confident it will go in (ii) you are sending the paper to it's death, but want a formal credit that you got the idea first. In this case the paper will end up getting rejected, but at least their will be a public record on openreview. 
+
+ICML is more theoretical: people here really like their math. If you are good at formalizing your intuitions, send your work here. Personally however, mathematics is not my strongest suite. I am more like a intuition kinda guy lol. I would like to take another example here. 
+
+CVPR/ECCV/ICCV tends to be more application oriented. People here really like their `benchmarks', and pushing state of the art. If you have a reasonable method, and good set of ablations, there are high odds your paper will go in. The applications here are directly applicable to industry, and hence these kind of conferences tend to be more funded. If you are looking to get a job, try to publish at this venue. Even attending CVPR seems to be a rich experience. I would like to take an example here. CVPR 2022 was held in New Orleans and the attendee's badge were of amazing quality. NeurIPS on the otherhand just gives you a piece of paper with holes for lanyard: the cheapness was bleeding through!! I loved it lol. 
+
+AAAI does not look kindly at vision papers: they like to give more chance to other ML related work. The reason is simple, vision folks have many options. Pure ML guys: not so much. Remember this in case you are fighting the two phase process of AAAI. 
+
+The young investigator shall be served well to understand the `prestige' of these conferences. Looking at the metrics, CVPR outclasses NeurIPS in terms of total citations. The reason is that application work ends up being used more, is of more practical relevance to today's problems. 
+
+However, there is another pattern. People like Yoshua bengio, Ruslan Salakhutdinov, Jurgen Schmidhuber, and Geoff Hinton, don't publish at opencvf conferences. Their work lands in the abstract category we discussed earlier, and neurips seems to be the well accepted battleground. Looking at the history of the field, several of key papers were published at NeurIPS/ICML. For eg, Alexnet in NeurIPS 2012, Word2Vec in NeurIPS 2013, GAN in NeurIPS 2014, attention was NeurIPS 2017, DDPM in NeurIPS 2020, Tree of Thoughts in NeurIPS 2023, AKORN in NeurIPS 2024. 
+
+The young investigator must not confuse 'originating' of an idea from its application. There has been a long history where methods were picked up from these conferences, and `applied' at CVPR/ICLR, and gained great popularity.  For example, consider VIT paper. They used transformer in NLP and showed it working for images, and eventually gained a lot of impact. Never undersestimate the power of original ideas. Be quick to spot ideas in these conferences, and use them before others use it. This is the secret. Pick cool ideas from NeurIPS, and apply them to CVPR. 
+
+
+One other mistake i have seen in people doing `foundational' work is the inability to appreciate its application. For eg, people look down at VIT just because it used a transformer without many changes, and so it was 'not novel' in that regards. I beg of you, don't make this mistake. Application of an idea solves real problems. It is application only that gives you a model of business. This will give you money, which you will need to sustain long term fundamental research. 
+
+
+Never make the mistake of thinking application is inferior to theory. Einstein had to wait for someone to go around the globe and observe a solar eclipse to prove his theory of relativity. Hopfield got his nobel at 91, even though he wrote about associative memories back in the 1950's. Cajal `perfected' golgi's staining technique, yet shared the same honors as the original inventor. Curie applied the Becquerel principle of radioactivity, and shared the honor with him. Theory is nothing without application. It is application and the power of observations that separates whims of the theorist from the actual existence of the physical law. 
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Problem for the Fundamentalist</span>
+
+Let us imagine you want to do fundamental work. That work is in NeurIPS. But, how do you create `new' fundamental work? The kind the world has never seen before? There is no paper you can cite, or build upon. You are on your own. There is no spot to hide. Your entire job is a battle of wits with the reviewers: you must convince them that the nature of computation you invented is far different than what their paradigm suggests. And trust me, this is a very stressful battle. It goes far beyond one conference cycle. Be mentally prepared for years of rejections, and alienation. 
+
+The only skill that matters here is perseverance: the ability to keep going even when odds are stacked against you. Not many people have that. One cool trick to train this muscle is to do strength training: push your body to lift more weights than it can. Keep pushing it before it breaks. If your mind can conquer the feebleness of your body, then perhaps your mind can conquer the superficial nature of the reviewer. 
+
+The trick is then to look at Nature Machine Intelligence, or journals like Neuron, The Mind, or Neural Computations. At these levels of research, people are not concerned with architectures. They have `abstracted' away the mathematics. The only problem of interest is the 'physical law' the machines must obey. Let me take an example. 
+
+
+Let us say you invented something like backpropagation and wanted to publish this as a new learning algorithm in Nature journal. Your first bet would be to use this method to train a   billion parameter model and demonstrate state of the art results on a benchmark. This strategy although works for CVPR, shall not work for Nature. The reason is pretty simple. People at that level talk in symmetry. 
+
+For example, there are a few tasks a machine must solve for eg, parity. How does it behave under rotation/reflection? How does it sort an array? How does it do copy of content from input to its internal memory? How does it retrieve an element? How does it work on the binding problem. i.e. detect objects without training?. The trick is to demonstrate `new properties' the machine has not seen before. Any other problem is computer vision can be then reduced to merely storing patterns in an associative memory, and recalling them when required. 
+
+Let me take another example. One of the masters of the art is Timothy Lillicrap. For example, in Random Feedback Alignment he showed that we can create two separate networks for passing forward signal, and error signal. Even with random initialization, the network still learns. That is a beautiful idea. Such people are concerned with `structure' of how information is represented in a neural network. The general principle holds across many architectures. And that is the reason publishing in nature is so tough: it demands the ability to abstract away the complexities. Indeed, this level of thought is well deserved for the first Hinton Sejnowski Award.
+
+99% of us are not creative enough to do this work on our first day. But instead of being angry, learn of it as a  mission to always strive towards. Always question : what is one key abstract insight i am pushing in my own work? 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The illusion of  compute and memory</span>
+
+Let me now turn to an advice (by Alex Alemi) that shattered my own illusions. 
+
+The young investigator wants a quick paper. There are two ways he may think of playing the game:
+
+1) push compute by training something longer than someone. The contribution comes from state of the art by bruteforcing the solution on a gpu, and not from an actual technical breakthrough. 
+
+2) push memory efficiency: lay the claim that the models should work in maybe 2GBs. Since large models cannot work in that way, the competition is eliminated. Only you can exist in that arena. 
+
+
+The problem with 1) is that it is always possible for someone to outcompute you. The problem with 2) is that the `baseline' access to memory is not a problem: companies can easily afford 150Gigs hoppers, and your 2GB setup is of no interest to them. Just because the young investigator is constrained for resources does not mean that the world is. 
+
+It turns out that i wasted a lot of time pushing 2) out of ego. And bruteforce scaling ultimately beat everything i dared to  design. And that leads one to sutton's bitter lesson. Read that lesson thoroughly. Don't make the same mistakes. 
+
+
+If both 1) and 2) don't work, then what is the way out? And that is where Alex Alemi's amazing advice kicks in. 
+
+Your job is to demonstrate a solution which works better than the state of the art at small scales (like one ampere gpu of 48 gigs). Then you scale it up to 80gigs, or at most 4 ampere gpus. The problem then is to demonstrate the scaling curve. That your `rate of increase' is faster than the baseline method, and it stands to reason that you will outperform the baseline. 
+
+Please note that the amount of time you must train for to make appreciable performance difference really matters. If you have to run the computing machine for 100 years to get the measurable performance different w.r.t baseline, your entire effort is futile. It is better to chase another worthy problem to work upon. 
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">One man's taboo is another man's science</span>
+
+There are certain problems which lie in the realms of the mystics. It is often considered to 'touch' them. 
+
+For eg, how does one define consciousness in the machines? This `does not' have a precise experiment the young investigator could perform in a machine. A turing machine merely mimics the outputs of a human. Just because it quacks like a duck, looks like a duck does not mean 'it is a duck'. 
+All you can measure is behaviour, and not the perception of the mind. Always know this difference. 
+
+
+The friction between philosophy and benchmark driven science is a fertile ground. Learn to exploit that.  Imagine new things, and find a way to build them. Let me give you another example. 
+
+
+
 
