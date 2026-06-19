@@ -181,4 +181,4 @@ He will wear a nice shirt, don some perfume, get a haircuit, hang a poster tube 
 
 On other remaining days, he diligently listens to the oral sessions, nods his head along, takes in some notes on his tablet. Occasionally, he goes to the industry booth to flirt with the cute recruiter: in the hope of getting into an afterparty (and an occasional job offer). He hands over his cv. The recruiter smiles, and points him to a barcode that leads to the ATS blackhole :-). Our hero then deposits his cv , and wonders what happened to his application. Our young investigator then manages to make an occasional friend or two, and thinks that the conference was a great success. 
 
-He then reaches back to the lab, and keeps a coffee mug at the desk as a reminder to those labmates who failed to succeed. By all measures, he is greatly successful. 
+He then reaches back to the lab, and keeps a coffee mug at the desk as a reminder to those labmates who failed to succeed. He likes to roam the corridors of the institution wearing shirt stamped `Google'. By all measures, he is greatly successful. 
