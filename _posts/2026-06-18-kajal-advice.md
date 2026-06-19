@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Advice For Young Investigators"
+title:  "Cajal's Advice For Young Investigators"
 description: "Advice For Young Investigators who are beginning their careers"
 date:   2021-02-02 11:00:00
 ---
@@ -22,13 +22,15 @@ date:   2021-02-02 11:00:00
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">An Existential Crisis</span>
 
-I am 32 now. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones. The last decade has been particularly hard. But it has been fulfilling in ways i never quite imagined. 
+I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones. The last decade has been particularly hard. But it has been fulfilling in ways i never quite imagined. 
 
-I like to think that i gained some learnings along the way, things which if i had known before would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people around this world who want to contribute to science, and they aren't quite lucky to get the chance to work with good people. There is just not enough correct advice around.
+Of the half that remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. 
 
 The problem with advice is that you can find shit ton of it online: everyone is preaching themselves as a technical messiah, who seems to have cracked the secrets of AI. They call themselves `influencers, technical enthusiasts' and whatever cool name which gets likes on social platforms. This is a good way to farm good karma. It won't give you reliable piece of advice. 
 
-We would like to remember Santiago Ramon Y Cajal (shown in the picture above). He is an old man who lived in the nineteenth century. He happened to get a nobel prize in biology. People know him as `father of neuroscience'. The reason we are interested in him is because he is exact opposite of what we think a successful scientist ought to be. He grew up in Spain, a country which didn't have much scientific establishment. He never went to best of the colleges. Yet, he did good science, inspite of working as assistant to a barber. Similarly, Alan Turing (and colleagues) did some of the best science of their time in Hut 8, and succeeded under miserable conditions of world war 2.  The reason was that they were 'driven' by a mission: to save the lives which would have been lost if the war had kept dragging on. 
+We would like to remember Santiago Ramon Y Cajal (shown in the picture above). He is an old man who lived in the nineteenth century. He happened to get a nobel prize in biology. People know him as `father of neuroscience'. The reason we are interested in him is because he is exact opposite of what we think a successful scientist ought to be. He grew up in Spain, a country which didn't have much scientific establishment. 
+
+He never went to best of the colleges. Yet, he did good nobel-worthy science, inspite of working as assistant to a barber. Similarly, Alan Turing (and colleagues) did some of the best science of their time in Hut 8, and succeeded under miserable conditions of world war 2.  The reason was that they were 'driven' by a mission: to save the lives which would have been lost if the war had kept dragging on. 
 
 Chances are your conditions are a lot better than them. You live in a time of peace. You might wiggle out of the argument saying `they were geniuses, so managed to get quite a lot of work done'. You might be correct, but there are high odds that is just an excuse:  you 'do not have' courage to face your laziness and incompetencies (indeed, i still don't have that). You might also argue that you need 'a lot of GPU resources for ai'. You will do well to remember that connectionists of the past (hinton) worked on CPUs, and still invented backpropagation, mixture of experts and all the basics we still use today. 
 
@@ -111,7 +113,7 @@ The second best way is to pick fight with the big people, and scientifically res
 
 [6] How do i gain collaborators ? I want my name on many papers. I am a paper production machine. If i dont get 5 icml/iclr/neurips/cvpr/eccv in a year, i will die.
 
-Do solo work first dude. You need to be able to offer `value' to other person. Otherwise, we are just a baggage. 
+Do solo work first dude. You need to be able to offer `value' to other person. Otherwise, you are just a baggage. Everyone in this world has to pay a 'tax'. Be willing to pay it. Often, in comes with low pay and long hours. Own it. Don't fight it. But, don't allow tax to turn into exploitation. It's a delicate balance. 
 
 [7] OMG. My citations are so low. I am not popular `enough'.
 
@@ -124,7 +126,20 @@ dude, you should be grateful that you are in a position to mentor people. Second
 Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The public performer </span>
 
+Our young investigator is indeed notorious: he can invent all sort of curious ways to get distracted and feed his ego. 
 
+One of the ways goes as follows: 1) he gets his paper accepted 2) he posts a message on linkedin 3) people like it 4) he constantly tracks how many likes he got 5) the more the better. 6) then, he looks at people who checked his profile 7) he messages people who followed him. 8) checking instagram/email often. 
 
+Often our young investigator will also operate under the `illusion of being a mentor': he will build a group of people who know less than him, and  'mentor them'. The fact they listen to him gives him great source of pleasure.
 
+ The issue is that there is no one telling the group leader what all he does not know. In that case, the group only "learns" what the routing node (aka the leader) knows. The achievements of the group are then limited by the leader. The students never outshine the master. A true master (yoda) however becomes happy when his students solve things that he could not solve alone. The first is a parasitic relationship and drains energy. The second is a self-sustaining relationship (which i like to call as the recirculation mechanism), whose constituents are vibrant personalities. 
+
+Be really wary not to become a public performer in your early career. A certain presence is required later on to establish an ecosystem and give a place for young minds to grow. But, if you are starting off, perhaps you don't need social media. (Although you can use tiktok to post your gym photos ). A young scientist trapped in a laboratory will spend `best years' of his life alone. SO there is indeed a need to mate, an endeavour we ourselves didnt have much success in. Keep making friends, and hanging out. Don't let research become your grave.  
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The trust issue </span>
+
+Let us imagine that our young investigator goes to work under someone famous. He is very happy at the opportunity. But, when he arrives at the laboratory,  he is deeply disappointed: he is given a boring task, which has nothing to do with what he actually wanted to do. He spends his energy trying to argue with his mentor. In this act, he loses peace of his mind, and energy which would have been better spent on the scientific pursuits. The mentor begins to doubt the mentees ability to complete non-trivial tasks, does not trust him, and never teaches him the deepest darkest secrets of the art. 
+
+The issue here is patience: 1) the mentor is famous due to a reason 2) the mentor is simply testing the young man's resolve. There is a common misconception in the young investigator's head: his value is measured by his skillset. If he is most skilled, he will advance further than others. However, it is not true. The true thing that matters is `compliance': are you easily coachable or do you have ego the size of the earth? Technical skill can be taught, character cannot. 
