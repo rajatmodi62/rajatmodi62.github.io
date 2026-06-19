@@ -111,7 +111,7 @@ Will they be your friends after they graduate and move cities/countries? Spouse 
 
 Work in their labs. But, it is not possible for everyone to have access. 
 
-The second best way is to pick fight with the big people, and scientifically resolve it. Works really well lol. Check the gelato bet on Alexei Effros's page at UC Berkeley for a nice example. Remember, it is better to gain glory as a loser  in a big fight, rather than as a `no-one'. At least people know you tried. Learn to become a good loser. Humour helps a lot.  Self-depreciation works wonders to bond with others. 
+The second best way is to pick fight with the big people, and scientifically resolve it. Works really well lol. Check the gelato bet on Alexei Effros's page at UC Berkeley for a nice example. Remember, it is better to gain glory as a loser  in a big fight, rather than be forgotten. Learn to become a good loser. Humour helps a lot.  Self-depreciation works wonders to bond with others. 
 
 [6] How do i `gain' collaborators ? I want my name on many papers. I am a paper production machine. If i dont get 5 icml/iclr/neurips/cvpr/eccv in a year, i will die.
 
@@ -123,9 +123,9 @@ really? Ok, you can think about it, and it will become 1000 citations in a day j
 
 [8] my group only got 8 papers in xx conference. Other dude got 20 papers. My students are not working hard enough. let me pressure them. 
 
-dude, you should be grateful that you are in a position to mentor people. Secondly, please fix your self esteem. Spending a night in a homeless shelter will do wonders for you. Get out of your ivory tower, and live with less privileged for a day. Wear used clothes. you will know what hardship really means. 
+dude, you should be grateful that you are in a position to mentor people.  please fix your self esteem. Spending a night in a homeless shelter will do wonders for you. Get out of your ivory tower, and live with less privileged for a day. Wear used clothes. you will know what hardship really means. 
 
-Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
+Cajal calls these afflictions as `disease of the mind'. These questions  often weaken resolve, have no definite answers and prevent the mind from staying to problems which really matter. The mind keeps oscillating and never quite settles on a canonical configuration. Learn to avoid these like a plague. They consumed years of my energy. Don't let it waste your life too. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The public performer </span>
@@ -138,13 +138,21 @@ Often our young investigator will also operate under the `illusion of being a me
 
  The issue is that there is no one telling the group leader what all he does not know. In that case, the group only "learns" what the routing node (aka the leader) knows. The achievements of the group are then limited by the leader. The students never outshine the master. A true master (yoda) however becomes happy when his students solve things that he could not solve alone. The first is a parasitic relationship and drains energy. The second is a self-sustaining relationship (which i like to call as the recirculation mechanism), whose constituents are vibrant personalities. 
 
-Be really wary not to become a public performer in your early career. A certain presence is required later on to establish an ecosystem and give a place for young minds to grow. But, if you are starting off, perhaps you don't need social media. (Although you can use tiktok to post your gym photos ). A young scientist trapped in a laboratory will spend `best years' of his life alone. SO there is indeed a need to mate, an endeavour we ourselves didnt have much success in. Keep making friends, and hanging out. Don't let research become your grave.  
+Be really wary not to become a public performer in your early career. A certain presence is required later on to establish an ecosystem and give a place for young minds to grow. But, if you are starting off, perhaps you don't need social media. (Although you can use tiktok to post your gym photos ). A young scientist trapped in a laboratory will spend `best years' of his life alone. SO there is indeed a need to mate, an endeavour we ourselves didnt have much success in. Keep making friends, and hanging out. Smoke the occasional joint (or not). Don't let research become your grave.  
+
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Judge your mentor accurately </span>
+
+Our dear investigator now wants to get a phd under someone. He wants to choose an advisor. So he does what seems obvious: go to google scholar, sort researchers by h indexes, and email the most popular one. This approach is a disaster. Find someone who is young, perhaps an assistant professor. He is trying to make a name for himself. Work with people who will lend their fire to you. An old professor will make you sleepy (with exception of a few good ones like Alexei Efros and Gil Strang )
+
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The trust issues </span>
 
 Let us imagine that our young investigator goes to work under someone 'famous'. He is very happy at the opportunity. But, when he arrives at the laboratory,  he is deeply disappointed: he is given a boring task, which has nothing to do with what he actually wanted to do. He spends his energy trying to argue with his mentor. In this act, he loses peace of his mind, and energy which would have been better spent on the scientific pursuits. The mentor begins to doubt the mentees ability to complete non-trivial tasks, does not trust him, and never teaches him the deepest darkest secrets of the art. 
 
 The issue here is patience: 1) the mentor is famous due to a reason 2) the mentor is simply 'testing' the young man's resolve. There is a common misconception in the young investigator's head: his value is measured by his skillset. If he is most skilled, he will advance further than others. However, this is not true. The true thing that matters is 'compliance': are you easily coachable or do you have an ego the size of a  balloon? Are you there to advance your agenda or your mentor's agenda? Technical skill can be taught, character cannot. 
+
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The mistake of thinking you outgrew your mentors </span>
 
@@ -157,11 +165,18 @@ I beg of you, don't let it get to your head. Remember who made you what you are.
 
 It appears that AI undergoes shifts over every five years. RNNs overcame LSTMS. Transformers overcame LSTMS. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
 
-Let me give you an example. People told me MLPs cannot do segemntation. I showed in my APM paper that you can do that. People told attention is fundamental. I showed you can do same computation with a shared MLP across locations. People thought we need data augmentation/routing. In making GLOM work, we got rid of all of it. Indeed, now people are realizing we don't need all this fluff. Yann lecunn recently removed layer norm too. Takeru/sindy got rid of mccullough pitts neuron. 
+Let me give you an example. People told me MLPs cannot do segmentation. I showed in my APM paper that you can do that. People told attention is fundamental. I showed you can do same computation with a shared MLP across locations. People thought we need data augmentation/routing. In making GLOM work, we got rid of all of it. Indeed, now people are realizing we don't need all this fluff. Yann lecunn recently removed layer norm too. Takeru/sindy got rid of mccullough pitts neuron. 
 
 At this point, i am deeply suspicious of backpropagation, contrastive learning, and gradient descent. I think it all needs to go away. 
 
 Do not make the mistake of thinking that science is a democracy. Opinions of most may turn out to be wrong. The only real thing that matters is the code, and the results. If you can see computational effects which you hypothesized about, then opinions of other people become irrelevant. Once i realized this fact, my life got a lot smoother. You must have one or two people you implicitly trust. For eg, a few people whose 'head' you can 'pick' ,to validate your own intuitions. Keep hunting for such people. But, be aware, that there are not many such people. At the highest levels, posturing does not work. Only the truth matters.
 
-There is some whose opinion matters more than the democracy: for eg, 'originator' of a particular concept. Let me take an example. Say you have a problem with graph convolutional networks. You go and talk to Thomas Kipf. If he agrees, chances are your intuition is correct. It does not matter what others around you think. I have noticed that people who invented a particular thing have often the most depth about that particular concept. Don't shy away from emailing `big people'. What's the worst that can happen? They won't reply. But if they do, it will change/validate your line of thinking. The potential of reward seems obvious. Yet, most young investigators  tend to self-reject before hitting send. 
+There is one person whose opinion matters more than the democracy: for eg, 'originator' of a particular concept. Let me take an example. Say you have a problem with graph convolutional networks. You go and talk to Thomas Kipf. If he agrees, chances are your intuition is correct. It does not matter what others around you think. I have noticed that people who invented a particular thing have often the most depth about that particular concept. Don't shy away from emailing `big people'. What's the worst that can happen? They won't reply. But if they do, it will change/validate your line of thinking. The potential of reward seems obvious. Yet, most young investigators  tend to self-reject before hitting send. 
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">How to not attend conferences??</span>
+
+Our young investigator finally manages to publish his first paper, and it is a fully paid trip to a conference!! 
+
+He will wear a nice shirt, don some perfume, get a haircuit, hang a poster tube on the shoulder, and enter the conference hall. He then finds his spot, and presents the poster to everyone. On other days, he diligently listens to the orals, nods his head along, takes in some notes on his tablet. Occasionally, he goes to the industry booth to flirt with the cute recruiter: in the hope of getting into an afterparty (and an occasional job offer). He hands over his cv. The recruiter smiles, and points him to a barcode that leads to the ATS blackhole :-). Our hero then deposits his cv , and wonders what happened to his application.
+
 
