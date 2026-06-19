@@ -148,4 +148,20 @@ The issue here is patience: 1) the mentor is famous due to a reason 2) the mento
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The mistake of thinking you outgrew your mentors </span>
 
-Let us imagine that the young investigator is wildly successful in their endeavours. They have managed to gain many papers, many orals and  tier-1 internships.  Now, they will start thinking their mentor is a does not understand their work anymore. While it may be scientifically accurate, the issue at hand is ego. I beg of you, don't let it get to your head. Remember who made you what you are. Remember their sacrifices. Remember their belief when you were a `no one'. Unfortunately, most people don't have this maturity. They think their phd's as a transaction: you do xx papers, and then you graduate. You leave your mentors, and never talk to them again. It DOES NOT work like that. Make sure your mentors become your collaborators, and not people you lose with your success. Otherwise, like Steve Jobs you will lie at your death bed and find it hollow. 
+Let us imagine that our dear investigator is wildly successful in his endeavours. He has managed to accumulate many papers, many orals and  tier-1 internships.  Now, he will start thinking their mentor is a 'does not understand' their work anymore. While it may be scientifically accurate, the issue at hand is ego. 
+
+I beg of you, don't let it get to your head. Remember who made you what you are. Remember their sacrifices. Remember their belief when you were a `no one'. Unfortunately, most people treat their phd's as a transaction: you do xx papers, and then you graduate. You leave your mentors, and never talk to them again. It DOES NOT work like that. Make sure your mentors become your collaborators, and not people you lose with your success. Otherwise, like Steve Jobs you will lay at your death bed and find it hollow. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Assume everything you were taught is wrong</span>
+
+It appears that AI undergoes severe shifts over every five years. RNNs overcame LSTMS. Transformers overcame LSTMS. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
+
+Let me give you an example. People told me MLPs cannot do segemntation. I showed in my APM paper that you can do that. People told attention is fundamental. I showed you can do same computation with a shared MLP across locations. People thought we need data augmentation/routing. In making GLOM work, we got rid of all of it. Indeed, now people are realizing we don't need all this fluff.
+
+At this point, i am deeply suspicious of backpropagation, contrastive learning, and gradient descent. I think it all needs to go away. 
+
+Do not make the mistake of thinking that science is a democracy. Opinions of most may turn out to be wrong. The only real thing that matters is the code, and the results. If you can see computational effects which you hypothesized about, then opinions of other people become irrelevant. Once i realized this fact, my life got a lot smoother. You must have one or two people you implicitly trust. For eg, a few people whose 'head' you can 'pick' ,to validate your own intuitions. Keep hunting for such people. 
+
+There is some whose opinion matters more than the democracy: for eg, originator of a particular concept. Let me take an example. Suppose you have a problem with graph convolutional networks. You go and talk to Thomas Kipf. If he agrees, chances are your intuition is correct. It does not matter what others around you think. I have noticed that people who invented a particular thing have often the most depth about that particular concept. Don't shy away from emailing `big-people'. What's the worst that can happen? They won't reply. But if they do, it will change/validate your line of thinking. The potential of reward seems obvious. Yet, most people tend to self-reject. 
+
