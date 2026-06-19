@@ -155,9 +155,9 @@ I beg of you, don't let it get to your head. Remember who made you what you are.
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Everything you were taught is wrong</span>
 
-It appears that AI undergoes severe shifts over every five years. RNNs overcame LSTMS. Transformers overcame LSTMS. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
+It appears that AI undergoes shifts over every five years. RNNs overcame LSTMS. Transformers overcame LSTMS. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
 
-Let me give you an example. People told me MLPs cannot do segemntation. I showed in my APM paper that you can do that. People told attention is fundamental. I showed you can do same computation with a shared MLP across locations. People thought we need data augmentation/routing. In making GLOM work, we got rid of all of it. Indeed, now people are realizing we don't need all this fluff.
+Let me give you an example. People told me MLPs cannot do segemntation. I showed in my APM paper that you can do that. People told attention is fundamental. I showed you can do same computation with a shared MLP across locations. People thought we need data augmentation/routing. In making GLOM work, we got rid of all of it. Indeed, now people are realizing we don't need all this fluff. Yann lecunn recently removed layer norm too. Takeru/sindy got rid of mccullough pitts neuron. 
 
 At this point, i am deeply suspicious of backpropagation, contrastive learning, and gradient descent. I think it all needs to go away. 
 
