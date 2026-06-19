@@ -153,7 +153,7 @@ Let us imagine that our dear investigator is wildly successful in his endeavours
 I beg of you, don't let it get to your head. Remember who made you what you are. Remember their sacrifices. Remember their belief when you were a `no one'. Unfortunately, most people treat their phd's as a transaction: you do xx papers, and then you graduate. You leave your mentors, and never talk to them again. It DOES NOT work like that. Make sure your mentors become your collaborators, and not people you lose with your success. Otherwise, like Steve Jobs you will lay at your death bed and find it hollow. 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Assume everything you were taught is wrong</span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Everything you were taught is wrong</span>
 
 It appears that AI undergoes severe shifts over every five years. RNNs overcame LSTMS. Transformers overcame LSTMS. Mamba (sorta) overcame Transformer. AI is pretty young: chances are everything you know about it is wrong. My advice is `be suspicious'. Question everything. 
 
