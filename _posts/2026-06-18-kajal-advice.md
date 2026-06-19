@@ -138,7 +138,7 @@ Often our young investigator will also operate under the `illusion of being a me
 
 Be really wary not to become a public performer in your early career. A certain presence is required later on to establish an ecosystem and give a place for young minds to grow. But, if you are starting off, perhaps you don't need social media. (Although you can use tiktok to post your gym photos ). A young scientist trapped in a laboratory will spend `best years' of his life alone. SO there is indeed a need to mate, an endeavour we ourselves didnt have much success in. Keep making friends, and hanging out. Don't let research become your grave.  
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The trust issue </span>
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The trust issues </span>
 
 Let us imagine that our young investigator goes to work under someone famous. He is very happy at the opportunity. But, when he arrives at the laboratory,  he is deeply disappointed: he is given a boring task, which has nothing to do with what he actually wanted to do. He spends his energy trying to argue with his mentor. In this act, he loses peace of his mind, and energy which would have been better spent on the scientific pursuits. The mentor begins to doubt the mentees ability to complete non-trivial tasks, does not trust him, and never teaches him the deepest darkest secrets of the art. 
 
