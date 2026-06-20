@@ -77,7 +77,7 @@ The problem however is that architectures keep replacing each other. As soon as 
 
 The issue with this approach is: 1) you must have an ability to connect across fields, and force people of different communities to talk with one another. This kind of thing automatically happens if you are in a system where many researchers sit together in a common space. For the young investigator it presents a problem: he is often alone. My only advice: claude is your friend. Ask it what you need to ask. The problem however is `what to ask it'?
 
-Before i answer this question, make sure you decide which level you want to operate at. It is tempting to choose [3] but it is hard. [1] is easier to do, and more worthwhile. It requires grunt work (often years on end), but it does pay dividends. Don't get carried away by those who [2] on a variety of different problems: they have breadth, but might lack depth. 
+Before i answer this question, make sure you decide which level you want to operate at. It is tempting to choose [3] but it is hard. [1] is easier to do, and more worthwhile. It requires grunt work (often years on end), but it does pay dividends. Don't get carried away by those who focus on [2], and work  on a variety of different problems: they have breadth, but might lack depth. Learn to focus. When a mother takes care of young ones, they are all that matter. The noise of the world fades into the oblivion. 
 
 Let me also mention other thing i observed: when i began, i thought neural nets have nothing to do with physics. They are just cute little things you train on computer vision tasks. In my mind, computer vision reigned supreme, and machine learning took a later spot. 
 
