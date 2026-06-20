@@ -295,7 +295,7 @@ Most people spend their lives in the framework, the laws which they believe to b
 
 The advice to young investigator is this: spend 80% of the time doing 1). Spend 20% of the time poking the giant. DONT make the mistake of thinking that you are a `genius' and only do 2). The reason is simple. To survive, you need food on the table. You need stability that a constant salary provides to do the 2) kind of work. If you keep doing 2), and 'frequently' stir up the hornet's nest, the hornet shall grow deeply uncomfortable. The giant machinery moves slow, and it tends to kick out people who are 'too much driven by passion' and 'don't respect the system'. Don't make those kind of mistakes. 
 
-Be patient. Keep an eye on the broader goal which spans decades. Make a small step at a time. Respect your collaborators. Plant questions in minds of people instead of making wild sweeping gestures. For eg, `never say transformer will be phased out'. Rather you may say: 'transformer does not do xx. Here is how you may do it. Look!! it is computationally cheaper. And it adds this curious new property to the system that simple transformer does not possess'. 
+Be patient. Keep an eye on the broader goal which spans decades. Make a small step at a time. Yoshua Bengio is a prime example: every decade or so he writes a survey summarizing everything and what we as a community are striving towards.  Respect your collaborators. Plant questions in minds of people instead of making wild sweeping gestures. For eg, `never say transformer will be phased out'. Rather you may say: 'transformer does not do xx. Here is how you may do it. Look!! it is computationally cheaper. And it adds this curious new property to the system that simple transformer does not possess'. You can measure the depth of a person with this test: if he says 'so what, it does not get sota, you will know he belongs to 1)', and if he says 'oh wow, did you try xx, how does it work in that case', he somewhat rests in 2). You can judge silently, and don't have to say it to offend others. 
 
 If you make the mistake of questioning people's belief system, they will get defensive. If you merely 'suggest', they might open up their ears and  listen to what you are saying. Some of them might embrace your theory, and help 'convert' others who are still on the defensive. A single man on his own is useless. The investigator shall do well to remember this. 
 
@@ -442,21 +442,32 @@ At this juncture of your career, it may be better to read books. Pick up sutton'
 Finally, once your body of published work has grown, start writing your own books. 
 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Respect your collaborators</span>
+
+Life has a curious way of doling out people of varying attitudes to be your collaborators. Do NOT make the mistake of thinking that the collaborator should possess `a minimum intelligence/skill' level to work with you. If you do that, you risk ALIENATING people. Find a way to work with everyone. Let us say you are working with an undergraduate student. You can guide him to use pytorch, help in visualizing the plots of papers. In time, he will also gain confidence, and start leading his own research efforts. If you are working with a masters student, perhaps you can just explain them a concept, and ask them to implement it. If you are working with a PhD student, help them in writing their papers. Keep everyone happy, and the fortunes shall smile on everyone. DONT specialize, but learn to generalize. That allows you to work with many people. 
+
+Let me give you my example. I spent years going against LLMs/VLMs/Diffusion models. Only when the success of the field stared at me in the face, did i realize that i had missed the opportunity: all these areas were saturated now, and the golden period of publishing in these areas seemed bygone. I have to constantly remind myself not to make these mistakes again. Unfortunately, i haven't learnt my lesson, and still am against world models. Hopefully, i will learn with time lol. 
+
+Learn to manage your collaborators. Play to their strengths. Let me give you my example. One of my collaborators makes amazing figures. So, i trust her to have ultimate say in the matters of figures in my papers. I will restructure my writing around what her figure says. Learn to keep your ego in check and minimize friction with collaborators. Another one of my collaborators helps me in rigor: prevent myself from making grand sweepping claims like p=np, and ground my papers in actual engineering. Another one is a native english speaker: he can write far better than any other LLM. Another one is tasked with making sure citation format is correct. It is a swarm of people, and each is an `expert' in their own right. If one person goes wrong, the whole machine collapses. 
+
+It is therefore important to frequently `sync up' with your collaborators: you MUST NOT talk technical stuff with them. Talk to them about their lives. Show interest in what is going on with them. Otherwise, they will start thinking that you use them, and they will not want to collaborate in future. A good way to check this is to look for 'sustained collaborations': how often do two people coauthor? If they have a good relationship, you will find many papers. If not, you will find the first authors keep changing, but the last author remains the same. Learn to distinguish the difference between the two.
+
+
+
+
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Parting comments</span>
 
-The sermon of the little godzillas has thus reached its conclusion. Lol, just kiddin :-).
 
 My parting comments are as follows: 1) read this set of notes if you are beginning. 2) learn from my mistakes, and don't repeat them. 3) keep your ego in check 4) don't chase prestige or money. focus on work. 
 
-last but not the least get your priorities straight: 5) family matters more than your phd 6) your mental health matters more than phd. If you see any of these depleting, there is no shame walking away. Have the COURAGE to walk away. You cannot change the system, or the actions of others. But, you can change your own. That is all you have in control. 
+last but not the least, get your priorities straight: 5) family matters more than your phd 6) your mental health matters more than phd. If you see any of these depleting, there is no shame walking away. Have the COURAGE to walk away. You cannot change the system, or the actions of others. But, you can change your own. That is all you have in control. 
 
 believe in the law of karma , if you give enough good to this world, perhaps the world shall reciprocate. Their has to be someone greater than us watching. You are not god. 
 
 love, 
 rajat
 
-
-p.s. i will dump advice from cajal's book here when i get time. the above shit was just my own interpretation of his work. your interpretation may differ wildly. if so, write your own :-). and please do send it across :-).
+p.s. i will dump advice from cajal's book here when i get time. the above stuff was just my own mere interpretation of his work. your interpretation may differ wildly. if so, write your own :-). and please do send it across :-).
 
 
 
