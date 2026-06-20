@@ -462,12 +462,13 @@ My parting comments are as follows: 1) read this set of notes if you are beginni
 
 last but not the least, get your priorities straight: 5) family matters more than your phd 6) your mental health matters more than phd. If you see any of these depleting, there is no shame walking away. Have the COURAGE to walk away. You cannot change the system, or the actions of others. But, you can change your own. That is all you have in control. 
 
-believe in the law of karma , if you give enough good to this world, perhaps the world shall reciprocate. Their has to be someone greater than us watching. You are not god. 
+believe in the law of karma , if you give enough good to this world, perhaps the world shall reciprocate. There has to be someone greater than us watching. Have courage. Have faith. May the force bless you. May you dear reader, Live Long and prosper. 
 
 love, 
 rajat
 
-p.s. i will dump advice from cajal's book here when i get time. the above stuff was just my own mere interpretation of his work. your interpretation may differ wildly. if so, write your own :-). and please do send it across :-).
+p.s. i will dump advice from cajal's book here when i get time. many apologies.
+
 
 
 
