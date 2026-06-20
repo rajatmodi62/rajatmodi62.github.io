@@ -452,7 +452,7 @@ Learn to manage your collaborators. Play to their strengths. Let me give you my 
 
 It is therefore important to frequently `sync up' with your collaborators: you MUST NOT talk technical stuff with them. Talk to them about their lives. Show interest in what is going on with them. Otherwise, they will start thinking that you use them, and they will not want to collaborate in future. A good way to check this is to look for 'sustained collaborations': how often do two people coauthor? If they have a good relationship, you will find many papers. If not, you will find the first authors keep changing, but the last author remains the same. Learn to distinguish the difference between the two.
 
-
+The young investigator must understand what `work-life' balance means in the academia. It does not mean that the relationships you form at work cannot seep into your personal life. All it means is that you dont expect your collaborators to work in their personal time : never message them if they are sleeping, or spending time with their family. Know the schedule of each collaborator you are working with. I have seen people grow arrogant: if there is someone working under them, they expect the mentee to be available 24/7. Don't make this mistake. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Parting comments</span>
