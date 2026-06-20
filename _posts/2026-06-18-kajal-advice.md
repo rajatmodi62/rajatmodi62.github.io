@@ -361,7 +361,7 @@ For eg, how does one define consciousness? This `does not' have a precise experi
 All you can measure is behaviour of the duck is similar to other ducks. But whether that duck thinks in the way you do, and whether `it knows' what it is feels like to be a duck cannot be reliabliy tested (yet). If you use the term 'consciousness' in your paper, it will not go in. It's that simple. You cannot fight the taboos in the minds of the reviewers. 
 
 
-The friction between philosophy and benchmark driven science is a fertile ground. Learn to exploit that.  Imagine new things, and find a way to build them. The advice is simple: spend 80% of time on engineering, but spend 20% of time reading the philosophers like Ray Kurzwell, David Chalmers etc. 
+The friction between philosophy and benchmark driven science is a fertile ground. Learn to exploit that.  Imagine new things, and find a way to build them. The advice is simple: spend 80% of time on engineering, but spend 20% of time reading the philosophers like Ray Kurzwell, David Chalmers etc. Only watch netflix when you are old like hinton (just kidding :-))
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Planting the flag: The arxiv tactic</span>
