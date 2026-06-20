@@ -454,6 +454,8 @@ It is therefore important to frequently `sync up' with your collaborators: you M
 
 The young investigator must understand what `work-life' balance means in the academia. It does not mean that the relationships you form at work cannot seep into your personal life. All it means is that you dont expect your collaborators to work in their personal time : never message them if they are sleeping, or spending time with their family. Know the schedule of each collaborator you are working with. I have seen people grow arrogant: if there is someone working under them, they expect the mentee to be available 24/7. Don't make this mistake. 
 
+Similarly, if you are working with someone, you can still ask about their life: as long as you don't go too personal. But, you can always ask how someone's weekend went. People tend to open up that way. 
+
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Parting comments</span>
 
