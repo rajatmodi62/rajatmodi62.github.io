@@ -314,12 +314,26 @@ There is another trap our young investigators tend to fall into: say he is worki
 
 Intuition suggests what is wrong OUGHT to be corrected. But, my practical experience is different. People who developed the baseline y might be aware of the mistake. In some cases it is 'intentional'. If you confront them, it quickly sours relationship. The problem worsens if the baseline was from your own group: you will find that the student who originally invented it has long graduated, and magically `lost the code' or worse 'never replies back'.  What should you do? I wasted two years of my life in this way. 
 
-The simple answer is `move on'. Skip that benchmark entirely. Skip that evaluation protocol. Suppress it. If  it comes up during peer-review, you can say you tried, but it never worked. That acts as a formal record of the discrepancy, and you can start correcting it in future. You can refer to your past rebuttal in the future papers. If it never comes up, let the wrong paper die a silent death: it is published, but it is of no use if no one can't ever reproduce or cite it. Let the community and passage of time take care of it. 
+The simple answer is `move on'. Skip that benchmark entirely. Skip that evaluation protocol. Suppress it. If  it comes up during peer-review, you can say you tried, but it never worked. That acts as a formal record of the discrepancy, and you can start correcting it in future. You can refer to your past rebuttal in the future papers. If it never comes up, let the wrong paper die a silent death: it is published, but it is of no use if no one can't ever reproduce or cite it. Let the community and passage of time take care of forgetting it. There are plenty of papers published now every year: let that wrong paper drown in the sea of noise. 
 
 Here is another way: go to the public github of that wrong baseline. Create an issue. Most of the times author won't reply. But, it serves as a matter of public record. The world of academia is very small: word of mouth travels fast. There are separate communication channels rather than merely communicating your papers over peer review. The `real work' is often circulated as drafts/memos in these circles. There are some channels where papers never exchange hands electronically, but through hard-copies, just to protect premature leaking of information. 
 
-
 They shall know if 'someone tried to be clever' and 'fake their way' through the process.  Eventually, a 'wrong paper' has a way of effecting one's career in the most subtle of ways. For such people surviving in academia becomes really difficult over time. 
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Don't OWN an area</span>
+
+Our young investigator also makes another mistake: he invents his own problem , and then keeps publishing in it. This way he gets a lot of incremental papers. Eventually, he will be known as `a person of that area'. 
+
+The problem is that if you are the ONLY person in that area for more than two years. Let me take my example, i work on GLOM. Most people have given up. I invented APM. Over a course of three years, it only got 1 citation. By all means, the area is dead. If i keep working on it, nobody will care. I will still end up getting published because i am merely surpassing the baseline i invented in an `earlier' paper. But the area is not active. Take care to identify such bottlenecks beforehand. And that is the reason by advisor rightfully told me to 'pivot'. 
+
+The next step is to 'take ideas from your area' and apply it to something popular. For eg, i took GLOM's ideas and applied it to test time training on long videos: a very hot problem right now. Don't FOCUS on Specializing in an area. 
+
+Another problem i have seen is that people get too `attached' to one technique. Let me take one example: i am too much attached to inject positional encodings everywhere. That is a general principle which gave me a lot of papers. In the long run however, it shall be my undoing: if positional encodings get eliminated, all the body of work becomes obsolete. Don't make the mistakes i keep making. 
+
+You must learn to separate "implementation" from the "mechanism". For eg, positional encodings inject orderig information. Therefore, any way to inject order in the neural net can be used in future. Now, if someone comes and says "order is not necessary, let the network figure it out", you must know that it is philosophically incorrect. All your assumptions should be anchored in philosophy: which is VERY HARD to be proven wrong. But, you must know the counter-philosophy. Let me take an example. 
+
+
+A lot of biologists think darwin's theory of evolution is correct. They have built entire fields of evolutionary learning and principle of natural selection around the core premise. You must know of the other camp: thoughts of Fodor, and what are the loopholes in darwin. If someone comes along and proves darwin wrong, most of the people in evolutionary computing will panic. Since our young investigator thought of the loophole far before, he shall be safe. On some occasions, he might silently to the waves emanating in the field, and develop the ability to observe the sea as a calm detached observer. 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Problem for the Fundamentalist</span>
 
