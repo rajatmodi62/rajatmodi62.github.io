@@ -308,7 +308,15 @@ It is good to have ambition to publish in top places of the world. If it does no
 
 It is better to publish your rejected papers in a lower tier venue than having no peer review at all and merely putting it on arxiv. For the young investigator, it is really important: you have no standing in the field, and some peer review will at least lend some level of validation to your ideas in the community .
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Don't get bogged down by wrong papers</span>
 
+There is another trap our young investigators tend to fall into: say he is working on problem x. He uses a baseline y. However, baseline y made a mistake: their evaluation metrics were wrong, or they never released the code. The question then is whether young investigator should spend time on fixing the mistake of the baseline or accept it as a core hypothesis. 
+
+Intuition suggests what is wrong OUGHT to be corrected. But, my practical experience is different. People who developed the baseline y might be aware of the mistake. In some cases it is 'intentional'. If you confront them, it quickly sours relationship. The problem worsens if the baseline was from your own group: you will find that the student who originally invented it has long graduated, and magically `lost the code' or worse 'never replies back'.  What should you do? I wasted two years of my life in this way. 
+
+The simple answer is `move on'. Skip that benchmark entirely. Skip that evaluation protocol. Suppress it. If  it comes up during peer-review, you can say you tried, but it never worked. That acts as a formal record of the discrepancy, and you can start correcting it in future. You can refer to your past rebuttal in the future papers. If it never comes up, let the wrong paper die a silent death: it is published, but it is of no use if no one can't ever reproduce or cite it. Let the community and passage of time take care of it. 
+
+Here is another way: go to the public github of that wrong baseline. Create an issue. Most of the times author won't reply. But, it serves as a matter of public record. The world of academia is very small: word of mouth travels fast. Their are separate communication channels rather than merely communicating your papers over peer review. The `real work' is often circulated as drafts/memos in these circles. They shall know if 'someone tried to be clever' and 'fake their way' through the process. Eventually, it has a way of effecting one's career in the most subtle of ways. 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Problem for the Fundamentalist</span>
 
@@ -442,6 +450,12 @@ At this juncture of your career, it may be better to read books. Pick up sutton'
 Finally, once your body of published work has grown, start writing your own books. 
 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Don't dream of oral spots</span>
+Don't dream of landing an oral spot at a prestigious conference. The reason is simple: it puts spotlight on you, and people have a way of getting distracted from their core mission if they achieve success earlier in their careers. Stay silent, move fast, and operate from the canadian shadows. One other mistake i have seen is that people project too much confidence in oral, and regret it later. Don't make that mistake. Don't polish your slides too much. Keep them raw. This is contrarian advice to those would like project `professionalism'. This prevents you from building a bond with your audience. The reader will do well to compare the slide decks of hinton vs lecunn. You will feel the difference of style. Both are different. No one is superior to another. Just try to feel them, and choose your style. 
+
+Another thing i have noted is consistency. There must be a signature to your slides. If noone knows you, they should still recognize the style. The style should stand out. And standing out does not mean it looks unprofessional. But, simplicity should bleed through. 
+
+
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Respect your collaborators</span>
 
 Life has a curious way of doling out people of varying attitudes to be your collaborators. Do NOT make the mistake of thinking that the collaborator should possess `a minimum intelligence/skill' level to work with you. If you do that, you risk ALIENATING people. Find a way to work with everyone. Let us say you are working with an undergraduate student. You can guide him to use pytorch, help in visualizing the plots of papers. In time, he will also gain confidence, and start leading his own research efforts. If you are working with a masters student, perhaps you can just explain them a concept, and ask them to implement it. If you are working with a PhD student, help them in writing their papers. Keep everyone happy, and the fortunes shall smile on everyone. DONT specialize, but learn to generalize. That allows you to work with many people. 
@@ -460,7 +474,7 @@ Similarly, if you are working with someone, you can still ask about their life: 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Parting comments</span>
 
 
-My parting comments are as follows: 1) read this set of notes if you are beginning. 2) learn from my mistakes, and don't repeat them. 3) keep your ego in check 4) don't chase prestige or money. focus on work. 
+My parting comments are as follows: 1) read this set of notes if you are beginning. 2) learn from my mistakes, and don't repeat them. 3) keep your ego in check 4) don't chase prestige or money. focus on work. 5) take of them what you will, leave the rest. It is my journey, it does not have to work for you. 
 
 last but not the least, get your priorities straight: 5) family matters more than your phd 6) your mental health matters more than phd. If you see any of these depleting, there is no shame walking away. Have the COURAGE to walk away. You cannot change the system, or the actions of others. But, you can change your own. That is all you have in control. 
 
@@ -469,7 +483,7 @@ believe in the law of karma , if you give enough good to this world, perhaps the
 love, 
 rajat
 
-p.s. i will dump advice from cajal's book here when i get time. many apologies.
+p.s. i will dump advice from cajal's book here when i get time. many apologies. what i wrote above is not cajal. but for some it just felt correct to dedicate the post to his teachings. 
 
 
 
