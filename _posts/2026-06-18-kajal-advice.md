@@ -24,9 +24,9 @@ published: false
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">An Existential Crisis</span>
 
-I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones, the kind that comes after travelling alone for a long time. This past decade has been particularly hard. I lost the one who birthed me. But it has been fulfilling in ways i never quite imagined. 
+I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones, the kind that comes after travelling alone for a long time. You look back and there is noone . You look forward and there is no one. It is just a silent road and you. This particular decade has been particularly hard. I lost the one who birthed me. But it has been fulfilling in ways i never quite imagined. 
 
-Of the half of my life that (perhaps) remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. I cannot claim to give correct advice, for i myself am inexperienced. But, all i can do is write things as i see them. 
+Of the half of my life that (perhaps) remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. I cannot claim to give correct advice, for i myself am inexperienced. But, all i can do is write things as i witnessed them in my limited reality. 
 
 The problem with advice is that you can find shit ton of it online: everyone is preaching themselves as a technical messiah, who seems to have cracked the secrets of AI. They call themselves `influencers, technical enthusiasts' and whatever cool name which gets likes on social platforms. This is a good way to farm good karma. It won't give you reliable piece of advice. 
 
@@ -34,9 +34,14 @@ We would like to remember Santiago Ramon Y Cajal (shown in the picture above). H
 
 He never went to best of the colleges. Yet, he did good nobel-worthy science, inspite of working as assistant to a barber. Similarly, Alan Turing (and colleagues) did some of the best science of their time in Hut 8, and succeeded under miserable conditions of world war 2.  The reason was that they were 'driven' by a mission: to save the lives which would have been lost if the war had kept dragging on. 
 
-Chances are your conditions are a lot better than them. You live in a time of peace. You might wiggle out of the argument saying `they were geniuses, so managed to get quite a lot of work done'. You might be correct, but there are high odds that is just an excuse:  you 'do not have' courage to face your laziness and incompetencies (indeed, i still don't have that). You might also argue that you need 'a lot of GPU resources for ai'. You will do well to remember that connectionists of the past (hinton) worked on CPUs, and still invented backpropagation, mixture of experts and all the basics we still use today. 
+Chances are your conditions are a lot better than them. You live in a time of peace. You might wiggle out of the argument saying `they were geniuses, so managed to get quite a lot of work done'. You might be correct, but there are high odds that is just an excuse:  you 'do not have' courage to face your laziness and incompetencies (indeed, i still don't have that). 
 
-Thus the ability to do good science only `in part' depends on one's financial condition. I beg of you, please don't let  it  be your excuse. A man who wants to make excuses will never be happy no matter what you give him. A man who just wants to work will eventually find a way. It is that simple. 
+You might also argue that you need 'a lot of GPU resources for ai'. You will do well to remember that connectionists of the past (hinton) worked on CPUs, and still invented backpropagation, mixture of experts and all the basics we still use today. 
+
+Thus the ability to do good science only `in part' depends on one's financial condition. I beg of you, please don't let  it  be your excuse. A man who wants to make excuses will never be happy no matter what you give him. A man who just wants to work will eventually find a way. 
+
+The man who starts at a disadvantage w.r.t to his peers, because of the virtue of being born in a poor family, in a wrong country, or in a wrong time, can still use `consistent measurable work' to produce good science.  It is that simple. 
+
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Mindset</span>
 
@@ -44,7 +49,7 @@ The mindset of a young investigator should be `i want to do good work, and make 
 
 If your motivation is `i need a lot of  money after i finish my studies and lead a comfortable life', it will not work out in the long run. The reason is pretty simple: you will run after what is popular and find yourself trapped. You will feel like  a little boat which is forced by the waves of the sea in whatever direction it wants you to go. Instead of becoming the sea, you are a boat, or worse a fish. A man only has a finite intellectual energy, but the world keeps changing. As he grows older, the 'time it takes for him to catch up' grows. Since there is no 'universal concept' to latch onto, many academics feel way uncomfortable and question their existence when the winds change direction. The stability of a tenure provides some relief, but then the students have to bear the existence of the storm. 
 
-Once you go after where everyone is going you realize: what unique things do i bring to the table? You will be at the mercy of homogenization: your work, and your achievements will be identical to the ones around you. If there is no differentiating factor, how can you hope to get things which others wish for, but never manage to get? You might be willing to settle for an ordinary life. It's a perfectly reasonable option, but it might not be as fullfilling. Life forces us to make a `choice'. If you don't, it will make one for you. It is better to choose earlier when the body can afford to take the risk, rather than later. 
+Once you go after where everyone is going you realize: what unique things do i bring to the table? You will be at the mercy of homogenization: your work, and your achievements will be identical to the ones around you. If there is no differentiating factor, how can you hope to get things which others wish for, but never manage to get? You might be willing to settle for an ordinary life. It's a perfectly reasonable option, but it might not be as fullfilling. Life forces us to make a `choice'. If you don't, it will make one for you. It is better to choose earlier when the body can afford to take the risk, rather than later,  when it has grown weary. 
 
 
 A PhD is a terminal degree, but don't let it  terminate your future scientific work. It is merely a  'license to practice': you have a formal acknowledgement of the institution that you produced 'some science'. People `might' listen a bit more seriously, had you never gotten it in the first place.  Other than that it is just a piece of paper. Don't make the mistake of flaunting that paper to others for the rest of your life. 
@@ -421,7 +426,33 @@ There is another piece of advice. There is one research you conduct for your doc
 
 Make sure your YES does not come from delusion. Here is a simple way to test it. Write down your thoughts WHY it should work. Give those a LLM. If it says it makes sense, you are on a correct path. Think of this second track as a `puzzle/game' you are playing. Let the fun of pursuing it help you treat it as 'play' so that working extraordinary hours does not seem tiring. 
 
-Now, here is the key trick. Once you get a certain amount of success in track 2, use it's findings to `fuel' your own doctoral research. It is very important to keep these two tracks separate. Track 1 is for professional life: which puts bread and butter on table. Track 2 is for the enrichment of the soul: without it you will find yourself bored in the day to day tasks, and the fire of your soul shall fade away. You must one such project. 
+Now, here is the key trick. Once you get a certain amount of success in track 2, use it's findings to `fuel' your own doctoral research. From your advisor's perspective: you are slow but accurate. Basically, dont share too many failures of track 2. Only share when you have successfully 'managed' to apply findings from track 2 to track 1, and achieved some results. 
+
+You must know what category of 'results' your advisor desires. Let me take a concrete example. 
+
+
+
+It is very important to keep these two tracks separate. Track 1 is for professional life: which puts bread and butter on table. Track 2 is for the enrichment of the soul: without it you will find yourself bored in the day to day tasks, and the fire of your soul shall fade away. You must own one such project. 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Learn to filter</span>
+
+Here is another pattern our dear investigator finds himself in. 
+
+He started working on xx project. Together, with his advisor, they decide on yy technique. Then, a week later, a `very socially popular' came on twitter. Advisor wants student to 'pivot' and apply zz technique instead of yy. The reason is simple: zz technique is latest, more popular, and promises better results. From an advisor's perspective, it's a quick win for the lab. 
+
+The investigator finds himself in a bubble: he spent so much time using yy technique, if he discards it, and all is lost. He finds himself `switching' techniques many times in the project, and ultimately gives up. 
+
+Learn to separate signal from noise. Your advisor will bounce ideas off you. You don't have to accept all of them. And, you must `precisely' convey to your advisor why that won't work. And this leads us to 'how to communicate with your superiors'. 
+
+If you say: 'it won't work, too much time consumed', advisor gets angry. Instead, ask questions: `Indeed, zz is amazing, here are our options: yy technique is nearly done, zz will take this much time....'. Let them arrive at the choice naturally, rather than you forcing your thoughts upon them. 
+
+An idea planted the right way in another person's head, is more powerful than directly giving him the answer. Learn to let people struggle, and arrive at the same set of conclusions you did. The `effort' it took them , will earn you the respect, which leads to more autonomy in a due course of time. 
+
+
+People complain at being `micromanaged'. That's not true. If you don't deliver results, each step of yours is watched and deeply scrutinized. If you manage to deliver results, you will gain freedom you so desire. But, learn to be micromanaged first. It requires an internal shift. Think of it as like 'my advisor knows far more. So, i will learn from him and do what he says'. 
+
+It is good to be micromanaged by a capable person who can teach you,  than someone who sits in a position of power and exploits your labor . Learn to spot the difference. 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Reviewer Psychology</span>
 You have finally managed to write a paper, and submit it to conferences. Assuming you haven't driven yourself crazy waiting for results in the two months, it is review time!!. You look up the scores, and become sad: they are horrible and entirely unpredictable. Your first reaction is to bang the keyboard, and silently retreat into a corner. Shame weighs on you and you question why you are existing. Perhaps the decision to pursue this entire PhD was wrong. Maybe, you were better off being a carpenter. You curse the gods of peer review, withdraw the paper, and get ready for you next battle and the chance to win glory: the upcoming conference. And the cycle repeats: until either the paper gets accepted, or you get burnt out. 
