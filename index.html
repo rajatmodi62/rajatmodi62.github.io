@@ -247,12 +247,24 @@ layout: default
     </div>
 
     
+
+    <div class="paper-item">
+        <h4> <u>Forget, Anticipate, Adapt: TTT for long videos</u></h4>
+        <p>TTT on long videos consumes O(N) time per sliding window. We got this down to O(1). Inspired by Kadane's algorithm, we proposed to `forget' a frame moving out of window, `anticipate' if current frame exceeds a notion of `surprise'  and if so adapt it. Surprise threshold adjusted dynamically based on Gaussian mixture model which temporally evolves as information of prior adapted frames accumulates in a buffer.  </p>
+        <div style="font-size: 0.75rem; margin-top: 5px;">
+            <span style="color: var(--link-color); font-weight: 800;">STATUS:</span> ECCV 2026 <br>
+            <a href="https://arxiv.org/pdf/2606.26515">[PAPER]</a>
+        </div>
+    </div>
+
+
       <div class="paper-item">
         <h4> <u>Sky2Ground</u></h4>
         <p>Introduced the new problem of cross-view camera localization given aerial, ground, satellite of outdoor scenes. New dataset for  54 scenes. Proposed SkyNet, an architecture for  3D point cloud generation, thus setting a strong baseline for the field. Grateful for the support from IARPA WRIVA  grant.</p>
         <div style="font-size: 0.75rem; margin-top: 5px;">
             <span style="color: var(--link-color); font-weight: 800;">STATUS:</span> CVPR 2026 <br>
             <a href="https://arxiv.org/abs/2410.20535">[PAPER]</a>
+            <a href="https://github.com/rajatmodi62/ffn">[GITHUB]</a>
         </div>
     </div>
 
@@ -333,7 +345,7 @@ layout: default
         <h4><u>Asychronous Perception Machine</u></h4>
         <p>First implementation getting GLOM to work. Recently filed as an A1 patent application in USPTO</p>
         <div style="font-size: 0.75rem; margin-top: 5px;">
-            <a href="https://drive.google.com/file/d/1R4NKRI5nVjcgQI9czmf46MTH1qDG7ECj/view?usp=sharing">[APPLICATION]</a>
+            <a href="https://github.com/rajatmodi62/rajatmodi62.github.io/releases/download/apm/apm_patent.pdf">[APPLICATION]</a>
         </div>
     </div>
 
