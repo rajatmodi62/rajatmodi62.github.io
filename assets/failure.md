@@ -88,7 +88,9 @@ feedback:
         - clash of egos. 
       -> write research statement
         - me: no, deepminds research is different, so u guys see alignment... didnt sit well. 
-    result: reject. moral: nobody gives a fuck about glom. 
+    result: reject. 
+    moral: nobody gives a fuck about glom.
+      - maybe that;s why hinton chose arxiv, and single author..
 
 [13] cvpr doctoral consortium
   - apparently better people were there. 
