@@ -93,5 +93,6 @@ feedback:
 [13] cvpr doctoral consortium
   - apparently better people were there. 
   
+[14] capital one: you dont do nlp, so you are not needed lol. vlm's are not good enough. 
 ---
 
