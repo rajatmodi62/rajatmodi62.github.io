@@ -96,7 +96,7 @@ feedback:
   - apparently better people were there. 
   
 [14] capital one: you dont do nlp, so we don't love you. vlm's are not good enough. 
-
+[15] sakana (again): fish got bored. 
 time to pack bags, move to india, become farmer on my dad's farm :-)
 ---
 
