@@ -94,5 +94,7 @@ feedback:
   - apparently better people were there. 
   
 [14] capital one: you dont do nlp, so we don't love you. vlm's are not good enough. 
+
+time to pack bags and move to india :-)
 ---
 
