@@ -97,6 +97,6 @@ feedback:
   
 [14] capital one: you dont do nlp, so we don't love you. vlm's are not good enough. 
 
-time to pack bags and move to india :-)
+time to pack bags, move to india, become farmer on my dad's farm :-)
 ---
 
