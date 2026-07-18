@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>◈ TURING NOTES | rajatmodi62</title>
+<style>
+    :root {
+        --bg-body: #080809;
+        --bg-sidebar: rgba(13, 13, 14, 0.95);
+        --bg-header: rgba(24, 24, 27, 0.9);
+        --text-main: #e2e2e4;
+        --text-muted: #a1a1aa;
+        --text-gold: #D4AF37;
+        --link-color: #38bdf8;
+        --border-gold: #D4AF37;
+        --border-dim: #27272a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        overflow: hidden;
+        background-image:
+            linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+
+    h1, h2, h3 { font-family: 'Courier New', Courier, monospace; }
+
+    .tn-wrapper {
+        display: grid;
+        grid-template-columns: 340px 1fr;
+        height: 100vh;
+        width: 100%;
+    }
+
+    /* ---------------- SIDEBAR ---------------- */
+
+    .sidebar-left {
+        background-color: var(--bg-sidebar);
+        backdrop-filter: blur(12px);
+        border-right: 2px solid var(--border-gold);
+        padding: 25px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        z-index: 101;
+        overflow-y: auto;
+    }
+
+    .sidebar-left::-webkit-scrollbar { width: 3px; }
+    .sidebar-left::-webkit-scrollbar-thumb { background: var(--border-dim); }
+
+    .tn-back {
+        display: inline-block;
+        color: var(--text-muted);
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        text-decoration: none;
+        margin-bottom: 22px;
+        letter-spacing: 1px;
+        border: 1px solid var(--border-dim);
+        padding: 6px 10px;
+        width: fit-content;
+    }
+    .tn-back:hover { color: var(--text-gold); border-color: var(--border-gold); }
+
+    .sidebar-left h2 { color: var(--text-gold); font-size: 1.4rem; margin-bottom: 4px; font-weight: 900; }
+    .sidebar-tagline { color: var(--text-gold); font-size: 10px; font-weight: 800; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.7; }
+
+    .notebook-search {
+        width: 100%;
+        background: #000;
+        border: 1px solid var(--border-dim);
+        padding: 10px 12px;
+        color: var(--text-main);
+        font-family: 'Courier New', monospace;
+        outline: none;
+        margin-bottom: 22px;
+        font-size: 12px;
+    }
+    .notebook-search:focus { border-color: var(--text-gold); }
+
+    .notebook-label {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        font-weight: 900;
+        color: var(--text-gold);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0.7;
+    }
+
+    .notebook-list { flex: 1; }
+
+    /* -- Tabs (notebook folders) -- */
+    .notebook-tab {
+        border: 1px solid var(--border-dim);
+        margin-bottom: 10px;
+        overflow: hidden;
+        transition: border-color 0.25s ease;
+        background: rgba(255,255,255,0.01);
+    }
+    .notebook-tab.active { border-color: var(--border-gold); }
+
+    .notebook-tab-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 16px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .notebook-tab-name {
+        font-family: 'Courier New', monospace;
+        font-weight: 900;
+        font-size: 0.95rem;
+        color: var(--text-main);
+        letter-spacing: 1px;
+    }
+    .notebook-tab.active .notebook-tab-name { color: var(--text-gold); }
+
+    .notebook-tab-count {
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        color: var(--text-muted);
+    }
+
+    .notebook-tab-chevron {
+        color: var(--text-gold);
+        font-size: 11px;
+        margin-left: 10px;
+        transition: transform 0.25s ease;
+        flex-shrink: 0;
+    }
+    .notebook-tab.active .notebook-tab-chevron { transform: rotate(90deg); }
+
+    .notebook-file-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-top: 1px solid transparent;
+    }
+    .notebook-tab.active .notebook-file-list {
+        max-height: 1000px;
+        border-top: 1px solid var(--border-dim);
+    }
+
+    .notebook-file {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px 10px 22px;
+        cursor: pointer;
+        font-family: 'Courier New', monospace;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        border-bottom: 1px dashed var(--border-dim);
+        transition: color 0.15s ease, background 0.15s ease;
+    }
+    .notebook-file:last-child { border-bottom: none; }
+    .notebook-file:hover { color: var(--link-color); background: rgba(56, 189, 248, 0.06); }
+    .notebook-file.open { color: var(--text-gold); background: rgba(212, 175, 55, 0.08); }
+    .notebook-file .fdot { color: var(--border-gold); flex-shrink: 0; font-size: 10px; }
+
+    .notebook-empty {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        color: var(--text-muted);
+        padding: 20px;
+        text-align: center;
+        border: 1px dashed var(--border-dim);
+    }
+
+    .manual-box {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid var(--border-gold);
+        background: rgba(212, 175, 55, 0.05);
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        color: var(--text-muted);
+        line-height: 1.5;
+        flex-shrink: 0;
+    }
+    .manual-box b { color: var(--text-gold); }
+
+    /* ---------------- MAIN ---------------- */
+
+    .main-column {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: relative;
+    }
+
+    .tn-header {
+        background-color: var(--bg-header);
+        padding: 16px 30px;
+        border-bottom: 2px solid var(--border-gold);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .tn-doc-title {
+        font-family: 'Courier New', monospace;
+        font-weight: 900;
+        font-size: 0.95rem;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 40vw;
+    }
+    .tn-doc-title .breadcrumb { color: var(--text-gold); font-weight: 700; opacity: 0.8; }
+
+    .tn-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Courier New', monospace;
+    }
+
+    .tn-btn {
+        background: #000;
+        border: 1px solid var(--border-gold);
+        color: var(--text-gold);
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        font-family: 'Courier New', monospace;
+        font-weight: 900;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.15s ease;
+    }
+    .tn-btn:hover:not(:disabled) { background: var(--text-gold); color: #000; }
+    .tn-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    .tn-btn.night-toggle {
+        border-color: #7a2020;
+        color: #a1a1aa;
+        flex-shrink: 0;
+    }
+    .tn-btn.night-toggle:hover { background: #7a2020; color: #fff; }
+    .tn-btn.night-toggle.active {
+        background: #3a0a0a;
+        border-color: #ff5555;
+        color: #ff8080;
+        box-shadow: 0 0 10px rgba(255, 85, 85, 0.35);
+    }
+    .tn-btn.night-toggle.active:hover { background: #ff5555; color: #1a0000; }
+
+    .night-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-right: 12px;
+        margin-right: 4px;
+        border-right: 1px solid var(--border-dim);
+    }
+
+    .night-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 80px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--border-dim), #ff5555);
+        outline: none;
+        cursor: pointer;
+    }
+    .night-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #ff8080;
+        border: 2px solid #1a0000;
+        box-shadow: 0 0 6px rgba(255, 85, 85, 0.7);
+        cursor: pointer;
+    }
+    .night-slider::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #ff8080;
+        border: 2px solid #1a0000;
+        box-shadow: 0 0 6px rgba(255, 85, 85, 0.7);
+        cursor: pointer;
+    }
+    .night-slider::-moz-range-track {
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--border-dim), #ff5555);
+    }
+
+    .night-readout {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        color: var(--text-muted);
+        min-width: 30px;
+        text-align: right;
+    }
+
+    .tn-zoom-readout {
+        font-size: 11px;
+        color: var(--text-muted);
+        min-width: 42px;
+        text-align: center;
+    }
+
+    .tn-page-readout {
+        font-size: 11px;
+        color: var(--text-muted);
+        min-width: 60px;
+        text-align: center;
+        border-left: 1px solid var(--border-dim);
+        padding-left: 12px;
+        margin-left: 4px;
+    }
+
+    /* ---------------- VIEWPORT ---------------- */
+
+    #tn-viewport {
+        flex: 1;
+        overflow: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0 80px 0;
+    }
+
+    .pdf-page-canvas {
+        box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+        margin-bottom: 22px;
+        background: #1a1a1a;
+        transition: filter 0.35s ease;
+    }
+
+    #tn-viewport {
+        --night-t: 0; /* 0 = off, 1 = full red night mode; set by the slider */
+    }
+
+    /* Night reading mode — desaturates the scan and pushes it toward a dim
+       red, similar to red-light/astronomer night vision filters. Keeps
+       contrast readable while cutting the blue/white glare of a raw scan.
+       Scales continuously with --night-t so the slider has real effect. */
+    .pdf-page-canvas {
+        filter:
+            grayscale(calc(var(--night-t) * 100%))
+            sepia(calc(var(--night-t) * 100%))
+            hue-rotate(calc(var(--night-t) * -52deg))
+            saturate(calc(100% + var(--night-t) * 400%))
+            brightness(calc(100% - var(--night-t) * 45%))
+            contrast(calc(100% + var(--night-t) * 15%));
+    }
+
+    .pdf-page-placeholder {
+        background: #111;
+        border: 1px dashed var(--border-dim);
+        margin-bottom: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+    }
+
+    /* Empty state */
+    .tn-empty-state {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        text-align: center;
+        padding: 40px;
+    }
+    .tn-empty-glyph {
+        font-size: 3rem;
+        color: var(--border-gold);
+        opacity: 0.5;
+        font-family: 'Courier New', monospace;
+    }
+    .tn-empty-title {
+        font-family: 'Courier New', monospace;
+        font-weight: 900;
+        color: var(--text-main);
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .tn-empty-sub {
+        font-family: 'Courier New', monospace;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        max-width: 340px;
+        line-height: 1.6;
+    }
+
+    /* Loader overlay */
+    .tn-loader-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(8,8,9,0.92);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 500;
+        font-family: 'Courier New', monospace;
+    }
+    .tn-loader-overlay.active { display: flex; }
+
+    .tn-loader-ring {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid var(--border-dim);
+        border-top: 2px solid var(--text-gold);
+        border-right: 2px solid var(--link-color);
+        animation: tnSpin 0.9s linear infinite;
+        margin-bottom: 22px;
+    }
+    @keyframes tnSpin { 100% { transform: rotate(360deg); } }
+
+    .tn-loader-text {
+        color: var(--text-gold);
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+    .tn-loader-sub {
+        color: var(--text-muted);
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .tn-loader-bar-track {
+        width: 220px;
+        height: 3px;
+        background: var(--border-dim);
+        margin-top: 16px;
+        overflow: hidden;
+    }
+    .tn-loader-bar-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--link-color), var(--text-gold));
+        transition: width 0.2s ease;
+    }
+
+    #tn-viewport::-webkit-scrollbar { width: 8px; }
+    #tn-viewport::-webkit-scrollbar-thumb { background: var(--border-dim); border-radius: 10px; }
+    #tn-viewport::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+
+    @media screen and (max-width: 760px) {
+        .tn-wrapper { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: auto; min-height: 100vh; }
+        .sidebar-left { height: auto; max-height: 45vh; }
+        .main-column { height: 55vh; }
+        .tn-doc-title { max-width: 60vw; }
+    }
+</style>
+</head>
+<body>
+
+<div class="tn-wrapper">
+    <aside class="sidebar-left">
+        <a href="../index.html" class="tn-back">&larr; BACK TO SITE</a>
+        <h2>◈ TURING NOTES</h2>
+        <p class="sidebar-tagline">With Love, rajat :-)</p>
+
+        <input type="text" class="notebook-search" id="notebookSearch" placeholder="Search notebooks or files...">
+
+        <div class="notebook-label">[ NOTEBOOKS ]</div>
+        <div class="notebook-list" id="notebookList"></div>
+
+        <div class="manual-box">
+            <div style="color: var(--text-gold); font-weight: 900; margin-bottom: 8px; border-bottom: 1px solid var(--border-gold); padding-bottom: 4px;">[ SYSTEM_MANUAL ]</div>
+            <b>Notebooks:</b> Click a tab — files load live from the archive.<br>
+            <b>Read:</b> Click a file to load it in-page. No redirects.<br>
+            <b>Zoom:</b> Use +/- in the top bar, or Ctrl+Scroll.<br>
+            <b>Night mode:</b> Drag the slider to dial in red tint; ☾ mutes/restores it.<br>
+            <b>Scroll:</b> Pages render lazily as you scroll down.
+        </div>
+    </aside>
+
+    <main class="main-column">
+        <header class="tn-header">
+            <div class="tn-doc-title" id="tnDocTitle"><span class="breadcrumb">◈</span> Select a notebook to begin</div>
+            <div class="tn-toolbar" id="tnToolbar" style="visibility: hidden;">
+                <div class="night-control">
+                    <button class="tn-btn night-toggle" id="nightModeBtn" title="Mute/restore night reading mode">&#9789;</button>
+                    <input type="range" id="nightSlider" class="night-slider" min="0" max="100" value="0" title="Night mode intensity">
+                    <span class="night-readout" id="nightReadout">0%</span>
+                </div>
+                <button class="tn-btn" id="zoomOutBtn" title="Zoom out">&minus;</button>
+                <span class="tn-zoom-readout" id="zoomReadout">100%</span>
+                <button class="tn-btn" id="zoomInBtn" title="Zoom in">&plus;</button>
+                <span class="tn-page-readout" id="pageReadout">— / —</span>
+            </div>
+        </header>
+
+        <div id="tn-viewport">
+            <div class="tn-empty-state" id="tnEmptyState">
+                <div class="tn-empty-glyph">◈</div>
+                <div class="tn-empty-title">NO TRANSMISSION LOADED</div>
+                <div class="tn-empty-sub">Open a notebook on the left, then pick a file. It will render right here — zoomable, scrollable, no leaving the page.</div>
+            </div>
+        </div>
+
+        <div class="tn-loader-overlay" id="tnLoader">
+            <div class="tn-loader-ring"></div>
+            <div class="tn-loader-text" id="tnLoaderText">DECRYPTING TRANSMISSION</div>
+            <div class="tn-loader-sub" id="tnLoaderSub">establishing secure channel...</div>
+            <div class="tn-loader-bar-track"><div class="tn-loader-bar-fill" id="tnLoaderBar"></div></div>
+        </div>
+    </main>
+</div>
+
+<script type="module">
+import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.mjs';
+
+/* ==================================================================
+   If you're linking PDFs hosted as GitHub Release assets (or any other
+   host that doesn't send CORS headers), set CORS_PROXY to a deployed
+   proxy URL (see cors_worker.js for a ready-to-deploy Cloudflare
+   Worker). Leave it "" for same-origin / raw.githubusercontent.com
+   files, which don't need a proxy.
+
+   Example once deployed:
+     const CORS_PROXY = "https://turing-notes-proxy.YOURSUBDOMAIN.workers.dev/?url=";
+   ================================================================== */
+const CORS_PROXY = "";
+
+function resolveFetchUrl(url) {
+    if (!CORS_PROXY) return url;
+    // Only proxy hosts that actually need it — leave same-origin/raw files alone.
+    const needsProxy = /^https:\/\/github\.com\/.+\/releases\/download\//.test(url);
+    return needsProxy ? (CORS_PROXY + encodeURIComponent(url)) : url;
+}
+
+/* ==================================================================
+   EDIT THIS. Each notebook is a tab. Two ways to populate it:
+
+   1) DYNAMIC — point it at a Hugging Face dataset folder and every
+      .pdf in there is listed automatically (handles folders with
+      hundreds of files, no manual maintenance):
+        { id, label, hfRepo: "owner/dataset", hfPath: "path/to/folder" }
+
+   2) STATIC — hand-list files yourself:
+        { id, label, files: [ { title, url }, ... ] }
+
+   You can combine both on the same notebook; dynamic entries are
+   appended after any static ones once they finish loading.
+   ================================================================== */
+const notebooks = [
+    { id: "delilah",               label: "DELILAH",               hfRepo: "rmodiucf/archive", hfPath: "final_output/delilah/processed",               files: [] },
+    { id: "kings_patricia",        label: "KINGS & PATRICIA",       hfRepo: "rmodiucf/archive", hfPath: "final_output/kings_patricia/processed",        files: [] },
+    { id: "mother_correspondance", label: "MOTHER CORRESPONDENCE",  hfRepo: "rmodiucf/archive", hfPath: "final_output/mother_correspondance/processed", files: [] },
+    { id: "other_turing_docs",     label: "OTHER TURING DOCS",      hfRepo: "rmodiucf/archive", hfPath: "final_output/other_turing_docs",                files: [] },
+    { id: "personal_documents",    label: "PERSONAL DOCUMENTS",     hfRepo: "rmodiucf/archive", hfPath: "final_output/personal_documents/processed",     files: [] },
+    { id: "unpublished_drafts",    label: "UNPUBLISHED DRAFTS",     hfRepo: "rmodiucf/archive", hfPath: "final_output/unpublished_drafts/processed",     files: [] },
+];
+/* ================================================================== */
+
+let activeTabId = null;
+let openFileUrl = null;
+
+let pdfDoc = null;
+let currentScale = 1.0;
+const BASE_SCALE = 1.3;
+let renderedPages = new Set();
+let renderTasks = new Map();
+let pageWrappers = [];
+let pageObserver = null;
+
+const notebookListEl = document.getElementById('notebookList');
+const viewportEl = document.getElementById('tn-viewport');
+const emptyStateEl = document.getElementById('tnEmptyState');
+const docTitleEl = document.getElementById('tnDocTitle');
+const toolbarEl = document.getElementById('tnToolbar');
+const zoomReadoutEl = document.getElementById('zoomReadout');
+const pageReadoutEl = document.getElementById('pageReadout');
+const loaderEl = document.getElementById('tnLoader');
+const loaderTextEl = document.getElementById('tnLoaderText');
+const loaderSubEl = document.getElementById('tnLoaderSub');
+const loaderBarEl = document.getElementById('tnLoaderBar');
+
+document.getElementById('notebookSearch').addEventListener('input', renderNotebooks);
+
+// Runtime state for dynamic (Hugging Face) folder listings, keyed by notebook id.
+// status: 'idle' | 'loading' | 'loaded' | 'error'
+const hfState = new Map();
+
+function naturalCompare(a, b) {
+    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+}
+
+function titleFromFilename(path) {
+    const name = path.split('/').pop().replace(/\.pdf$/i, '');
+    return name;
+}
+
+async function fetchHfFolder(nb) {
+    const state = { status: 'loading', files: [], error: null };
+    hfState.set(nb.id, state);
+    renderNotebooks();
+
+    try {
+        const apiUrl = `https://huggingface.co/api/datasets/${nb.hfRepo}/tree/main/${nb.hfPath}`;
+        const res = await fetch(resolveFetchUrl(apiUrl));
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const entries = await res.json();
+
+        const pdfFiles = entries
+            .filter(e => e.type === 'file' && /\.pdf$/i.test(e.path))
+            .map(e => ({
+                title: titleFromFilename(e.path),
+                url: `https://huggingface.co/datasets/${nb.hfRepo}/resolve/main/${e.path}`,
+            }))
+            .sort((a, b) => naturalCompare(a.title, b.title));
+
+        state.status = 'loaded';
+        state.files = pdfFiles;
+    } catch (err) {
+        state.status = 'error';
+        state.error = String(err.message || err);
+        console.error('HF folder fetch failed for', nb.id, err);
+    }
+    renderNotebooks();
+}
+
+function getCombinedFiles(nb) {
+    const state = hfState.get(nb.id);
+    const dynamicFiles = (state && state.status === 'loaded') ? state.files : [];
+    return [...(nb.files || []), ...dynamicFiles];
+}
+
+function renderNotebooks() {
+    const q = document.getElementById('notebookSearch').value.toLowerCase().trim();
+    notebookListEl.innerHTML = '';
+
+    notebooks.forEach(nb => {
+        const allFiles = getCombinedFiles(nb);
+        const state = hfState.get(nb.id);
+
+        const filesMatching = q
+            ? allFiles.filter(f => f.title.toLowerCase().includes(q) || nb.label.toLowerCase().includes(q))
+            : allFiles;
+
+        if (q && filesMatching.length === 0 && !nb.label.toLowerCase().includes(q)) return;
+
+        const tab = document.createElement('div');
+        tab.className = 'notebook-tab' + (activeTabId === nb.id ? ' active' : '');
+
+        const countLabel = (nb.hfPath && (!state || state.status === 'idle'))
+            ? '···'
+            : (nb.hfPath && state && state.status === 'loading')
+                ? 'LOADING'
+                : `${allFiles.length} FILE${allFiles.length === 1 ? '' : 'S'}`;
+
+        const header = document.createElement('div');
+        header.className = 'notebook-tab-header';
+        header.innerHTML = `
+            <span class="notebook-tab-name">${nb.label}</span>
+            <span style="display:flex; align-items:center;">
+                <span class="notebook-tab-count">${countLabel}</span>
+                <span class="notebook-tab-chevron">&#9656;</span>
+            </span>
+        `;
+        header.addEventListener('click', () => {
+            const opening = activeTabId !== nb.id;
+            activeTabId = opening ? nb.id : null;
+            renderNotebooks();
+            if (opening && nb.hfPath && (!hfState.has(nb.id) || hfState.get(nb.id).status === 'idle')) {
+                fetchHfFolder(nb);
+            }
+        });
+
+        const fileList = document.createElement('div');
+        fileList.className = 'notebook-file-list';
+
+        const listToShow = q ? filesMatching : allFiles;
+
+        if (nb.hfPath && state && state.status === 'loading') {
+            fileList.innerHTML = `<div class="notebook-empty">SCANNING_ARCHIVE<span class="join-cursor">_</span><br><span style="opacity:0.6;">querying ${nb.hfRepo}</span></div>`;
+        } else if (nb.hfPath && state && state.status === 'error') {
+            fileList.innerHTML = `<div class="notebook-empty">FETCH_FAILED<br><span style="opacity:0.6;">${state.error}</span><br><span style="opacity:0.6;">check CORS_PROXY near top of script</span></div>`;
+        } else if (listToShow.length === 0) {
+            fileList.innerHTML = `<div class="notebook-empty">EMPTY_NOTEBOOK</div>`;
+        } else {
+            listToShow.forEach(f => {
+                const item = document.createElement('div');
+                item.className = 'notebook-file' + (openFileUrl === f.url ? ' open' : '');
+                item.innerHTML = `<span class="fdot">◆</span><span>${f.title}</span>`;
+                item.addEventListener('click', () => openPdf(f.url, f.title, nb.label));
+                fileList.appendChild(item);
+            });
+        }
+
+        tab.appendChild(header);
+        tab.appendChild(fileList);
+        notebookListEl.appendChild(tab);
+    });
+
+    if (notebookListEl.innerHTML === '') {
+        notebookListEl.innerHTML = `<div class="notebook-empty">NO_MATCHES_FOUND</div>`;
+    }
+}
+
+function showLoader(text, sub) {
+    loaderTextEl.textContent = text;
+    loaderSubEl.textContent = sub;
+    loaderBarEl.style.width = '0%';
+    loaderEl.classList.add('active');
+}
+function updateLoaderProgress(pct, sub) {
+    loaderBarEl.style.width = pct + '%';
+    if (sub) loaderSubEl.textContent = sub;
+}
+function hideLoader() {
+    loaderEl.classList.remove('active');
+}
+
+async function openPdf(url, title, notebookLabel) {
+    if (!url) {
+        showLoader('NO_FILE_LINKED', 'this entry has no url set yet');
+        setTimeout(hideLoader, 1400);
+        return;
+    }
+
+    openFileUrl = url;
+    renderNotebooks();
+
+    emptyStateEl.style.display = 'none';
+    toolbarEl.style.visibility = 'visible';
+    docTitleEl.innerHTML = `<span class="breadcrumb">${notebookLabel} /</span> ${title}`;
+
+    showLoader('DECRYPTING TRANSMISSION', 'establishing secure channel...');
+
+    // Reset state
+    viewportEl.querySelectorAll('.pdf-page-canvas, .pdf-page-placeholder').forEach(el => el.remove());
+    if (pageObserver) pageObserver.disconnect();
+    renderedPages = new Set();
+    renderTasks = new Map();
+    pageWrappers = [];
+    currentScale = 1.0;
+    zoomReadoutEl.textContent = '100%';
+
+    try {
+        const loadingTask = pdfjsLib.getDocument(resolveFetchUrl(url));
+        loadingTask.onProgress = (p) => {
+            if (p.total) {
+                const pct = Math.min(100, Math.round((p.loaded / p.total) * 100));
+                updateLoaderProgress(pct, `receiving bytes... ${pct}%`);
+            }
+        };
+        pdfDoc = await loadingTask.promise;
+
+        updateLoaderProgress(100, `${pdfDoc.numPages} pages found`);
+        pageReadoutEl.textContent = `1 / ${pdfDoc.numPages}`;
+
+        buildPagePlaceholders();
+        setTimeout(hideLoader, 300);
+    } catch (err) {
+        loaderTextEl.textContent = 'TRANSMISSION_FAILED';
+        const msg = String(err.message || err);
+        const looksLikeCORS = /fetch|network|cors|failed/i.test(msg);
+        loaderSubEl.textContent = looksLikeCORS
+            ? 'blocked fetching file — likely CORS. Set CORS_PROXY near the top of the script (see cors_worker.js), or host the PDF same-origin / via raw.githubusercontent.com.'
+            : msg;
+        console.error(err);
+    }
+}
+
+function buildPagePlaceholders() {
+    for (let i = 1; i <= pdfDoc.numPages; i++) {
+        const wrap = document.createElement('div');
+        wrap.className = 'pdf-page-placeholder';
+        wrap.dataset.pageNum = i;
+        wrap.style.width = '80%';
+        wrap.style.height = '400px';
+        wrap.textContent = `PAGE ${i} — scroll to load`;
+        viewportEl.appendChild(wrap);
+        pageWrappers.push(wrap);
+    }
+
+    pageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const pageNum = parseInt(entry.target.dataset.pageNum, 10);
+                renderPage(pageNum);
+            }
+        });
+    }, { root: viewportEl, rootMargin: '600px 0px 600px 0px' });
+
+    pageWrappers.forEach(w => pageObserver.observe(w));
+
+    // Track current visible page for the readout
+    viewportEl.addEventListener('scroll', updatePageReadout, { passive: true });
+}
+
+function updatePageReadout() {
+    if (!pdfDoc) return;
+    const vpTop = viewportEl.scrollTop + 80;
+    let current = 1;
+    for (const w of pageWrappers) {
+        if (w.offsetTop <= vpTop) current = parseInt(w.dataset.pageNum, 10);
+    }
+    pageReadoutEl.textContent = `${current} / ${pdfDoc.numPages}`;
+}
+
+async function renderPage(pageNum, forceRerender = false) {
+    if (!pdfDoc) return;
+    if (renderedPages.has(pageNum) && !forceRerender) return;
+
+    // Cancel any in-flight render for this page (e.g. zoom changed mid-render)
+    if (renderTasks.has(pageNum)) {
+        try { renderTasks.get(pageNum).cancel(); } catch (e) {}
+    }
+
+    const wrapperIndex = pageNum - 1;
+    const placeholderOrCanvas = pageWrappers[wrapperIndex];
+
+    const page = await pdfDoc.getPage(pageNum);
+    const viewport = page.getViewport({ scale: BASE_SCALE * currentScale });
+
+    let canvas = placeholderOrCanvas.tagName === 'CANVAS' ? placeholderOrCanvas : document.createElement('canvas');
+    canvas.className = 'pdf-page-canvas';
+    canvas.dataset.pageNum = pageNum;
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+    canvas.style.width = viewport.width + 'px';
+    canvas.style.height = viewport.height + 'px';
+
+    if (placeholderOrCanvas.tagName !== 'CANVAS') {
+        placeholderOrCanvas.replaceWith(canvas);
+        pageWrappers[wrapperIndex] = canvas;
+        if (pageObserver) pageObserver.observe(canvas);
+    }
+
+    const ctx = canvas.getContext('2d');
+    const task = page.render({ canvasContext: ctx, viewport });
+    renderTasks.set(pageNum, task);
+
+    try {
+        await task.promise;
+        renderedPages.add(pageNum);
+    } catch (e) {
+        // Cancelled renders are expected during rapid zoom changes
+    } finally {
+        renderTasks.delete(pageNum);
+    }
+}
+
+function setZoom(newScale) {
+    currentScale = Math.min(3, Math.max(0.4, newScale));
+    zoomReadoutEl.textContent = Math.round(currentScale * 100) + '%';
+    // Re-render pages that were already rendered, at the new scale
+    const pagesToRerender = Array.from(renderedPages);
+    renderedPages.clear();
+    pagesToRerender.forEach(p => renderPage(p, true));
+}
+
+document.getElementById('zoomInBtn').addEventListener('click', () => setZoom(currentScale + 0.2));
+document.getElementById('zoomOutBtn').addEventListener('click', () => setZoom(currentScale - 0.2));
+
+const nightModeBtn = document.getElementById('nightModeBtn');
+const nightSlider = document.getElementById('nightSlider');
+const nightReadout = document.getElementById('nightReadout');
+
+let nightIntensity = 0;        // 0-100, drives the actual filter
+let lastNightIntensity = 65;   // restored when the button "unmutes"
+
+try {
+    const savedIntensity = parseInt(localStorage.getItem('tn-night-intensity'), 10);
+    if (!isNaN(savedIntensity)) nightIntensity = Math.min(100, Math.max(0, savedIntensity));
+    const savedLast = parseInt(localStorage.getItem('tn-night-last-intensity'), 10);
+    if (!isNaN(savedLast) && savedLast > 0) lastNightIntensity = savedLast;
+} catch (e) { /* storage unavailable, defaults stand */ }
+
+function applyNightMode() {
+    const t = nightIntensity / 100;
+    viewportEl.style.setProperty('--night-t', t);
+    nightModeBtn.classList.toggle('active', nightIntensity > 0);
+    nightSlider.value = nightIntensity;
+    nightReadout.textContent = nightIntensity + '%';
+}
+applyNightMode();
+
+function setNightIntensity(value) {
+    nightIntensity = Math.min(100, Math.max(0, value));
+    if (nightIntensity > 0) lastNightIntensity = nightIntensity;
+    try {
+        localStorage.setItem('tn-night-intensity', String(nightIntensity));
+        localStorage.setItem('tn-night-last-intensity', String(lastNightIntensity));
+    } catch (e) { /* ignore */ }
+    applyNightMode();
+}
+
+nightModeBtn.addEventListener('click', () => {
+    setNightIntensity(nightIntensity > 0 ? 0 : lastNightIntensity);
+});
+
+nightSlider.addEventListener('input', (e) => {
+    setNightIntensity(parseInt(e.target.value, 10));
+});
+
+viewportEl.addEventListener('wheel', (e) => {
+    if (e.ctrlKey) {
+        e.preventDefault();
+        setZoom(currentScale + (e.deltaY < 0 ? 0.1 : -0.1));
+    }
+}, { passive: false });
+
+renderNotebooks();
+</script>
+</body>
+</html>
