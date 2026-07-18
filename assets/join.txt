@@ -46,6 +46,7 @@ some weird questions:
 - you look at a giant tall tree.. what stands out.. 
 - what is the most weird thing you have read recently? 
 - what is one foolish mistake we made in one of our papers (first-authored by me)?
+    - please read the `arxiv' versions... those are the latest ones...
     - please make sure that the mistake you point out is `conceptual'. 
     - for eg, some bad answers include: `you didnt test xx benchmark, you didnt scale up... how does it work on yy modality'..
 - draw your favourite cartoon on a piece of paper, 
@@ -82,6 +83,7 @@ what taste comes to your mouth? do you like it? or is it unpleasant?
     - it should NOT be on AI...
 - so you wake up in the morning (or night). what's the first thing you do?
     - eg, brush teeth, check cellphone, drink tea, check computer, etc...
+- so you sleep at night (or morning). what's the last thing you remember before you drift off...
 - there are 7 days in a week. on which day do you like to rest :-).
     - if you `do' rest, why that particular day?
     - what's your take on work-life balance?
