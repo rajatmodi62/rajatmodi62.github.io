@@ -785,7 +785,249 @@ document.addEventListener('keydown', function(event) {
 </div>
 
 
+<div class="join-us-wrapper" style="margin-top: 25px; display: flex; justify-content: flex-start;">
+  <a href="#"
+     class="join-us-btn"
+     onclick="openJoinTerminal(); return false;">
+    <span class="join-us-icon">&gt;</span> JOIN US<span class="join-cursor">_</span>
+  </a>
+</div>
 
+<!-- JOIN TERMINAL MODAL -->
+<div id="joinTerminalOverlay" class="join-terminal-overlay">
+  <div class="join-terminal-window">
+    <div class="join-terminal-titlebar">
+      <span class="join-terminal-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </span>
+      <span class="join-terminal-title">join.txt — rajatmodi62.github.io</span>
+      <span class="join-terminal-close" onclick="closeJoinTerminal()">[ ESC / CLOSE ]</span>
+    </div>
+    <div class="join-terminal-body" id="joinTerminalBody">
+      <div class="join-terminal-loading">Fetching transmission<span class="join-cursor">_</span></div>
+    </div>
+  </div>
+</div>
+
+<style>
+.join-us-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  color: var(--border-header-bottom);
+  background: #0a0a0a;
+  border: 1px solid var(--border-header-bottom);
+  padding: 12px 22px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.join-us-btn::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    rgba(255, 215, 0, 0.08),
+    var(--border-header-bottom) 20%,
+    transparent 25%
+  );
+  animation: joinBorderRotate 4s linear infinite;
+}
+
+.join-us-btn::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #0a0a0a;
+  border-radius: 3px;
+}
+
+.join-us-icon { color: var(--link-color); font-weight: 900; }
+.join-cursor { animation: joinBlink 1s infinite; font-weight: bold; }
+
+@keyframes joinBorderRotate { 100% { transform: rotate(360deg); } }
+@keyframes joinBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.join-us-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px var(--link-color), 0 0 6px var(--border-header-bottom);
+  color: #fff;
+}
+.join-us-btn:hover .join-us-icon { color: var(--border-header-bottom); }
+
+/* ---------------- TERMINAL MODAL ---------------- */
+
+.join-terminal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(3px);
+  z-index: 1000000;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-terminal-overlay.active {
+  display: flex;
+}
+
+.join-terminal-window {
+  width: 80vw;
+  max-width: 900px;
+  height: 75vh;
+  max-height: 700px;
+  background: #0a0a0a;
+  border: 1px solid var(--border-header-bottom);
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.9), 0 0 20px var(--link-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  animation: joinTermIn 0.25s ease-out;
+}
+
+@keyframes joinTermIn {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.join-terminal-titlebar {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: var(--bg-header, #18181b);
+  border-bottom: 1px solid var(--border-header-bottom);
+  flex-shrink: 0;
+}
+
+.join-terminal-dots { display: flex; gap: 6px; margin-right: 15px; }
+.dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.join-terminal-title {
+  flex-grow: 1;
+  color: var(--link-color);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.join-terminal-close {
+  color: var(--border-header-bottom);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  white-space: nowrap;
+  padding-left: 15px;
+}
+.join-terminal-close:hover { color: #fff; }
+
+.join-terminal-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 25px 30px;
+  color: #00ff41;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.join-terminal-body::-webkit-scrollbar { width: 8px; }
+.join-terminal-body::-webkit-scrollbar-thumb {
+  background: var(--link-color);
+  border-radius: 10px;
+}
+.join-terminal-body::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); }
+
+.join-terminal-loading { color: var(--link-color); opacity: 0.8; }
+.join-terminal-error { color: #ff5f56; }
+
+body.no-scroll { overflow: hidden; }
+</style>
+
+<script>
+let joinTerminalLoaded = false;
+
+function openJoinTerminal() {
+  const overlay = document.getElementById('joinTerminalOverlay');
+  overlay.classList.add('active');
+  document.body.classList.add('no-scroll');
+
+  if (!joinTerminalLoaded) {
+    fetchJoinText();
+  }
+}
+
+function closeJoinTerminal() {
+  const overlay = document.getElementById('joinTerminalOverlay');
+  overlay.classList.remove('active');
+  document.body.classList.remove('no-scroll');
+}
+
+function fetchJoinText() {
+  const body = document.getElementById('joinTerminalBody');
+  fetch('https://raw.githubusercontent.com/rajatmodi62/rajatmodi62.github.io/main/assets/join.txt')
+    .then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.text();
+    })
+    .then(function(text) {
+      body.textContent = text;
+      joinTerminalLoaded = true;
+    })
+    .catch(function(err) {
+      body.innerHTML = '<span class="join-terminal-error">[ ERROR ] Could not load transmission: ' + err.message + '<br><br>You can read it directly here: <a href="https://github.com/rajatmodi62/rajatmodi62.github.io/blob/main/assets/join.txt" style="color: var(--link-color);" target="_blank">join.txt</a></span>';
+    });
+}
+
+// Close on click outside window
+document.addEventListener('click', function(event) {
+  const overlay = document.getElementById('joinTerminalOverlay');
+  if (event.target === overlay) {
+    closeJoinTerminal();
+  }
+});
+
+// Close on ESC
+document.addEventListener('keydown', function(event) {
+  const overlay = document.getElementById('joinTerminalOverlay');
+  if (event.key === 'Escape' && overlay.classList.contains('active')) {
+    closeJoinTerminal();
+  }
+});
+</script>
 
 
 <!--     
