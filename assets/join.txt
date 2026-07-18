@@ -41,6 +41,11 @@ fell free to take your time (a week, month, year or more :-))
 whenever you finish it, just send it across. 
 
 
+we design our questions to be as much non-technical as possible, 
+kindly zip all your attachments, and put your answers in a readme.txt
+please email your file to <rajatmodi62@gmail.com>, 
+title it as: <your name> application for being a cute godzilla. 
+
 some weird questions:
 
 - tell us what is the similarity between an immortal jellyfish, a human baby and the milkyway. 
@@ -97,13 +102,6 @@ what taste comes to your mouth? do you like it? or is it unpleasant?
     - if you `do' rest, why that particular day?
     - what's your take on work-life balance?
 
-we design our questions to be as much non technical as possible, 
-please do try to answer all of them. 
-kindly zip all your attachments, and put your answers in a readme.txt
-
-
-please email your file to <rajatmodi62@gmail.com>, 
-title it as: <your name> application for being a cute godzilla. 
 
 cheers, 
 rajat
