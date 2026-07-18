@@ -26,6 +26,8 @@ some weird questions:
 - you look at a giant tall tree.. what stands out.. 
 - what is the most weird thing you have read recently? 
 - what is one foolish mistake we made in one of our papers?
+    - please make sure that the mistake you point out is `conceptual'. 
+    - for eg, some bad answers include: `you didnt test xx benchmark, you didnt scale up... how does it work on yy modality'..
 - draw your favourite cartoon on a piece of paper, 
     - send its photo across, no ai please..
 - draw your signature, send it across... (or someone else's if you are privacy conscious)
