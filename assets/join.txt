@@ -23,7 +23,8 @@ if you still want to joint us..
 the application process is pretty simple (and foolish :-)). 
 just answer a couple of questions, and you're in!!
 we try to be fair to  all people irrespective of their backgrounds, age, countries, or financial situation.
-
+we don't require your CV, GRE score, and current  affiliations .. 
+just answer the questions, and we might chat :-)
 
 some weird questions:
 
@@ -77,8 +78,7 @@ what taste comes to your mouth? do you like it? or is it unpleasant?
 we design our questions to be as much non technical as possible, 
 please do try to answer all of them. 
 kindly zip all your attachments, and put your answers in a readme.txt
-we don't require your CV, GRE score, and current  affiliations .. 
-just answer the questions, and we might chat :-)
+
 
 please email your file to <rajatmodi62@gmail.com>, 
 title it as: <your name> application for being a cute godzilla. 
