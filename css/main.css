@@ -755,3 +755,15 @@ body.no-scroll {
     padding: 15px;
     background: #000;
 }
+
+.tight-spacing {
+    margin: 5px 0 !important; /* Overrides the 25px default */
+}
+
+.venue-row {
+  display: block;
+  width: 100%;
+  flex-basis: 100%;   /* <-- this is the key line for the flex-container case */
+  margin-bottom: -2px;
+  /* line-height: 1.8; */
+}
