@@ -19,13 +19,13 @@ we try to be fair to  all people irrespective of their backgrounds, age, countri
 
 some weird questions:
 
-- tell us what is the similarity between an immortal jellyfish and the milkyway. 
+- tell us what is the similarity between an immortal jellyfish, a human baby and the milkyway. 
 - when u see stonehenge, or roman colloseum, what do you see..
 - you are travelling in a boat on a sea in the night under full moon. the sky is full of stars.. what happens..
 - you take a potato and throw it in the air, what stands out...
 - you look at a giant tall tree.. what stands out.. 
 - what is the most weird thing you have read recently? 
-- what is one foolish mistake we made in one of our papers?
+- what is one foolish mistake we made in one of our papers (first-authored by me)?
     - please make sure that the mistake you point out is `conceptual'. 
     - for eg, some bad answers include: `you didnt test xx benchmark, you didnt scale up... how does it work on yy modality'..
 - draw your favourite cartoon on a piece of paper, 
@@ -59,11 +59,15 @@ what taste comes to your mouth? do you like it? or is it unpleasant?
     how can information be created out of nothing?
 - so you might have made some slides on some topic in your life
     - send your `proudest slides' across as a .pdf. 
-    - it doesnt have to be on AI...
+    - it should NOT be on AI...
+- so you wake up in the morning (or night). what's the first thing you do?
+    - eg, brush teeth, check cellphone, drink tea, check computer, etc...
 - there are 7 days in a week. on which day do you like to rest :-).
     - if you `do' rest, why that particular day?
     - what's your take on work-life balance?
 
+we design our questions to be as much non technical as possible, 
+please do try to answer all of them. 
 kindly zip all your attachments, and put your answers in a readme.txt
 
 please email your file to <rajatmodi62@gmail.com>, title it as: <your name> application for being a cute godzilla. 
