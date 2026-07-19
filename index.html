@@ -128,8 +128,8 @@ layout: default
                     <button class="play-btn">Play Video 😚  </button>
                 </div>
                 <iframe class="video-frame" width="480" height="270" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
 
         <div class="video-item">
             <a href="#" class="video-trigger" data-video-id="2gsJcuiQsp4">Weight Transport Problem</a><br>
@@ -170,11 +170,6 @@ layout: default
         </p>
         </div>
       
-        <!-- <div style="margin-top: 40px; border-top: 1px solid var(--border-general); padding-top: 10px; color: var(--text-muted);">
-            [Cognitive Side]<br>
-            Work in progress 
-            
-        </div> -->
     </div>
 
     <div class="main-column" style="padding: 0 45px; min-height: 100vh; background-color: var(--bg-body);">
@@ -219,7 +214,7 @@ layout: default
         </div>
         
         
-    <div class="terminal-container" style="
+    <div class="terminal-container" id="liveFeedTrigger" onclick="openAchievementsTerminal()" style="
         background: #0a0a0a; 
         border: 1px solid var(--border-header-bottom); 
         padding: 15px; 
@@ -227,9 +222,12 @@ layout: default
         font-family: 'Courier New', Courier, monospace; 
         border-radius: 4px;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        cursor: pointer;
+        transition: box-shadow 0.3s ease, transform 0.2s ease;
         ">
-    <div style="color: var(--link-color); font-size: 0.7rem; margin-bottom: 10px; opacity: 0.7; text-transform: uppercase; letter-spacing: 2px;">
-        [ System Status: Live Feed ]
+    <div style="color: var(--link-color); font-size: 0.7rem; margin-bottom: 10px; opacity: 0.7; text-transform: uppercase; letter-spacing: 2px; display: flex; justify-content: space-between; align-items: center;">
+        <span>[ System Status: Live Feed ]</span>
+        <span style="opacity: 0.6; font-size: 0.65rem;">[ click to expand ]</span>
         </div>
         <div id="terminal-text" style="color: #00ff41; font-size: 0.95rem; min-height: 1.5em; line-height: 1.4;">
             <span id="terminal-content">Initializing...</span><span class="cursor">_</span>
@@ -245,6 +243,132 @@ layout: default
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
+        .terminal-container:hover {
+            box-shadow: 0 0 20px rgba(0,255,65,0.25), 0 0 10px var(--border-header-bottom);
+            transform: translateY(-1px);
+        }
+    </style>
+
+    <!-- ACHIEVEMENTS TERMINAL MODAL -->
+    <div id="achievementsTerminalOverlay" class="achv-terminal-overlay">
+      <div class="achv-terminal-window">
+        <div class="achv-terminal-titlebar">
+          <span class="achv-terminal-dots">
+            <span class="adot adot-red"></span>
+            <span class="adot adot-yellow"></span>
+            <span class="adot adot-green"></span>
+          </span>
+          <span class="achv-terminal-title">system_log.txt — live feed history</span>
+          <span class="achv-terminal-close" onclick="closeAchievementsTerminal()">[ ESC / CLOSE ]</span>
+        </div>
+        <div class="achv-terminal-body" id="achievementsTerminalBody"></div>
+      </div>
+    </div>
+
+    <style>
+    .achv-terminal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(3px);
+      z-index: 1000000;
+      align-items: center;
+      justify-content: center;
+    }
+    .achv-terminal-overlay.active { display: flex; }
+
+    .achv-terminal-window {
+      width: 80vw;
+      max-width: 900px;
+      height: 75vh;
+      max-height: 700px;
+      background: #0a0a0a;
+      border: 1px solid var(--border-header-bottom);
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.9), 0 0 20px #00ff41;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: 'Courier New', Courier, monospace;
+      animation: achvTermIn 0.25s ease-out;
+    }
+
+    @keyframes achvTermIn {
+      from { opacity: 0; transform: scale(0.96) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .achv-terminal-titlebar {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      background: var(--bg-header, #18181b);
+      border-bottom: 1px solid var(--border-header-bottom);
+      flex-shrink: 0;
+    }
+
+    .achv-terminal-dots { display: flex; gap: 6px; margin-right: 15px; }
+    .adot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .adot-red { background: #ff5f56; }
+    .adot-yellow { background: #ffbd2e; }
+    .adot-green { background: #27c93f; }
+
+    .achv-terminal-title {
+      flex-grow: 1;
+      color: var(--link-color);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      opacity: 0.85;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .achv-terminal-close {
+      color: var(--border-header-bottom);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      cursor: pointer;
+      white-space: nowrap;
+      padding-left: 15px;
+    }
+    .achv-terminal-close:hover { color: #fff; }
+
+    .achv-terminal-body {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 25px 30px;
+      color: #00ff41;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .achv-terminal-body::-webkit-scrollbar { width: 8px; }
+    .achv-terminal-body::-webkit-scrollbar-thumb {
+      background: var(--link-color);
+      border-radius: 10px;
+    }
+    .achv-terminal-body::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); }
+
+    .achv-line {
+      opacity: 0;
+      animation: achvLineIn 0.3s ease forwards;
+    }
+    @keyframes achvLineIn {
+      from { opacity: 0; transform: translateX(-6px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .achv-line-cursor {
+      display: inline-block;
+      animation: blink 1s infinite;
+      font-weight: bold;
+    }
     </style>
 
          <div class="paper-expansion-card" id="paperCard">
@@ -515,55 +639,6 @@ document.addEventListener('keydown', function(event) {
 
     <div class="sidebar-right" style="text-align: left; padding-top: 30px; padding-left: 25px; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); border-left: 2px solid var(--border-header-bottom); ">
 
-        
-<!-- this was james bond video lol , meant to go with geoff-zilla         -->
-      <!-- <h2 style="color: var(--link-color); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid var(--link-color); display: inline-block;">
-            License To Kill
-        </h2> -->
-
-    <!-- <div id="video-wrapper" style="display: none; width: 100%; max-width: 400px; margin-bottom: 30px; position: relative; overflow: hidden; aspect-ratio: 400 / 260;">
-    <video 
-        id="lab-core-video"
-        src="{{ site.baseurl }}/assets/bond.mp4" 
-        loop 
-        playsinline
-        style="width: 100%; height: 100%; display: block; filter: brightness(0.8) contrast(1.2); object-fit: cover;">
-    </video>
-</div>
-
-
-<div id="boot-overlay" style="width: 100%; max-width: 400px; aspect-ratio: 400 / 260; display: flex; align-items: center; justify-content: center; cursor: pointer; background: transparent; margin-bottom: 30px;">
-    <div style="color: var(--link-color); font-family: 'Courier New', monospace; font-size: 14px; text-align: center; animation: pulse 2s infinite;">
-        [ INITIALIZING ]<br>
-        <span style="font-size: 10px; opacity: 0.6;">( CLICK HERE )</span>
-    </div>
-</div>
-
-  <style>
-  @keyframes pulse {
-      0% { opacity: 0.3; }
-      50% { opacity: 1; }
-      100% { opacity: 0.3; }
-  }
-  </style>
-
-  <script>
-      const overlay = document.getElementById('boot-overlay');
-      const wrapper = document.getElementById('video-wrapper');
-      const vid = document.getElementById('lab-core-video');
-
-      overlay.addEventListener('click', function() {
-          overlay.style.display = 'none';
-          wrapper.style.display = 'block';
-          vid.play().catch(e => console.log("System Error:", e));
-      });
-  </script> -->
-
-
-
-
-        <!-- <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 1;"> -->
-
         <h2 style="color: var(--link-color); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid var(--link-color); display: inline-block;">
             Philosophy Of Mind
         </h2>
@@ -588,8 +663,6 @@ document.addEventListener('keydown', function(event) {
                   </a>
               </p>
           {% endif %}{% endfor %}
-
-          
 
           {% for post in site.posts %}{% if post.slug == "emotions-in-machine" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
@@ -637,13 +710,6 @@ document.addEventListener('keydown', function(event) {
 
         <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 1;">
 
-       
-        
-
-        <!-- <h2 style="color: var(--link-color); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid var(--link-color); display: inline-block;">
-            Godzilla Corner 
-        </h2> -->
-     
         <div id="gif-wrapper" style="width: 90%; margin: -5px auto 30px auto; position: relative; overflow: hidden; background: black; transform: translateX(-5%);">
     <img 
         id="lab-core-gif"
@@ -652,20 +718,10 @@ document.addEventListener('keydown', function(event) {
         style="width: 100%; height: 100%; display: block; object-fit: cover; border: none; outline: none; transform: translateX(-10%);">
     </div>
 
-
-    <!-- <h2 style="color: var(--link-color); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 30px; font-weight: 800; border-bottom: 2px solid var(--link-color); display: inline-block;">
-    Godzilla Corner 
-</h2> -->
 <div class="godzilla-directory" style="display: flex; flex-wrap: wrap; gap: 10px 10px; font-family: 'Courier New', Courier, monospace; align-items: center;">
 
     <a href="https://github.com/rajatmodi62/job_study/tree/main/distributed/princeton/multi_gpu_training/03_pytorch_lightning" class="sys-link">How to run multi-node training?</a>
     <span class="sep">|</span>
-    <!-- <a href="https://scholar.google.com/citations?user=D_JvEcwAAAAJ&hl=en" class="sys-link">Academic Papa</a>
-    <span class="sep">|</span>
-    <a href="https://scholar.google.com/citations?hl=en&user=p8gsO3gAAAAJ" class="sys-link">Grand Papa</a>
-    <span class="sep">|</span>
-    <a href="https://www.crcv.ucf.edu/research/projects/mama-multi-actor-multi-action-dataset-for-action-detection/" class="sys-link"> Mama</a>
-    <span class="sep">|</span> -->
 
     {% for post in site.posts %}
         {% if post.slug == "gofzilla" %}
@@ -674,7 +730,6 @@ document.addEventListener('keydown', function(event) {
                 style=" text-decoration: none; font-family: 'Courier New', monospace; ">
                 {{ post.title }}
             </a>
-            <!-- <span class="sep" style="margin: 0 5px; color: #444;">|</span> -->
         {% endif %}
         {% endfor %}
 
@@ -895,8 +950,6 @@ document.addEventListener('keydown', function(event) {
 }
 .join-us-btn:hover .join-us-icon { color: var(--border-header-bottom); }
 
-/* ---------------- TERMINAL MODAL ---------------- */
-
 .join-terminal-overlay {
   display: none;
   position: fixed;
@@ -1030,7 +1083,6 @@ function fetchJoinText() {
     });
 }
 
-// Close on click outside window
 document.addEventListener('click', function(event) {
   const overlay = document.getElementById('joinTerminalOverlay');
   if (event.target === overlay) {
@@ -1038,7 +1090,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Close on ESC
 document.addEventListener('keydown', function(event) {
   const overlay = document.getElementById('joinTerminalOverlay');
   if (event.key === 'Escape' && overlay.classList.contains('active')) {
@@ -1046,26 +1097,11 @@ document.addEventListener('keydown', function(event) {
   }
 });
 </script>
-
-
-<!--     
-    <a href="{{ '/paper_bank/index.html' | prepend: site.baseurl }}" 
-    class="sys-link" 
-    style="text-decoration: none; font-family: 'Courier New', monospace;">
-    Must read if you are single
-    </a> -->
-    <!-- <a href="https://openreview.net/forum?id=7Ye12RLZ4P&referrer=%5Bthe%20profile%20of%20Yogesh%20S%20Rawat%5D(%2Fprofile%3Fid%3D~Yogesh_S_Rawat1)" class="sys-link"> 😏</a>
-    <span class="sep">|</span> -->
     
 </div>
 
-
-
     </div>
 </div>
-
-
-
 
 
 <script>
@@ -1079,8 +1115,6 @@ document.addEventListener('keydown', function(event) {
     "> [Sep 2024] APM accepted to NeurIPS 2024.. ",
     "> [Sep 2023] Occlusions Paper accepted to NeurIPS 2023.. ",
     "> [Jun 2022] UCF-MAMA accepted to CVPR 2022..."
-
-
 ];
 
 let lastIndex = -1;
@@ -1088,16 +1122,14 @@ let lastIndex = -1;
 function updateTerminal() {
     const content = document.getElementById('terminal-content');
     
-    // Pick a random index different from the last one
     let randomIndex;
     do {
-        randomIndex = Math.floor(Math.random() * 5);
+        randomIndex = Math.floor(Math.random() * newsItems.length);
     } while (randomIndex === lastIndex);
     
     lastIndex = randomIndex;
     const text = newsItems[randomIndex];
     
-    // Typewriter effect
     content.innerHTML = "";
     let i = 0;
     const timer = setInterval(() => {
@@ -1107,11 +1139,77 @@ function updateTerminal() {
         } else {
             clearInterval(timer);
         }
-    }, 30); // Speed of typing
+    }, 30);
 }
 
-// Initial trigger
 updateTerminal();
-// Cycle every 5 seconds
 setInterval(updateTerminal, 5000);
+
+// ---------------- ACHIEVEMENTS TERMINAL (full history, sequential reveal) ----------------
+
+let achievementsRevealed = false;
+
+function openAchievementsTerminal() {
+    const overlay = document.getElementById('achievementsTerminalOverlay');
+    overlay.classList.add('active');
+    document.body.classList.add('no-scroll');
+
+    if (!achievementsRevealed) {
+        revealAllAchievements();
+    }
+}
+
+function closeAchievementsTerminal() {
+    const overlay = document.getElementById('achievementsTerminalOverlay');
+    overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+}
+
+function revealAllAchievements() {
+    achievementsRevealed = true;
+    const body = document.getElementById('achievementsTerminalBody');
+    body.innerHTML = '';
+
+    // Reverse so oldest shows first, most recent appears last (like a real log tailing up)
+    const ordered = [...newsItems].reverse();
+
+    let idx = 0;
+
+    function revealNext() {
+        if (idx >= ordered.length) {
+            // done — leave a blinking cursor at the end
+            const doneLine = document.createElement('div');
+            doneLine.innerHTML = '<span class="achv-line-cursor">_</span>';
+            body.appendChild(doneLine);
+            return;
+        }
+
+        const line = document.createElement('div');
+        line.className = 'achv-line';
+        line.textContent = ordered[idx];
+        body.appendChild(line);
+
+        // auto-scroll to bottom as new lines appear
+        body.scrollTop = body.scrollHeight;
+
+        idx++;
+        setTimeout(revealNext, 220);
+    }
+
+    revealNext();
+}
+
+document.addEventListener('click', function(event) {
+    const overlay = document.getElementById('achievementsTerminalOverlay');
+    if (event.target === overlay) {
+        closeAchievementsTerminal();
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    const overlay = document.getElementById('achievementsTerminalOverlay');
+    if (event.key === 'Escape' && overlay.classList.contains('active')) {
+        closeAchievementsTerminal();
+    }
+});
 </script>
