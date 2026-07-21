@@ -97,6 +97,12 @@ feedback:
   
 [14] capital one: you dont do nlp, so we don't love you. vlm's are not good enough. 
 [15] sakana (again): fish got bored. 
+[16] mach9: reject. 
+      - coding round: he asked  if four points are coplanar (did that one)
+      - non maximal suppression code of boxes. 
+        - calculate their iou. -> trapped here. made it too complicated. 
+        -> never reached nms code. 
+      
 time to pack bags, move to india, become farmer on my dad's farm :-)
 ---
 
