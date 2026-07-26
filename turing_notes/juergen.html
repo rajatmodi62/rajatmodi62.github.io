@@ -6,13 +6,14 @@
 <title>◈ SCHMIDHUBER NOTES | rajatmodi62</title>
 <style>
     :root {
-        --bg-body: #080809;
-        --bg-sidebar: rgba(13, 13, 14, 0.95);
-        --bg-header: rgba(24, 24, 27, 0.9);
-        --text-main: #e2e2e4;
-        --text-muted: #a1a1aa;
+        --bg-body: #060608;
+        --bg-sidebar: rgba(12, 12, 15, 0.95);
+        --bg-header: rgba(20, 20, 25, 0.9);
+        --text-main: #e6e6ea;
+        --text-muted: #9a9aa3;
         --text-gold: #D4AF37;
         --link-color: #38bdf8;
+        --accent-violet: #a855f7;
         --border-gold: #D4AF37;
         --border-dim: #27272a;
     }
@@ -26,13 +27,43 @@
         background-color: var(--bg-body);
         color: var(--text-main);
         overflow: hidden;
+        position: relative;
         background-image:
+            radial-gradient(ellipse 90% 70% at 50% -10%, rgba(56, 189, 248, 0.06), transparent 60%),
+            radial-gradient(ellipse 70% 60% at 100% 110%, rgba(212, 175, 55, 0.05), transparent 60%),
             linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
             linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
-        background-size: 50px 50px;
+        background-size: auto, auto, 50px 50px, 50px 50px;
+    }
+
+    /* Faint scanline sweep + vignette for a dossier / CRT-terminal feel */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 999999;
+        mix-blend-mode: overlay;
+        opacity: 0.35;
+        background: repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.025) 0px,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+    }
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 999998;
+        background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,0.55) 100%);
     }
 
     h1, h2, h3 { font-family: 'Courier New', Courier, monospace; }
+
 
     .tn-wrapper {
         display: grid;
@@ -47,6 +78,7 @@
         background-color: var(--bg-sidebar);
         backdrop-filter: blur(12px);
         border-right: 2px solid var(--border-gold);
+        box-shadow: 4px 0 30px rgba(0, 0, 0, 0.5);
         padding: 25px;
         height: 100vh;
         display: flex;
@@ -69,11 +101,28 @@
         border: 1px solid var(--border-dim);
         padding: 6px 10px;
         width: fit-content;
+        transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .tn-back:hover { color: var(--text-gold); border-color: var(--border-gold); }
+    .tn-back:hover { color: var(--text-gold); border-color: var(--border-gold); box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
 
-    .sidebar-left h2 { color: var(--text-gold); font-size: 1.4rem; margin-bottom: 4px; font-weight: 900; }
-    .sidebar-tagline { color: var(--text-gold); font-size: 10px; font-weight: 800; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.7; }
+    .sidebar-left h2 {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        background: linear-gradient(100deg, var(--text-gold) 20%, var(--link-color) 55%, var(--text-gold) 85%);
+        background-size: 220% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: titleSheen 7s ease-in-out infinite;
+        text-shadow: 0 0 22px rgba(212, 175, 55, 0.18);
+    }
+    @keyframes titleSheen {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    .sidebar-tagline { color: var(--text-gold); font-size: 10px; font-weight: 800; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.65; }
 
     .notebook-search {
         width: 100%;
@@ -85,8 +134,9 @@
         outline: none;
         margin-bottom: 22px;
         font-size: 12px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .notebook-search:focus { border-color: var(--text-gold); }
+    .notebook-search:focus { border-color: var(--link-color); box-shadow: 0 0 0 1px var(--link-color), 0 0 16px rgba(56, 189, 248, 0.25); }
 
     .notebook-label {
         font-family: 'Courier New', monospace;
@@ -103,19 +153,35 @@
 
     /* -- Tabs (notebook folders) -- */
     .notebook-tab {
+        position: relative;
         border: 1px solid var(--border-dim);
         margin-bottom: 10px;
         overflow: hidden;
-        transition: border-color 0.25s ease;
-        background: rgba(255,255,255,0.01);
+        transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        background: rgba(255,255,255,0.015);
     }
-    .notebook-tab.active { border-color: var(--border-gold); }
+    .notebook-tab::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, var(--link-color), var(--text-gold));
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+    }
+    .notebook-tab:hover { border-color: rgba(212, 175, 55, 0.5); }
+    .notebook-tab.active {
+        border-color: var(--border-gold);
+        box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.15), 0 4px 24px rgba(0, 0, 0, 0.45), 0 0 18px rgba(212, 175, 55, 0.08);
+    }
+    .notebook-tab.active::before { transform: scaleY(1); }
 
     .notebook-tab-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 13px 16px;
+        padding: 13px 16px 13px 19px;
         cursor: pointer;
         user-select: none;
     }
@@ -126,8 +192,9 @@
         font-size: 0.95rem;
         color: var(--text-main);
         letter-spacing: 1px;
+        transition: color 0.2s ease;
     }
-    .notebook-tab.active .notebook-tab-name { color: var(--text-gold); }
+    .notebook-tab.active .notebook-tab-name { color: var(--text-gold); text-shadow: 0 0 12px rgba(212, 175, 55, 0.35); }
 
     .notebook-tab-count {
         font-family: 'Courier New', monospace;
@@ -155,8 +222,12 @@
         overflow-y: auto;
         border-top: 1px solid var(--border-dim);
     }
+    .notebook-file-list::-webkit-scrollbar { width: 5px; }
+    .notebook-file-list::-webkit-scrollbar-thumb { background: var(--border-dim); border-radius: 10px; }
+    .notebook-file-list::-webkit-scrollbar-thumb:hover { background: var(--link-color); }
 
     .notebook-file {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -166,12 +237,17 @@
         font-size: 0.8rem;
         color: var(--text-muted);
         border-bottom: 1px dashed var(--border-dim);
-        transition: color 0.15s ease, background 0.15s ease;
+        transition: color 0.15s ease, background 0.15s ease, padding-left 0.15s ease;
     }
     .notebook-file:last-child { border-bottom: none; }
-    .notebook-file:hover { color: var(--link-color); background: rgba(56, 189, 248, 0.06); }
-    .notebook-file.open { color: var(--text-gold); background: rgba(212, 175, 55, 0.08); }
+    .notebook-file:hover { color: var(--link-color); background: rgba(56, 189, 248, 0.07); padding-left: 26px; }
+    .notebook-file.open {
+        color: var(--text-gold);
+        background: linear-gradient(90deg, rgba(212, 175, 55, 0.12), transparent 75%);
+        box-shadow: inset 3px 0 0 var(--text-gold);
+    }
     .notebook-file .fdot { color: var(--border-gold); flex-shrink: 0; font-size: 10px; }
+    .notebook-file.open .fdot { color: var(--text-gold); text-shadow: 0 0 6px rgba(212, 175, 55, 0.7); }
 
     .notebook-empty {
         font-family: 'Courier New', monospace;
@@ -186,12 +262,13 @@
         margin-top: 20px;
         padding: 15px;
         border: 1px solid var(--border-gold);
-        background: rgba(212, 175, 55, 0.05);
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.06), rgba(56, 189, 248, 0.03));
         font-family: 'Courier New', monospace;
         font-size: 11px;
         color: var(--text-muted);
         line-height: 1.5;
         flex-shrink: 0;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.35);
     }
     .manual-box b { color: var(--text-gold); }
 
@@ -211,13 +288,33 @@
         text-transform: uppercase;
         padding: 11px 10px;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: transform 0.2s ease, color 0.3s ease;
         flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
     }
+    .ack-trigger::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -50%; top: -50%;
+        width: 200%; height: 200%;
+        background: conic-gradient(transparent, rgba(56, 189, 248, 0.12), var(--link-color) 20%, transparent 25%);
+        animation: ackBorderRotate 4s linear infinite;
+    }
+    .ack-trigger::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 2px; top: 2px; right: 2px; bottom: 2px;
+        background: #0a0a0a;
+    }
+    @keyframes ackBorderRotate { 100% { transform: rotate(360deg); } }
     .ack-trigger:hover {
-        background: var(--link-color);
-        color: #000;
-        box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
+        transform: scale(1.02);
+        color: #fff;
+        box-shadow: 0 0 20px var(--link-color), 0 0 6px var(--text-gold);
     }
 
     /* ---------------- MAIN ---------------- */
@@ -239,6 +336,21 @@
         z-index: 100;
         flex-wrap: wrap;
         gap: 12px;
+        position: relative;
+    }
+    .tn-header::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -2px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--text-gold), var(--link-color), var(--accent-violet), var(--text-gold));
+        background-size: 300% 100%;
+        animation: headerSheen 10s linear infinite;
+        opacity: 0.7;
+    }
+    @keyframes headerSheen {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 300% 0%; }
     }
 
     .tn-doc-title {
@@ -275,7 +387,7 @@
         justify-content: center;
         transition: all 0.15s ease;
     }
-    .tn-btn:hover:not(:disabled) { background: var(--text-gold); color: #000; }
+    .tn-btn:hover:not(:disabled) { background: var(--text-gold); color: #000; box-shadow: 0 0 14px rgba(212, 175, 55, 0.5); }
     .tn-btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
     .tn-btn.night-toggle {
@@ -283,7 +395,7 @@
         color: #a1a1aa;
         flex-shrink: 0;
     }
-    .tn-btn.night-toggle:hover { background: #7a2020; color: #fff; }
+    .tn-btn.night-toggle:hover { background: #7a2020; color: #fff; box-shadow: 0 0 14px rgba(255, 85, 85, 0.4); }
     .tn-btn.night-toggle.active {
         background: #3a0a0a;
         border-color: #ff5555;
@@ -481,8 +593,14 @@
     .tn-empty-glyph {
         font-size: 3rem;
         color: var(--border-gold);
-        opacity: 0.5;
+        opacity: 0.55;
         font-family: 'Courier New', monospace;
+        animation: emptyGlyphPulse 3.5s ease-in-out infinite;
+        text-shadow: 0 0 24px rgba(212, 175, 55, 0.35);
+    }
+    @keyframes emptyGlyphPulse {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.85; transform: scale(1.08); }
     }
     .tn-empty-title {
         font-family: 'Courier New', monospace;
@@ -514,6 +632,7 @@
     .tn-loader-overlay.active { display: flex; }
 
     .tn-loader-ring {
+        position: relative;
         width: 70px;
         height: 70px;
         border-radius: 50%;
@@ -523,6 +642,16 @@
         animation: tnSpin 0.9s linear infinite;
         margin-bottom: 22px;
     }
+    .tn-loader-ring::before {
+        content: '';
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-bottom: 2px solid var(--accent-violet);
+        border-left: 2px solid rgba(168, 85, 247, 0.35);
+        animation: tnSpin 1.4s linear infinite reverse;
+    }
     @keyframes tnSpin { 100% { transform: rotate(360deg); } }
 
     .tn-loader-text {
@@ -530,6 +659,7 @@
         font-size: 12px;
         letter-spacing: 2px;
         margin-bottom: 8px;
+        text-shadow: 0 0 14px rgba(212, 175, 55, 0.4);
     }
     .tn-loader-sub {
         color: var(--text-muted);
@@ -924,6 +1054,13 @@ function getCombinedFiles(nb) {
 
 function renderNotebooks() {
     const q = document.getElementById('notebookSearch').value.toLowerCase().trim();
+
+    // Rebuilding the sidebar (innerHTML swap below) would otherwise snap
+    // whichever notebook's file list you're scrolled through back to the
+    // top. Remember where you were and restore it once the new DOM is in.
+    const scrollAnchor = notebookListEl.querySelector('.notebook-tab.active .notebook-file-list');
+    const savedScrollTop = scrollAnchor ? scrollAnchor.scrollTop : null;
+
     notebookListEl.innerHTML = '';
 
     notebooks.forEach(nb => {
@@ -978,6 +1115,7 @@ function renderNotebooks() {
             listToShow.forEach(f => {
                 const item = document.createElement('div');
                 item.className = 'notebook-file' + (openFileUrl === f.url ? ' open' : '');
+                item.dataset.url = f.url;
                 item.innerHTML = `<span class="fdot">◆</span><span>${f.title}</span>`;
                 item.addEventListener('click', () => openPdf(f.url, f.title, nb.label));
                 fileList.appendChild(item);
@@ -992,6 +1130,19 @@ function renderNotebooks() {
     if (notebookListEl.innerHTML === '') {
         notebookListEl.innerHTML = `<div class="notebook-empty">NO_MATCHES_FOUND</div>`;
     }
+
+    if (savedScrollTop !== null) {
+        const restored = notebookListEl.querySelector('.notebook-tab.active .notebook-file-list');
+        if (restored) restored.scrollTop = savedScrollTop;
+    }
+}
+
+// Marks the active file in the sidebar without touching the rest of the
+// DOM — used on every click so the file-list scroll position never jumps.
+function highlightOpenFile(url) {
+    notebookListEl.querySelectorAll('.notebook-file').forEach(el => {
+        el.classList.toggle('open', el.dataset.url === url);
+    });
 }
 
 function showLoader(text, sub) {
@@ -1016,7 +1167,7 @@ async function openPdf(url, title, notebookLabel) {
     }
 
     openFileUrl = url;
-    renderNotebooks();
+    highlightOpenFile(url);
 
     emptyStateEl.style.display = 'none';
     toolbarEl.style.visibility = 'visible';
