@@ -103,6 +103,21 @@ feedback:
         - calculate their iou. -> trapped here. made it too complicated. 
         -> never reached nms code. 
       
+[17] dolby video coding intern 
+    - reject, they need signal processing guy.
+    - but i did learn a lot 
+    - learnt about entropy, conenctions to signal processing 
+    - the fact that at lower layer, edges are left in compression, texture is lost, 
+    - information bottlneck in theory, and information bottleneck in architectures are two things. But, they are signals. 
+    - architecture level design is separate. a mathematical bound to minimize entropy is separate. 
+    - there is something called end2end video compression. 
+    - i can read h264 paper, h265, dlvc, hlvc etc to see how their codecs are working. 
+
+    - he said that compression has nothing to do with downstream task, and joint compression and task have no correlation, he didnt believe that it will work. 
+
+    - i however believe that their is some correlation. 
+    - i still thank god for giving me opporunity to learn, perhaps something better will come in future. 
+    
 time to pack bags, move to india, become farmer on my dad's farm :-)
 ---
 
