@@ -117,7 +117,7 @@ feedback:
 
     - i however believe that their is some correlation. 
     - i still thank god for giving me opporunity to learn, perhaps something better will come in future. 
-    
-time to pack bags, move to india, become farmer on my dad's farm :-)
+
+time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food.
 ---
 
