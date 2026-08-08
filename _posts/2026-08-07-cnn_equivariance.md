@@ -91,7 +91,7 @@ Let us consider the same case from an opposite perspective.
 
 The turtle in the above figure (extreme left) is humble. He knows the world won't bend to his whims. There are just so many turtles in the world. The only option turtle has is to adjust himself. The turtles who submit themselves to what the world demands of them, outlive those turtles that refuse to adjust. Darwin called that survival of the fittest lol. 
 
-So anyways, our turtle (in middle part of the picture) rotates clockwise and aligns himself with the world. They are happy. However, you dear reader are not happy. You see both of them rotated now. So, you would rather prefer them to be upright. So, you tell the turtle: `dear turtle, can you please rotate yourself to align with me'? 
+So anyways, our turtle (in middle part of the picture) rotates clockwise and aligns himself with the world. They are happy. However, you dear reader are not happy. You see both of them rotated now. So, you would rather prefer them to be upright. So, you tell the turtle: `dear turtle, can you please rotate yourself to align with me`? 
 
 The turtle  says: `Sure master, i am humble, i will do whatever you say.` So he takes `his perception of the world (yellow vector)` , along with his own vector (red), and rotates `both` to align vertically on the screen. Every thing looks beautiful once again. 
 
