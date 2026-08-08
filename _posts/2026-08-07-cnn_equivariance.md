@@ -32,7 +32,7 @@ For the rest of this post, there are three `axioms' we shall use. We take them f
 
 - What makes matter or a collection of cells living or non living?  Animate or Inanimate? What gives them Life. These are the questions in the realm of the mystics, and we shall steer away from that. This does not mean that the mystical laws do not exist. It is just that we are not at the level to understand them yet. We also are not yet capable to develop a computational theory for hard problem of consciousness. 
 
-sThe matter then is to precisely identify which symmetries to break. Breaking them can be trivial. So trivial, that once it reveals itself to us, we can only laugh. The entire problem is how to identify the fundamental symmetries of learning machines in the first place. And that gets at the core of representational learning. It is possible to invent all sort of clever mathematics, and abstract hilbert spaces, reimannan geometry and what not. But, there has gotta be some intuition to it all. We will merely try to scratch that itch. 
+The matter then is to precisely identify which symmetries to break. Breaking them can be trivial. So trivial, that once it reveals itself to us, we can only laugh. The entire problem is how to identify the fundamental symmetries of learning machines in the first place. And that gets at the core of representational learning. It is possible to invent all sort of clever mathematics, and abstract hilbert spaces, reimannan geometry and what not. But, there has gotta be some intuition to it all. We will merely try to scratch that itch. 
 
 
 
