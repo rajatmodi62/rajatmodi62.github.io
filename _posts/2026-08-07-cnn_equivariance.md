@@ -18,7 +18,7 @@ date:   2026-08-07 07:00:00
 </div>
 
 
-Shinchan is in a foul mood, and pretty stressed out. So, he had to smoke a cigar. It is time for serious business. Neural nets are notorious little creatures. If you try to peek under the hood, they will find all the clever ways to make themselves a black box. To make a sense of them, this time we again turn to dear grandpa geoff hinton (And a little bit of Taco cohen and max welling too). It is time to finally the wrath of  the gods of symmetry. 
+Shinchan is in a foul mood, and pretty stressed out. So, he had to smoke a cigar. He's a bit high, but now it is the time for serious business. Neural nets are notorious little creatures. If you try to peek under the hood, they will find all the clever ways to make themselves a black box. To make a sense of them, this time we again turn to dear grandpa geoff hinton (And a little bit of Taco cohen and max welling too). It is time to finally the wrath of  the gods of symmetry. 
 
 First, we need to take care of rich sutton's bitter lesson. He says symmetry is a fool's endeavour, and it is better to brute force representations using a transformer. Good for their camp. Let them scale.  Alas, who can argue. The fight continues. 
 
@@ -30,7 +30,10 @@ For the rest of this post, there are two `axioms' we shall use. We take them for
 
 - God's Universe follows some laws of symmetry. Machines are made of silicon. Since silicon is matter, it has to have a similar symmetry. By extension, computer chips are made of silicon, and neural nets live in silicon.  Therefore, they inherit the symmetries of the physical law from their parents. An organism which sits on a machine however need not possess the limitations of the biological organism. Therefore, we can isolate symmetry groups, and intentionally break them in the neural nets. This then leads to new properties in the organism. 
 
-The matter then is to precisely identify which symmetries to break. Breaking them can be trivial. 
+The matter then is to precisely identify which symmetries to break. Breaking them can be trivial. So trivial, that once it reveals itself to us, we can only laugh. The entire problem is how to identify the fundamental symmetries in the first place. And that gets at the core of representational learning. It is possible to invent all sort of clever mathematics, and abstract hilbert spaces, reimannan geometry and what not. But, there has gotta be some intuition to it all. We will merely try to scratch that itch. 
+
+
+
 
 
 
