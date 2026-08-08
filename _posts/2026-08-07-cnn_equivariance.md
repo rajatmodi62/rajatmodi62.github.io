@@ -18,7 +18,7 @@ date:   2026-08-07 07:00:00
 </div>
 
 
-Shinchan is in a foul mood, and pretty stressed out. So, he had to smoke a cigar. He's a bit high, but now it is the time for serious business. Neural nets are notorious little creatures. If you try to peek under the hood, they will find all the clever ways to make themselves a black box. To make a sense of them, this time we again turn to dear grandpa geoff hinton (And a little bit of Taco cohen and max welling too). It is time to finally the wrath of  the gods of symmetry. 
+Shinchan is in a foul mood, and pretty stressed out. So, he had to smoke a cigar. He's a bit high, but now it is the time for serious business. Neural nets are notorious little creatures. If you try to peek under the hood, they will find all the clever ways to make themselves a black box. To make a sense of them, this time we again turn to dear grandpa geoff hinton (And a little bit of Taco cohen and max welling too). It is time to finally invoke the wrath of  the gods of symmetry. 
 
 First, we need to take care of rich sutton's bitter lesson. He says symmetry is a fool's endeavour, and it is better to brute force representations using a transformer. Good for their camp. Let them scale.  Alas, who can argue. The fight continues. 
 
