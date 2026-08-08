@@ -104,7 +104,9 @@ feedback:
         -> never reached nms code. 
       
 [17] dolby video coding intern 
+
     - reject, they need signal processing guy.
+    - not a good fit, they wanted entropy modelling, and sort of deep mathematics. 
     - but i did learn a lot 
     - learnt about entropy, conenctions to signal processing 
     - the fact that at lower layer, edges are left in compression, texture is lost, 
@@ -119,5 +121,6 @@ feedback:
     - i still thank god for giving me opporunity to learn, perhaps something better will come in future. 
 
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food.
+
 ---
 
