@@ -1339,7 +1339,7 @@ This has however raised some existensial questions for our connectionist warrior
 
 Alas, what is geometry and what is memory? Does it even make sense to keep them separate? Or are they more subtle: like heisenburg's uncertainity principle which forbids us from knowing positions and velocities of particules, perhaps geometry and memory have a tradeoff? Or perhaps the key to generalization is to get rid of models of memory and merely encode a geometric transformation? If that were true, it will dismantle all the work on models of information processing lol.
 
-If geometry were the answer, the notion of fitting internal representations on a given data is wrong. A kernel designed in such way, merely encodes correlation, but not structure. Perhaps structure is like sort of lego blocks which fit into each other to form a lattice. (Think DNA lol). This means that gradient descent no longer makes sense. So we will need to get rid of it. (Rosenblatt to rescue hehe)
+If geometry were the answer, the notion of fitting internal representations on a given data is wrong. A kernel designed in such way, merely encodes correlation, but not structure. Perhaps structure is like sort of lego blocks which fit into each other to form a lattice. (Think DNA lol). The lattice then is same as the lattice in quantum field theory. Woah.. shhh. This means that gradient descent no longer makes sense. So we will need to get rid of it. (Rosenblatt to rescue hehe)
 
  Anyhow, we had way too much fun, and we will explore these questions at some point later. 
 
