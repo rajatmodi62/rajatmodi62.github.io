@@ -97,7 +97,7 @@ So anyways, our turtle (in middle part of the picture) rotates clockwise and ali
 
 The turtle  says: `Sure master, i am humble, i will do whatever you say.` So he takes `his perception of the world (yellow vector)` , along with his own vector (red), and rotates `both` to align vertically on the screen. Every thing looks beautiful once again. 
 
-The humble turtle thinks: `alas what is beauty? i can feel it, but i have no way of quantifying it. How may i even start to model it?`. He makes a note to ask schmiduber for [guidance later](https://people.idsia.ch/~juergen/beauty.html). For now, however, the turtle has grown weary. All that rotation and counterrotation have deeply exhausted him. 
+The humble turtle thinks: `alas what is beauty? i can feel it, but i have no way of quantifying it. How may i even start to model it?`. He makes a note to ask schmiduber for [guidance later](https://people.idsia.ch/~juergen/beauty.html). For now, however, the turtle has grown weary. All that rotation and counterrotation have deeply exhausted his mojo. 
 
 Our dear turtle closes his eyes, retreats into his shell, and enters a deep state of trance. Smoking a little cigar always helps. Our turtle then goes into a deep silence, for only then mother nature reveal her mysteries. The musings of the outer world no longer concern it. The turtle only opens it's eyes,  when it is time to make other turtles by the sea. For some reason, turtle just lays eggs and continues on its merry way. He does not have to mate for life or pledge its allegiance to a female turtle forever. 
 
