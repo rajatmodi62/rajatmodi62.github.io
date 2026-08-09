@@ -1316,9 +1316,9 @@ Therefore, the line of attack has to be:
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The geometric argument </span>
 
-Now, let us consider the heart of the matter. The implementation above is messy. We had to derive a group, a group action, build two different kinds of layers, and make sure they were constrained geometrically. I agree with Sutton's bitter lesson: all these inductive biases are too complex to keep track of.
+Now, let us consider the heart of the matter. The implementation above is messy. We had to derive a group, a group action, build two different kinds of layers, and make sure they were constrained geometrically. I agree with Sutton's bitter lesson: all these inductive biases are too complex to keep track of. However that does not mean that having a sense of symmetry in neural net is useless. It is just that the mechanisms to get there might need to be bit simpler.
 
-However, I still believe that some way for a neural net to remain equivariant across rotations of the input is necessary to get the kind of generalization we want. The question then is: is there a way to merely program geometrical constraints without doing a lot of data fitting? It turns out yours truly already has the answer, but you will have to wait and watch, lol. Do we really have the answer? Nah, just kidding.
+I still believe that some way for a neural net to remain equivariant across rotations of the input is necessary to get the kind of generalization we want. The question then is: is there a way to merely program geometrical constraints without doing a lot of data fitting? It turns out yours truly already has the answer, but you will have to wait and watch, lol. Do we really have the answer? Nah, just kidding.
 
 
 
