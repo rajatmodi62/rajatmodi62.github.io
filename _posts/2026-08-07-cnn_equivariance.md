@@ -1337,7 +1337,7 @@ Whoa, the post has come to an end. We have done so much hard work together, so i
 </div>
 
 
-Bori Bori Demon has a curious property: he's a `badass`. He has tried to be a good cop before. Nobody listened. Therefore, the time has now come  to become `Bori Bori demons`. (Please note that blackmail is not at all intended). Hiyaaa!!
+Bori Bori Demon has a curious property: he's a `badass`. He has tried to be a good cop before. Nobody listened. Therefore, the time has now come for glom guys to  become `Bori Bori demons`. (Please note that blackmail is not at all intended). Hiyaaa!!
 
 
 until we meet next, <br>
