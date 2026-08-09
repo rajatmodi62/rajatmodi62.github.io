@@ -1327,6 +1327,18 @@ For other people, the above post is garbage. They would prefer to enforce invari
 
 It remains to be seen which of those two paths is correct. I however, bet my horsies on the geometric argument. You dear reader, are free to choose your own camp.
 
+
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> A deeply philosophical question </span>
+
+This has however raised some existensial questions for our connectionist warriors:
+
+- what do the weights of a neural net actually encode? Do they encode the actual data they saw during training, thereby functioning as a form of memory. Indeed, implicit representations prove that neural nets can learn to memorize scenes. 
+
+- Do they merely encode geometric transformations? For eg, the kernels learnt above were able to retain equivariance throughout the net, no matter the input. 
+
+Alas, what is geometry and what is memory? Does it even make sense to keep them separate? Or are they more subtle: like heisenburg's uncertainity principle which forbids us from knowing positions and velocities of particules, perhaps geometry and memory have a tradeoff? Or perhaps the key to generalization is to get rid of models of memory and merely encode a geometric transformation? If that were true, it will dismantle all the work on models of information processing lol. Anyhow, we had too much fun, and we will explore these questions at some point later. 
+
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The prize in the end </span>
 
 Whoa, the post has come to an end. We have done so much hard work together, so it is time to get some prize, hehe. We recall Bori Bori Demon from our childhood. He used to be a character in Shinchan, one of my favourites, and I still watch him to this day, lol.
