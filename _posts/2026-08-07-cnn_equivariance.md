@@ -1298,6 +1298,8 @@ So, finally I am able to smile a little bit. It turns out we do not need a lot o
 - It still uses convolution. That is too dated. One might use attention. That is also dated.
 - An input containing floating points does not guarantee perfect equivariance. Minor errors sort of accumulate as we move through deeper layers of the net. That may be the reason we got 90.7 instead of 93.1 across all possible orientations. The model generalized but lost performance.
 - The real world is noisy, and we showed it for digits only.
+- Pooling is disaster. So it attention. It is just a form of weighed pooling. 
+
 
 However, there are a few subtle points in this model that stood out:
 - It is possible to define a rotation matrix $R$ for each kind of rotation group we want our network to encode. Once the group is defined, the number of filters is defined accordingly, which has some effect on how much memory it will occupy.
