@@ -295,7 +295,7 @@ In a sense the mapping which the dictionary holds, is the `representation` of th
 
 So say we start from 0. We wanna get to 270. So we need three rotations 0 -> 90 -> 180 -> 270. Is it possible to directly get to 270? Perhaps. But, we will assume that reaching 270 still requires a repeated `action` of the dictionary. Why? `It seems nonsense`. To go from 0 -> 270 is possible by multiplying the dictionary $D$ three times like $D.D.D$ and apply the resultant operator directly to the input image. This is far faster than doing $D$, $DD$, $DDD$. This makes `no sense`. 
 
-Well my dear reader, the fact that you can just apply $D$ three times `recursively` even if it took long is of interest because compute is cheap, memory is not: it is easier to store D, than store 3 separate operators $D$, $DD$, $DDD$ together. So, let us make this assumption for now. Those of us who are in the GLOM business now call this $D$ as a `geometric operator`. It might be learnt, or it might be a stupid hardcoded mapping for transforming input (like hintons transforming autoencoder hehe)
+Well my dear reader, the fact that you can just apply $D$ three times `recursively` even if it took long is of interest because compute is cheap, memory is not: it is easier to store D, than store 3 separate operators $D$, $DD$, $DDD$ together. So, let us make this assumption for now. Those of us who are in the GLOM business now call this $D$ as a `geometric operator`. It might be hardcoded, or a super cute learnt mapping for transforming input (like hintons transforming autoencoder hehe)
 
 Now, we will start asking ourselves a few stupid questions, and gradually build towards a more general solution.
 
