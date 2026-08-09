@@ -52,7 +52,7 @@ The second one seems undesirable. It comes at the cost of defining how the repre
 
 If someone asked you: `hey dude, should i choose invariance or equivariance when building my neural net?` . Your answer will be: `Geez, build invariance man. It's simple, faster, and cheaper to compute`. 
 
-The argument for the rest of this post is counterintuitive: that equivariance is far better than invariance. However, to understand it, we have to bring in a cute turtle. There are two types of turtle we wish to consider: 1) the arrogant turtle, 2) the humble turtle. Most of the turtles of this world are arrogant. 
+The argument for the rest of this post is counterintuitive: that equivariance is far better than invariance. However, to understand it, we have to bring in a cute turtle. There are two types of turtle we wish to consider: 1) the arrogant turtle, 2) the humble turtle. Most of the turtles of this world are arrogant.
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The arrogant turtle</span>
