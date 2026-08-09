@@ -1325,7 +1325,7 @@ I still believe that some way for a neural net to remain equivariant across rota
 
 For other people, the above post is garbage. They would prefer to enforce invariance through data augmentation. 
 
-
+It remains to be seen which of those two paths is correct. I however, bet my horsies on the geometric argument. You dear reader, are free to choose your own camp.
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> The prize in the end </span>
 
