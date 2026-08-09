@@ -1335,7 +1335,7 @@ Whoa, the post has come to an end. We have done so much hard work together, so i
 </div>
 
 
-Bori Bori Demon has a curious property: he's a `badass`. He has tried to be a good cop before. Nobody listened. Everyone called hinton a crazy old nut. Therefore, it is now the time to become `a Bori Bori demon`. (Please note that blackmail is not at all intended). Hiyaaa!!
+Bori Bori Demon has a curious property: he's a `badass`. He has tried to be a good cop before. Nobody listened. Therefore, it is now the time to become `a Bori Bori demon`. (Please note that blackmail is not at all intended). Hiyaaa!!
 
 
 until we meet next, <br>
