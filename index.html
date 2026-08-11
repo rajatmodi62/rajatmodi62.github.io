@@ -664,6 +664,17 @@ document.addEventListener('keydown', function(event) {
         </h2>
 
         <div class="talks-list" style="font-weight: 600;">
+
+            {% for post in site.posts %}{% if post.slug == "wheel" %}
+              <p style="margin: 0; margin-bottom: 1.2rem;">
+                  <a href="{{ post.url | prepend: site.baseurl }}"
+                  class="portal-trigger" 
+                    style="color: var(--text-main); text-decoration: none; border-left: 3px solid var(--border-header-bottom); padding-left: 15px; font-weight: 600; font-size: 1rem; font-family: 'Courier New', Courier, monospace; display: block;">
+                      {{ post.title }}
+                  </a>
+              </p>
+          {% endif %}{% endfor %}
+
           {% for post in site.posts %}{% if post.slug == "reflection_mortal_machine copy" %}
               <p style="margin: 0; margin-bottom: 1.2rem;">
                   <a href="{{ post.url | prepend: site.baseurl }}"

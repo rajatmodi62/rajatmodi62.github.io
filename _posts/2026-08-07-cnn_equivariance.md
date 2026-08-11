@@ -548,9 +548,7 @@ The next order of the business is to build a general layer which can operate fro
   - `H, W` = spatial dimensions
 
 - **Kernel:** `(N_out, N_in, 4, d, d)` — critically, the kernel itself now needs a `4`-sized
-  group axis too (matching eq. 11's requirement that the filter also lives on $G$, not just
-  $\mathbb{Z}^2$) — this is the genuinely new structural piece, beyond what `lift_layer1`'s
-  kernels needed
+  group axis too 
   - `N_out` = number of output feature channels this layer produces
   - `N_in` = must match the input's `N_in` (summed over)
   - `4` = the kernel's own orientation axis
@@ -558,8 +556,7 @@ The next order of the business is to build a general layer which can operate fro
 
 - **Output:** `(B, N_out, 4, H, W)` — same shape *family* as the input (batch, channels,
   orientation-axis-of-size-4, spatial), so this layer can be stacked on top of itself
-  arbitrarily many times — each layer's output is a valid input to the next layer of the
-  same kind
+  arbitrarily many times 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Building the second layer  </span>
 
