@@ -773,36 +773,99 @@ body.no-scroll {
 /* ----------------------------------------------------------*/
 
 .posts-terminal-box {
+    position: relative;
     margin: 2rem 0;
-    background-color: var(--bg-header);
+    background-color: transparent;
     border: 1px solid var(--quote-border);
     border-radius: 4px;
     overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.posts-terminal-box:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.4), 0 0 12px var(--border-header-bottom);
+    border-color: var(--border-header-bottom);
+}
+
+/* Faint CRT scanline texture — purely decorative, background stays transparent */
+.posts-terminal-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 3px
+    );
 }
 
 .posts-box-header {
-    padding: 15px 25px;
+    position: relative;
+    z-index: 1;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-header);
+    background-color: transparent;
     border-bottom: 1px solid var(--border-general);
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: var(--link-color);
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.posts-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.posts-terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.pdot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.pdot-red { background: #ff5f56; }
+.pdot-yellow { background: #ffbd2e; }
+.pdot-green { background: #27c93f; }
+
+.posts-cursor {
+    display: inline-block;
+    animation: postsCursorBlink 1s infinite;
+    font-weight: bold;
+    color: var(--border-header-bottom);
+}
+
+@keyframes postsCursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .posts-count {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     text-transform: none;
     font-weight: 600;
-    opacity: 0.8;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
 }
 
 .posts-box-body {
+    position: relative;
+    z-index: 1;
     padding: 20px 25px 10px 25px;
 }
 
@@ -812,7 +875,54 @@ body.no-scroll {
     min-height: 60px;
 }
 
+/* Numbered terminal-log rows */
+.posts-box-body .posts li {
+    position: relative;
+    border-left-color: color-mix(in srgb, var(--border-header-bottom) 40%, transparent) !important;
+    transition: transform 0.18s ease, border-left-color 0.18s ease, padding-left 0.18s ease;
+}
+
+.posts-box-body .posts li::before {
+    content: attr(data-post-index) "  ";
+    color: var(--border-header-bottom);
+    opacity: 0.5;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-right: 6px;
+}
+
+.posts-box-body .posts li:hover {
+    transform: translateX(5px);
+    border-left-color: var(--link-color) !important;
+}
+
+.posts-box-body .posts li:hover::before {
+    opacity: 1;
+    color: var(--link-color);
+}
+
+.posts-box-body .posts .post-link {
+    position: relative;
+}
+
+.posts-box-body .posts .post-link::after {
+    content: " →";
+    display: inline-block;
+    opacity: 0;
+    color: var(--link-color);
+    transform: translateX(-4px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.posts-box-body .posts li:hover .post-link::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .posts-pagination {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -830,16 +940,17 @@ body.no-scroll {
     border-radius: 3px;
     padding: 6px 12px;
     cursor: pointer;
-    transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .posts-page-btn:hover {
     color: var(--link-color);
     border-color: var(--link-color);
+    transform: translateY(-1px);
 }
 
 .posts-page-btn.active-page {
     color: var(--border-header-bottom);
     border-color: var(--border-header-bottom);
-    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    box-shadow: 0 0 8px rgba(0,0,0,0.4), 0 0 6px var(--border-header-bottom);
 }

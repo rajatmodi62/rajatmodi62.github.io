@@ -157,7 +157,7 @@ layout: default
 
         
         <!-- # start of small talks links... -->
-          <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 1;">
+          <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 0.4;">
         <h2 style="color: var(--link-color); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid var(--link-color); display: inline-block;">
                 Stuff that doesn't fit anywhere else
         </h2>
@@ -552,7 +552,14 @@ document.addEventListener('keydown', function(event) {
         <!-- ===================== PAGINATED POSTS BOX ===================== -->
         <div class="posts-terminal-box" id="postsBox">
             <div class="posts-box-header">
-                <span>[ + ] Posts</span>
+                <span class="posts-header-left">
+                    <span class="posts-terminal-dots">
+                        <span class="pdot pdot-red"></span>
+                        <span class="pdot pdot-yellow"></span>
+                        <span class="pdot pdot-green"></span>
+                    </span>
+                    <span>Posts<span class="posts-cursor">_</span></span>
+                </span>
                 <span class="posts-count" id="postsCount"></span>
             </div>
 
@@ -762,7 +769,7 @@ document.addEventListener('keydown', function(event) {
      
         
 
-        <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 1;">
+        <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 0.4;">
 
         <div id="gif-wrapper" style="width: 90%; margin: -5px auto 30px auto; position: relative; overflow: hidden; background: black; transform: translateX(-5%);">
     <img 
@@ -816,7 +823,7 @@ document.addEventListener('keydown', function(event) {
     Juergen Notes
     </a>
 
-            <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 1;">
+            <hr style="width: 23vw; height: 2px; background-color: var(--border-header-bottom); border: none; margin: 1rem 0; opacity: 0.4;">
 
     <h2 style="color: var(--link-color); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid var(--link-color); display: inline-block;">
                 Abstracts 
@@ -1292,6 +1299,11 @@ document.addEventListener('keydown', function(event) {
 
     const totalPosts = items.length;
     const totalPages = Math.max(1, Math.ceil(totalPosts / POSTS_PER_PAGE));
+
+    // Tag each entry with its true position for the numbered terminal-log look
+    items.forEach(function(li, i) {
+        li.setAttribute('data-post-index', String(i + 1).padStart(2, '0'));
+    });
 
     function showPage(page) {
         items.forEach(function(li, i) {
