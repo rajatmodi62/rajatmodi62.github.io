@@ -549,118 +549,131 @@ document.addEventListener('keydown', function(event) {
 
         
 
-        <ul class="posts" style="list-style: none; padding: 0; text-align: left;">
-            
+        <!-- ===================== PAGINATED POSTS BOX ===================== -->
+        <div class="posts-terminal-box" id="postsBox">
+            <div class="posts-box-header">
+                <span>[ + ] Posts</span>
+                <span class="posts-count" id="postsCount"></span>
+            </div>
 
-            {% for post in site.posts %}{% if post.slug == "deepsets" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+            <div class="posts-box-body">
+                <ul class="posts" id="postsList" style="list-style: none; padding: 0; text-align: left;">
+                    
 
-
-            {% for post in site.posts %}{% if post.slug == "cnn_equivariance" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
-
-            {% for post in site.posts %}{% if post.slug == "gan" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+                    {% for post in site.posts %}{% if post.slug == "deepsets" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
 
+                    {% for post in site.posts %}{% if post.slug == "cnn_equivariance" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
-            {% for post in site.posts %}{% if post.slug == "ffn" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
-
-          
-            {% for post in site.posts %}{% if post.slug == "sky2ground" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
-          
-             {% for post in site.posts %}{% if post.slug == "akorn_followup" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+                    {% for post in site.posts %}{% if post.slug == "gan" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
 
-            {% for post in site.posts %}{% if post.slug == "akorn" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "energy_based_models copy" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+                    {% for post in site.posts %}{% if post.slug == "ffn" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "hinton_apm copy" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+                  
+                    {% for post in site.posts %}{% if post.slug == "sky2ground" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
+                  
+                     {% for post in site.posts %}{% if post.slug == "akorn_followup" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "hinton_information_models" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "nature_mental_representations copy" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+                    {% for post in site.posts %}{% if post.slug == "akorn" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "mental-imagery" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
+                  {% for post in site.posts %}{% if post.slug == "energy_based_models copy" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
-          {% for post in site.posts %}{% if post.slug == "detection-rcnn" %}
-            <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
-              <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
-                  {{ post.title }}
-              </a>
-            </li>
-          {% endif %}{% endfor %}
-        </ul>
+                  {% for post in site.posts %}{% if post.slug == "hinton_apm copy" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
+
+                  {% for post in site.posts %}{% if post.slug == "hinton_information_models" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
+
+                  {% for post in site.posts %}{% if post.slug == "nature_mental_representations copy" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
+
+                  {% for post in site.posts %}{% if post.slug == "mental-imagery" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
+
+                  {% for post in site.posts %}{% if post.slug == "detection-rcnn" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
+                </ul>
+            </div>
+
+            <div class="posts-pagination" id="postsPagination"></div>
+        </div>
+        <!-- =================== END PAGINATED POSTS BOX =================== -->
 
        
     </div>
@@ -1261,4 +1274,56 @@ document.addEventListener('keydown', function(event) {
         closeAchievementsTerminal();
     }
 });
+
+// ---------------- POSTS PAGINATION (10 per page) ----------------
+
+(function() {
+    const POSTS_PER_PAGE = 10;
+    const list = document.getElementById('postsList');
+    if (!list) return;
+
+    const pagination = document.getElementById('postsPagination');
+    const countEl = document.getElementById('postsCount');
+
+    // Only the actual <li> post entries — anything else in there is left alone
+    const items = Array.prototype.slice.call(list.children).filter(function(el) {
+        return el.tagName === 'LI';
+    });
+
+    const totalPosts = items.length;
+    const totalPages = Math.max(1, Math.ceil(totalPosts / POSTS_PER_PAGE));
+
+    function showPage(page) {
+        items.forEach(function(li, i) {
+            const itemPage = Math.floor(i / POSTS_PER_PAGE) + 1;
+            li.style.display = (itemPage === page) ? '' : 'none';
+        });
+
+        const buttons = pagination.querySelectorAll('.posts-page-btn');
+        buttons.forEach(function(btn) {
+            btn.classList.toggle('active-page', parseInt(btn.dataset.page, 10) === page);
+        });
+
+        if (countEl) {
+            countEl.textContent = '[ ' + totalPosts + ' total | page ' + page + ' / ' + totalPages + ' ]';
+        }
+    }
+
+    if (totalPages > 1 && pagination) {
+        for (let p = 1; p <= totalPages; p++) {
+            const btn = document.createElement('button');
+            btn.className = 'posts-page-btn';
+            btn.type = 'button';
+            btn.textContent = p;
+            btn.dataset.page = p;
+            btn.addEventListener('click', function() {
+                showPage(p);
+                document.getElementById('postsBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            pagination.appendChild(btn);
+        }
+    }
+
+    showPage(1);
+})();
 </script>

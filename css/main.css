@@ -767,3 +767,79 @@ body.no-scroll {
   margin-bottom: -2px;
   /* line-height: 1.8; */
 }
+
+/* ----------------------------------------------------------*/
+/* Posts Terminal Box (paginated post list) */
+/* ----------------------------------------------------------*/
+
+.posts-terminal-box {
+    margin: 2rem 0;
+    background-color: var(--bg-header);
+    border: 1px solid var(--quote-border);
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.posts-box-header {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-general);
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--link-color);
+    text-transform: uppercase;
+}
+
+.posts-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: none;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.posts-box-body {
+    padding: 20px 25px 10px 25px;
+}
+
+/* Keep a stable minimum height so the box doesn't jump around
+   in height as different pages show fewer/more items */
+.posts-box-body .posts {
+    min-height: 60px;
+}
+
+.posts-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px 25px 20px 25px;
+    border-top: 1px dashed var(--border-general);
+}
+
+.posts-page-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: #0a0a0a;
+    border: 1px solid var(--border-general);
+    border-radius: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.posts-page-btn:hover {
+    color: var(--link-color);
+    border-color: var(--link-color);
+}
+
+.posts-page-btn.active-page {
+    color: var(--border-header-bottom);
+    border-color: var(--border-header-bottom);
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
