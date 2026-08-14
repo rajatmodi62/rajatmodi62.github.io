@@ -348,6 +348,10 @@ If you had hedged your philosophical bets correctly, you can rise from the ashes
 
 Learn to master the art of philosophy. Learn to separate the difference between a scientific investigator and an engineer. My advisor always taught me this. It is very easy to spot differences. For eg, a student in initial years will say, "i ran into errors running code, i face installation issues, i have troubles coding fast". He shall never focus on science for he still wrestles with the core mechanism. Learn to notice if you are still struggling in this phase. 
 
+Over the course of decades, the ideas will change. For eg, earlier there were support vector machines, then boltzmann machines, convolutional nets, transformers, and now diffusion models. The yo young investigator gets trapped: the concepts he learnt earlier become obsolete overnight especially in a fast moving space as AI. The only way to survive is to have a deeper philosophy: `what am i trying to achieve? what are the questions that next generation of ai models need to answer? what is the simplest, dumbest way to demonstrate that they fail on a trivial task? what are the problems which wont be solved by scale'. 
+
+Once the philosophy is in place, spend your efforts trying to achieve it. The philosophy will remain, even if the methods change. A good example is hinton: look at his earlier paper on mental imagery in the 1980's when he was a cognitive scientist working on experimental psychology. Then, look at his turing award lecture. Over four decades, the philosophy remained same: given a dodecahedron shape, how can a machine learn to represent its 3d structure, and correctly predict the corners which are not visible. The methods changed, but the philosophy remained.
+
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Problem for the Fundamentalist</span>

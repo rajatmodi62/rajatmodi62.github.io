@@ -267,5 +267,74 @@ document.addEventListener('DOMContentLoaded', function() {
     getGeolocation();
 </script>
 
+<script>
+// --- COPY-TO-CLIPBOARD BUTTON FOR CODE BLOCKS ---
+(function () {
+  function addCopyButtons() {
+    var processed = new Set();
+    var candidates = document.querySelectorAll(
+      '.highlighter-rouge, .post-content pre, .post pre'
+    );
+
+    candidates.forEach(function (el) {
+      var target = el.closest('.highlighter-rouge') || el;
+      if (processed.has(target)) return;
+      processed.add(target);
+
+      var codeEl = target.querySelector('code') || target.querySelector('pre') || target;
+      if (!codeEl) return;
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'code-copy-btn';
+      btn.textContent = 'Copy';
+      btn.setAttribute('aria-label', 'Copy code to clipboard');
+
+      btn.addEventListener('click', function () {
+        var text = codeEl.innerText;
+
+        function showCopied() {
+          btn.textContent = 'Copied!';
+          btn.classList.add('copied');
+          setTimeout(function () {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+          }, 1500);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(showCopied).catch(function () {
+            btn.textContent = 'Error';
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+            showCopied();
+          } catch (e) {
+            btn.textContent = 'Error';
+          }
+          document.body.removeChild(ta);
+        }
+      });
+
+      target.style.position = 'relative';
+      target.appendChild(btn);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addCopyButtons);
+  } else {
+    addCopyButtons();
+  }
+})();
+</script>
+
 </body>
 </html>

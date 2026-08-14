@@ -954,3 +954,50 @@ body.no-scroll {
     border-color: var(--border-header-bottom);
     box-shadow: 0 0 8px rgba(0,0,0,0.4), 0 0 6px var(--border-header-bottom);
 }
+
+/* ----------------------------------------------------------*/
+/* Copy-to-clipboard button on code blocks */
+/* ----------------------------------------------------------*/
+
+.highlighter-rouge,
+.post-content pre,
+.post pre {
+    position: relative;
+}
+
+.code-copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--border-header-bottom);
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid color-mix(in srgb, var(--border-header-bottom) 50%, transparent);
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlighter-rouge:hover .code-copy-btn,
+.post-content pre:hover .code-copy-btn,
+.post pre:hover .code-copy-btn {
+    opacity: 1;
+}
+
+.code-copy-btn:hover {
+    color: var(--link-color);
+    border-color: var(--link-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 6px var(--link-color);
+}
+
+.code-copy-btn.copied {
+    color: #27c93f;
+    border-color: #27c93f;
+}
