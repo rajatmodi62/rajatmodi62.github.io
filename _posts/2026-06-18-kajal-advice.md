@@ -544,6 +544,23 @@ The young investigator must understand what `work-life' balance means in the aca
 Similarly, if you are working with someone, you can still ask about their life: as long as you don't go too personal. But, you can always ask how someone's weekend went. People tend to open up that way. 
 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Test of Time </span>
+
+There are several kinds of research careers i have seen pan out. Learn about them.
+
+[1] A person invents one thing. He uses that `one idea' and keeps applying it to a large no of problems. Overtime, the idea gets saturated. This kind of person has difficulty in finding new ideas, and eventually stagnates. 
+
+[2] A person does a lot of incremental benchmark chasing. He is a great engineer, and gets a lot of papers out. He accumulates a lot of citations. He is very successful. He has a lot of prestige. However, he ends up becoming a research manager, who manages a large team of people. Over time, he loses touch with the actual research practices for science has a way of moving forward and waiting for the whims of no one. 
+
+[3] A person who thinks in foundational principles. He merely writes philosophy which TURNS OUT to be correct. Over time he builds a reputation for placing correct bets, and gains a prestige of as being a `true seer', a man who can reliably predict the future. However, the issue is: he can predict what will happen, but does not know how to make it happen. 
+
+[4] A personal who thinks in foundational principles, and also invent the ability to make it happen. He is `not rigorous`, but possesses an unusual creativity for bridging disciplines which otherwise don't talk to one another. The novelty comes from non-trivial combinations of things. 
+
+[5] A person who invents entirely new paradigms. These kidns of people are generally physicists, and mathematicians who possess uncanny ability to see the laws of nature in an abstract way. 
+
+Choose which kind of person you are. A successful progression is [2] -> [1] -> [3]-> [4]. Becoming [5] is however very difficult, though not entirely unachievable. Mere talent is not enough, one must possess the ability to concentrate for long periods of time and an ability to work in isolation. The lack of talent can be substituted by a strong work ethic. It will take longer to get there, but it does lie within the realm of possibility. 
+
+
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Parting comments</span>
 
 
