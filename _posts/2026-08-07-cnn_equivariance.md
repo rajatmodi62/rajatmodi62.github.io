@@ -392,6 +392,7 @@ for g, ax in enumerate(axes):
 plt.tight_layout(); plt.show()
 ```
 
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -460,6 +461,9 @@ print("error:", error, "  exactly zero?", error == 0.0)
 
 `output: error: 0.0   exactly zero? True`
 
+
+
+
 What we are basically doing is that we create some data and run it through the group-equivariant layer first. Next, we rotate the input by 90 degrees and run it through the equivariance net again. Then we rotate the output in the opposite 90-degree direction. The two answers should match and be exactly 0. If so, then the net is said to have encoded equivariance. Please note the following line: `x = rng.integers(-3, 4, size=(B, C_in, H, W)).astype(np.float64)`. What this is saying is that the data in the input should be perfectly integer-valued for the perfect 0 loss to hold. If it is a float, there will be some error that accumulates, and the representation does not hold perfectly equivariant anymore.
 
 Folks in the ML community get away with this issue: a little error is okay, as long as some symmetry is being baked into the architecture. While this solves the problem, there is an issue: if you want your neural net to be precise—absolutely precise—it will not work. The difference, while subtle, stacks up: you can no longer break encryptions using neural nets, since the errors compound. A better design might help get rid of this issue.
@@ -467,6 +471,7 @@ Folks in the ML community get away with this issue: a little error is okay, as l
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Simulating the mental rotation </span>
 
 You might have noticed a subtle issue: to test for equivariance, I had to run the original image and the rotated version of it through the net. Is it possible to perform something equivalent to the physical rotation of the input inside the representation of the neural net itself? If so, then it is called mental rotation. Turns out, there is. Time to dump some more code, lol.
+
 ```python
 import numpy as np
 from scipy.signal import correlate2d
@@ -498,16 +503,16 @@ def lift_layer1(x, kernels):
                 out[b, n, g] = acc
     return out
 
-O_original = lift_layer1(x, kernels)                # (B,N,4,H,W) -- from the UNROTATED input
+O_original = lift_layer1(x, kernels)    # (B,N,4,H,W) -- from the UNROTATED input
 r = 1
-O_physical = lift_layer1(rot(x, r), kernels)          # (B,N,4,H,W) -- ground truth, from the ROTATED input
+O_physical = lift_layer1(rot(x, r), kernels)   # (B,N,4,H,W) -- ground truth, from the ROTATED input
 
 # --- pool away the spatial axes entirely -- 'store the responses', no H,W left to worry about ---
 pooled_original = O_original.sum(axis=(-2,-1))         # (B, N, 4)
 pooled_physical  = O_physical.sum(axis=(-2,-1))          # (B, N, 4)
 print("pooled shape:", pooled_original.shape)
 
-# --- 'mental rotation': PURE axis permutation on the pooled vector, nothing spatial left to rotate ---
+# --- mental rotation: PURE axis permutation on the pooled vector, nothing spatial left to rotate ---
 def mental_rotate_pooled(pooled, r):
     idx = [(g - r) % 4 for g in range(4)]
     return pooled[:, :, idx]
@@ -517,6 +522,7 @@ pooled_mental = mental_rotate_pooled(pooled_original, r)
 error = np.abs(pooled_mental - pooled_physical).max()
 print("mental-rotation-via-pure-axis-permutation error (on POOLED activity):", error)
 ```
+
 
 Note the subtlety here: we started from the original image and then simulated the mental rotation of 90 degrees by shifting the neural activity along the axis of the filter axis. This only held when the intermediate feature map of $B, N, 4, H, W$ was spatially pooled to $B, N, 4$, i.e. when we lost the spatial information altogether. It might be helpful to draw a picture of this:
 
@@ -536,6 +542,8 @@ def mental_rotate_pooled(pooled, r):
     return pooled[:, :, idx]
 ```
 Now, let us consider the matter of the loss of spatial information when the actual convolution is performed prior to pooling. Suppose you are given two integers, $2$ and $3$. There are two ways to add them: either $2 + 3$ or $3 + 2$. If I gave you the answer $5$ and asked which order of numbers you used to add them, you would not know, lol. Or you might say, “You know what, it is $2+3$ with 50% probability and $3+2$ with 50% probability.” The key point is that there is no way to encode the order of operation, i.e. the physical locations of the variables $2$ and $3$ themselves (there are two slots for addition, so which number maps to which) within the convolution operation itself. It collapses the signal and loses useful information. Therefore, convolution makes no sense. However, for the rest of this (shit) post, we will assume convolution is all we know. (Personally, however, I like neither convolution nor attention; maybe it is time for something new, lol.) Anyway, let us continue with the matter at hand.
+
+
 
 Now let us recall where we actually stand:- We have built a layer which can take an input of $(B, 3, H, W ) $ and lift it to $(B, N, 4, H , W)$. 
 The next order of the business is to build a general layer which can operate from `second layer` onwards in the neural net. More precisely, we need a layer of the following properties:
@@ -559,6 +567,7 @@ The next order of the business is to build a general layer which can operate fro
   arbitrarily many times 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Building the second layer  </span>
+
 
 
 ```python 
@@ -628,6 +637,8 @@ def group_corr_layer(f_stack, kernels):
     return out
 
 ```
+
+
 
 ```python 
 rng = np.random.default_rng(0)
@@ -765,6 +776,8 @@ if FAIL:
     print("FAILED:", FAIL)
 print("="*70)
 ```
+
+
 The tests pass, so I am somewhat happy.
 
 Now, it is time to take care of the last layer. 
@@ -774,6 +787,9 @@ Now, it is time to take care of the last layer.
 “The fact that pooling works so well is a disaster,” — Geoff Hinton.
 
 We can stack several layers together, as in the last section. Then we have a final feature dimension of $B, N_{out}, 4, H, W$. The next order of business is to collapse all the information along the filter orientation axis. This buys us something really interesting, lol.
+
+
+
 ```python 
 # coreset pooling, the last layer, and unit tests. 
 import numpy as np
@@ -1060,6 +1076,7 @@ All tests passed, including the deliberately-broken sanity checks.
 ======================================================================
 ```
 
+
 The core claim is as follows:
 
 - Suppose you take an image and feed it to the network. It creates internal representations within itself. At the last layer, you pool the answer. Then you rotate it by 90 degrees. This operation can be summarized as `rotate(pool(x))`. This is equivalent to mental rotation.
@@ -1073,6 +1090,9 @@ The benefits of building an equivariant model of the world are that the net can 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);"> Testing all of it</span>
 
 How to test all this machinery? Well, it is simple, lol. Give it digits in one orientation. Train on that. Then give it digits in an orientation it never saw during training. It should correctly recognize that. A benchmark to do this job is called Rotating MNIST. So I prompted my lovely LLM to write some code for me. Obviously, it needed a little steering.
+
+
+
 ```python 
 
 import numpy as np
@@ -1252,6 +1272,8 @@ ax.legend()
 plt.tight_layout()
 plt.show()
 ```
+
+
 
 ```
 Sanity-checking layer equivariance before training...
