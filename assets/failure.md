@@ -123,7 +123,7 @@ feedback:
     - dude needs a rl guy, i am not rl guy.
     - funny thing tho: Suggested VLF model instead of VLA, something which directly predicts force. 
     - Robot arms mimicing each other does not work when the muscle tendon is driven by a pressure kind of system pumping blood. 
-      - such an organ is driven by multiple tendons, and multiple tendons multiple muscles. So, there is no 1-1 correlation. 
+      - such an organ is driven by multiple tendons, and multiple tendons multiple muscles. So, there is no 1-1 correlation. Kuramoto coupling does work. 
       - read bernstein's problem on motor control. Dude is facing the same issue. 
     - dude said will reach out if vision guys need : basically slang for you're rejected :-)..ok chill bro...
 
