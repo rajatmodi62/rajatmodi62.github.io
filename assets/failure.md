@@ -85,12 +85,12 @@ feedback:
       -> he asked why do you work on part-wholes if the rest of world has moved on? 
         - i said bcoz hinton told so.. 
         -> hinton is not your advisor.. 
-        - clash of egos. 
+        - clash of the egos. 
       -> write research statement
         - me: no, deepminds research is different, so u guys see alignment... didnt sit well. 
     result: reject. 
     moral: nobody gives a fuck about glom.
-      - maybe that;s why hinton chose arxiv, and single author..
+      - maybe that;s why hinton chose arxiv, and single author..push glom as single author. yeah, i wont change my ways :-)
 
 [13] cvpr doctoral consortium
   - apparently better people were there. 
@@ -125,7 +125,7 @@ feedback:
     - Robot arms mimicing each other does not work when the muscle tendon is driven by a pressure kind of system pumping blood. 
       - such an organ is driven by multiple tendons, and multiple tendons multiple muscles. So, there is no 1-1 correlation. 
       - read bernstein's problem on motor control. Dude is facing the same issue. 
-      
+
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food.
 
 ---
