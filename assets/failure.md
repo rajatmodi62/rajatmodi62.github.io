@@ -16,7 +16,6 @@ A list of failures sitting silently on my website.
 [5] Openai (Sep 25): Implement nanograd in 45 mins. Bombed. <br>
 [6] Tesla (Oct 25): Made to round 3, implement trajectory transformer, didnt know how to use naive pytorch attention layer, learn how to use libraries also!!. <br>
 [7] RealityDefender (Dec 25): rejected. Dude wants forgery detection, i dont want that. too boring. <br>
-  -->
 [8] amd: (mar 10) reject. 
     - i didnt know what is fsdp 
     - confused between linear and flash attention 
@@ -127,7 +126,5 @@ feedback:
       - read bernstein's problem on motor control. Dude is facing the same issue. 
     - dude said will reach out if vision guys need : basically slang for you're rejected :-)..ok chill bro...
 
-time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food.
-
----
+time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food. glomfather will be eternally unemployed. geez.
 
