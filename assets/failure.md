@@ -120,11 +120,15 @@ feedback:
 
 [18] clone robotics: reject 
     - dude needs a rl guy, i am not rl guy.
+    - he wants math, i backprop.
     - funny thing tho: Suggested VLF model instead of VLA, something which directly predicts force. 
     - Robot arms mimicing each other does not work when the muscle tendon is driven by a pressure kind of system pumping blood. 
       - such an organ is driven by multiple tendons, and multiple tendons multiple muscles. So, there is no 1-1 correlation. Kuramoto coupling does work. 
       - read bernstein's problem on motor control. Dude is facing the same issue. 
     - dude said will reach out if vision guys need : basically slang for you're rejected :-)..ok chill bro...
-
+    - nobody cares about walking or bipedal locomotion, but i do. who wants a stupid robot with wheels? only looks good in WALL-E.
+    - 10 years estimate for physical humanoid robot which beats price point of <1000 bucks? Hmm, let's see. 
+    - counter question: i asked what problem wont be solved by better quality of dataset, training at scale, or infinite compute. He said: get better data :-)
+    
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food. glomfather will be eternally unemployed. geez.
 
