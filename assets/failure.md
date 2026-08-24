@@ -84,8 +84,8 @@ feedback:
     -> where i lost:
       -> he asked why do you work on part-wholes if the rest of world has moved on? 
         - i said bcoz hinton told so.. 
-        -> hinton is not your advisor.. 
-        - clash of the egos. 
+        -> he said: hinton is not your advisor.. 
+        - clash of the titans (egos). 
       -> write research statement
         - me: no, deepminds research is different, so u guys see alignment... didnt sit well. 
     result: reject. 
