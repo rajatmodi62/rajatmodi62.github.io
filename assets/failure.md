@@ -118,8 +118,14 @@ feedback:
     - he said that compression has nothing to do with downstream task, and joint compression and task have no correlation, he didnt believe that it will work. 
 
     - i however believe that their is some correlation. 
-    - i still thank god for giving me opporunity to learn, perhaps something better will come in future. 
 
+[18] clone robotics: reject 
+    - dude needs a rl guy, i am not rl guy.
+    - funny thing tho: Suggested VLF model instead of VLA, something which directly predicts force. 
+    - Robot arms mimicing each other does not work when the muscle tendon is driven by a pressure kind of system pumping blood. 
+      - such an organ is driven by multiple tendons, and multiple tendons multiple muscles. So, there is no 1-1 correlation. 
+      - read bernstein's problem on motor control. Dude is facing the same issue. 
+      
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food.
 
 ---
