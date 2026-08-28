@@ -129,6 +129,25 @@ feedback:
     - nobody cares about walking or bipedal locomotion, but i do. who wants a stupid robot with wheels? only looks good in WALL-E.
     - 10 years estimate for physical humanoid robot which beats price point of <1000 bucks? Hmm, let's see. 
     - counter question: i asked what problem wont be solved by better quality of dataset, training at scale, or infinite compute. He said: get better data :-)
-    
+
+   
+Careers Clone
+5:22 AM (45 minutes ago)
+to Maciej, me, Kaibo
+
+Hi Rajat,
+
+Thank you again for the time you invested in our interview process. After reviewing the interviews and take-home task, we’ve decided not to move forward with your application, but we wanted to share some feedback.
+
+For this role, we’re looking for stronger hands-on robotics experience, as well as deeper familiarity with areas such as Diffusion and Flow Matching. Experience with reinforcement learning and VLA systems is also important for the position, and we felt there was a gap in these areas relative to the current requirements of the role.
+
+Thank you again for your interest and time. We wish you all the best in your future opportunities.
+
+Best,
+Karolina
+
+- needs diffusion, flow matching, rl, vla. how much can i do alone lol :-), 
+
+
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food. glomfather will be eternally unemployed. geez.
 
