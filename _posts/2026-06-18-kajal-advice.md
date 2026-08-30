@@ -446,7 +446,7 @@ You must set apart some time everyday (even if it is 15 minutes) to think of the
 
 The workbench ethic is as follows: wake at 5 am. Cook a glass of tea (should be warm, since humans are warm blooded creatures). Dim the lights of the room. Put on a contemplative instrumental music, for the rhythm of the instrument shall invigorate the rhythm of your thoughts. Learn to exist in solace, particularly when most of the men are deep in their slumbers. You must learn to confront yourself first: only then the nature shall reveal her secrets. 
 
-To be honest, the workbench ethic is not purely science or empirical. It is more of an emotional and spiritual pursuit which must be done in order to feed the soul. Otherwise, the intellect cannot pierce the viel of the cosmos. I have tried to get into this state of mind in the day, but never quite managed to arrive at it. 
+To be honest, the workbench ethic is not purely science or empirical. It is more of an emotional and spiritual pursuit which must be done in order to feed the soul. Otherwise, the intellect cannot pierce the viel of the cosmos. I have tried to get into this state of mind in the day, but never quite managed to arrive at it. There is a book called `the 5 am club' , and i would highly recommend reading it. 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Learn to filter</span>
 
