@@ -448,6 +448,7 @@ The workbench ethic is as follows: wake at 5 am. Cook a glass of tea (should be 
 
 To be honest, the workbench ethic is not purely science or empirical. It is more of an emotional and spiritual pursuit which must be done in order to feed the soul. Otherwise, the intellect cannot pierce the viel of the cosmos. I have tried to get into this state of mind in the day, but never quite managed to arrive at it. There is a book called `the 5 am club' , and i would highly recommend reading it. 
 
+Finally, understand the deep work cannot be rushed, it has to be deliberately slow. If you rush it, the quality will drop , and you will feel yourself getting back into the traps of incremental benchmark chasing. Learn to analyze yourself everyday in this workbench session. 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Learn to filter</span>
 
 Here is another pattern our dear investigator finds himself in. 
