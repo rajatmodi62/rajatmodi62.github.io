@@ -439,6 +439,15 @@ You must know what category of 'results' your advisor desires. Let me take a con
 It is very important to keep these two tracks separate. Track 1 is for professional life: which puts bread and butter on table. Track 2 is for the enrichment of the soul: without it you will find yourself bored in the day to day tasks, and the fire of your soul shall fade away. You must own one such project. 
 
 
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The workbench ethic</span>
+This i believe is one of the most important techniques to cultivate a good intuition, so please read this properly. 
+
+You must set apart some time everyday (even if it is 15 minutes) to think of the big problems in the field. It is best to do this immediately after one wakes up, for the mind is still in half asleep state and tends to make connections that one otherwise may miss. My advice is create a google sheets, and dump your ideas there. In the era of llms, you can consider it as a research assistant and one may indeed throw stupid unrelated questions at it and extract relationships between different fields of study that one may not have thought of on his own. In such a way, one can immesely reduce the time to arrive at a new idea. 
+
+The workbench ethic is as follows: wake at 5 am. Cook a glass of tea (should be warm, since humans are warm blooded creatures). Dim the lights of the room. Put on a contemplative instrumental music, for the rhythm of the instrument shall invigorate the rhythm of your thoughts. Learn to exist in solace, particularly when most of the men are deep in their slumbers. You must learn to confront yourself first: only then the nature shall reveal her secrets. 
+
+To be honest, the workbench ethic is not purely science or empirical. It is more of an emotional and spiritual pursuit which must be done in order to feed the soul. Otherwise, the intellect cannot pierce the viel of the cosmos. I have tried to get into this state of mind in the day, but never quite managed to arrive at it. 
+
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">Learn to filter</span>
 
 Here is another pattern our dear investigator finds himself in. 
