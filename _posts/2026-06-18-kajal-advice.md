@@ -8,6 +8,8 @@ published: false
 
 ---
 
+>> "If all the current deep learning libraries,  benchmarks, and leaderboards vanished tomorrow, does the mathematical or physical problem I am solving still exist? Does the work i do uncover general computational principles that stand irrespective of the architecture that implements them?- Cajal (sort of)"
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
