@@ -10,6 +10,20 @@ published: false
 
 >> "If all the current deep learning libraries,  benchmarks, and leaderboards vanished tomorrow, does the mathematical or physical problem I am solving still exist? Does the work i do uncover general computational principles that stand irrespective of the architecture that implements them?- Cajal (sort of)"
 
+
+# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">An Existential Crisis</span>
+
+I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones, the kind that comes after travelling alone for a long time. You look back and there is noone . You look forward and there is no one. It is just a silent road and you. This particular decade has been particularly hard. I lost the one who birthed me. But it has been fulfilling in ways i never quite imagined. 
+
+Of the half of my life that (perhaps) remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. I cannot claim to give correct advice, for i myself am inexperienced. But, all i can do is write things as i witnessed them in my limited reality. 
+
+The problem with advice is that you can find a lot of it online: everyone is preaching themselves as a technical messiah, who seems to have cracked the secrets of AI. They call themselves `influencers, technical enthusiasts' and whatever cool name which gets likes on social platforms. This is a good way to farm good karma. However, it won't give you reliable piece of advice. It is easy to feel guilty about ourselves when we see thesuccess of others. The world has a way of putting achievements of people on a pedestal ( when they achieve modest amounts of it), and thinking that they are somehow untouchable. 
+
+But, perhaps what matters is a general set of behavioural principles one may adopt to achieve success in their endeavours. Knowing these is the first step, the second step is to internalize them deeply so that they become part of your unconscious. I can merely help out with the first part, but the second part has to come from you. 
+
+
+
+
 <div style="text-align: center; margin-bottom: 20px;">
     <img 
         class="img-fluid" 
@@ -24,13 +38,6 @@ published: false
 
 
 
-# <span style="font-size: 1.5rem; color: var(--border-header-bottom);">An Existential Crisis</span>
-
-I am 32 now. Almost half of my life has passed by. It appears i will soon wrap up my PhD. On the outside, i still appear young. On the inside, however, i feel a deep weariness in my bones, the kind that comes after travelling alone for a long time. You look back and there is noone . You look forward and there is no one. It is just a silent road and you. This particular decade has been particularly hard. I lost the one who birthed me. But it has been fulfilling in ways i never quite imagined. 
-
-Of the half of my life that (perhaps) remains, I would like to think about the learnings i gained  along the way. If i had known these things beforehand, it would have made my journey a lot smoother. So i thought to pen them down. The reason is simple: there are many people in similar shoes. There is just not enough `correct advice' around. I cannot claim to give correct advice, for i myself am inexperienced. But, all i can do is write things as i witnessed them in my limited reality. 
-
-The problem with advice is that you can find shit ton of it online: everyone is preaching themselves as a technical messiah, who seems to have cracked the secrets of AI. They call themselves `influencers, technical enthusiasts' and whatever cool name which gets likes on social platforms. This is a good way to farm good karma. It won't give you reliable piece of advice. 
 
 We would like to remember Santiago Ramon Y Cajal (shown in the picture above). He is an old man who lived in the nineteenth century. He happened to get a nobel prize in biology. People know him as `father of neuroscience'. The reason we are interested in him is because he is exact opposite of what we think a successful scientist ought to be. He grew up in Spain, a country which didn't have much scientific establishment. 
 
@@ -42,7 +49,7 @@ You might also argue that you need 'a lot of GPU resources for ai'. You will do 
 
 Thus the ability to do good science only `in part' depends on one's financial condition. I beg of you, please don't let  it  be your excuse. A man who wants to make excuses will never be happy no matter what you give him. A man who just wants to work will eventually find a way. 
 
-The man who starts at a disadvantage w.r.t to his peers, because of the virtue of being born in a poor family, in a wrong country, or in a wrong time, can still use `consistent measurable work' to produce good science.  It is that simple. 
+The man who starts at a disadvantage w.r.t to his peers, because of the virtue of being born in a poor family, in a wrong country, or in a wrong time, can still use `consistent measurable work' to produce good science.  It might take him a decade or so to even the odds, but he may still catch up. One's pursuit of science does not have to restricted to one's age. Everyone can make some sort of contribution.It is that simple. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The Mindset</span>
@@ -179,7 +186,7 @@ But, as an investigator, you must maintain a sense of the bigger picture: here i
 
 Let me give you two concrete examples. I told one of my friends : 1) segmentation will be unified. it does not make sense to keep instance/semantic/panoptic segmentation separate, for they are still doing segmentation. And it turned out to be true in Mask2former paper. 2) I told slots dont make sense, and AKORN paper showed a way to substitute slots for synchronization. 3) I kept saying GLOM will work, and it did. 4) I said we dont need data augmentation, or routing, and indeed a lot of papers recently showed. 5) I keep saying we don't need gradient descent , the attention mechanism, Hungarian matching prevalent in object detection 6) I also strongly believe P=NP. But we will have to see how this story pans out lol :-). There are some good bets, some wrong ones, but that is the fun of it. 
 
-The key point i am trying to make here is NOT to BOAST that i am a great predictor. All this was NOT my work, but works of several other amazing people. But, it is somewhat helpful to have a broader sense of where the field is going. A good  way is to read abstracts of all papers to see what problems they are solving. If you read entire approach, it kills creativity. If you read papers in your area of expertise, you are doomed to fail when your area becomes obsolete. Reading abstracts just seems a `nice sweet spot' sitting in the middle lol. 
+The key point i am trying to make here is not to boast that i am a great predictor. All this was NOT my work, but works of several other amazing people. But, it is somewhat helpful to have a broader sense of where the field is going. A good  way is to read abstracts of all papers to see what problems they are solving. If you read entire approach, it kills creativity. If you read papers in your area of expertise, you are doomed to fail when your area becomes obsolete. Reading abstracts just seems a `nice sweet spot' sitting in the middle lol. 
 
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">The mistake of thinking you outgrew your mentors </span>
