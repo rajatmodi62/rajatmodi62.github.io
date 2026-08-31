@@ -148,6 +148,15 @@ Karolina
 
 - needs diffusion, flow matching, rl, vla. how much can i do alone lol :-), 
 
+[19] amazon agi, reject, they wanted someone else lol. 
+  - messed up input to mask2former in my eccv forget anticipate paper. 
+    - its recurrent video, and predicts center frame, but i gave it all frames for weight update
+    - window is overlapping 
+    - positionally binded, but was not able to explain it in  a better way. 
+    - for some reason, no behavioural. 
+  - ROPE is it added? i said no, its sorta rotated, but exact formulation i will have to see. 
+  
+
 
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food. glomfather will be eternally unemployed. geez.
 
