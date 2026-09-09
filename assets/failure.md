@@ -156,7 +156,9 @@ Karolina
     - for some reason, no behavioural. 
   - ROPE is it added? i said no, its sorta rotated, but exact formulation i will have to see. 
   
-
+  - dude needs llm guy, could not understand glom. 
+  - he didnt understand how mask2former can be converted to video model. 
 
 time to pack bags, move to india, help out my old dad, play some cards with him, and eat good food. glomfather will be eternally unemployed. geez.
 
+  
