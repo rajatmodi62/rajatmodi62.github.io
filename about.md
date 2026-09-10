@@ -35,7 +35,7 @@ I am currently pursuing PhD in computer science at University of Central Florida
 
 ##  Research Interests 
 
-For a long time, i have been interested in building compute-efficient AI models that adapt under "distribution shifts". The question of what makes a machine generalize is not answered. Our ability to combine parts into wholes, and to learn from few examples is still a great mystery. 
+For a long time, i have been interested in building compute-efficient AI models that adapt under "distribution shifts". The question of what makes a machine generalize is not answered. Our ability to combine parts into wholes, and to learn from few examples is still a great mystery. It is possible to bruteforce one's way to a representation, but that does not answer the fundamental question.  
 
 From an industry standpoint: I am interested in deploying AI models "on the edge", specifically techniques like weight pruning, quantization etc. I am also searching for a way to transfer knowledge in a zero-shot way between architectures of different structures.
 
