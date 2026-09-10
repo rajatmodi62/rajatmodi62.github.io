@@ -46,8 +46,8 @@ Some questions which excite me: 1) what is [next](https://arxiv.org/abs/1502.041
 
 
 The challenge then is which one to solve first. Now that i hold these problems in mind (which is a form of fast memory), i keep looking for cool tools which will enable solving them. And as soon as something appears, i focus on solving it. 
-
-The running benchmark for AI is 1) something which can run in a toaster for less than twenty dollars 2) something which is as powerful as a big model without loss in performance. 3) something which can train on-device on the chip and does not need a big cluster. Obviously, it sounds weird and stupid. That's the fun of it. Only time can tell.
+<!-- 
+One teeny tiny benchmark by which i try to measure my progress: 1) something which can run in a toaster for less than twenty dollars 2) something which is as powerful as a big model without loss in performance. 3) something which can train on-device on the chip and does not need a big cluster. 4) something that possesses maternal and moral instincts to care for beings lesser intelligent than it. Obviously, it sounds weird and stupid. That's the fun of it. Only time can tell. -->
 <!-- 
 i drop all i am doing, and get back to solving it. From a recruiter's perspective, my work is "high risk-high variance". But, it seems that some of my high risk ideas are getting published (for now). Hopefully, the trend continues :-). -->
 
