@@ -35,9 +35,9 @@ I am currently pursuing PhD in computer science at University of Central Florida
 
 ##  Research Interests 
 
-For a long time, i have been interested in building compute-efficient AI models that adapt under "distribution shifts".  
+For a long time, i have been interested in building compute-efficient AI models that adapt under "distribution shifts". The question of what makes a machine generalize is not answered. Our ability to combine parts into wholes, and to learn from few examples is still a great mystery. 
 
-From an industry standpoint: I am interested in deploying AI models "on the edge", specifically techniques like weight pruning, quantization etc. I am also searching for a way to transfer knowledge in a zero-shot way between architectures of different structures. 
+From an industry standpoint: I am interested in deploying AI models "on the edge", specifically techniques like weight pruning, quantization etc. I am also searching for a way to transfer knowledge in a zero-shot way between architectures of different structures.
 
 From a research standpoint: Now, i am just trying to figure out how the brain "might" work. I read neuroscience, and then build computational models encoding those constraints. My interest lies on building biological plausible learning algorithms, simulating cognitive thought processes, inventing new kinds of "associative" memories. More specfically, i am interested in lifelong learning, i.e. how to build machines which learn even during [inference](https://arxiv.org/abs/2407.04620) and do not rely on pre-defined SSL tasks.
 
