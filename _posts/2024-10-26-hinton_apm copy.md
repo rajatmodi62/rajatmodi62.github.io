@@ -4,6 +4,7 @@ comments: true
 title:  "Towards Making GLOM work: Asynchronous Perception Machine"
 description: "APM is one of the first steps towards getting Hinton's GLOM working. The golden goose is how to encode part-whole hierarchies in a neural net"
 date:   2024-10-26 11:00:00
+published: false
 ---
 A tribute to Geoff Hinton, whose ideas continue to have profound impact on the field. 
 
