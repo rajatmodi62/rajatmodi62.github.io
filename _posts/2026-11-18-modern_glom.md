@@ -21,19 +21,19 @@ Inductively, the net consists of positionally-bound bottom-up and top-down neura
 
 Most of the data we encounter in real world, can be modelled as a graph. For example, a molecule can be modelled as a graph of atoms, social networks can be modelled as graphs of people, and even the brain can be modelled as a graph of neurons. More importantly, such graphs often change dynamically according to the input. For eg, a face can be modelled as a graph of parts (eyes, nose, lips, etc), but the structure of this graph changes if the face is rotated or occluded. Similarly, most of the times, this structure is not known apriori, and must be inferred from the input.
 
-This raises the question: how can a neural net encode part-whole hierarchies whose structure can change dynamically given a particular input? Indeed, the importance of this problem has been further articulated at great length  by Geoff Hinton in his 2021 proposal for the GLOM architecture([Hinton, 2021](#ref-glom)). However, an implementation for GLOM has continued to remain elusive for our community.
+This raises the question: how can a neural net encode part-whole hierarchies whose structure can change dynamically given a particular input? Indeed, the importance of this problem has been further articulated at great length  by Geoff Hinton in his 2021 proposal for the GLOM architecture\[[1](#ref-glom)\]. However, an implementation for GLOM has continued to remain elusive for our community.
 
-Over the years several attempts have been made. For eg, ([Modi et al., 2024](#ref-Modi2024OnOI)) showed the existence of islands of agreement inside a video-transformer trained only on recognition([Fan et al., 2021](#ref-fan2021multiscale)), which was a key theoretical representation in Hinton's GLOM. Recently, it was also suggested that global self attention does not allow part-whole hierarchies to emerge in a transformer and instead inverts them. In ICML 2026, ([Liu et al., 2026](#ref-liu2026krause)) presented Krause synchronization transformers, a form of constrained attention that  appears to promote the  cluster formation .
+Over the years several attempts have been made. For eg, \[[2](#ref-Modi2024OnOI)\] showed the existence of islands of agreement inside a video-transformer trained only on recognition\[[3](#ref-fan2021multiscale)\], which was a key theoretical representation in Hinton's GLOM. Recently, it was also suggested that global self attention does not allow part-whole hierarchies to emerge in a transformer and instead inverts them. In ICML 2026, \[[4](#ref-liu2026krause)\] presented Krause synchronization transformers, a form of constrained attention that  appears to promote the  cluster formation .
 
-It was later realized that GLOM might require a new fundamental computational unit (different from McCulloch-Pitts neurons) which could promote cluster formation in a neural net. For eg, Takeru (and collaborators) ([Miyato et al., 2025b](#ref-miyato2025artificial)) invented a new kind of neuron called AKORN which relies on principles of neural synchronization. Similarly, Sindy ([Löwe et al., 2023](#ref-lowe2023rotating)) presented the idea of rotating features as an alternative to slot based representations.
+It was later realized that GLOM might require a new fundamental computational unit (different from McCulloch-Pitts neurons) which could promote cluster formation in a neural net. For eg, Takeru (and collaborators) \[[5](#ref-miyato2025artificial)\] invented a new kind of neuron called AKORN which relies on principles of neural synchronization. Similarly, Sindy \[[6](#ref-lowe2023rotating)\] presented the idea of rotating features as an alternative to slot based representations.
 
-Concurrently, ([Modi & Rawat, 2024](#ref-modi2024asynchronous)) demonstrated a potential implementation of GLOM using the asynchronous perception machine (APM), and a potential validation of GLOM's idea that percept is indeed a field. Of note was their invention of a geometrical operator called ‘the folding-unfolding operator’, which is analogous to the phenomenon of mental folding if one models the brain as an analog memory([Hinton, 1979](#ref-hinton1979some)).
+Concurrently, \[[7](#ref-modi2024asynchronous)\] demonstrated a potential implementation of GLOM using the asynchronous perception machine (APM), and a potential validation of GLOM's idea that percept is indeed a field. Of note was their invention of a geometrical operator called ‘the folding-unfolding operator’, which is analogous to the phenomenon of mental folding if one models the brain as an analog memory\[[8](#ref-hinton1979some)\].
 
 Such progress over these past five years motivates us to ask ourselves (yet) again: Could the ideas promised in GLOM/APM be  made to somewhat work? Could what once seemed like a philosophy now lie firmly in our grasps? Indeed, there are three issues with APMs which prevent the philosophy from becoming a  reality. Notably:
 
 - APMs only works for test-time-training. For purely supervised task, for eg, image classification, the internal representations of the net were severely collapsing. It was possible to average them and perform classification (using an external teacher's vision encoder), but attempts to do dense segmentation were met with utter failure.
-- Furthermore, applying regularization to different cortical columns in APM to overcome collapse, applying contrastive learning on local patches of a image, or forcing the net to reconstruct masked regions of an image proved too slow to converge. To give an estimate, it took almost a day to train a cifar-10 classifier from scratch including the pre-training phase([Garau et al., 2022](#ref-garau2022interpretable)).
-- Later on it was realized that codistillation across locations from a strong teacher (eg Dinov2) got the training time down to a couple of hours ([Modi & Rawat, 2024](#ref-modi2024asynchronous)). While APM showed that the net could distill last layers of the teacher, the paper did not consider the subtle matters of part-whole hierarchies. There was also the obvious flaw, that it relied on a teacher, which in turn had to be trained at scale.
+- Furthermore, applying regularization to different cortical columns in APM to overcome collapse, applying contrastive learning on local patches of a image, or forcing the net to reconstruct masked regions of an image proved too slow to converge. To give an estimate, it took almost a day to train a cifar-10 classifier from scratch including the pre-training phase\[[9](#ref-garau2022interpretable)\].
+- Later on it was realized that codistillation across locations from a strong teacher (eg Dinov2) got the training time down to a couple of hours \[[7](#ref-modi2024asynchronous)\]. While APM showed that the net could distill last layers of the teacher, the paper did not consider the subtle matters of part-whole hierarchies. There was also the obvious flaw, that it relied on a teacher, which in turn had to be trained at scale.
 - A further assumption APM made was that internal layers of a transformer naturally encoded part-whole hierarchies. However, that quickly proved to be wrong.
 
 To resolve some of the above issues, we propose the second generation of Asynchronous Perception Machines (APM/s). Of note is the ability of APM/s to learn only on one train sample (without any pre-training), and generalize to an entire test set with competitive accuracies. APM's also appear capable of encoding part-whole hierarchies, as well as finally doing dense-segmentation tasks. The decoded features are also robust to occlusions and masking.
@@ -51,10 +51,10 @@ We begin by discussing two ways of encoding part-whole hierarchies in neural net
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">2.1. Encoding hierarchy inside the net</span>
 
-Fig[2](#fig-2)(i) illustrates a hierarchy with a sequence length of four, and two levels. An image can be fed through several attention layers (as in a ViT), without loss of spatial resolution. Each layer generates internal representations (marked as grey tokens).  One can encode part-whole hierarchies by taking a dot product between parts and wholes, and calculating attention weights (after squeezing logits through a softmax bottleneck). The resultant matrix can be forced to be the same as a graph's adjacency matrix. A similar coding scheme was used in capsules([Sabour et al., 2017](#ref-sabour2017dynamic)). However, this raises several interesting issues:
+Fig[2](#fig-2)(i) illustrates a hierarchy with a sequence length of four, and two levels. An image can be fed through several attention layers (as in a ViT), without loss of spatial resolution. Each layer generates internal representations (marked as grey tokens).  One can encode part-whole hierarchies by taking a dot product between parts and wholes, and calculating attention weights (after squeezing logits through a softmax bottleneck). The resultant matrix can be forced to be the same as a graph's adjacency matrix. A similar coding scheme was used in capsules\[[10](#ref-sabour2017dynamic)\]. However, this raises several interesting issues:
 
 - Routing issue: Each part $$p_i$$ must learn which whole $$w_j$$ it belongs to. For $$N$$ parts and wholes, this represents an $$N^2$$ assignment problem. All this routing information becomes noisy as data passes through different layers, which cannot be compensated for by dynamic routing[^1]. Stacking several such layers appears to make the problem worse.
-- Different graphical structure across each layer: The adjacency matrix of part-whole relationships changes across different layers of the net. Encoding this dynamic evolving structure is more challenging than enforcing the same graphical structure through different attention layers([Veličković et al., 2017](#ref-velivckovic2017graph)).
+- Different graphical structure across each layer: The adjacency matrix of part-whole relationships changes across different layers of the net. Encoding this dynamic evolving structure is more challenging than enforcing the same graphical structure through different attention layers\[[12](#ref-velivckovic2017graph)\].
 - Collapse issue:  The representations produced in higher layers tend to become identical across different wholes, which means that the net cannot reliably encode multi-level hierarchies.
 
 Typically it is possible to sweep these issues under the rug by pre-training a transformer-like net on vast swaths of data. The scale of data drowns out the natural noise of the system, and thus forces it to learn. At the moment, there are two philosophical schools of thought. Although the connectionist-symbolist war has been (somewhat) pacified and connectionists have won, a new kind of war has brewed in the shadows:
@@ -64,7 +64,7 @@ Typically it is possible to sweep these issues under the rug by pre-training a t
 
 Indeed, geometrical school of thought is older, for it has been around since the time of Plato. The scaling school of thought is newer, for computing machines have only recently gotten faster. Things that are new, seem shiny, and move faster. Things that are old are heavier, and move slowly. The momentum thus is product of mass and velocity.
 
-Now that the warring factions have been defined, we must continue on. But, you dear reader, must keep your mind open, and judgement neutral, for these are the times of peace. Those who render judgement too quickly are forced to choose one side, and thus only win with a 50% probability. Those who however negotiate peace, and GLOM together everything[^2], have a 100% percent chance of winning, for no man (or woman or transformer([Vaswani et al., 2017](#ref-Vaswani2017AttentionIA))) shall be left behind.
+Now that the warring factions have been defined, we must continue on. But, you dear reader, must keep your mind open, and judgement neutral, for these are the times of peace. Those who render judgement too quickly are forced to choose one side, and thus only win with a 50% probability. Those who however negotiate peace, and GLOM together everything[^2], have a 100% percent chance of winning, for no man (or woman or transformer\[[13](#ref-Vaswani2017AttentionIA)\]) shall be left behind.
 
 From a biological standpoint, we are still not able to explain why our minds are able to consume so less energy and exhibit vast abilities of generalization. The explanation that generalization emerges from scale does not explain how we as humans, in our limited lifespans, with our limited experiences, can generalize to vastly different scenarios.Indeed, it seems as though we are missing something fundamental.
 
@@ -78,11 +78,11 @@ Fig [2](#fig-2)(ii) shows an alternate coding scheme. First, a neural net (with 
 - For a given query $$(i,j)$$, all the neurons in $$W_{e}$$ are used to compute the embedding at that location. The binding is now done by a location-specific query.
 - The amount of available neural hardware does not change and remains reusable  no matter how deep the hierarchy gets.
 
-This coding scheme of encoding hierarchies in the latent space outside the net was  proposed by ([Hinton, 2021](#ref-glom)), and later on inductively realized by ([Modi & Rawat, 2024](#ref-modi2024asynchronous)). However, it collapses when multiple levels of the hierarchy are considered. This leads us to the notion of canonical locks([Hinton, 1981](#ref-hinton1981parallel)).
+This coding scheme of encoding hierarchies in the latent space outside the net was  proposed by \[[1](#ref-glom)\], and later on inductively realized by \[[7](#ref-modi2024asynchronous)\]. However, it collapses when multiple levels of the hierarchy are considered. This leads us to the notion of canonical locks\[[14](#ref-hinton1981parallel)\].
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">3. Canonical locks for learning machines</span>
 
-We begin with a toy problem. Next, we consider two kinds of computational systems: (i) static feed-forward inference; (ii) dynamical systems like a net of oscillators or continuous Ising machines. Inspired by ([Sejnowski et al., 1986](#ref-sejnowski1986learning)), we isolate several symmetrical configurations in the net and demonstrate how they are resolved.  Simultaneously, we examine the connections between canonical locks and mental rotation.
+We begin with a toy problem. Next, we consider two kinds of computational systems: (i) static feed-forward inference; (ii) dynamical systems like a net of oscillators or continuous Ising machines. Inspired by \[[15](#ref-sejnowski1986learning)\], we isolate several symmetrical configurations in the net and demonstrate how they are resolved.  Simultaneously, we examine the connections between canonical locks and mental rotation.
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">3.1. A toy problem</span>
 
@@ -100,7 +100,7 @@ Fig [3](#fig-3) shows a face (whole) and one of its parts (nose). We can draw li
 
 Fig [4](#fig-4) shows a hypersphere of unit radius. We imagine two disks on the surface of this hypersphere. One disk corresponds to the part vectors, and another to whole vectors. A vector connecting the center of the sphere with the circumference of the disk represents a part/whole vector. At any moment, we are allowed only ‘one’ vector per disk.
 
-For example, the whole's vector can oscillate between one of the states like whole 1, whole 2, whole 3, etc. Similarly, the part's vector can oscillate between part 1, part 2, part 3, etc. There are infinite such states, and a vector can be in any of them at a given time. This representation then starts to bear resemblance to continuous Ising models([Hinton, 2021](#ref-glom)).
+For example, the whole's vector can oscillate between one of the states like whole 1, whole 2, whole 3, etc. Similarly, the part's vector can oscillate between part 1, part 2, part 3, etc. There are infinite such states, and a vector can be in any of them at a given time. This representation then starts to bear resemblance to continuous Ising models\[[1](#ref-glom)\].
 
 Please note that a vector possesses a magnitude $$r$$ and a phase $$\theta$$. This does not encode in which direction the vector is spinning (clockwise or anti-clockwise). For some tasks, it may be required, but for our toy problem, we will ignore this (subtle matter of chirality of the digital organism). For the rest of this paper, instead of looking at the sphere (which is tough  to draw), we will visualize the disks themselves.
 
@@ -109,28 +109,28 @@ Please note that a vector possesses a magnitude $$r$$ and a phase $$\theta$$. Th
   <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 5.</b> A 2D projection of the great circle taken from the hypersphere. Part's and Whole's arrows can be thought of as ‘needles’ oscillating in a compass.</p>
 </div>
 
-In Fig [5](#fig-5), the visualization now changes. We can think of the part and whole vectors as little needles lying on a circular compass. Any vector is free to choose any angle on the disk. However, if the part and whole are to be related to each other, they need to decide on a particular angle. This is what we now call a canonical lock([Hinton, 1981](#ref-hinton1981parallel)).
+In Fig [5](#fig-5), the visualization now changes. We can think of the part and whole vectors as little needles lying on a circular compass. Any vector is free to choose any angle on the disk. However, if the part and whole are to be related to each other, they need to decide on a particular angle. This is what we now call a canonical lock\[[14](#ref-hinton1981parallel)\].
 
 <div id="fig-6" style="text-align: center; margin: 20px 0;">
   <img class="img-fluid" src="{{ site.baseurl }}/assets/img/modern_glom/canonical_lock.png" style="width: 60%; height: auto; display: block; margin: 0 auto;" alt="Figure 6">
   <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 6.</b> A perfect canonical lock.</p>
 </div>
 
-In Figure [6](#fig-6), the part (lip) is perfectly locked to the whole (face) at an angle of $$\mathtt{30}^{\circ}$$. The left and right parts of the picture show these vectors ‘rotating’ on the disk in different configurations([Löwe et al., 2023](#ref-lowe2023rotating)). At different instances of time, the part and whole vectors may be at different angles, but the relative angle between them remains constant. The job of a neural net is then to achieve such a ‘canonical lock’.
+In Figure [6](#fig-6), the part (lip) is perfectly locked to the whole (face) at an angle of $$\mathtt{30}^{\circ}$$. The left and right parts of the picture show these vectors ‘rotating’ on the disk in different configurations\[[6](#ref-lowe2023rotating)\]. At different instances of time, the part and whole vectors may be at different angles, but the relative angle between them remains constant. The job of a neural net is then to achieve such a ‘canonical lock’.
 
 This form of representation raises several concerns:
 
 - For a single pair of $$\left\langle \text{part}, \text{whole} \right\rangle$$ vectors, what angle should be chosen? This information is not readily available as supervision in the part-whole hierarchy.
 - For many such pairs spanning the hierarchy, how can a neural net achieve multiple canonical locks simultaneously? Can simple gradient descent learn this?
-- If the input vector is rotated (translated) slightly, the predicted representations of the net should also rotate (translate) in an equivariant manner. The canonical locks however should remain invariant.  How can we enforce both equivariance and invariance at the same time([Cohen & Welling, 2016](#ref-cohen2016group)), in particular, for the attention mechanism([Hutchinson et al., 2021](#ref-hutchinson2021lietransformer); [Vaswani et al., 2017](#ref-Vaswani2017AttentionIA))?
+- If the input vector is rotated (translated) slightly, the predicted representations of the net should also rotate (translate) in an equivariant manner. The canonical locks however should remain invariant.  How can we enforce both equivariance and invariance at the same time\[[16](#ref-cohen2016group)\], in particular, for the attention mechanism\[[17](#ref-hutchinson2021lietransformer), [13](#ref-Vaswani2017AttentionIA)\]?
 
-We will try to answer these questions as we proceed in the paper. First, we wish to discuss static vs dynamical systems ([Löwe et al., 2023](#ref-lowe2023rotating); [Miyato et al., 2025a](#ref-akorn)).
+We will try to answer these questions as we proceed in the paper. First, we wish to discuss static vs dynamical systems \[[6](#ref-lowe2023rotating), [18](#ref-akorn)\].
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">3.2. Static vs Dynamical systems</span>
 
 We now distinguish between two kinds of recurrent nets in which part-whole hierarchies may be encoded:
 
-- Static System: Models like Deep Equilibrium Models([Bai et al., 2019](#ref-bai2019deep)) assume that when a recurrent net is run till infinity, it converges to a fixed representation. In such a system, the part and whole vectors might be fixed in both magnitude and direction once the fixed point is reached.
+- Static System: Models like Deep Equilibrium Models\[[19](#ref-bai2019deep)\] assume that when a recurrent net is run till infinity, it converges to a fixed representation. In such a system, the part and whole vectors might be fixed in both magnitude and direction once the fixed point is reached.
 - Dynamical System: Here the vectors are given the freedom to rotate on the disk, but they are locked onto each other. Both magnitude and direction of the part and whole vectors may change, but the relative angle between them remains constant.
 
 Intuition suggests that a static system is better: it is easy to detect when the fixed point is reached by comparing the differences among predicted representations across different timesteps of the recurrent net. However, it has been observed that the best downstream accuracy on a given task is not necessarily achieved at the fixed point. Furthermore, running such a net till infinity often leads to loss in performance, a phenomenon dubbed as ‘overthinking’.
@@ -141,13 +141,13 @@ The uncomfortable decision for allowing the part and whole vectors to rotate for
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">3.3. Information storage in dynamical systems</span>
 
-In the forward-forward paper([Hinton, 2022](#ref-hinton2022forward)), it was suggested that vectors fed to a subsequent layer of a neural net must be normalized. The reason was that clamping the magnitude to unity results in loss of goodness, which forces the next layer of the net to learn better features. For some reason, separation in the phase space does not affect the downstream accuracy. This assumption makes sense for a static system.
+In the forward-forward paper\[[20](#ref-hinton2022forward)\], it was suggested that vectors fed to a subsequent layer of a neural net must be normalized. The reason was that clamping the magnitude to unity results in loss of goodness, which forces the next layer of the net to learn better features. For some reason, separation in the phase space does not affect the downstream accuracy. This assumption makes sense for a static system.
 
 The system of information organization discussed in Section [2.2](#22-encoding-hierarchy-outside-the-net) however is a dynamical system and differs because the last layer of $$W_e$$ is responsible for generating all the vectors in the hierarchy. It is just a linear layer, and thus free to generate any vector in the latent space, much like CLIP. This means that both the (relative) magnitude and phase of vectors in the hierarchy can be used to encode information.
 
 A (complex) vector written in the Euler form of $$r e^{i \theta}$$ means that $$r$$ is just a scalar, whereas $$\theta$$ is multi-dimensional. This means that the phase of a vector can encode much more information than its magnitude. The original capsules attempted to encode the presence of an entity in the magnitude. However, this only makes sense if the vector represents a single entity. If an entity possesses multiple identities in superposition, such a representation quickly breaks down. This mysterious case manifests itself when a shape can be either a diamond or a tilted square at the same time.
 
-Modelling internal representations as complex vectors ([Löwe et al., 2022](#ref-lowe2022complex)) might allow visualizing different kinds of neural nets one might build, much akin to Smith charts found in electrical engineering. Notably, resistance and reactance can be encoded as a single representation called impedance. The impedance of a circuit of electrical elements is well defined. A neural net is indeed a circuit of parallel interconnected elements, and it should thus be possible to quantify the impedance. However, that matter is a digression, and not relevant to the current discussion. The minds of mortals can only focus on one thing at a time. Multi-head attention does not have those issues, and merely appears to be constrained by memory of the machine.
+Modelling internal representations as complex vectors \[[21](#ref-lowe2022complex)\] might allow visualizing different kinds of neural nets one might build, much akin to Smith charts found in electrical engineering. Notably, resistance and reactance can be encoded as a single representation called impedance. The impedance of a circuit of electrical elements is well defined. A neural net is indeed a circuit of parallel interconnected elements, and it should thus be possible to quantify the impedance. However, that matter is a digression, and not relevant to the current discussion. The minds of mortals can only focus on one thing at a time. Multi-head attention does not have those issues, and merely appears to be constrained by memory of the machine.
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">4. The Part-Whole Symmetry</span>
 
@@ -166,7 +166,7 @@ If we consider the entire system (including part/whole), the center of gravity l
 
 An alternate configuration is shown in (ii). Here all parts coincide with the whole. Intuition suggests that the canonical lock is at $$\mathtt{0}^{\circ}$$. However, this might pose an issue: if all the parts and their wholes are identical vectors, there is no relative angle between them. Thus, the net does not encode any meaningful hierarchical structure.
 
-Till now we have talked about vectors lying on spheres/disks. However, they are typically high-dimensional vectors, sometimes extending up to 2048 dimensions. Recent conversations ([Miyato et al., 2025a](#ref-akorn)) seem to suggest that it is indeed very difficult to achieve a perfect lock in such high dimensions ($$d\geq\mathtt{4}$$), since the volume of the space is just too high.
+Till now we have talked about vectors lying on spheres/disks. However, they are typically high-dimensional vectors, sometimes extending up to 2048 dimensions. Recent conversations \[[18](#ref-akorn)\] seem to suggest that it is indeed very difficult to achieve a perfect lock in such high dimensions ($$d\geq\mathtt{4}$$), since the volume of the space is just too high.
 
 While nature does (occasionally) respect symmetry, breaking those symmetries leads to new abilities in the machine. Biological organisms, for example, reproduce and break entropy's law by self-organizing into complex structures. When a zygote reproduces and spreads out in a sphere, a mechanism to break the ring symmetry is what makes our legs look different from our heads. Similarly, we may want our learning machines to break the symmetries and achieve these canonical locks.
 
@@ -200,7 +200,7 @@ A crucial difference between both cases is the time it takes to break symmetry. 
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">5.3. A Linear Model for Predicting the Time It Takes to Break Symmetry</span>
 
-An argument made in psychology is that the time it takes for humans to recognize a shape depends on the angle at which they are viewing the shape and the angle of the natural canonical axis they tend to favor([Palmer, 1981](#ref-palmer1981cannonical)). Can a neural net follow similar behavior? A demonstration may indeed be performed.
+An argument made in psychology is that the time it takes for humans to recognize a shape depends on the angle at which they are viewing the shape and the angle of the natural canonical axis they tend to favor\[[23](#ref-palmer1981cannonical)\]. Can a neural net follow similar behavior? A demonstration may indeed be performed.
 
 <div id="fig-10" style="text-align: center; margin: 20px 0;">
   <img class="img-fluid" src="{{ site.baseurl }}/assets/img/modern_glom/225_degree.png" style="width: 50%; height: auto; display: block; margin: 0 auto;" alt="Figure 10">
@@ -243,7 +243,7 @@ The assumption till now is that vectors of parts/wholes lie on a disk. There may
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">6.1. Synchrony vs Asynchrony across levels of the part-whole hierarchy</span>
 
-Next, we examine the proposal on GLOM([Hinton, 2021](#ref-glom)). Specifically, we are concerned with how information might be represented in the hierarchy. We consider two cases: (i) Synchrony across levels; (ii) Asynchrony across levels.
+Next, we examine the proposal on GLOM\[[1](#ref-glom)\]. Specifically, we are concerned with how information might be represented in the hierarchy. We consider two cases: (i) Synchrony across levels; (ii) Asynchrony across levels.
 
 <div id="fig-13" style="text-align: center; margin: 20px 0;">
   <img class="img-fluid" src="{{ site.baseurl }}/assets/img/modern_glom/synchrony.png" style="width: 50%; height: auto; display: block; margin: 0 auto;" alt="Figure 13">
@@ -261,11 +261,11 @@ Alternatively, consider Fig[14](#fig-14). Here, all the parts in the lower level
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">6.2. Relaxing the orthogonality of coordinate frames</span>
 
-We now consider this notion of coordinate frames as in ([Hinton, 1976](#ref-hinton1976using)).
+We now consider this notion of coordinate frames as in \[[24](#ref-hinton1976using)\].
 
 <div id="fig-15" style="text-align: center; margin: 20px 0;">
   <img class="img-fluid" src="{{ site.baseurl }}/assets/img/modern_glom/arm.png" style="width: 60%; height: auto; display: block; margin: 0 auto;" alt="Figure 15">
-  <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 15.</b> An arm analogy. Representing coordinate frames with three layers(<a href="#ref-hinton1977relaxation">Hinton, 1977</a>)</p>
+  <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 15.</b> An arm analogy. Representing coordinate frames with three layers[<a href="#ref-hinton1977relaxation">22</a>]</p>
 </div>
 
 Please consider the human stick diagram. It shows two body parts, a fore-arm and an arm. Several observations may be made:
@@ -285,7 +285,7 @@ It is possible to model this hierarchy by using a three-layered neural net. One 
   <div style="display: inline-block; border: 1px solid #000; padding: 12px; background: #fff; width: 40%;">
     <img class="img-fluid" src="{{ site.baseurl }}/assets/img/modern_glom/stick_symmetry.png" style="width: 100%; height: auto; display: block; margin: 0 auto;" alt="Figure 17">
   </div>
-  <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 17.</b> A human stick figure showing the hierarchy of body parts. Each part has chosen its own canonical axis. Similarly, the part corresponding to the left hand knows that its whole is the left forearm. We want a neural net to learn similar hierarchy.  Figure gratefully inspired from (<a href="#ref-hinton1977relaxation">Hinton, 1977</a>).</p>
+  <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 17.</b> A human stick figure showing the hierarchy of body parts. Each part has chosen its own canonical axis. Similarly, the part corresponding to the left hand knows that its whole is the left forearm. We want a neural net to learn similar hierarchy.  Figure gratefully inspired from [<a href="#ref-hinton1977relaxation">22</a>].</p>
 </div>
 
 There are issues with this kind of representation. The neural net is wasteful, because to model two coordinate frames, we require three layers. In principle, it is possible to model the hierarchy with just one layer.
@@ -318,7 +318,7 @@ An alternate way is not to fight the fundamental laws of physics and try to forc
 
 This leads one to the question: Is there a way to arrange these vectors together into some sort of geometric structure, so that a combination of them could encode part-whole hierarchies?
 
-The motivation stems from trying to resolve Fodor's arguments against connectionism([Fodor & Pylyshyn, 1988](#ref-fodor1988connectionism)). It has been shown that symbols (characters) and their combinations (words) can be encoded as vectors in neural nets. Similarly, image pixels can be encoded as vectors. However, it is not clear how pixels form objects, for there is no definition of what an object is. In the words of David Marr: ‘what is an object?’
+The motivation stems from trying to resolve Fodor's arguments against connectionism\[[25](#ref-fodor1988connectionism)\]. It has been shown that symbols (characters) and their combinations (words) can be encoded as vectors in neural nets. Similarly, image pixels can be encoded as vectors. However, it is not clear how pixels form objects, for there is no definition of what an object is. In the words of David Marr: ‘what is an object?’
 It merely depends on the granularity at which one is observing them.
 
 This further suggests that neural hardware must be designed to abstract higher-order mental functions at different levels of granularity, for eg, representations at level one could also serve as level ten at some other scale. After all, we have no trouble in looking up at the galaxy of stars, or the world of atoms in a microscope. The universe is countless at different scales, which might suggest that there is no informational bottleneck.
@@ -328,7 +328,7 @@ If one is willing to accept the premise that neural nets operate on higher vecto
 - How do vectors arrange themselves to form concepts like ‘face’, ‘lip’, ‘nose’ etc. in a higher-dimensional space? Is there a geometric structure which can be imposed on these vectors, so that they can encode such part-whole hierarchies? If there are infinite concepts, how can they be coded onto finite neural hardware?
 - How are concepts represented as distributed patterns? Is it possible to learn them as geometric primitives, whose combination can lead us to the formation of new concepts on the fly? Is it possible to capture these primitives as continuous probability distributions one might sample from? The structure of these hierarchies should be changed dynamically based on the input data vector, and not be fixed a priori.
 
-Indeed, these arguments allow us to probe whether the brain relies on a universal form of grammar of symbols([Chomsky, 1965](#ref-chomsky1965aspects)). Does an organism get born with such a universal grammar (or somehow inherit it through the genetic code from its parents), or does it learn it from the environment as it grows up([Hinton et al., 1987](#ref-hinton1987learning))? If the latter were true, then an organism isolated from the environment should not be able to learn any language.
+Indeed, these arguments allow us to probe whether the brain relies on a universal form of grammar of symbols\[[26](#ref-chomsky1965aspects)\]. Does an organism get born with such a universal grammar (or somehow inherit it through the genetic code from its parents), or does it learn it from the environment as it grows up\[[27](#ref-hinton1987learning)\]? If the latter were true, then an organism isolated from the environment should not be able to learn any language.
 
 An alternate possibility is that the language transmitted by the parent is a universal language of syntax, and entities which satisfy it lead to the formation of higher-level concepts, which allows one to encode causal constraints. A rule that A:B gives A+B should hold no matter what A and B are.
 
@@ -363,7 +363,7 @@ must first properly partition the problems we might wish our dear computing mach
 
 <u>Problems whose algorithms provably don't exist:</u> There might be a class of problems  whose exact algorithm is not known, and it is also provably impossible to write one. Here, the connectionist theory reduces to a mere approximation and cannot provide an exact solution.
 
-<u>Problems whose algorithms might exist but we are not so sure:</u>  A neural net may be able to relax into a perfect solution very quickly for every instance of the problem which is easy to verify. Even if it does, how does one merely look at the weights of the net and mathematically prove that it has indeed learnt the algorithm? This seems difficult because testing a machine on infinite instances of the problem (in our lifetimes) is not the same as proving it has learnt a true universal algorithm. Given two infinite dimensional spaces, each of whose elements have a precise bijection with the other, it is possible to come up with a neural operator. If one can prove that a specific neural operator exists for a particular problem, then there might be some solace([Kovachki et al., 2023](#ref-kovachki2023neural)).
+<u>Problems whose algorithms might exist but we are not so sure:</u>  A neural net may be able to relax into a perfect solution very quickly for every instance of the problem which is easy to verify. Even if it does, how does one merely look at the weights of the net and mathematically prove that it has indeed learnt the algorithm? This seems difficult because testing a machine on infinite instances of the problem (in our lifetimes) is not the same as proving it has learnt a true universal algorithm. Given two infinite dimensional spaces, each of whose elements have a precise bijection with the other, it is possible to come up with a neural operator. If one can prove that a specific neural operator exists for a particular problem, then there might be some solace\[[28](#ref-kovachki2023neural)\].
 
 <u>A canonical view of algorithms:</u> Men of logic tend to describe algorithms as a set of  rules one ‘ought to follow’ to arrive at a correct answer to the given problem. A proof of an algorithm is thus the mathematical construct that the algorithm is indeed correct no matter what the input. However, mathematics itself is a human construct, and it makes sense to define algorithms in a language of symbols.
 
@@ -416,20 +416,20 @@ The key differences of this form of representation are  :
 - There is no more routing. There is a separate whole vector being predicted for every part vector.
 - The value of K is not known before decoding. Clustering happens after the recognition has happened. There is no need of bounding boxes or Hungarian matching.
 
-This is different from slots which require the number of slots to be known a priori, and rely on competitive learning to latch correct slot onto correct object. This results in an issue where a slot latches onto more than one object and needs to be split using some heuristic or learnt rule.Our mechanism  however is gratefully inspired from neural-synchronization([Miyato et al., 2025a](#ref-akorn)).
+This is different from slots which require the number of slots to be known a priori, and rely on competitive learning to latch correct slot onto correct object. This results in an issue where a slot latches onto more than one object and needs to be split using some heuristic or learnt rule.Our mechanism  however is gratefully inspired from neural-synchronization\[[18](#ref-akorn)\].
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">6.6. Brain as a generative model</span>
 
 Earlier, Boltzmann machines proposed the idea that a common set of neurons could be used for both perception and generation. For a given input process, a bottom-up process generates recognition  and a top-down generative process provides a feedback loop of neural activity. Similarly, the brain appears to have both feedforward and feedback connections which operate asynchronously.
 
-Taken together, both these systems iterate over several iterations, to reach what one may now term as ‘islands of agreement’([Hinton, 2021](#ref-glom); [Modi & Rawat, 2024](#ref-modi2024asynchronous)). This idea also inspired the invention of Helmholtz Machines. Later, AlexNet popularized the effectiveness of a simple bottom-up approach, because it was simpler to implement and train. The notion of a top-down feedback loop was abandoned[^5] and the ideas of a purely feedforward approach (trained at scale) became pre-dominant.
+Taken together, both these systems iterate over several iterations, to reach what one may now term as ‘islands of agreement’\[[1](#ref-glom), [7](#ref-modi2024asynchronous)\]. This idea also inspired the invention of Helmholtz Machines. Later, AlexNet popularized the effectiveness of a simple bottom-up approach, because it was simpler to implement and train. The notion of a top-down feedback loop was abandoned[^5] and the ideas of a purely feedforward approach (trained at scale) became pre-dominant.
 
-Our implementation of canonical locks is closer in spirit to   GLOM([Hinton, 2021](#ref-glom)) (than transformers)  as follows:
+Our implementation of canonical locks is closer in spirit to   GLOM\[[1](#ref-glom)\] (than transformers)  as follows:
 
 - There are now separate bottom-up and top-down neural nets which can synchronize each other.
 - We have removed the notion of singular fixation: i.e. the assumption that a neural net can look at an input image only once.
 
-Next, we  consider how issues with the bottom-up net (in the original GLOM formulation) were resolved([Hinton, 2021](#ref-glom)). This has connections to mean field theory. Later, we   will consider the full architecture of the model.
+Next, we  consider how issues with the bottom-up net (in the original GLOM formulation) were resolved\[[1](#ref-glom)\]. This has connections to mean field theory. Later, we   will consider the full architecture of the model.
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">6.7. Issues with the mean field approximation</span>
 
@@ -459,7 +459,7 @@ The solution is simply to ‘transform’ all the lower level part vectors into 
 - The bottom up net $$W_{f}$$ is shared across all part vectors at a particular level.
 - One must guarantee that $$W_f\neq \mathbf{I}$$ in order to prevent collapse in Fig [23](#fig-23).
 
-This is easy to guarantee if the bottom-up net is a multi-layered neural net with non-linearities and  initialized with random weights (as long as weights of different layers are not identical). Next, we introduce Asynchronous Perception Machines (APM's). The key upgrade over ([Modi & Rawat, 2024](#ref-modi2024asynchronous)) is that we have now implemented canonical locks.
+This is easy to guarantee if the bottom-up net is a multi-layered neural net with non-linearities and  initialized with random weights (as long as weights of different layers are not identical). Next, we introduce Asynchronous Perception Machines (APM's). The key upgrade over \[[7](#ref-modi2024asynchronous)\] is that we have now implemented canonical locks.
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">7. Asynchronous Perception Machines</span>
 
@@ -540,7 +540,7 @@ $$
 v_p \leftarrow \sum_{q \,:\, \lVert q-p \rVert \le r} \mathrm{softmax}_q\big(\mathrm{sim}(v_p, v_q)\big)\, v_q \tag{1a}
 $$
 
-The above equation only enables communication within the ‘same’ level *l*. Please note that this neighborhood information aggregation could (in principle) be implemented by  self-attention([Vaswani et al., 2017](#ref-Vaswani2017AttentionIA)), Kuramoto synchronization or any other similar mechanism.
+The above equation only enables communication within the ‘same’ level *l*. Please note that this neighborhood information aggregation could (in principle) be implemented by  self-attention\[[13](#ref-Vaswani2017AttentionIA)\], Kuramoto synchronization or any other similar mechanism.
 
 Next, we consider the communication agreement ‘between’ different levels *l* and *l+1*. This communication happens as the information is piped through both bottom-up and top-down nets. Note that during this procedure the bottom-up weights $$W_f$$ are frozen, and only the top-down weights $$W_b$$ are updated.
 
@@ -568,7 +568,7 @@ $$
 v_w \leftarrow \left\langle v_w + v_{proj} \right\rangle \tag{4b}
 $$
 
-The addition operation between $$v_{w}$$ and $$v_{proj}$$ induces a form of coupling between levels $$l$$ and $$l+1$$. Indeed, there might be many ways to combine (and separate) information from two sources like $$v_{w}$$ and $$v_{proj}$$ together. But, the set transformer paper([Lee et al., 2019](#ref-lee2019set)) proved that a simple addition operation is sufficient to achieve universal approximation. It also bears deep mathematical connections to Arnold Kolmogorov's superposition theorem (as acknowledged in the original GLOM paper([Hinton, 2021](#ref-glom))), which in turn inspires this choice. An interpretation can also be found in the appendix.
+The addition operation between $$v_{w}$$ and $$v_{proj}$$ induces a form of coupling between levels $$l$$ and $$l+1$$. Indeed, there might be many ways to combine (and separate) information from two sources like $$v_{w}$$ and $$v_{proj}$$ together. But, the set transformer paper\[[29](#ref-lee2019set)\] proved that a simple addition operation is sufficient to achieve universal approximation. It also bears deep mathematical connections to Arnold Kolmogorov's superposition theorem (as acknowledged in the original GLOM paper\[[1](#ref-glom)\]), which in turn inspires this choice. An interpretation can also be found in the appendix.
 
 Next, $$v_{w}$$ is fed back through the top-down net $$W_{b}$$ to produce a new part vector $$v_{part-out}'$$ as:
 
@@ -651,9 +651,9 @@ $$
   <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 30.</b> Hinton Diagrams for synchronization: The top-down and bottom-up net  can drive each other to identical weights. They follow signed symmetry: the magnitude of sign of the weight in each box is the same. However, the magnitude of the weight may be different. For eg, the thickness of blue highlighted square, is different in layer L3 of both nets.</p>
 </div>
 
-Note that neither $$L_{agreement}$$ nor $$L_{weight}$$ require any labels. The inner loop is thus a self-supervised procedure which promotes islands of agreement inside the net([Modi & Rawat, 2024](#ref-modi2024asynchronous); [Hinton, 2021](#ref-glom)).
+Note that neither $$L_{agreement}$$ nor $$L_{weight}$$ require any labels. The inner loop is thus a self-supervised procedure which promotes islands of agreement inside the net\[[7](#ref-modi2024asynchronous), [1](#ref-glom)\].
 
-Connections to Random Feedback Alignment: On a first glance, the  Deep Weight Alignment procedure appears similar to the idea of random feedback alignment([Lillicrap et al., 2016](#ref-lillicrap2016random)). However, there are several differences:
+Connections to Random Feedback Alignment: On a first glance, the  Deep Weight Alignment procedure appears similar to the idea of random feedback alignment\[[30](#ref-lillicrap2016random)\]. However, there are several differences:
 
 - The top-down net is a mirror symmetric copy of the bottom-up net.
 - The top-down net carries agreement signal, and not the gradient signal.
@@ -661,9 +661,9 @@ Connections to Random Feedback Alignment: On a first glance, the  Deep Weight Al
 
 We acknowledge that the resultant system is biologically implausible. First, it creates the illusion that brain contains two pathways which must be symmetric.  But such observations have not been made in neuroscience. Second, the notion that a part of the circuit (bottom up net) is never trained seems absurd.
 
-However,  this does appear to work better as compared to training both the nets together.  The job is far from done, and there must be some other  alternative mechanisms by which brain does credit-assignment that does  not rely on gradient descent. A weight update rule $$W = W - \eta \nabla_W L$$ means that both the weights and gradients are stored, which in turn implies there must be two weights on each  synapse[^8]. This seems even more absurd. A better alternative might be to let the weight matrix ‘itself know’ how to update itself, without ever estimating the gradients([Irie et al., 2022](#ref-irie2022modern)). This is not a path we have yet explored.
+However,  this does appear to work better as compared to training both the nets together.  The job is far from done, and there must be some other  alternative mechanisms by which brain does credit-assignment that does  not rely on gradient descent. A weight update rule $$W = W - \eta \nabla_W L$$ means that both the weights and gradients are stored, which in turn implies there must be two weights on each  synapse[^8]. This seems even more absurd. A better alternative might be to let the weight matrix ‘itself know’ how to update itself, without ever estimating the gradients\[[31](#ref-irie2022modern)\]. This is not a path we have yet explored.
 
-Connections to Kuramoto Oscillatory Neurons: The agreement procedure communicated in Section [7.2](#72-the-agreement-procedure) is similar to the idea of Artificial Kuramoto oscillatory neurons([Miyato et al., 2025a](#ref-akorn)). However, the differences are :
+Connections to Kuramoto Oscillatory Neurons: The agreement procedure communicated in Section [7.2](#72-the-agreement-procedure) is similar to the idea of Artificial Kuramoto oscillatory neurons\[[18](#ref-akorn)\]. However, the differences are :
 
 - Synchronization happens between two different levels of the hierarchy, and not within the same level.
 - A top-down net is responsible for the synchronization. Therefore, the application of minimum description length principle to $$v_{proj}$$ is not enforced directly, but is an implicit consequence of enforcing $$L_{agreement}$$.
@@ -671,7 +671,7 @@ Connections to Kuramoto Oscillatory Neurons: The agreement procedure communicate
 
 ## <span style="font-size: 1.2rem; color: var(--border-header-bottom);">7.5. Hinton diagrams for synchronization</span>
 
-Hinton diagrams were a connectionist weapon designed  during the times of the symbolist-connectionist war([Fodor & Pylyshyn, 1988](#ref-fodor1988connectionism)). A Hinton diagram is a 2D grid of squares, visualizing the weights of the net. For an N by N weight matrix, the total grid is of size N by N. Each element of the grid is a square. The thickness of the square denotes the magnitude of the weight, and the color (black or white) denotes the sign of the weight. Multiple such squares can then be plotted for each layer of the bottom up/ top-down  net. We show one such plot in Fig[30](#fig-30).
+Hinton diagrams were a connectionist weapon designed  during the times of the symbolist-connectionist war\[[25](#ref-fodor1988connectionism)\]. A Hinton diagram is a 2D grid of squares, visualizing the weights of the net. For an N by N weight matrix, the total grid is of size N by N. Each element of the grid is a square. The thickness of the square denotes the magnitude of the weight, and the color (black or white) denotes the sign of the weight. Multiple such squares can then be plotted for each layer of the bottom up/ top-down  net. We show one such plot in Fig[30](#fig-30).
 
 We perform the following experiment: (i) the part vectors in level $$l$$ and level $$l+1$$ are initialized randomly. (ii) Both bottom-up and top-down nets are initialized randomly. The weights of the bottom-up net are frozen. (iii) The agreement procedure  is performed and the weights of both the nets (After T steps) are plotted. $$L_{inner}$$ is used to update the weights of the top-down net.
 
@@ -679,13 +679,13 @@ Fig[30](#fig-30) shows the two rows with weights $$W_f^{-1}$$ and $$W_b$$ visual
 
 However, the agreement procedure seems to promote signed symmetry between the two nets, i.e. the ‘color’ of the boxes comes out to be identical. We tested our procedure with different initializations of $$W_f$$ prior to the agreement procedure. Similarly, we tested running the optimization for more than a million iterations, and the results appear somewhat consistent. This suggests that the agreement procedure can indeed allow bottom-up net and top-down net to drive each other to synchrony.
 
-If the vectors at part level and whole level are entirely random, then the agreement procedure still converges to their mean. This means that merely examining the loss is not enough to reveal the quality of islands being formed. However, it the data possesses some structure, (for eg, images), we can indeed see islands of agreement to emerge([Modi & Rawat, 2024](#ref-modi2024asynchronous); [Hinton, 2021](#ref-glom)).
+If the vectors at part level and whole level are entirely random, then the agreement procedure still converges to their mean. This means that merely examining the loss is not enough to reveal the quality of islands being formed. However, it the data possesses some structure, (for eg, images), we can indeed see islands of agreement to emerge\[[7](#ref-modi2024asynchronous), [1](#ref-glom)\].
 
 A way to promote formation of islands is to enforce two constraints: (i) attention must be restricted to a circular local neighborhood, much akin to  restricted Boltzmann machines (ii) The radius of the neighborhood is gradually increased as one goes up the different layers of $$W_e$$. This is similar to the idea of receptive fields in convolutional nets. The key issue with CNNs was that they traded off the resolution of the input in favor of increasing channel count in the later layers. This led to a loss of spatial information, which had to be compensated for  via skip connections from a layer $$l$$ of encoder to  layer $$l$$ of decoder.
 
 Our mechanism is different in two ways: (i) As information flows through $$W_{e}$$ there is no loss of spatial resolution (ii) a standard softmax looks at all the locations, and weighs the incoming signal accordingly. This is flawed because it guides the agreement towards a single mean and leads to collapse.
 
-Our procedure instead relies on resonance([Liu et al., 2026](#ref-liu2026krause))[^9]: a part vector looks at all its neighbors, and chooses the ‘most dominant one’. Once it has done this selection, it does not care about what all other part-vectors are saying. Our part aligns itself in the direction of the dominant neighbor.
+Our procedure instead relies on resonance\[[4](#ref-liu2026krause)\][^9]: a part vector looks at all its neighbors, and chooses the ‘most dominant one’. Once it has done this selection, it does not care about what all other part-vectors are saying. Our part aligns itself in the direction of the dominant neighbor.
 
 In the initial layers of $$W_e$$, there are several part vectors around a given part-vector, pointing in randomly different directions. Thus, there is no structure in the internal representation. Thus, the attention mechanism needs to seek consensus from k top neighbors. As we go up in the hierarchy, the circular neighborhoods we tap into gradually increase in radius. The value of k is gradually stepped down during training from 4 to 1 because by then the system has already beaten the natural entropy, and cluster formation has already happened.
 
@@ -726,9 +726,9 @@ The universal approximation theorem leads one to believe that it is possible to 
 
 Kindly refer again to the architecture in Fig[25](#fig-25).  Consider the top-down and bottom-up nets between level $$l$$ and $$l+1$$ again. One can observe that both the nets are shared across all the locations $$(i,j)$$ in the spatial grid. We wish to consider various ways in which this weight sharing might occur.
 
-Firstly, one could replicate top-down and bottom-up net across locations $$(i,j)$$ in the spatial grid. On a single GPU, this weight copying means that one quickly runs out of memory. However, one gains the ability to exchange information between different copies of the net by weight sharing, which is a much higher bandwidth way of exchanging information than knowledge distillation([Hinton, 2021](#ref-glom); [Hinton, 2022](#ref-hinton2022forward))
+Firstly, one could replicate top-down and bottom-up net across locations $$(i,j)$$ in the spatial grid. On a single GPU, this weight copying means that one quickly runs out of memory. However, one gains the ability to exchange information between different copies of the net by weight sharing, which is a much higher bandwidth way of exchanging information than knowledge distillation\[[1](#ref-glom), [20](#ref-hinton2022forward)\]
 
-Secondly, a single copy of the top-down and bottom-up net is kept. Instead, the location based queries $$(i,j)$$ are fed as a batched input to the net([Modi & Rawat, 2024](#ref-modi2024asynchronous)). This saves memory on a single device.
+Secondly, a single copy of the top-down and bottom-up net is kept. Instead, the location based queries $$(i,j)$$ are fed as a batched input to the net\[[7](#ref-modi2024asynchronous)\]. This saves memory on a single device.
 
 Finally, among multiple GPU devices, only one copy of top-down and bottom-up net is kept. Inside the device, the parallelism is achieved by feeding different $$(i,j)$$ queries to the net. Thus, one in principle could reap the benefits of both weight sharing and memory efficiency.
 
@@ -736,7 +736,7 @@ Finally, among multiple GPU devices, only one copy of top-down and bottom-up net
 
 In NLP, it is easy to parse sentences into parse trees, since it is possible to define which words form a noun, verb etc. In case of vision, the hierarchies are not so well defined. Similarly, existing datasets only contain up to 3 levels of hierarchy, whereas GLOM explicitly requires 5 levels of the hierarchy.
 
-Towards this end, we consider the CelebA-HQ dataset([Karras et al., 2017](#ref-karras2017progressive)) of faces, and define a 5-level part-whole hierarchy of a face. An example of the hierarchy is shown in Fig[31](#fig-31). The hierarchy is defined at lowest level  as *ground*, *skin*, *left-eyebrow*, *right-eyebrow*, *left-eye*, *right-eye*, *nose*, *upper-lip*, *inner-mouth*, *lower-lip* and *hair*. The remaining levels are derived by merging the parts into wholes. The hierarchy is as follows:
+Towards this end, we consider the CelebA-HQ dataset\[[32](#ref-karras2017progressive)\] of faces, and define a 5-level part-whole hierarchy of a face. An example of the hierarchy is shown in Fig[31](#fig-31). The hierarchy is defined at lowest level  as *ground*, *skin*, *left-eyebrow*, *right-eyebrow*, *left-eye*, *right-eye*, *nose*, *upper-lip*, *inner-mouth*, *lower-lip* and *hair*. The remaining levels are derived by merging the parts into wholes. The hierarchy is as follows:
 
 - **L1** ($$11$$ classes) — the raw parser classes above.
 - **L2** ($$7$$) — the two eyebrows merge into *eyebrows*, the two eyes into *eyes*, and the three lip/mouth classes into *mouth*.
@@ -750,7 +750,7 @@ Fig[1](#fig-1) shows the predicted part-whole hierarchy of a face from the APM. 
 
 <u>Backward Parsing:</u> For a pixel (i,j) at level L, we can know all the children in the parse tree by looking recursively at representation of (i,j) at level L-1, and so on until the finest level is reached. The procedure is repeated for all the locations $$(1,1) \leq (i,j) \leq (H,W)$$ in the spatial grid.
 
-We would like to distinguish this form of visual parsing  from the parsing of sentences in ([Vinyals et al., 2014](#ref-Vinyals2014GrammarAA)). In the latter, one partitions a sentence into words spanning indices (i,j), builds a representation, and runs a linear classifier. Running the net for all pairs gives a score. An assignment problem is then solved to find the best parse tree which follows a correct syntax. Along the similar lines, a similar hungarian assignment procedure is used in object detectors to allocate boxes to ground truth.
+We would like to distinguish this form of visual parsing  from the parsing of sentences in \[[33](#ref-Vinyals2014GrammarAA)\]. In the latter, one partitions a sentence into words spanning indices (i,j), builds a representation, and runs a linear classifier. Running the net for all pairs gives a score. An assignment problem is then solved to find the best parse tree which follows a correct syntax. Along the similar lines, a similar hungarian assignment procedure is used in object detectors to allocate boxes to ground truth.
 
 The parsing of images here does not require any assignment, but instead emerges as a consequence of the agreement procedure. The very act of ‘gluing together’[^10] $$\langle$$sub part, part, object vectors$$\rangle$$ in a single column guarantees that the parent-child relationship can be read off directly, which should significantly speed up the parsing process.
 
@@ -762,122 +762,122 @@ The form of hierarchical parsing proposed here is different: the entire parse-tr
 
 In this paper, we have presented canonical locks as a geometric primitive for learning machines. This allows them to encode part-whole hierarchies in a neural net. Our key result is that it is possible to train a neural net with just one sample (without any sort of initialization from a pretrained set of weights), and generalize to a given test set of images with competitive accuracies. This generalization also extends to rotational groups that increment in multiples of 90 degrees.
 
-Our running hypothesis is that neural nets are geometrical engines that encode part-whole hierarchies. Overfitting on a single sample leads  to a form of compositional-based learning which learns to combine parts into wholes dynamically([Hinton, 1990](#ref-hinton1990mapping); [Schmidhuber, 1990](#ref-schmidhuber1990towards); [Hinton, 2019](#ref-hinton2019representing); [Hinton, 2021](#ref-glom)). Constraining the weights properly reduces the subspace gradient descent has to search, which in turn significantly speeds up learning.
+Our running hypothesis is that neural nets are geometrical engines that encode part-whole hierarchies. Overfitting on a single sample leads  to a form of compositional-based learning which learns to combine parts into wholes dynamically\[[34](#ref-hinton1990mapping), [35](#ref-schmidhuber1990towards), [36](#ref-hinton2019representing), [1](#ref-glom)\]. Constraining the weights properly reduces the subspace gradient descent has to search, which in turn significantly speeds up learning.
 
-Given that compute is finally cheap, but the solid-state memory is not, it makes sense to explore learning machines which are higher bandwidth, but lower parameterized. It might be possible for APM/s to meta learn  multiple levels of the  part whole hierarchy. They should meta learn their own architecture, learning algorithms, optimizers, and pretraining task as well. Last but not the least, they should meta learn from the meta learner himself([Schmidhuber, 1987](#ref-schmidhuber1987evolutionary)).
+Given that compute is finally cheap, but the solid-state memory is not, it makes sense to explore learning machines which are higher bandwidth, but lower parameterized. It might be possible for APM/s to meta learn  multiple levels of the  part whole hierarchy. They should meta learn their own architecture, learning algorithms, optimizers, and pretraining task as well. Last but not the least, they should meta learn from the meta learner himself\[[37](#ref-schmidhuber1987evolutionary)\].
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">References</span>
 
-Bai, S., Kolter, J. Z., and Koltun, V. Deep equilibrium models. *Advances in neural information processing systems*, 32, 2019.
-{: #ref-bai2019deep}
-
-Chomsky, N. *Aspects of the Theory of Syntax*, volume 11. MIT press Cambridge, MA, 1965.
-{: #ref-chomsky1965aspects}
-
-Cohen, T. and Welling, M. Group equivariant convolutional networks. In *International conference on machine learning*, pp. 2990–2999. PMLR, 2016.
-{: #ref-cohen2016group}
-
-Fan, H., Xiong, B., Mangalam, K., Li, Y., Yan, Z., Malik, J., and Feichtenhofer, C. Multiscale vision transformers. In *2021 IEEE/CVF international conference on computer vision (ICCV)*, pp. 6804–6815. IEEE, 2021.
-{: #ref-fan2021multiscale}
-
-Fodor, J. A. and Pylyshyn, Z. W. Connectionism and cognitive architecture: A critical analysis. *Cognition*, 28(1-2):3–71, 1988.
-{: #ref-fodor1988connectionism}
-
-Garau, N., Bisagno, N., Sambugaro, Z., and Conci, N. Interpretable part-whole hierarchies and conceptual-semantic relationships in neural networks. In *2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, pp. 13679–13688. IEEE, 2022.
-{: #ref-garau2022interpretable}
-
-Hinton, G. Using relaxation to find a puppet. In *Proceedings of the 2nd summer conference on artificial intelligence and simulation of behaviour*, pp. 148–157, 1976.
-{: #ref-hinton1976using}
-
-Hinton, G. Some demonstrations of the effects of structural descriptions in mental imagery. *Cognitive Science*, 3(3):231–250, 1979.
-{: #ref-hinton1979some}
-
-Hinton, G. The forward-forward algorithm: Some preliminary investigations. *arXiv preprint arXiv:2212.13345*, 2(3):5, 2022.
-{: #ref-hinton2022forward}
-
-Hinton, G. E. Relaxation and its role in vision. 1977.
-{: #ref-hinton1977relaxation}
-
-Hinton, G. E. Mapping part-whole hierarchies into connectionist networks. *Artificial Intelligence*, 46(1-2):47–75, 1990.
-{: #ref-hinton1990mapping}
-
-Hinton, G. E. Representing part-whole hierarchies in connectionist networks. In *10th Annual Conference Cognitive Science Society Pod*, pp. 48–54. Psychology Press, 2019.
-{: #ref-hinton2019representing}
-
-Hinton, G. E. How to represent part-whole hierarchies in a neural network. *Neural Computation*, 35:413–452, 2021. URL [https://api.semanticscholar.org/CorpusID:232046121](https://api.semanticscholar.org/CorpusID:232046121).
+[1] Hinton, G. E. How to represent part-whole hierarchies in a neural network. *Neural Computation*, 35:413–452, 2021. URL [https://api.semanticscholar.org/CorpusID:232046121](https://api.semanticscholar.org/CorpusID:232046121).
 {: #ref-glom}
 
-Hinton, G. E., Nowlan, S. J., et al. How learning can guide evolution. *Complex systems*, 1(3):495–502, 1987.
-{: #ref-hinton1987learning}
-
-Hinton, G. F. A parallel computation that assigns canonical object-based frames of reference. In *Proceedings of the 7th international joint conference on Artificial intelligence-Volume 2*, pp. 683–685, 1981.
-{: #ref-hinton1981parallel}
-
-Hutchinson, M. J., Le Lan, C., Zaidi, S., Dupont, E., Teh, Y. W., and Kim, H. Lietransformer: Equivariant self-attention for lie groups. In *International conference on machine learning*, pp. 4533–4543. PMLR, 2021.
-{: #ref-hutchinson2021lietransformer}
-
-Irie, K., Schlag, I., Csordás, R., and Schmidhuber, J. A modern self-referential weight matrix that learns to modify itself. In *International conference on machine learning*, pp. 9660–9677. PMLR, 2022.
-{: #ref-irie2022modern}
-
-Karras, T., Aila, T., Laine, S., and Lehtinen, J. Progressive growing of gans for improved quality, stability, and variation. *arXiv preprint arXiv:1710.10196*, 2017.
-{: #ref-karras2017progressive}
-
-Kovachki, N., Li, Z., Liu, B., Azizzadenesheli, K., Bhattacharya, K., Stuart, A., and Anandkumar, A. Neural operator: Learning maps between function spaces with applications to pdes. *Journal of Machine Learning Research*, 24(89):1–97, 2023.
-{: #ref-kovachki2023neural}
-
-Lee, J., Lee, Y., Kim, J., Kosiorek, A., Choi, S., and Teh, Y. W. Set transformer: A framework for attention-based permutation-invariant neural networks. In *International conference on machine learning*, pp. 3744–3753. PMLR, 2019.
-{: #ref-lee2019set}
-
-Lillicrap, T. P., Cownden, D., Tweed, D. B., and Akerman, C. J. Random synaptic feedback weights support error backpropagation for deep learning. *Nature communications*, 7(1):13276, 2016.
-{: #ref-lillicrap2016random}
-
-Liu, J., Yue, Y., Welling, M., and Song, Y. Krause synchronization transformers. In *Forty-third International Conference on Machine Learning*, 2026.
-{: #ref-liu2026krause}
-
-Löwe, S., Lippe, P., Rudolph, M., and Welling, M. Complex-valued autoencoders for object discovery. *arXiv preprint arXiv:2204.02075*, 2022.
-{: #ref-lowe2022complex}
-
-Löwe, S., Lippe, P., Locatello, F., and Welling, M. Rotating features for object discovery. *Advances in Neural Information Processing Systems*, 36:59606–59635, 2023.
-{: #ref-lowe2023rotating}
-
-Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025a.
-{: #ref-akorn}
-
-Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025b.
-{: #ref-miyato2025artificial}
-
-Modi, R. and Rawat, Y. S. Asynchronous perception machine for efficient test time training. *Advances in Neural Information Processing Systems*, 37:106020–106058, 2024.
-{: #ref-modi2024asynchronous}
-
-Modi, R., Vineet, V., and Rawat, Y. S. On occlusions in video action detection: Benchmark datasets and training recipes. *ArXiv*, abs/2410.19553, 2024. URL [https://api.semanticscholar.org/CorpusID:262950334](https://api.semanticscholar.org/CorpusID:262950334).
+[2] Modi, R., Vineet, V., and Rawat, Y. S. On occlusions in video action detection: Benchmark datasets and training recipes. *ArXiv*, abs/2410.19553, 2024. URL [https://api.semanticscholar.org/CorpusID:262950334](https://api.semanticscholar.org/CorpusID:262950334).
 {: #ref-Modi2024OnOI}
 
-Palmer, S. E. Cannonical perspective and the perception of objects. *Attention and performance*, 9:135–151, 1981.
-{: #ref-palmer1981cannonical}
+[3] Fan, H., Xiong, B., Mangalam, K., Li, Y., Yan, Z., Malik, J., and Feichtenhofer, C. Multiscale vision transformers. In *2021 IEEE/CVF international conference on computer vision (ICCV)*, pp. 6804–6815. IEEE, 2021.
+{: #ref-fan2021multiscale}
 
-Sabour, S., Frosst, N., and Hinton, G. E. Dynamic routing between capsules. *Advances in neural information processing systems*, 30, 2017.
+[4] Liu, J., Yue, Y., Welling, M., and Song, Y. Krause synchronization transformers. In *Forty-third International Conference on Machine Learning*, 2026.
+{: #ref-liu2026krause}
+
+[5] Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025b.
+{: #ref-miyato2025artificial}
+
+[6] Löwe, S., Lippe, P., Locatello, F., and Welling, M. Rotating features for object discovery. *Advances in Neural Information Processing Systems*, 36:59606–59635, 2023.
+{: #ref-lowe2023rotating}
+
+[7] Modi, R. and Rawat, Y. S. Asynchronous perception machine for efficient test time training. *Advances in Neural Information Processing Systems*, 37:106020–106058, 2024.
+{: #ref-modi2024asynchronous}
+
+[8] Hinton, G. Some demonstrations of the effects of structural descriptions in mental imagery. *Cognitive Science*, 3(3):231–250, 1979.
+{: #ref-hinton1979some}
+
+[9] Garau, N., Bisagno, N., Sambugaro, Z., and Conci, N. Interpretable part-whole hierarchies and conceptual-semantic relationships in neural networks. In *2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, pp. 13679–13688. IEEE, 2022.
+{: #ref-garau2022interpretable}
+
+[10] Sabour, S., Frosst, N., and Hinton, G. E. Dynamic routing between capsules. *Advances in neural information processing systems*, 30, 2017.
 {: #ref-sabour2017dynamic}
 
-Schmidhuber, J. *Evolutionary principles in self-referential learning, or on learning how to learn: the meta-meta-... hook*. PhD thesis, Technische Universität München, 1987.
-{: #ref-schmidhuber1987evolutionary}
+[11] Zaheer, M., Kottur, S., Ravanbakhsh, S., Poczos, B., Salakhutdinov, R. R., and Smola, A. Deep sets. *Advances in neural information processing systems*, 30, 2017.
+{: #ref-zaheer2017deep}
 
-Schmidhuber, J. Towards compositional learning in dynamic networks. *Technical University of Munich (Technical Report FKI-129-90)*, 1, 1990.
-{: #ref-schmidhuber1990towards}
-
-Sejnowski, T. J., Kienker, P. K., and Hinton, G. E. Learning symmetry groups with hidden units: Beyond the perceptron. *Physica D: Nonlinear Phenomena*, 22(1-3):260–275, 1986.
-{: #ref-sejnowski1986learning}
-
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. Attention is all you need. In *Neural Information Processing Systems*, 2017. URL [https://api.semanticscholar.org/CorpusID:13756489](https://api.semanticscholar.org/CorpusID:13756489).
-{: #ref-Vaswani2017AttentionIA}
-
-Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., and Bengio, Y. Graph attention networks. *arXiv preprint arXiv:1710.10903*, 2017.
+[12] Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., and Bengio, Y. Graph attention networks. *arXiv preprint arXiv:1710.10903*, 2017.
 {: #ref-velivckovic2017graph}
 
-Vinyals, O., Kaiser, L., Koo, T., Petrov, S., Sutskever, I., and Hinton, G. E. Grammar as a foreign language. *ArXiv*, abs/1412.7449, 2014. URL [https://api.semanticscholar.org/CorpusID:14223](https://api.semanticscholar.org/CorpusID:14223).
+[13] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. Attention is all you need. In *Neural Information Processing Systems*, 2017. URL [https://api.semanticscholar.org/CorpusID:13756489](https://api.semanticscholar.org/CorpusID:13756489).
+{: #ref-Vaswani2017AttentionIA}
+
+[14] Hinton, G. F. A parallel computation that assigns canonical object-based frames of reference. In *Proceedings of the 7th international joint conference on Artificial intelligence-Volume 2*, pp. 683–685, 1981.
+{: #ref-hinton1981parallel}
+
+[15] Sejnowski, T. J., Kienker, P. K., and Hinton, G. E. Learning symmetry groups with hidden units: Beyond the perceptron. *Physica D: Nonlinear Phenomena*, 22(1-3):260–275, 1986.
+{: #ref-sejnowski1986learning}
+
+[16] Cohen, T. and Welling, M. Group equivariant convolutional networks. In *International conference on machine learning*, pp. 2990–2999. PMLR, 2016.
+{: #ref-cohen2016group}
+
+[17] Hutchinson, M. J., Le Lan, C., Zaidi, S., Dupont, E., Teh, Y. W., and Kim, H. Lietransformer: Equivariant self-attention for lie groups. In *International conference on machine learning*, pp. 4533–4543. PMLR, 2021.
+{: #ref-hutchinson2021lietransformer}
+
+[18] Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025a.
+{: #ref-akorn}
+
+[19] Bai, S., Kolter, J. Z., and Koltun, V. Deep equilibrium models. *Advances in neural information processing systems*, 32, 2019.
+{: #ref-bai2019deep}
+
+[20] Hinton, G. The forward-forward algorithm: Some preliminary investigations. *arXiv preprint arXiv:2212.13345*, 2(3):5, 2022.
+{: #ref-hinton2022forward}
+
+[21] Löwe, S., Lippe, P., Rudolph, M., and Welling, M. Complex-valued autoencoders for object discovery. *arXiv preprint arXiv:2204.02075*, 2022.
+{: #ref-lowe2022complex}
+
+[22] Hinton, G. E. Relaxation and its role in vision. 1977.
+{: #ref-hinton1977relaxation}
+
+[23] Palmer, S. E. Cannonical perspective and the perception of objects. *Attention and performance*, 9:135–151, 1981.
+{: #ref-palmer1981cannonical}
+
+[24] Hinton, G. Using relaxation to find a puppet. In *Proceedings of the 2nd summer conference on artificial intelligence and simulation of behaviour*, pp. 148–157, 1976.
+{: #ref-hinton1976using}
+
+[25] Fodor, J. A. and Pylyshyn, Z. W. Connectionism and cognitive architecture: A critical analysis. *Cognition*, 28(1-2):3–71, 1988.
+{: #ref-fodor1988connectionism}
+
+[26] Chomsky, N. *Aspects of the Theory of Syntax*, volume 11. MIT press Cambridge, MA, 1965.
+{: #ref-chomsky1965aspects}
+
+[27] Hinton, G. E., Nowlan, S. J., et al. How learning can guide evolution. *Complex systems*, 1(3):495–502, 1987.
+{: #ref-hinton1987learning}
+
+[28] Kovachki, N., Li, Z., Liu, B., Azizzadenesheli, K., Bhattacharya, K., Stuart, A., and Anandkumar, A. Neural operator: Learning maps between function spaces with applications to pdes. *Journal of Machine Learning Research*, 24(89):1–97, 2023.
+{: #ref-kovachki2023neural}
+
+[29] Lee, J., Lee, Y., Kim, J., Kosiorek, A., Choi, S., and Teh, Y. W. Set transformer: A framework for attention-based permutation-invariant neural networks. In *International conference on machine learning*, pp. 3744–3753. PMLR, 2019.
+{: #ref-lee2019set}
+
+[30] Lillicrap, T. P., Cownden, D., Tweed, D. B., and Akerman, C. J. Random synaptic feedback weights support error backpropagation for deep learning. *Nature communications*, 7(1):13276, 2016.
+{: #ref-lillicrap2016random}
+
+[31] Irie, K., Schlag, I., Csordás, R., and Schmidhuber, J. A modern self-referential weight matrix that learns to modify itself. In *International conference on machine learning*, pp. 9660–9677. PMLR, 2022.
+{: #ref-irie2022modern}
+
+[32] Karras, T., Aila, T., Laine, S., and Lehtinen, J. Progressive growing of gans for improved quality, stability, and variation. *arXiv preprint arXiv:1710.10196*, 2017.
+{: #ref-karras2017progressive}
+
+[33] Vinyals, O., Kaiser, L., Koo, T., Petrov, S., Sutskever, I., and Hinton, G. E. Grammar as a foreign language. *ArXiv*, abs/1412.7449, 2014. URL [https://api.semanticscholar.org/CorpusID:14223](https://api.semanticscholar.org/CorpusID:14223).
 {: #ref-Vinyals2014GrammarAA}
 
-Zaheer, M., Kottur, S., Ravanbakhsh, S., Poczos, B., Salakhutdinov, R. R., and Smola, A. Deep sets. *Advances in neural information processing systems*, 30, 2017.
-{: #ref-zaheer2017deep}
+[34] Hinton, G. E. Mapping part-whole hierarchies into connectionist networks. *Artificial Intelligence*, 46(1-2):47–75, 1990.
+{: #ref-hinton1990mapping}
+
+[35] Schmidhuber, J. Towards compositional learning in dynamic networks. *Technical University of Munich (Technical Report FKI-129-90)*, 1, 1990.
+{: #ref-schmidhuber1990towards}
+
+[36] Hinton, G. E. Representing part-whole hierarchies in connectionist networks. In *10th Annual Conference Cognitive Science Society Pod*, pp. 48–54. Psychology Press, 2019.
+{: #ref-hinton2019representing}
+
+[37] Schmidhuber, J. *Evolutionary principles in self-referential learning, or on learning how to learn: the meta-meta-... hook*. PhD thesis, Technische Universität München, 1987.
+{: #ref-schmidhuber1987evolutionary}
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">A. Decoding the part-whole hierarchy</span>
 
@@ -945,9 +945,9 @@ An example of a hierarchy decoded using our visual semantic parser has been prov
   <p style="font-size: 0.9em; text-align: left; margin-top: 8px;"><b>Figure 32.</b> The 5 predicted level maps stacked along a z-axis (L1 finest at bottom, L5 coarsest at top), making the part-whole merging across levels visually explicit: individual parts (eyes, nose, mouth) at the bottom converge into a single face region by the top.</p>
 </div>
 
-[^1]: which acts as a single feedforward approximation of an EM iterative clustering algorithm as in DeepSets([Zaheer et al., 2017](#ref-zaheer2017deep))
-[^2]: GLOM is derived from the slang ”glom together” which may derive from the word ”agglomerate”([Hinton, 2021](#ref-glom))
-[^3]: These assumptions are not necessary, but they help reveal internal mechanisms. As we proceed further, we will try to relax them([Hinton, 1977](#ref-hinton1977relaxation)).
+[^1]: which acts as a single feedforward approximation of an EM iterative clustering algorithm as in DeepSets\[[11](#ref-zaheer2017deep)\]
+[^2]: GLOM is derived from the slang ”glom together” which may derive from the word ”agglomerate”\[[1](#ref-glom)\]
+[^3]: These assumptions are not necessary, but they help reveal internal mechanisms. As we proceed further, we will try to relax them\[[22](#ref-hinton1977relaxation)\].
 [^4]: which means we  want it to stay on the hypersphere.
 [^5]: It was replaced by feeding top layer activations of a layer in a *previous timestep* into  a lower layer at next timestep. However, this requires backpropagation to take a time-out and unfold the computational graph to form a directed acyclic graph.
 [^6]: r is set as a hyperparameter, or locations of vectors $$v_{p}$$ attends to could themselves be learned
