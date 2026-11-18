@@ -577,7 +577,15 @@ document.addEventListener('keydown', function(event) {
 
             <div class="posts-box-body">
                 <ul class="posts" id="postsList" style="list-style: none; padding: 0; text-align: left;">
-                    
+
+
+                    {% for post in site.posts %}{% if post.slug == "modern_glom" %}
+                    <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
+                      <a class="post-link portal-trigger" href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1.1rem; font-family: 'Courier New', Courier, monospace;">
+                          {{ post.title }}
+                      </a>
+                    </li>
+                  {% endif %}{% endfor %}
 
                     {% for post in site.posts %}{% if post.slug == "deepsets" %}
                     <li style="margin-bottom: 1.8rem; border-left: 3px solid var(--border-header-bottom); padding-left: 15px;">
