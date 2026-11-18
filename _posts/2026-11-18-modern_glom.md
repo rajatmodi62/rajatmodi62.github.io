@@ -768,115 +768,115 @@ Given that compute is finally cheap, but the solid-state memory is not, it makes
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">References</span>
 
-[1] Hinton, G. E. How to represent part-whole hierarchies in a neural network. *Neural Computation*, 35:413–452, 2021. URL [https://api.semanticscholar.org/CorpusID:232046121](https://api.semanticscholar.org/CorpusID:232046121).
+[1] Hinton, G. E. How to represent part-whole hierarchies in a neural network. *Neural Computation*, 35:413–452, 2021. URL [https://api.semanticscholar.org/CorpusID:232046121](https://api.semanticscholar.org/CorpusID:232046121). \[[link](https://arxiv.org/abs/2102.12627)\]
 {: #ref-glom}
 
-[2] Modi, R., Vineet, V., and Rawat, Y. S. On occlusions in video action detection: Benchmark datasets and training recipes. *ArXiv*, abs/2410.19553, 2024. URL [https://api.semanticscholar.org/CorpusID:262950334](https://api.semanticscholar.org/CorpusID:262950334).
+[2] Modi, R., Vineet, V., and Rawat, Y. S. On occlusions in video action detection: Benchmark datasets and training recipes. *ArXiv*, abs/2410.19553, 2024. URL [https://api.semanticscholar.org/CorpusID:262950334](https://api.semanticscholar.org/CorpusID:262950334). \[[link](https://arxiv.org/abs/2410.19553)\]
 {: #ref-Modi2024OnOI}
 
-[3] Fan, H., Xiong, B., Mangalam, K., Li, Y., Yan, Z., Malik, J., and Feichtenhofer, C. Multiscale vision transformers. In *2021 IEEE/CVF international conference on computer vision (ICCV)*, pp. 6804–6815. IEEE, 2021.
+[3] Fan, H., Xiong, B., Mangalam, K., Li, Y., Yan, Z., Malik, J., and Feichtenhofer, C. Multiscale vision transformers. In *2021 IEEE/CVF international conference on computer vision (ICCV)*, pp. 6804–6815. IEEE, 2021. \[[link](https://arxiv.org/abs/2104.11227)\]
 {: #ref-fan2021multiscale}
 
-[4] Liu, J., Yue, Y., Welling, M., and Song, Y. Krause synchronization transformers. In *Forty-third International Conference on Machine Learning*, 2026.
+[4] Liu, J., Yue, Y., Welling, M., and Song, Y. Krause synchronization transformers. In *Forty-third International Conference on Machine Learning*, 2026. \[[link](https://arxiv.org/abs/2602.11534)\]
 {: #ref-liu2026krause}
 
-[5] Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025b.
+[5] Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025b. \[[link](https://arxiv.org/abs/2410.13821)\]
 {: #ref-miyato2025artificial}
 
-[6] Löwe, S., Lippe, P., Locatello, F., and Welling, M. Rotating features for object discovery. *Advances in Neural Information Processing Systems*, 36:59606–59635, 2023.
+[6] Löwe, S., Lippe, P., Locatello, F., and Welling, M. Rotating features for object discovery. *Advances in Neural Information Processing Systems*, 36:59606–59635, 2023. \[[link](https://arxiv.org/abs/2306.00600)\]
 {: #ref-lowe2023rotating}
 
-[7] Modi, R. and Rawat, Y. S. Asynchronous perception machine for efficient test time training. *Advances in Neural Information Processing Systems*, 37:106020–106058, 2024.
+[7] Modi, R. and Rawat, Y. S. Asynchronous perception machine for efficient test time training. *Advances in Neural Information Processing Systems*, 37:106020–106058, 2024. \[[link](https://arxiv.org/abs/2410.20535)\]
 {: #ref-modi2024asynchronous}
 
-[8] Hinton, G. Some demonstrations of the effects of structural descriptions in mental imagery. *Cognitive Science*, 3(3):231–250, 1979.
+[8] Hinton, G. Some demonstrations of the effects of structural descriptions in mental imagery. *Cognitive Science*, 3(3):231–250, 1979. \[[link](https://doi.org/10.1207/s15516709cog0303_3)\]
 {: #ref-hinton1979some}
 
-[9] Garau, N., Bisagno, N., Sambugaro, Z., and Conci, N. Interpretable part-whole hierarchies and conceptual-semantic relationships in neural networks. In *2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, pp. 13679–13688. IEEE, 2022.
+[9] Garau, N., Bisagno, N., Sambugaro, Z., and Conci, N. Interpretable part-whole hierarchies and conceptual-semantic relationships in neural networks. In *2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, pp. 13679–13688. IEEE, 2022. \[[link](https://arxiv.org/abs/2203.03282)\]
 {: #ref-garau2022interpretable}
 
-[10] Sabour, S., Frosst, N., and Hinton, G. E. Dynamic routing between capsules. *Advances in neural information processing systems*, 30, 2017.
+[10] Sabour, S., Frosst, N., and Hinton, G. E. Dynamic routing between capsules. *Advances in neural information processing systems*, 30, 2017. \[[link](https://arxiv.org/abs/1710.09829)\]
 {: #ref-sabour2017dynamic}
 
-[11] Zaheer, M., Kottur, S., Ravanbakhsh, S., Poczos, B., Salakhutdinov, R. R., and Smola, A. Deep sets. *Advances in neural information processing systems*, 30, 2017.
+[11] Zaheer, M., Kottur, S., Ravanbakhsh, S., Poczos, B., Salakhutdinov, R. R., and Smola, A. Deep sets. *Advances in neural information processing systems*, 30, 2017. \[[link](https://arxiv.org/abs/1703.06114)\]
 {: #ref-zaheer2017deep}
 
-[12] Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., and Bengio, Y. Graph attention networks. *arXiv preprint arXiv:1710.10903*, 2017.
+[12] Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., and Bengio, Y. Graph attention networks. *arXiv preprint arXiv:1710.10903*, 2017. \[[link](https://arxiv.org/abs/1710.10903)\]
 {: #ref-velivckovic2017graph}
 
-[13] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. Attention is all you need. In *Neural Information Processing Systems*, 2017. URL [https://api.semanticscholar.org/CorpusID:13756489](https://api.semanticscholar.org/CorpusID:13756489).
+[13] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. Attention is all you need. In *Neural Information Processing Systems*, 2017. URL [https://api.semanticscholar.org/CorpusID:13756489](https://api.semanticscholar.org/CorpusID:13756489). \[[link](https://arxiv.org/abs/1706.03762)\]
 {: #ref-Vaswani2017AttentionIA}
 
-[14] Hinton, G. F. A parallel computation that assigns canonical object-based frames of reference. In *Proceedings of the 7th international joint conference on Artificial intelligence-Volume 2*, pp. 683–685, 1981.
+[14] Hinton, G. F. A parallel computation that assigns canonical object-based frames of reference. In *Proceedings of the 7th international joint conference on Artificial intelligence-Volume 2*, pp. 683–685, 1981. \[[link](https://www.ijcai.org/proceedings/1981/129)\]
 {: #ref-hinton1981parallel}
 
-[15] Sejnowski, T. J., Kienker, P. K., and Hinton, G. E. Learning symmetry groups with hidden units: Beyond the perceptron. *Physica D: Nonlinear Phenomena*, 22(1-3):260–275, 1986.
+[15] Sejnowski, T. J., Kienker, P. K., and Hinton, G. E. Learning symmetry groups with hidden units: Beyond the perceptron. *Physica D: Nonlinear Phenomena*, 22(1-3):260–275, 1986. \[[link](https://doi.org/10.1016/0167-2789%2886%2990245-9)\]
 {: #ref-sejnowski1986learning}
 
-[16] Cohen, T. and Welling, M. Group equivariant convolutional networks. In *International conference on machine learning*, pp. 2990–2999. PMLR, 2016.
+[16] Cohen, T. and Welling, M. Group equivariant convolutional networks. In *International conference on machine learning*, pp. 2990–2999. PMLR, 2016. \[[link](https://arxiv.org/abs/1602.07576)\]
 {: #ref-cohen2016group}
 
-[17] Hutchinson, M. J., Le Lan, C., Zaidi, S., Dupont, E., Teh, Y. W., and Kim, H. Lietransformer: Equivariant self-attention for lie groups. In *International conference on machine learning*, pp. 4533–4543. PMLR, 2021.
+[17] Hutchinson, M. J., Le Lan, C., Zaidi, S., Dupont, E., Teh, Y. W., and Kim, H. Lietransformer: Equivariant self-attention for lie groups. In *International conference on machine learning*, pp. 4533–4543. PMLR, 2021. \[[link](https://arxiv.org/abs/2012.10885)\]
 {: #ref-hutchinson2021lietransformer}
 
-[18] Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025a.
+[18] Miyato, T., Löwe, S., Geiger, A., and Welling, M. Artificial kuramoto oscillatory neurons. In *International Conference on Learning Representations*, volume 2025, pp. 44278–44322, 2025a. \[[link](https://arxiv.org/abs/2410.13821)\]
 {: #ref-akorn}
 
-[19] Bai, S., Kolter, J. Z., and Koltun, V. Deep equilibrium models. *Advances in neural information processing systems*, 32, 2019.
+[19] Bai, S., Kolter, J. Z., and Koltun, V. Deep equilibrium models. *Advances in neural information processing systems*, 32, 2019. \[[link](https://arxiv.org/abs/1909.01377)\]
 {: #ref-bai2019deep}
 
-[20] Hinton, G. The forward-forward algorithm: Some preliminary investigations. *arXiv preprint arXiv:2212.13345*, 2(3):5, 2022.
+[20] Hinton, G. The forward-forward algorithm: Some preliminary investigations. *arXiv preprint arXiv:2212.13345*, 2(3):5, 2022. \[[link](https://arxiv.org/abs/2212.13345)\]
 {: #ref-hinton2022forward}
 
-[21] Löwe, S., Lippe, P., Rudolph, M., and Welling, M. Complex-valued autoencoders for object discovery. *arXiv preprint arXiv:2204.02075*, 2022.
+[21] Löwe, S., Lippe, P., Rudolph, M., and Welling, M. Complex-valued autoencoders for object discovery. *arXiv preprint arXiv:2204.02075*, 2022. \[[link](https://arxiv.org/abs/2204.02075)\]
 {: #ref-lowe2022complex}
 
-[22] Hinton, G. E. Relaxation and its role in vision. 1977.
+[22] Hinton, G. E. Relaxation and its role in vision. 1977. \[[link](https://era.ed.ac.uk/handle/1842/8121)\]
 {: #ref-hinton1977relaxation}
 
-[23] Palmer, S. E. Cannonical perspective and the perception of objects. *Attention and performance*, 9:135–151, 1981.
+[23] Palmer, S. E. Cannonical perspective and the perception of objects. *Attention and performance*, 9:135–151, 1981. \[[link](https://scholar.google.com/scholar?q=%22Canonical+perspective+and+the+perception+of+objects%22)\]
 {: #ref-palmer1981cannonical}
 
-[24] Hinton, G. Using relaxation to find a puppet. In *Proceedings of the 2nd summer conference on artificial intelligence and simulation of behaviour*, pp. 148–157, 1976.
+[24] Hinton, G. Using relaxation to find a puppet. In *Proceedings of the 2nd summer conference on artificial intelligence and simulation of behaviour*, pp. 148–157, 1976. \[[link](https://www.cs.toronto.edu/~hinton/absps/puppet.pdf)\]
 {: #ref-hinton1976using}
 
-[25] Fodor, J. A. and Pylyshyn, Z. W. Connectionism and cognitive architecture: A critical analysis. *Cognition*, 28(1-2):3–71, 1988.
+[25] Fodor, J. A. and Pylyshyn, Z. W. Connectionism and cognitive architecture: A critical analysis. *Cognition*, 28(1-2):3–71, 1988. \[[link](https://doi.org/10.1016/0010-0277%2888%2990031-5)\]
 {: #ref-fodor1988connectionism}
 
-[26] Chomsky, N. *Aspects of the Theory of Syntax*, volume 11. MIT press Cambridge, MA, 1965.
+[26] Chomsky, N. *Aspects of the Theory of Syntax*, volume 11. MIT press Cambridge, MA, 1965. \[[link](https://doi.org/10.21236/ad0616323)\]
 {: #ref-chomsky1965aspects}
 
-[27] Hinton, G. E., Nowlan, S. J., et al. How learning can guide evolution. *Complex systems*, 1(3):495–502, 1987.
+[27] Hinton, G. E., Nowlan, S. J., et al. How learning can guide evolution. *Complex systems*, 1(3):495–502, 1987. \[[link](https://www.complex-systems.com/abstracts/v01_i03_a06/)\]
 {: #ref-hinton1987learning}
 
-[28] Kovachki, N., Li, Z., Liu, B., Azizzadenesheli, K., Bhattacharya, K., Stuart, A., and Anandkumar, A. Neural operator: Learning maps between function spaces with applications to pdes. *Journal of Machine Learning Research*, 24(89):1–97, 2023.
+[28] Kovachki, N., Li, Z., Liu, B., Azizzadenesheli, K., Bhattacharya, K., Stuart, A., and Anandkumar, A. Neural operator: Learning maps between function spaces with applications to pdes. *Journal of Machine Learning Research*, 24(89):1–97, 2023. \[[link](https://jmlr.org/papers/v24/21-1524.html)\]
 {: #ref-kovachki2023neural}
 
-[29] Lee, J., Lee, Y., Kim, J., Kosiorek, A., Choi, S., and Teh, Y. W. Set transformer: A framework for attention-based permutation-invariant neural networks. In *International conference on machine learning*, pp. 3744–3753. PMLR, 2019.
+[29] Lee, J., Lee, Y., Kim, J., Kosiorek, A., Choi, S., and Teh, Y. W. Set transformer: A framework for attention-based permutation-invariant neural networks. In *International conference on machine learning*, pp. 3744–3753. PMLR, 2019. \[[link](https://arxiv.org/abs/1810.00825)\]
 {: #ref-lee2019set}
 
-[30] Lillicrap, T. P., Cownden, D., Tweed, D. B., and Akerman, C. J. Random synaptic feedback weights support error backpropagation for deep learning. *Nature communications*, 7(1):13276, 2016.
+[30] Lillicrap, T. P., Cownden, D., Tweed, D. B., and Akerman, C. J. Random synaptic feedback weights support error backpropagation for deep learning. *Nature communications*, 7(1):13276, 2016. \[[link](https://doi.org/10.1038/ncomms13276)\]
 {: #ref-lillicrap2016random}
 
-[31] Irie, K., Schlag, I., Csordás, R., and Schmidhuber, J. A modern self-referential weight matrix that learns to modify itself. In *International conference on machine learning*, pp. 9660–9677. PMLR, 2022.
+[31] Irie, K., Schlag, I., Csordás, R., and Schmidhuber, J. A modern self-referential weight matrix that learns to modify itself. In *International conference on machine learning*, pp. 9660–9677. PMLR, 2022. \[[link](https://arxiv.org/abs/2202.05780)\]
 {: #ref-irie2022modern}
 
-[32] Karras, T., Aila, T., Laine, S., and Lehtinen, J. Progressive growing of gans for improved quality, stability, and variation. *arXiv preprint arXiv:1710.10196*, 2017.
+[32] Karras, T., Aila, T., Laine, S., and Lehtinen, J. Progressive growing of gans for improved quality, stability, and variation. *arXiv preprint arXiv:1710.10196*, 2017. \[[link](https://arxiv.org/abs/1710.10196)\]
 {: #ref-karras2017progressive}
 
-[33] Vinyals, O., Kaiser, L., Koo, T., Petrov, S., Sutskever, I., and Hinton, G. E. Grammar as a foreign language. *ArXiv*, abs/1412.7449, 2014. URL [https://api.semanticscholar.org/CorpusID:14223](https://api.semanticscholar.org/CorpusID:14223).
+[33] Vinyals, O., Kaiser, L., Koo, T., Petrov, S., Sutskever, I., and Hinton, G. E. Grammar as a foreign language. *ArXiv*, abs/1412.7449, 2014. URL [https://api.semanticscholar.org/CorpusID:14223](https://api.semanticscholar.org/CorpusID:14223). \[[link](https://arxiv.org/abs/1412.7449)\]
 {: #ref-Vinyals2014GrammarAA}
 
-[34] Hinton, G. E. Mapping part-whole hierarchies into connectionist networks. *Artificial Intelligence*, 46(1-2):47–75, 1990.
+[34] Hinton, G. E. Mapping part-whole hierarchies into connectionist networks. *Artificial Intelligence*, 46(1-2):47–75, 1990. \[[link](https://doi.org/10.1016/0004-3702%2890%2990004-J)\]
 {: #ref-hinton1990mapping}
 
-[35] Schmidhuber, J. Towards compositional learning in dynamic networks. *Technical University of Munich (Technical Report FKI-129-90)*, 1, 1990.
+[35] Schmidhuber, J. Towards compositional learning in dynamic networks. *Technical University of Munich (Technical Report FKI-129-90)*, 1, 1990. \[[link](https://people.idsia.ch/~juergen/FKI-129-90ocr.pdf)\]
 {: #ref-schmidhuber1990towards}
 
-[36] Hinton, G. E. Representing part-whole hierarchies in connectionist networks. In *10th Annual Conference Cognitive Science Society Pod*, pp. 48–54. Psychology Press, 2019.
+[36] Hinton, G. E. Representing part-whole hierarchies in connectionist networks. In *10th Annual Conference Cognitive Science Society Pod*, pp. 48–54. Psychology Press, 2019. \[[link](https://www.cs.toronto.edu/~hinton/absps/part-whole88.pdf)\]
 {: #ref-hinton2019representing}
 
-[37] Schmidhuber, J. *Evolutionary principles in self-referential learning, or on learning how to learn: the meta-meta-... hook*. PhD thesis, Technische Universität München, 1987.
+[37] Schmidhuber, J. *Evolutionary principles in self-referential learning, or on learning how to learn: the meta-meta-... hook*. PhD thesis, Technische Universität München, 1987. \[[link](https://people.idsia.ch/~juergen/diploma1987ocr.pdf)\]
 {: #ref-schmidhuber1987evolutionary}
 
 # <span style="font-size: 1.5rem; color: var(--border-header-bottom);">A. Decoding the part-whole hierarchy</span>
